@@ -12,7 +12,7 @@
 
 <p style="font-size:13px;color:#808080">Терминал -> npm build</p>
 
-# Подсказки для талантливых
+# Подсказки по рабочим моментам
 
 <h2> Для работы с GitHub </h2>
 <ol style="font-size:20px">
