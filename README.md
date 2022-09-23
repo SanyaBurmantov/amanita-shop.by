@@ -1,14 +1,14 @@
 # Amanita-shop.by 
 
-Стек разработки: TS + Redux + MERN, деплой на Heroku, а там как пойдет
+<p style="font-size:15px;color:#808080">Стек разработки: TS + Redux + MERN, деплой на Heroku, а там как пойдет<p>
 
-<img src="./random/muhomor.jpg">
+<img style="width:50%;height: 50%" src="./random/muhomor.jpg">
 
 # Для запуска проекта
 
-Терминал -> npm run
+<p style="font-size:13px;color:#808080">Терминал -> npm start</p>
 
 # Сборка проекта
 
-Терминал -> npm build
+<p style="font-size:13px;color:#808080">Терминал -> npm build</p>
 
