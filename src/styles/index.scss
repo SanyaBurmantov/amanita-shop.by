@@ -1,1 +1,13 @@
 @import "~normalize.css";
+@import "typo.scss";
+@import "vars.scss";
+
+
+/////// MQ /////
+@media all and (min-width:1440px){html{font-size: 10px}}
+@media all and (min-width:1700px){html{font-size: 12px}}
+@media all and (min-width:2000px){html{font-size: 20px}}
+@media all and (min-width:3000px){html{font-size: 32px}}
+@media all and (max-width:1000px){html{font-size: 8px}}
+@media all and (max-width:767px){html{font-size: 12px}}
+@media all and (max-width:440px){html{font-size: 10px}}

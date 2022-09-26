@@ -14,7 +14,7 @@ export const Preview = (props: Props) => {
                 </div>
             </div>
             <div className={styles.background}>
-                <img src={background} alt="Pizda"/>
+                <img src={background} alt="Cover"/>
             </div>
         </section>
     )
