@@ -9,9 +9,7 @@ interface Props {
 
 export const Microdosing = () => {
 
-    const [textActive, setTextActive] = useState(false)
-
-    const items = [{
+ const items = [{
         name: 'Бессонница и ночная тревога у взрослых и пожилых людей',
     }, {
         name: 'Синдром хронической усталости',
@@ -57,16 +55,6 @@ export const Microdosing = () => {
     }, {
         name: 'Если эффекта также не чувствуете, то на следующий день утром примите 1 грамм.'
     }];
-    const itemTree = [{
-        name: 'Цельные шляпки'
-    },
-        {
-            name: 'Измельчённые шляпки'
-        }, {
-            name: 'Капсулы в состав которых входят 100% измельчённые шляпки.'
-        }, {
-            name: 'Чайные пакетики'
-        }]
     return (
         <section className={styles.microdosing}>
             <div className={styles.section_layer}>
@@ -77,9 +65,9 @@ export const Microdosing = () => {
                         <div className={styles.item}>
                             <div className={styles.item_head}>
                                 <div className={styles.item_title}>Что такое микродозинг мухомором?</div>
-                                <div className={styles.item_ico} onClick={()=>setTextActive(!textActive)}><img src={ico} alt='ico'/></div>
+                                <div className={styles.item_ico}><img src={ico} alt='ico'/></div>
                             </div>
-                            <div className={textActive ? styles.item_text_active : styles.item_text}>
+                            <div className={styles.item_text}>
                                 Микродозинг мухоморов — это употребление сушеных грибов в сверхмалой, буквально
                                 микроскопической дозировке.<br/>
                                 Для многих, эффективное количество равно 0,7 — 1,5 гр за сутки. Это количество
