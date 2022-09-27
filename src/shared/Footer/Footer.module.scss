@@ -1,0 +1,14 @@
+@import "/src/styles/vars.scss";
+
+.footer{
+  width: 100%;
+  font-family: $font-normal;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 132rem;
+    margin: 0 auto;
+    padding: 0.6rem 0.6rem;
+  }
+}

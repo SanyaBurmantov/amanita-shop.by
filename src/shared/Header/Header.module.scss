@@ -1,19 +1,36 @@
+@import "/src/styles/vars.scss";
+
 .header{
-  background-color: #464646;
+  background-color: $color-dark-gray;
   width: 100%;
+  font-family: $font-normal;
   .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1320px;
+    max-width: 132rem;
     margin: 0 auto;
-    padding: 6px 6px;
+    padding: 0.6rem 0.6rem;
   }
 }
 
 .container__info{
   display: flex;
   align-items: center;
+  ul{
+    flex-wrap: wrap;
+    display: flex;
+    list-style-type: none;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    li:not(:last-child){
+      margin: 0rem 2rem 0rem 0rem;
+    }
+    a{
+      text-decoration: none;
+      color: $color-white-text-button;
+    }
+  }
 }
 
 .container__button{
@@ -22,53 +39,41 @@
 }
 
 .logo{
-  margin-right: 50px;
+  margin-right: 5rem;
+  cursor: pointer;
 }
 
 .contactBtn{
-  margin-right: 20px;
-}
-
-ul{
-  flex-wrap: wrap;
-  display: flex;
-  list-style-type: none;
-  font-size: 20px;
-  line-height: 23px;
-      li:not(:last-child){
-      margin: 0px 20px 0px 0px;
-      }
-         a{
-         text-decoration: none;
-         color: #F1F1F1;
-       }
+  margin-right: 2rem;
 }
 
 .contactBtn {
-  border: 1px solid #FFFFFF;
-  border-radius: 6px;
-  padding: 11px 30px;
+  font-family: $font-semi-bold;
+  border: 0.1rem solid $color-white;
+  border-radius: 0.6rem;
+  padding: 1.1rem 3rem;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 26px;
-  color: #FFFFFF;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  color: $color-white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  margin-right: 12px;
+  margin-right: 1.2rem;
 }
 
 
 .basketBtn {
-  border: 1px solid #F60909;
-  background-color: #F60909;
-  border-radius: 6px;
-  padding: 12px 37px;
+  font-family: $font-semi-bold;
+  border: 0.1rem solid $color-red;
+  background-color: $color-red;
+  border-radius: 0.6rem;
+  padding: 1.2rem 3.7rem;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 26px;
-  color: #FFFFFF;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  color: $color-white;
   display: flex;
   align-items: center;
   justify-content: center;
