@@ -1,0 +1,41 @@
+@import "../../styles/vars";
+
+.background__blog{
+  background-color: $color-light-gray2;
+}
+
+.container {
+  color: $color-gray;
+  font-size: 2.4rem;
+  margin: 0 auto;
+  max-width: 132rem;
+  font-family: $font-normal;
+}
+
+.blog__title {
+  font-size: 5.6rem;
+  line-height: 6.7rem;
+  color: $color-dark-gray;
+  font-family: $font-bold;
+  margin-bottom: 4rem;
+  padding-top: 5rem;
+}
+
+.blog__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__posts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 0 1 73%;
+
+}
+
+.content__panel {
+  flex: 0 1 22%;
+}
+
+

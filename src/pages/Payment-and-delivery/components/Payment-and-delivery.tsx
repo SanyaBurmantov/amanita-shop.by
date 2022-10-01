@@ -6,6 +6,6 @@ interface Props {
 }
 export const PaymentAndDelivery = (props: Props) => {
     return (
-        <div className={styles.payment}>Payment and delivery</div>
+        <div>Payment and delivery</div>
     )
 }

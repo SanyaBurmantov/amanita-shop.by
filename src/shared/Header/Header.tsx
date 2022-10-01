@@ -1,7 +1,8 @@
 import React from "react";
-import styles from './Header.module.scss'
 import logo from '../../assets/icons/logo-amanita.svg'
 import {Link} from "react-router-dom";
+import './Header.scss'
+import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE} from "../../utils/consts";
 
 interface Props {
 
@@ -11,25 +12,25 @@ interface Props {
 export const Header = (props: Props) => {
     const items = [{
         name: 'Главная',
-        href: '/'
-    },{
+        href: HOME_ROUTE
+    }, {
         name: 'Блог',
-        href: '/blog'
-    },{
+        href: BLOG_ROUTE
+    }, {
         name: 'Магазин',
-        href: '/products'
-    },{
+        href: PRODUCTS_ROUTE
+    }, {
         name: 'Доставка и оплата',
-        href: '/payment-and-delivery'
-    },{
+        href: PAYMENT_ROUTE
+    }, {
         name: 'Отзывы',
-        href: '/reviews'
+        href: REVIEWS_ROUTE
     }];
     return (
-        <header className={styles.header}>
-            <div className={styles.container}>
-                <div className={styles.container__info}>
-                    <div className={styles.logo}>
+        <header className='header'>
+            <div className='container'>
+                <div className='container__info'>
+                    <div className='logo'>
                         <Link to="/">
                             <img src={logo} alt='logo-amanita'/>
                         </Link>
@@ -42,12 +43,12 @@ export const Header = (props: Props) => {
                         )}
                     </ul>
                 </div>
-                <div className={styles.container__button}>
-                    <div className={styles.contactButton}>
-                        <Link to="#" className={styles.contactBtn}>Контакты</Link>
+                <div className='container__button'>
+                    <div className='contactButton'>
+                        <Link to="#" className='contactBtn'>Контакты</Link>
                     </div>
-                    <div className={styles.basketButton}>
-                        <Link to="#" className={styles.basketBtn}>Корзина</Link>
+                    <div className='basketButton'>
+                        <Link to="#" className='basketBtn'>Корзина</Link>
                     </div>
                 </div>
             </div>
