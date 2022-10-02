@@ -4,5 +4,6 @@ export interface IPost {
     subtitle: string,
     image: string,
     likeCount: number,
-    Themes: string
+    Themes: string,
+    liked: boolean
 }
