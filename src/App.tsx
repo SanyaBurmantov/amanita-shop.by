@@ -1,6 +1,10 @@
 import React from 'react';
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 import {Header} from "./shared/Header/Header";
 import {Footer} from "./shared/Footer/Footer";
+
+
 import {Home} from "./pages/Home/Home";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
@@ -15,6 +19,7 @@ import {PersistGate} from "redux-persist/integration/react";
 import {persistStore} from "redux-persist";
 
 
+
 function App() {
 
     return (
@@ -22,6 +27,9 @@ function App() {
             <PersistGate persistor={persistStore(store)} loading={<div>Loading...</div>}>
         <BrowserRouter>
             <Header/>
+
+            <AppRouter/>
+
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/blog' element={<Blog/>}/>
@@ -30,6 +38,7 @@ function App() {
                 <Route path='/reviews' element={<Reviews/>}/>
             </Routes>
             <Cart />
+
             <Footer/>
         </BrowserRouter>
             </PersistGate>

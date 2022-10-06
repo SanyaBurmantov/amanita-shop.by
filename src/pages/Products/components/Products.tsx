@@ -2,6 +2,15 @@ import React from 'react';
 import {IProduct} from "../../../types";
 import ProductItem from "./ProductItem";
 
+
+interface Props {
+}
+export const Products = (props: Props) => {
+    return (
+        <div>Products</div>
+    )
+}
+
 const products:IProduct[] = [
     {
         _id: 'hehe',
@@ -128,3 +137,4 @@ const Products = () => {
 };
 
 export default Products;
+
