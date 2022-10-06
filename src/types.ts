@@ -7,6 +7,7 @@ export interface IProduct{
     imagePath: string
     price: number
     count: number
+    type: string
 }
 
 export interface ICartItem extends IProduct{

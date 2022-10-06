@@ -29,8 +29,8 @@ function App() {
                 <Route path='/payment-and-delivery' element={<PaymentAndDelivery/>}/>
                 <Route path='/reviews' element={<Reviews/>}/>
             </Routes>
-            {/*<Cart />*/}
-            {/*<Footer/>*/}
+            <Cart />
+            <Footer/>
         </BrowserRouter>
             </PersistGate>
         </Provider>

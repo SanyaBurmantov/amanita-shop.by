@@ -1,19 +1,17 @@
 .cart{
 
   &__picture{
-
-
+    position: absolute;
+    right: 2rem;
+    bottom: 20rem;
+    background-color: $color-light-white;
     &--img{
-      position: fixed;
-      right: 6rem;
-      bottom: 20rem;
-      width: 10rem;
 
     }
     &--text{
-      position: fixed;
-      top: 58.2rem;
-      right: 4.2rem;
+      position: absolute;
+      top:-2rem;
+      right: 0;
       font-size: 3.4rem;
       line-height: 4.1rem;
       background-color: $color-red;
@@ -26,22 +24,58 @@
     }
   }
   &__data{
-    display: none;
-    transition: 500ms;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+
+
+    &.active{
+      opacity: 1;
+      pointer-events: all;
+      scroll-x: none;
+    }
+
+    &--content{
+      padding: 2rem;
+      border-radius: 1.2rem;
+      background-color: $color-light-white;
+      width: 60vw;
+      transform: scale(0.5);
+      transition: 0.4s all;
+      &.active{
+        transform: scale(1);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+    &--elem{
+      display: flex;
+      width: 40%;
+      padding: 2rem;
+      margin: 2.5rem;
+      border-radius: 1.2rem;
+      -webkit-box-shadow: -1px 2px 6px 3px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: -1px 2px 6px 3px rgba(34, 60, 80, 0.2);
+      box-shadow: -1px 2px 6px 3px rgba(34, 60, 80, 0.2);
+    }
 
     &--picture{
-      width: 25rem;
+      width: 8rem;
+      height: 8rem;
+      margin: 1rem;
     }
-    &.active{
-      display: block;
-      position: fixed;
-      top: 10rem;
-      width: 60%;
-      height: 70%;
-      border: 1px solid red;
-      left: 30%;
-      display: flex;
-      background-color: $color-white;
+    &--name{
+
     }
   }
   __total{

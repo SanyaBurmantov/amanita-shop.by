@@ -42,14 +42,6 @@ export const Header = (props: Props) => {
                         )}
                     </ul>
                 </div>
-                <div className={styles.container__button}>
-                    <div className={styles.contactButton}>
-                        <Link to="#" className={styles.contactBtn}>Контакты</Link>
-                    </div>
-                    <div className={styles.basketButton}>
-                        <Link to="#" className={styles.basketBtn}>Корзина</Link>
-                    </div>
-                </div>
             </div>
         </header>
 

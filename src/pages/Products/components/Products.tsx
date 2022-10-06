@@ -6,109 +6,122 @@ const products:IProduct[] = [
     {
         _id: 'hehe',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor',
+        name: 'Muhomor1',
         price: 4545,
         title: 'блябуду крута',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
         _id: 'hea',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor1',
+        name: 'Muhomor2',
         price: 4445,
         title: 'бери, сука',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
         _id: 'he234he',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor2',
+        name: 'Muhomor3',
         price: 8745,
         title: 'бери, сука',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
         _id: 'he12he',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor3',
+        name: 'Muhomor4',
         price: 4145,
         title: 'бери, сука',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
-        _id: 'hehe',
+        _id: 'he23e',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor',
+        name: 'Muhomor5',
         price: 4545,
         title: 'блябуду крута',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
-        _id: 'hea',
+        _id: 'he546a',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor1',
+        name: 'Muhomor6',
         price: 4445,
         title: 'бери, сука',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
-        _id: 'he234he',
+        _id: 'he276834he',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor2',
+        name: 'Muhomor7',
         price: 8745,
         title: 'бери, сука',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
-        _id: 'he12he',
+        _id: 'he1254he',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor3',
+        name: 'Muhomor8',
         price: 4145,
         title: 'бери, сука',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
-        _id: 'hehe',
+        _id: 'heh3457e',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor',
+        name: 'Muhomor9',
         price: 4545,
         title: 'блябуду крута',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
-        _id: 'hea',
+        _id: 'he9876a',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor1',
+        name: 'Muhomor10',
         price: 4445,
-        title: 'бери, сука',
-        count: 30
+        title: 'null',
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
-        _id: 'he234he',
+        _id: 'he234567he',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor2',
+        name: 'Muhomor11',
         price: 8745,
         title: 'бери, сука',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
     {
-        _id: 'he12he',
+        _id: 'he17652he',
         imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor3',
+        name: 'Muhomor12',
         price: 4145,
         title: 'бери, сука',
-        count: 30
+        count: 30,
+        type: 'россыпь ебана'
     },
 ]
 
 const Products = () => {
     return (
-
-                <div className="container">
-                    <div className="products">
-                {products.map(product => (
-                    <ProductItem product={product} key={product._id}/>
-                ))}
+        <div>
+            <div className="container">
+                <div className="products">
+                    {products.map(product => (
+                        <ProductItem product={product} key={product._id}/>
+                    ))}
+                </div>
             </div>
         </div>
     );
