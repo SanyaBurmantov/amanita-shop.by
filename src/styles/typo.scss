@@ -1,1 +1,39 @@
 @import "fonts.scss";
+@import "vars.scss";
+
+.h1, h1{font-size: 3.8rem;line-height: 4.2rem;}
+.h5, h5{font-size: 1.6rem;line-height: 2.2rem;}
+
+h2{font:bold 3.8rem/1.11 $font-normal;margin:0 0 3.6rem;color:$color-dark-gray;
+  @media (max-width:$mobile){font-size: 2.8rem;line-height: 3.4rem;margin:0 0 1.8rem}
+}
+h3{font-size: 4.5rem;line-height: 1.29;font-weight:bold;
+  font-family:$font-normal;color:$color-dark-gray;margin:0 0 4rem;
+  @media (max-width:600px){font-size: 2.8rem;margin-bottom: 1.8rem}
+}
+h4{font-size: 2.4rem;line-height: 1;color:$color-dark-gray;
+  @media (max-width:600px){font-size: 1.8rem}
+}
+
+.subtitle{font-size: 2.2rem;line-height: 2.8rem}
+
+.br-desktop{
+  @media (max-width:600px){display: none;}
+}
+
+ul.list{padding-left: 0;line-height: 1.38;list-style: none;
+  li{margin-bottom: .5em;
+    &:before{margin-right:.64em;width:.31em;height: .31em;background: $color-dark-gray;border-radius: 50%;
+      display: inline-block;vertical-align: middle;position: relative;top:-.1em;content:"";}
+  }
+}
+ol.list{padding-left: 0;line-height: 1.38;counter-reset: list;list-style: none;
+  li{margin-bottom: .8rem;
+    &:before{counter-increment:list;content:counter(list)'.';display: inline-block;margin-right: .5rem }
+  }
+}
+
+
+sub, sup{font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}
+sup{top: -0.5em;}
+sub{bottom: -0.25em;}
