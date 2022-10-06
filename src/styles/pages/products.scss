@@ -1,0 +1,23 @@
+.products {
+  display: flex;
+  width: 40%;
+  flex-wrap: wrap;
+}
+
+.product{
+
+  padding: 0.8rem;
+  margin: 0.8rem;
+  -webkit-box-shadow: -1px 4px 15px 7px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -1px 4px 15px 7px rgba(34, 60, 80, 0.2);
+  box-shadow: -1px 4px 15px 7px rgba(34, 60, 80, 0.2);
+  border-radius: 1rem;
+  &__item {
+    &--pic {
+      width: 80%;
+    }
+  }
+  &__more{
+    display: none;
+  }
+}

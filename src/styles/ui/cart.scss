@@ -1,0 +1,50 @@
+.cart{
+
+  &__picture{
+
+
+    &--img{
+      position: fixed;
+      right: 6rem;
+      bottom: 20rem;
+      width: 10rem;
+
+    }
+    &--text{
+      position: fixed;
+      top: 58.2rem;
+      right: 4.2rem;
+      font-size: 3.4rem;
+      line-height: 4.1rem;
+      background-color: $color-red;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 15rem;
+      color: $color-white;
+      font-family: $font-normal;
+      transition: 1.4ms;
+    }
+  }
+  &__data{
+    display: none;
+    transition: 500ms;
+
+    &--picture{
+      width: 25rem;
+    }
+    &.active{
+      display: block;
+      position: fixed;
+      top: 10rem;
+      width: 60%;
+      height: 70%;
+      border: 1px solid red;
+      left: 30%;
+      display: flex;
+      background-color: $color-white;
+    }
+  }
+  __total{
+
+  }
+}

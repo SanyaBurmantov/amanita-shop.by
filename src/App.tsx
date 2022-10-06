@@ -14,6 +14,7 @@ import {Cart} from "./shared/Cart/Cart";
 import {PersistGate} from "redux-persist/integration/react";
 import {persistStore} from "redux-persist";
 
+
 function App() {
 
     return (
@@ -28,11 +29,12 @@ function App() {
                 <Route path='/payment-and-delivery' element={<PaymentAndDelivery/>}/>
                 <Route path='/reviews' element={<Reviews/>}/>
             </Routes>
-            <Cart />
-            <Footer/>
+            {/*<Cart />*/}
+            {/*<Footer/>*/}
         </BrowserRouter>
             </PersistGate>
         </Provider>
+
     )
 }
 

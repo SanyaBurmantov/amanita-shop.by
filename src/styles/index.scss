@@ -1,13 +1,51 @@
+html{min-height:100%;box-sizing: border-box;font-size: 10px;scroll-behavior: smooth;
+}
+body{overflow-x: hidden;overflow-y: scroll;min-width: 320px;margin: 0;background:inherit;
+  -webkit-font-smoothing: antialiased;-webkit-text-size-adjust: 100%;-ms-text-size-adjust:none;
+
+}
+
+
 @import "~normalize.css";
-@import "typo.scss";
 @import "vars.scss";
 
 
-/////// MQ /////
-@media all and (min-width:1440px){html{font-size: 10px}}
-@media all and (min-width:1700px){html{font-size: 12px}}
-@media all and (min-width:2000px){html{font-size: 20px}}
+body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
+  -webkit-text-size-adjust:none;
+  &.noscroll{overflow: hidden !important;}}
+
+.container {
+  max-width: 84%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 56px;
+  padding-right: 56px;
+  @media all and (max-width: 1440px) {
+    max-width: 92%;
+  }
+  @media all and (max-width: 767px) {
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px
+  }
+  @media all and (max-width: 600px) {
+    max-width: 100%;
+  }
+}
+
+
+
+  /////// MQ /////
 @media all and (min-width:3000px){html{font-size: 32px}}
+@media all and (min-width:2000px){html{font-size: 20px}}
+@media all and (min-width:1700px){html{font-size: 12px}}
+@media all and (min-width:1580px){html{font-size: 10px}}
 @media all and (max-width:1000px){html{font-size: 8px}}
 @media all and (max-width:767px){html{font-size: 12px}}
 @media all and (max-width:440px){html{font-size: 10px}}
+
+@import "typo.scss";
+@import "pages/pages.scss";
+@import "ui/ui.scss";
+
