@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {IPost} from "../../../../models";
 import './Post.scss'
 import NoLikesHeart from '../../../../assets/icons/noLike.svg'
