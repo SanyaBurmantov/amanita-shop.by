@@ -12,9 +12,6 @@ interface BlogProps {
 
 }
 
-
-
-
 export const Blog = () => {
 
     const [filtred, setFiltred] = useState(posts)

@@ -44,14 +44,7 @@ export const Header = (props: Props) => {
                     </ul>
                 </div>
 
-                <div className='container__button'>
-                    <div className='contactButton'>
-                        <Link to="#" className='contactBtn'>Контакты</Link>
-                    </div>
-                    <div className='basketButton'>
-                        <Link to="#" className='basketBtn'>Корзина</Link>
-                    </div>
-                </div>
+
 
             </div>
         </header>

@@ -5,11 +5,6 @@ import ProductItem from "./ProductItem";
 
 interface Props {
 }
-export const Products = (props: Props) => {
-    return (
-        <div>Products</div>
-    )
-}
 
 const products:IProduct[] = [
     {
