@@ -10,6 +10,19 @@ export interface IProduct{
     type: string
 }
 
+export interface IPost {
+    id: number,
+    title: string,
+    subtitle: string,
+    image: string,
+    likeCount: number,
+    Themes: string,
+    liked: boolean,
+    views: number,
+    ViewedByUser: boolean,
+    PostData: string
+}
+
 export interface ICartItem extends IProduct{
     count: number
 }
