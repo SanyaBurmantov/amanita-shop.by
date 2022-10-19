@@ -1,6 +1,5 @@
 import {IProduct} from "../../types";
 import {actionTypes} from "./types";
-import products from "../../pages/Products/components/Products";
 
 export const addToCart = (product: IProduct, count: number) => ({
     type: actionTypes.CART_ADD_ITEM,

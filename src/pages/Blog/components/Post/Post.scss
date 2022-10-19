@@ -102,12 +102,14 @@
   transition: 0.8s;
 
   &.active {
+    overflow: auto;
     opacity: 1;
     pointer-events: all;
     z-index: 20;
   }
 
   &-item {
+    margin: auto;
     transform: scale(0);
     opacity: 0;
     top: 0;
@@ -115,13 +117,13 @@
     transition: 0.3s;
 
     &.active {
+      margin-top: 5rem;
       position: relative;
       opacity: 1;
       transition: 0.5s;
       transform: scale(1);
       flex-wrap: wrap;
-      justify-content: space-between;
-      height: 90vh;
+      justify-content: flex-start;
       width: 40vw;
       background-color: $color-light-white;
       border-radius: 1.2rem;

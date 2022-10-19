@@ -1,0 +1,44 @@
+@import "../../../../styles/vars";
+
+.replies{
+  margin-left: 5rem;
+}
+.comment{
+  margin-bottom: 3rem;
+  background-color: white;
+  border-radius: 7px;
+  padding: 0.8rem;
+  &-actions{
+    display: flex;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #F60909;
+  }
+  &-action{
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  &-container{
+    display: flex;
+    align-items: center;
+  }
+  &-image{
+    padding-right: 1rem;
+  }
+  &-author{
+    color: $color-red;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  &-data{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $color-gray;
+  }
+  &-text{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $color-dark-gray;
+  }
+}

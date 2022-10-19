@@ -4,14 +4,15 @@ import './Post.scss'
 import AdminIco from '../../../../assets/icons/AdminIco.svg'
 import NoLikesHeart from '../../../../assets/icons/noLike.svg'
 import LikesHeart from '../../../../assets/icons/Likes.svg'
-import {posts} from "../../../../data/Posts";
-import RemoveIco from '../../../../assets/icons/remove-add.svg'
 import CloseEyes from '../../../../assets/icons/closeeyes.png'
 import OpenEyes from '../../../../assets/icons/openeyes.png'
+import {posts} from "../../../../data/Posts";
+import RemoveIco from "../../../../assets/icons/remove-add.svg";
+import {CommentList} from "../Commets/CommentList";
 
 
 interface PostProps {
-    post: IPost,
+    post: IPost
 }
 
 export const Post = ({post}: PostProps) => {
@@ -60,6 +61,7 @@ export const Post = ({post}: PostProps) => {
         setViews(updateArrTwo);
     }
 
+
     return (
 
         <div className='post'>
@@ -96,7 +98,6 @@ export const Post = ({post}: PostProps) => {
                     </div>
                 </div>
             </div>
-
             <div className={visible ? 'post-more active' : 'post-more'} onClick={() => setVisible(false)}>
                 <div className={visible ? 'post-more-item active' : 'post-more-item'}
                      onClick={(e) => e.stopPropagation()}>
@@ -116,36 +117,22 @@ export const Post = ({post}: PostProps) => {
                     <div className='post-more-image'><img src={post.image}/></div>
                     <div className='post-more-attr'>
                         <div className='post-more-attr__likes'>
-                            <div className='post-more-attr__likes-ico' onClick={() => LikeCount(post.id)}><img
+                            <div className='post-more-attr__likes-ico'  onClick={() => LikeCount(post.id)}><img
                                 src={post.liked ? LikesHeart : NoLikesHeart}/></div>
                             <div className='post-more-attr__likes-number'>{post.likeCount}</div>
                         </div>
                         <div className='post-more-attr__views'>
                             <div className='post-more-attr__views-ico'><img
-                                src={post.ViewedByUser ? OpenEyes : CloseEyes}/></div>
+                                src={OpenEyes}/></div>
                             <div className='post-more-attr__views-number'>{post.views} Просмотров</div>
                         </div>
                     </div>
                     <hr/>
                     <div className='post-more-comment'>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
-                        <div>Говно</div>
+                        <CommentList currentUserId='8'/>
                     </div>
                 </div>
             </div>
         </div>
-
-
     );
 };
