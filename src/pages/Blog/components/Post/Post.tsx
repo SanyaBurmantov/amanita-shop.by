@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import {IPost} from "../../../../types";
 import './Post.scss'
 import AdminIco from '../../../../assets/icons/AdminIco.svg'
@@ -6,16 +6,16 @@ import NoLikesHeart from '../../../../assets/icons/noLike.svg'
 import LikesHeart from '../../../../assets/icons/Likes.svg'
 import CloseEyes from '../../../../assets/icons/closeeyes.png'
 import OpenEyes from '../../../../assets/icons/openeyes.png'
+import {BlogModal} from "../BlogModal/BlogModal";
 import {posts} from "../../../../data/Posts";
-import RemoveIco from "../../../../assets/icons/remove-add.svg";
-import {CommentList} from "../Commets/CommentList";
+import {getComments} from '../../../../data/Comment'
 
 
 interface PostProps {
-    post: IPost
+    post: IPost,
 }
 
-export const Post = ({post}: PostProps) => {
+export const Post: FC<PostProps> = ({post}) => {
 
     const [visible, setVisible] = useState(false)
 
@@ -23,36 +23,38 @@ export const Post = ({post}: PostProps) => {
 
     const [views, setViews] = useState(posts)
 
-    function Count() {
-        if (!post.liked) {
-            return ++post.likeCount;
-        } else {
-            return --post.likeCount;
-        }
-    }
-
-    function Liked() {
-        return post.liked = !post.liked;
-    }
 
     const LikeCount = (id: number) => {
+
         const updateArr = count.map(post => post.id === id ? {...post, likeCount: Count(), liked: Liked()} : post);
+
+        function Count() {
+            if (!post.liked) {
+                return ++post.likeCount;
+            } else {
+                return --post.likeCount;
+            }
+        }
+        function Liked() {
+            return post.liked = !post.liked;
+        }
+
         setCount(updateArr);
     }
 
-    function ViewsCount() {
-        if (!post.ViewedByUser) {
-            return ++post.views;
-        } else {
-            return post.views;
-        }
-    }
-
-    function ViewedByUser() {
-        return post.ViewedByUser = true;
-    }
-
     const Views = (id: number) => {
+        function ViewsCount() {
+            if (!post.ViewedByUser) {
+                return ++post.views;
+            } else {
+                return post.views;
+            }
+        }
+
+        function ViewedByUser() {
+            return post.ViewedByUser = true;
+        }
+
         const updateArrTwo = views.map(post => post.id === id ? {
             ...post,
             views: ViewsCount(),
@@ -61,9 +63,7 @@ export const Post = ({post}: PostProps) => {
         setViews(updateArrTwo);
     }
 
-
     return (
-
         <div className='post'>
             <div className='post__container'>
                 <div className='post__container-click' onClick={() => setVisible(true)}>
@@ -78,6 +78,7 @@ export const Post = ({post}: PostProps) => {
                         </div>
                         <div className='post__container-views-title'>{post.title}</div>
                         <div className='post__container-views-subtitle'>{post.subtitle}</div>
+                        <div></div>
                     </div>
                 </div>
                 <hr/>
@@ -98,41 +99,7 @@ export const Post = ({post}: PostProps) => {
                     </div>
                 </div>
             </div>
-            <div className={visible ? 'post-more active' : 'post-more'} onClick={() => setVisible(false)}>
-                <div className={visible ? 'post-more-item active' : 'post-more-item'}
-                     onClick={(e) => e.stopPropagation()}>
-                    <div className='post-more-bloc'>
-                        <div className='post-more-bloc-admin'>
-                            <div className='post-more-bloc-admin-image'><img src={AdminIco}/></div>
-                            <div className="post-more-bloc-admin-other">
-                                <div className='post-more-bloc-admin-other-text'>Администратор</div>
-                                <div className='post-more-bloc-admin-other-data'>{post.PostData}</div>
-                            </div>
-                        </div>
-                        <div className='post-more-bloc-remove' onClick={() => setVisible(false)}><img src={RemoveIco}/>
-                        </div>
-                    </div>
-                    <div className='post-more-title'>{post.title}</div>
-                    <div className='post-more-subtitle'>{post.subtitle}</div>
-                    <div className='post-more-image'><img src={post.image}/></div>
-                    <div className='post-more-attr'>
-                        <div className='post-more-attr__likes'>
-                            <div className='post-more-attr__likes-ico'  onClick={() => LikeCount(post.id)}><img
-                                src={post.liked ? LikesHeart : NoLikesHeart}/></div>
-                            <div className='post-more-attr__likes-number'>{post.likeCount}</div>
-                        </div>
-                        <div className='post-more-attr__views'>
-                            <div className='post-more-attr__views-ico'><img
-                                src={OpenEyes}/></div>
-                            <div className='post-more-attr__views-number'>{post.views} Просмотров</div>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className='post-more-comment'>
-                        <CommentList currentUserId='8'/>
-                    </div>
-                </div>
-            </div>
+            <BlogModal visible={visible} setVisible={setVisible} post={post} LikeCount={LikeCount} />
         </div>
     );
 };

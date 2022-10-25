@@ -5,6 +5,7 @@ import {IPost} from "../../types";
 import {Post} from "./components/Post/Post";
 import {Filter} from "./components/Filter/Filter";
 import {Best} from "./components/Best/Best";
+import {useDispatch, useSelector} from "react-redux";
 
 
 interface BlogProps {
@@ -25,7 +26,7 @@ export const Blog = () => {
     }
 
     const counts = 4;
-    const maxThreeNumbers = posts.slice().sort(function (a, b) {
+    const maxNumbers = posts.slice().sort(function (a, b) {
         if (a.likeCount < b.likeCount) {
             return 1;
         }
@@ -36,6 +37,8 @@ export const Blog = () => {
     }).slice(0, counts);
 
 
+
+
     return (
         <div className='background__blog'>
             <div className='blog'>
@@ -44,7 +47,8 @@ export const Blog = () => {
                     <div className='blog__posts'>
                         <div className='blog__post'>{filtred.map((post: IPost) => <Post
                             post={post}
-                            key={post.id}/>)}</div>
+                            key={post.id}
+                        />)}</div>
                     </div>
                     <div className='blog__panel'>
                         <div className='blog__panel-buttons'>
@@ -56,7 +60,10 @@ export const Blog = () => {
                             <div className='blog__panel-best-title'>Популярное</div>
                             <div className='blog__panel-best-post'>
                                 <div className='blog__best'>
-                                    {maxThreeNumbers.map((post: IPost) => <Best post={post} key={post.id}/>)}
+                                    {maxNumbers.map((post: IPost) => <Best
+                                        post={post}
+                                        key={post.id}
+                                    />)}
                                 </div>
                             </div>
                         </div>

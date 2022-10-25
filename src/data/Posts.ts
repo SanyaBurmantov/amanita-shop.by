@@ -11,8 +11,9 @@ export const posts: IPost[] = [
         liked: true,
         views: 149,
         ViewedByUser: false,
-        PostData: "28.01.2022"
-    },{
+        PostData: "28.01.2022",
+    },
+    {
         id: 1,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
         subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -22,7 +23,7 @@ export const posts: IPost[] = [
         liked: false,
         views: 5469,
         ViewedByUser: true,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
     },{
         id: 2,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -177,5 +178,6 @@ export const posts: IPost[] = [
         views: 1488,
         ViewedByUser: false,
         PostData: "28.01.2022"
-    },
-]
+    }
+
+    ]

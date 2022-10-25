@@ -4,40 +4,43 @@ interface CommentFormProps {
     submitLabel: any,
     handleSubmit: any,
     handleCancel?: any,
-    hasCancelButton?: boolean,
-    initialText?: string
+    hasCancelButton?: any,
+    initialText?: any
 
 }
 
+export const CommentForm = ({submitLabel, handleSubmit, handleCancel = false, hasCancelButton, initialText=''}: CommentFormProps) => {
 
-export const CommentForm = ({submitLabel, handleSubmit, handleCancel, hasCancelButton, initialText}:CommentFormProps) => {
-    const [text, setText] = useState(initialText='')
+    const [text, setText] = useState(initialText);
+
     const isTextareaDisabled = text.length === 0;
 
-    const onSubmit = (event: any) => {
-        event.preventDefault()
+    const onSubmit = (e: any) => {
+        e.preventDefault();
         handleSubmit(text);
-        setText('')
-    }
-
+        setText("");
+    };
 
     return (
-        <form onSubmit={onSubmit}>
-            <textarea
-                className='comment-form-textarea'
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-            />
-            <button className='comment-form-button' disabled={isTextareaDisabled}>{submitLabel}</button>
+      <form onSubmit={onSubmit}>
+      <textarea
+          className="comment-form-textarea"
+          value={text}
+          onChange={(e) => setText(e.target.value)}/>
+            <button className="comment-form-button" disabled={isTextareaDisabled}>
+                {submitLabel}
+            </button>
             {hasCancelButton && (
                 <button
                     type="button"
                     className="comment-form-button comment-form-cancel-button"
                     onClick={handleCancel}
                 >
-                    Изменить
+                    Отменить
                 </button>
             )}
-        </form>
+      </form>
     );
 };
+
+

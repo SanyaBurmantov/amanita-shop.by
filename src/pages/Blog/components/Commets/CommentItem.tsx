@@ -1,34 +1,31 @@
 import React from 'react';
-import AdminIco from "../../../../assets/icons/AdminIco.svg";
 import './CommentItem.scss'
 import {CommentForm} from "./CommentForm";
+import AdminIco from '../../../../assets/icons/AdminIco.svg'
 
 interface CommentItemProps {
     comment: any,
     replies: any,
-    currentUserId: any,
-    deleteComment: any,
-    setActivecomment: any,
+    setActiveComment: any,
     activeComment: any,
+    updateComment: any,
+    deleteComment: any,
     addComment: any,
-    updateComment: any
-    parentId?: any
+    parentId?: any,
+    currentUserId: any,
 }
 
 
-export const CommentItem = ({comment, replies, currentUserId, deleteComment, activeComment, updateComment, addComment, setActivecomment}: CommentItemProps, parentId = null) => {
-
+export const CommentItem = ({comment, replies, setActiveComment, activeComment, updateComment, deleteComment, addComment, parentId = null, currentUserId}: CommentItemProps) => {
+    const isEditing = activeComment && activeComment.id === comment.id && activeComment.type === "editing";
+    const isReplying = activeComment && activeComment.id === comment.id && activeComment.type === "replying";
     const fiveMinutes = 300000;
-    const timePassed = new Date().valueOf() - new Date(comment.Data).valueOf() > fiveMinutes;
-    const canReply = Boolean(currentUserId)
+    const timePassed = new Date().valueOf() - new Date(comment.createdAt).valueOf() > fiveMinutes;
+    const canDelete = currentUserId === comment.userId && replies.length === 0 && !timePassed;
+    const canReply = Boolean(currentUserId);
     const canEdit = currentUserId === comment.userId && !timePassed;
-    const canDelete = currentUserId === comment.userId && !timePassed;
-    const Data = new Date(comment.Data).toLocaleDateString();
-    const isReplying = activeComment && activeComment.type === 'replying' && activeComment.id === comment.id;
-    const isEditing = activeComment && activeComment.type === 'editing' && activeComment.id === comment.id;
     const replyId = parentId ? parentId : comment.id;
-    const hasCancelButton = false;
-
+    const createdAt = new Date(comment.createdAt).toLocaleDateString();
 
     return (
         <div key={comment.id} className='comment'>
@@ -38,41 +35,75 @@ export const CommentItem = ({comment, replies, currentUserId, deleteComment, act
                 </div>
                 <div className='comment-content'>
                     <div className='comment-author'>{comment.username}</div>
-                    <div className='comment-data'>{Data}</div>
+                    <div className='comment-data'>{createdAt}</div>
                 </div>
             </div>
-            {!isEditing && <div className='comment-text'>{comment.body}</div>}
-            {isEditing && (
-                <CommentForm
-                    submitLabel="Update"
-                    hasCancelButton={hasCancelButton}
-                    initialText={comment.body}
-                    handleSubmit={(text:any) => updateComment(text, comment.id)}
-                    handleCancel={() => {
-                    setActivecomment(null);
-                    }}
-                />
-            )}
-            <div className='comment-actions'>
-                {canReply && <div className='comment-action' onClick={()=> setActivecomment({id: comment.id, type: 'replying'})}>Ответить</div>}
-                {canEdit && <div className='comment-action'onClick={()=> setActivecomment({id: comment.id, type: 'editing'})}>Изменить</div>}
-                {canDelete && <div className='comment-action' onClick={()=> deleteComment(comment.id)}>Удалить</div>}
-            </div>
-            {isReplying && (
-                <CommentForm submitLabel='Отправить' handleSubmit={(text: any) => addComment(text, replyId)}/>
-            )}
-            {replies.length > 0 && (
-                <div className='replies'>
-                    {replies.map((reply: any) => (
-                        <CommentItem comment={reply} key={reply.id} replies={[]}
-                                     currentUserId={currentUserId} deleteComment={deleteComment}
-                                     parentId={comment.id} addComment={addComment}
-                                     activeComment={activeComment} setActivecomment={setActivecomment}
-                                     updateComment={updateComment}
-                        />
-                    ))}
+                {!isEditing && <div className="comment-text">{comment.body}</div>}
+                {isEditing && (
+                    <CommentForm
+                        submitLabel="Изменить"
+                        hasCancelButton
+                        initialText={comment.body}
+                        handleSubmit={(text: any) => updateComment(text, comment.id)}
+                        handleCancel={() => {
+                            setActiveComment(null);
+                        }}
+                    />
+                )}
+                <div className="comment-actions">
+                    {canReply && (
+                        <div
+                            className="comment-action"
+                            onClick={() =>
+                                setActiveComment({ id: comment.id, type: "replying" })
+                            }
+                        >
+                            Ответить
+                        </div>
+                    )}
+                    {canEdit && (
+                        <div
+                            className="comment-action"
+                            onClick={() =>
+                                setActiveComment({ id: comment.id, type: "editing" })
+                            }
+                        >
+                            Изменить
+                        </div>
+                    )}
+                    {canDelete && (
+                        <div
+                            className="comment-action"
+                            onClick={() => deleteComment(comment.id)}
+                        >
+                            Удалить
+                        </div>
+                    )}
                 </div>
-            )}
-        </div>
+                {isReplying && (
+                    <CommentForm
+                        submitLabel="Отправить"
+                        handleSubmit={(text: any) => addComment(text, replyId)}
+                    />
+                )}
+                {replies.length > 0 && (
+                    <div className="replies">
+                        {replies.map((reply: any) => (
+                            <CommentItem
+                                comment={reply}
+                                key={reply.id}
+                                setActiveComment={setActiveComment}
+                                activeComment={activeComment}
+                                updateComment={updateComment}
+                                deleteComment={deleteComment}
+                                addComment={addComment}
+                                parentId={comment.id}
+                                replies={[]}
+                                currentUserId={currentUserId}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
     );
 };

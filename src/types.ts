@@ -1,5 +1,4 @@
 import {Dispatch, SetStateAction} from "react";
-import exp from "constants";
 
 export interface IProduct{
     _id: string
@@ -21,22 +20,23 @@ export interface IPost {
     liked: boolean,
     views: number,
     ViewedByUser: boolean,
-    PostData: string
+    PostData: string,
 }
 
 export interface IComment {
-    id: string,
-    body: string,
-    username: string,
-    userId: string,
-    parentId: null | string,
-    Data: string
+    id: any
+    body: any
+    username: any
+    userId: any
+    parentId: any
+    createdAt: any
 }
 
 
 export interface ICartItem extends IProduct{
     count: number
 }
+
 
 export type TypeSetState<T> = Dispatch<SetStateAction<T>>
 
