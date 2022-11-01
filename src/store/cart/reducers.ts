@@ -12,14 +12,14 @@ export const cartReducer = (state = initialState, action:
             const {count, product} = action.payload
 
             const foundProduct = cart.find(item => item._id === product._id)
-                if(foundProduct) {
-                    foundProduct.count = count
-                }else {
-                    cart.push({
-                        ...product,
-                        count
-                    })
-                }
+            if(foundProduct) {
+                foundProduct.count = count
+            }else {
+                cart.push({
+                    ...product,
+                    count
+                })
+            }
 
             return cart
         }
@@ -31,4 +31,3 @@ export const cartReducer = (state = initialState, action:
             return state
     }
 }
-

@@ -18,6 +18,7 @@ const ProductItem:FC<IProductItem> = ({product}) => {
 
     const addHandler = () => { if(count>0){
         dispatch(addToCart(product, count))
+        console.dir(dispatch)
     }
     }
     return (
