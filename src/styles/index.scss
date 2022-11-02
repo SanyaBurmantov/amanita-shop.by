@@ -3,6 +3,7 @@ html{min-height:100%;box-sizing: border-box;font-size: 10px;scroll-behavior: smo
 body{overflow-x: hidden;overflow-y: scroll;min-width: 320px;margin: 0;background:inherit;
   -webkit-font-smoothing: antialiased;-webkit-text-size-adjust: 100%;-ms-text-size-adjust:none;
 
+
 }
 
 
@@ -11,7 +12,7 @@ body{overflow-x: hidden;overflow-y: scroll;min-width: 320px;margin: 0;background
 
 
 body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
-  -webkit-text-size-adjust:none;
+  -webkit-text-size-adjust:none; background-color: $color-light-gray2;
   &.noscroll{overflow: hidden !important;}}
 
 .container {
@@ -49,3 +50,5 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
 @import "pages/pages.scss";
 @import "ui/ui.scss";
 
+@import "header";
+@import "footer";

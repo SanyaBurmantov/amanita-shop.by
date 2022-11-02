@@ -2,17 +2,20 @@
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  margin: 0 auto;
+  justify-content: center
 
 }
 
 .product {
-  width: 40%;
+  width: 45%;
   padding: 0.8rem;
-  margin: 0.8rem;
-  -webkit-box-shadow: -1px 4px 15px 7px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: -1px 4px 15px 7px rgba(34, 60, 80, 0.2);
-  box-shadow: -1px 4px 15px 7px rgba(34, 60, 80, 0.2);
+  margin: 2rem 1.5rem;
+  -webkit-box-shadow: -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
+  -moz-box-shadow:  -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
+  box-shadow:  -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
   border-radius: 1rem;
+  background-color: $color-white;
 
   &__item {
     width: 40%;

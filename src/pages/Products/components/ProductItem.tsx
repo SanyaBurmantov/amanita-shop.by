@@ -39,6 +39,7 @@ const ProductItem:FC<IProductItem> = ({product}) => {
                     <div className="product-info__more--title">{product.title} </div>
                     <div className="product-info__more--count">{product.count} </div>
                     <div className="product-info__more--price">{product.price}</div>
+                    <div className="product-info__more--type">{product.type}</div>
                     <button onClick={addHandler}>В корзину</button>
                 </div>
             </div>
