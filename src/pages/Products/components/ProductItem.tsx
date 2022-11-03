@@ -32,7 +32,7 @@ const ProductItem:FC<IProductItem> = ({product}) => {
     let selectorValue = capacity.map((size) =>
 
         <>
-            <input onClick={() => setDaun(size) } type="radio" name="capacity"  value={size} />
+            <input type="radio" name="capacity" id={setDaun(size)} checked value={size} />
             <label htmlFor={size.toString()}>{size}</label>
         </>
     )

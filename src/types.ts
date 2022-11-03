@@ -4,6 +4,7 @@ export interface IProduct{
     _id: string
     name: string
     title: string
+    form: number //1- капсулы 2- порошок 3- шляпки
     imagePath: string
     price: number
     capacity: number[]
