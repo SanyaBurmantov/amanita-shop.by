@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {products} from "../../../data/Products";
 import {FunctionProdFilter} from "../../../types";
 
@@ -12,8 +12,10 @@ export const Filter: FC<FilterProps> = ({ProdFilter}) => {
     const fill = products.filter(({type}) => (!FillProd[type] && (FillProd[type] = 1)));
 
 
+
     return (
-        <div className='blog__panel-buttons-button'>{fill.map((FillProd) => <button
+        <div className='section-products__filter'>{fill.map((FillProd) => <button
+            className='section-products__filter--element'
             onClick={() => ProdFilter(FillProd.type)}>{FillProd.type}</button>)}</div>
     );
 };

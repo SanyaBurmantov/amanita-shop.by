@@ -1,7 +1,11 @@
 .btn{
   background-color: $color-red;
-  border: 1.2px solid $color-light-gray;
+  border: none;
   color: $color-white;
-  padding: 1rem 2rem;
+  padding: 1.1rem 2rem;
   border-radius: 1rem;
+  &-second{
+    color: $color-dark-gray;
+    background-color: $color-products-button;
+  }
 }

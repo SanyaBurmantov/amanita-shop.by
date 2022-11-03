@@ -8,8 +8,10 @@ export const products:IProduct[] = [
         name: 'Muhomor1',
         price: 4545,
         title: 'блябуду крута',
+        text: 'ПРИВЕТ ПОКЕМОН ПОКУПАЙ ЗАЛУПУ loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'сушеные бля',
+        capacity: [30 , 60, 90, 120, 140],
     },
     {
         _id: 'hea',
@@ -17,8 +19,10 @@ export const products:IProduct[] = [
         name: 'Muhomor2',
         price: 4445,
         title: 'бери, сука',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ghbdtn',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'россыпь ебана',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'he234he',
@@ -26,8 +30,11 @@ export const products:IProduct[] = [
         name: 'Muhomor3',
         price: 8745,
         title: 'бери, сука',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'россыпь ебана',
+        capacity: [30, 60, 90],
+
     },
     {
         _id: 'he12he',
@@ -35,8 +42,10 @@ export const products:IProduct[] = [
         name: 'Muhomor4',
         price: 4145,
         title: 'бери, сука',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'сушеные бля',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'he23e',
@@ -44,8 +53,10 @@ export const products:IProduct[] = [
         name: 'Muhomor5',
         price: 4545,
         title: 'блябуду крута',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'россыпь ебана',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'he546a',
@@ -53,8 +64,10 @@ export const products:IProduct[] = [
         name: 'Muhomor6',
         price: 4445,
         title: 'бери, сука',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'россыпь ебана',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'he276834he',
@@ -62,8 +75,10 @@ export const products:IProduct[] = [
         name: 'Muhomor7',
         price: 8745,
         title: 'бери, сука',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'красивые <3',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'he1254he',
@@ -71,8 +86,10 @@ export const products:IProduct[] = [
         name: 'Muhomor8',
         price: 4145,
         title: 'бери, сука',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'россыпь ебана',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'heh3457e',
@@ -80,8 +97,10 @@ export const products:IProduct[] = [
         name: 'Muhomor9',
         price: 4545,
         title: 'блябуду крута',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'россыпь ебана',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'he9876a',
@@ -89,8 +108,10 @@ export const products:IProduct[] = [
         name: 'Muhomor10',
         price: 4445,
         title: 'null',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'красивые <3',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'he234567he',
@@ -98,8 +119,10 @@ export const products:IProduct[] = [
         name: 'Muhomor11',
         price: 8745,
         title: 'бери, сука',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'россыпь ебана',
+        capacity: [30, 60, 90],
     },
     {
         _id: 'he17652he',
@@ -107,7 +130,9 @@ export const products:IProduct[] = [
         name: 'Muhomor12',
         price: 4145,
         title: 'бери, сука',
+        text: 'loremdsfsfdfs fsdsdf fdsfsd fdsfsddf s sffs df sdf ',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'красивые <3',
+        capacity: [30, 60, 90],
     },
 ]

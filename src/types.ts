@@ -6,8 +6,10 @@ export interface IProduct{
     title: string
     imagePath: string
     price: number
+    capacity: number[]
     count: number
     type: string
+    text: string
 }
 
 export interface IPost {

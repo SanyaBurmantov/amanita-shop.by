@@ -18,6 +18,7 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
 .container {
   max-width: 84%;
   width: 100%;
+
   margin-left: auto;
   margin-right: auto;
   padding-left: 56px;
@@ -35,6 +36,12 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
   }
 }
 
+.section{
+  min-height:79vh;
+  @media (max-width: 1000px ){
+    min-height: 60vh;
+  }
+}
 
 
   /////// MQ /////
@@ -52,3 +59,4 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
 
 @import "header";
 @import "footer";
+@import "sections";
