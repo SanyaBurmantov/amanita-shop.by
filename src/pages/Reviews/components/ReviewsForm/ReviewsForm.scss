@@ -1,0 +1,72 @@
+@import "../../../../styles/vars";
+
+.reviews-modal-forms-form {
+
+  &-avatar {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-username {
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    background-color: $color-light-gray3;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    width: 100%;
+
+    &.active {
+      border: 0.1rem solid red;
+    }
+  }
+
+  &-question {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    font-family: $font-bold;
+    margin-bottom: 1.6rem;
+    margin-top: 2.6rem;
+    color: $color-dark-gray;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-textarea{
+    box-sizing: border-box;
+    background-color: $color-light-gray3;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+    width: 100%;
+    resize: none;
+
+    &.active {
+      border: 0.1rem solid red;
+    }
+  }
+
+  &-rate {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+
+    &-submit {
+      color: $color-white;
+      background-color: $color-red;
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      border: 0;
+      border-radius: 0.6rem;
+      font-family: $font-semi-bold;
+      padding: 1.5rem 4.6rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -12,6 +12,24 @@ export const posts: IPost[] = [
         views: 149,
         ViewedByUser: false,
         PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "2",
+                body: "ебал мать админа сайта",
+                username: "Pidor2",
+                userId: "2",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },
     {
         id: 1,
@@ -24,6 +42,24 @@ export const posts: IPost[] = [
         views: 5469,
         ViewedByUser: true,
         PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "2",
+                body: "ебал мать админа сайта",
+                username: "Pidor2",
+                userId: "2",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 2,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -34,7 +70,25 @@ export const posts: IPost[] = [
         liked: true,
         views: 7645,
         ViewedByUser: false,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "2",
+                body: "ебал мать админа сайта",
+                username: "Pidor2",
+                userId: "2",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 3,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -45,7 +99,40 @@ export const posts: IPost[] = [
         liked: false,
         views: 75,
         ViewedByUser: false,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "3",
+                body: "ебать мой хуй",
+                username: "Pidor3",
+                userId: "3",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "4",
+                body: "чо сука раз на раз в мид на пуждах????",
+                username: "Pidor4",
+                userId: "4",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "5",
+                body: "купи грибы сука @админ",
+                username: "Pidor5",
+                userId: "5",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }, {
+                id: "6",
+                body: "ебаааать я люблю редакс и тайскрипт ебаные (нет)",
+                username: "Pidor2",
+                userId: "2",
+                parentId: "1",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 4,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -56,7 +143,40 @@ export const posts: IPost[] = [
         liked: false,
         views: 646,
         ViewedByUser: false,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "3",
+                body: "ебать мой хуй",
+                username: "Pidor3",
+                userId: "3",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "4",
+                body: "чо сука раз на раз в мид на пуждах????",
+                username: "Pidor4",
+                userId: "4",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "5",
+                body: "купи грибы сука @админ",
+                username: "Pidor5",
+                userId: "5",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }, {
+                id: "6",
+                body: "ебаааать я люблю редакс и тайскрипт ебаные (нет)",
+                username: "Pidor2",
+                userId: "2",
+                parentId: "1",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 5,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -67,7 +187,41 @@ export const posts: IPost[] = [
         liked: false,
         views: 785,
         ViewedByUser: false,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "3",
+                body: "ебать мой хуй",
+                username: "Pidor3",
+                userId: "3",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "4",
+                body: "чо сука раз на раз в мид на пуждах????",
+                username: "Pidor4",
+                userId: "4",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "5",
+                body: "купи грибы сука @админ",
+                username: "Pidor5",
+                userId: "5",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }, {
+                id: "6",
+                body: "ебаааать я люблю редакс и тайскрипт ебаные (нет)",
+                username: "Pidor2",
+                userId: "2",
+                parentId: "1",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
+
     },{
         id: 6,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -78,7 +232,40 @@ export const posts: IPost[] = [
         liked: false,
         views:353,
         ViewedByUser: true,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "3",
+                body: "ебать мой хуй",
+                username: "Pidor3",
+                userId: "3",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "4",
+                body: "чо сука раз на раз в мид на пуждах????",
+                username: "Pidor4",
+                userId: "4",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "5",
+                body: "купи грибы сука @админ",
+                username: "Pidor5",
+                userId: "5",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }, {
+                id: "6",
+                body: "ебаааать я люблю редакс и тайскрипт ебаные (нет)",
+                username: "Pidor2",
+                userId: "2",
+                parentId: "1",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 7,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -89,7 +276,40 @@ export const posts: IPost[] = [
         liked: false,
         views: 985,
         ViewedByUser: true,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "3",
+                body: "ебать мой хуй",
+                username: "Pidor3",
+                userId: "3",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "4",
+                body: "чо сука раз на раз в мид на пуждах????",
+                username: "Pidor4",
+                userId: "4",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "5",
+                body: "купи грибы сука @админ",
+                username: "Pidor5",
+                userId: "5",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }, {
+                id: "6",
+                body: "ебаааать я люблю редакс и тайскрипт ебаные (нет)",
+                username: "Pidor2",
+                userId: "2",
+                parentId: "1",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 8,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -100,7 +320,40 @@ export const posts: IPost[] = [
         liked: false,
         views: 634,
         ViewedByUser: true,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "3",
+                body: "ебать мой хуй",
+                username: "Pidor3",
+                userId: "3",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "4",
+                body: "чо сука раз на раз в мид на пуждах????",
+                username: "Pidor4",
+                userId: "4",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "5",
+                body: "купи грибы сука @админ",
+                username: "Pidor5",
+                userId: "5",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }, {
+                id: "6",
+                body: "ебаааать я люблю редакс и тайскрипт ебаные (нет)",
+                username: "Pidor2",
+                userId: "2",
+                parentId: "1",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 9,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -111,7 +364,40 @@ export const posts: IPost[] = [
         liked: false,
         views: 4,
         ViewedByUser: true,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "3",
+                body: "ебать мой хуй",
+                username: "Pidor3",
+                userId: "3",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "4",
+                body: "чо сука раз на раз в мид на пуждах????",
+                username: "Pidor4",
+                userId: "4",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "5",
+                body: "купи грибы сука @админ",
+                username: "Pidor5",
+                userId: "5",
+                parentId: "2",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }, {
+                id: "6",
+                body: "ебаааать я люблю редакс и тайскрипт ебаные (нет)",
+                username: "Pidor2",
+                userId: "2",
+                parentId: "1",
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 10,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -122,7 +408,25 @@ export const posts: IPost[] = [
         liked: false,
         views: 123,
         ViewedByUser: false,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "2",
+                body: "ебал мать админа сайта",
+                username: "Pidor2",
+                userId: "2",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 11,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -133,7 +437,17 @@ export const posts: IPost[] = [
         liked: false,
         views: 236,
         ViewedByUser: false,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 12,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -144,7 +458,25 @@ export const posts: IPost[] = [
         liked: false,
         views: 2180,
         ViewedByUser: false,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "2",
+                body: "ебал мать админа сайта",
+                username: "Pidor2",
+                userId: "2",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 13,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -155,7 +487,17 @@ export const posts: IPost[] = [
         liked: false,
         views: 646,
         ViewedByUser: true,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 14,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -166,7 +508,17 @@ export const posts: IPost[] = [
         liked: false,
         views: 668,
         ViewedByUser: true,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     },{
         id: 15,
         title: "Accusamus beatae ad facilis cum similique qui sunt",
@@ -177,7 +529,25 @@ export const posts: IPost[] = [
         liked: false,
         views: 1488,
         ViewedByUser: false,
-        PostData: "28.01.2022"
+        PostData: "28.01.2022",
+        Comments: [
+            {
+                id: "1",
+                body: "сайт гавно",
+                username: "Pidor1",
+                userId: "1",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            },
+            {
+                id: "2",
+                body: "ебал мать админа сайта",
+                username: "Pidor2",
+                userId: "2",
+                parentId: null,
+                createdAt: "2021-08-16T23:00:33.010+02:00",
+            }
+        ]
     }
 
     ]

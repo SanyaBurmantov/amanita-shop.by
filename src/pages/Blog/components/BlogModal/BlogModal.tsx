@@ -1,22 +1,20 @@
-import React from 'react';
+import React, {FC} from 'react';
 import AdminIco from "../../../../assets/icons/AdminIco.svg";
 import RemoveIco from "../../../../assets/icons/remove-add.svg";
 import OpenEyes from "../../../../assets/icons/openeyes.png";
 import {CommentsList} from "../Commets/CommentList";
 import './BlogModal.scss'
-import {FunctionlikeCount, IPost, TypeSetState} from "../../../../types";
-import LikesHeart from "../../../../assets/icons/Likes.svg";
-import NoLikesHeart from "../../../../assets/icons/noLike.svg";
+import {IPost, TypeSetState} from "../../../../types";
+import {Like} from "../Like/Like";
 
 
 interface BlogModalProps {
     visible: boolean,
     setVisible: TypeSetState<boolean>,
     post: IPost,
-    LikeCount: FunctionlikeCount
 }
 
-export const BlogModal = ({setVisible, visible, post, LikeCount}: BlogModalProps) => {
+export const BlogModal: FC<BlogModalProps> = ({setVisible, visible, post}) => {
 
     return (
         <div className={visible ? 'post-more active' : 'post-more'} onClick={() => setVisible(false)}>
@@ -38,9 +36,7 @@ export const BlogModal = ({setVisible, visible, post, LikeCount}: BlogModalProps
                 <div className='post-more-image'><img src={post.image}/></div>
                 <div className='post-more-attr'>
                     <div className='post-more-attr__likes'>
-                        <div className='post-more-attr__likes-ico' onClick={() => LikeCount(post.id)}><img
-                            src={post.liked ? LikesHeart : NoLikesHeart}/></div>
-                        <div className='post-more-attr__likes-number'>{post.likeCount}</div>
+                        <Like post={post} />
                     </div>
                     <div className='post-more-attr__views'>
                         <div className='post-more-attr__views-ico'><img
