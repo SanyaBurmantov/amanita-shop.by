@@ -24,15 +24,13 @@ export const Reviews: FC<ReviewsProps> = () => {
                     </div>
                     <button className='reviews-desc-button' onClick={() => setVisible(true)}>Оставить отзыв</button>
                 </div>
-
-
                 <div className="reviews-items">
                     {review.map((rew: IRewiews, index) => <ReviewsItem
                         rew={rew}
                         key={rew.id}
                     />)}
                 </div>
-                <ReviewsModal visible={visible} setVisible={setVisible} review={review} setReviews={setReviews}  />
+                <ReviewsModal visible={visible} setVisible={setVisible} review={review} setReviews={setReviews}/>
             </div>
         </div>
     )

@@ -20,13 +20,7 @@ export const ReviewsModal: FC<ReviewsModal> = ({visible, setVisible, setReviews,
                      onClick={(e) => e.stopPropagation()}>
                     <div className='reviews-modal-forms'>
                         <div className='reviews-modal-forms-button-remove'><img src={RemoveIco} onClick={() => setVisible(false)}/></div>
-
                         <ReviewsForm setReviews={setReviews} review={review} />
-
-                        {/*{<div className='reviews-modal-forms-sent'>*/}
-                        {/*    <div className='reviews-modal-forms-sent-text'>Спасибо за отзыв бро!</div>*/}
-                        {/*    <div className='reviews-modal-forms-sent-image'><img src='https://sun9-87.userapi.com/impg/z3c-4hgHqhsMh-5UQOrKa873TS9fAoKgnSzDnw/kn14aZIkPzs.jpg?size=539x666&quality=96&sign=4935b0f99a85f97997942247a778c82f&type=album'/></div>*/}
-                        {/*</div>}*/}
                     </div>
                 </div>
             </div>
