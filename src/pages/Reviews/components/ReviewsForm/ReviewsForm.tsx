@@ -1,34 +1,64 @@
 import React, {FC, useEffect, useState} from 'react';
 import UserAvatar from "../../../../assets/icons/UserAvatar.svg";
 import {StarRate} from "../StarRate/StarRate";
-import {IRewiews, TypeSetState} from "../../../../types";
+import {FunctionHandler, IRewiews, TypeSetState} from "../../../../types";
 import './ReviewsForm.scss'
 
 
 interface ReviewsForm {
     setReviews: TypeSetState<IRewiews[]>,
-    review: IRewiews[]
+    review: IRewiews[],
+    setSubmitForm: TypeSetState<boolean>,
+    setEmail: React.Dispatch<React.SetStateAction<string>>,
+    email: string,
+    setTestUserName: React.Dispatch<React.SetStateAction<boolean>>,
+    errorEmail: string,
+    blurHandler: FunctionHandler,
+    emailHandler: FunctionHandler,
+    testUserName: boolean,
+    testEmail: boolean,
+    testText: boolean,
+    setTestText: React.Dispatch<React.SetStateAction<boolean>>,
+    emailtest: RegExp,
+    setTestEmail: React.Dispatch<React.SetStateAction<boolean>>,
+    setErrorEmail: React.Dispatch<React.SetStateAction<string>>
+
+
 }
 
-export const ReviewsForm: FC<ReviewsForm> = ({setReviews, review}) => {
+export const ReviewsForm: FC<ReviewsForm> = ({
+                                                 setReviews,
+                                                 review,
+                                                 setSubmitForm,
+                                                 setEmail,
+                                                 email,
+                                                 setTestUserName,
+                                                 errorEmail,
+                                                 emailHandler,
+                                                 blurHandler,
+                                                 testUserName,
+                                                 testEmail,
+                                                 testText,
+                                                 setTestText,
+                                                 emailtest,
+                                                 setTestEmail,
+                                                 setErrorEmail
+                                             }) => {
 
     const [userName, setUserName] = useState('')
     const [text, setText] = useState('')
     const [rate, setRate] = useState('')
-    const [testUserName, setTestUserName] = useState(false)
-    const [testText, setTestText] = useState(false)
     const [testRate, setTestRate] = useState(false)
     const [errorUserName, setErrorUserName] = useState('Введите имя')
     const [errorText, setErrorText] = useState('Введите текст отзыва')
     const [errorRate, setErrorRate] = useState('Выберите отметку')
     const [formValid, setFormValid] = useState(false)
-    const [submitForm, setSubmitForm] = useState(false)
     // Имага временно по дефолту
     // const [userImage, SetUserImage] = useState('')
 
     const addNewReviews = (e: any) => {
         e.preventDefault()
-        if (text.length >= 4 && userName.length != 0 && rate.length != 0) {
+        if (text.length >= 4 && userName.length != 0 && rate.length != 0 && emailtest.test(String(email).toLowerCase())) {
             const newReviews = {
                 id: Date.now(),
                 userName,
@@ -36,12 +66,14 @@ export const ReviewsForm: FC<ReviewsForm> = ({setReviews, review}) => {
                 userImage: 'https://sun9-87.userapi.com/impg/z3c-4hgHqhsMh-5UQOrKa873TS9fAoKgnSzDnw/kn14aZIkPzs.jpg?size=539x666&quality=96&sign=4935b0f99a85f97997942247a778c82f&type=album',
                 text,
                 Data: new Date().toLocaleDateString(),
+                email,
             }
             setReviews([newReviews, ...review])
             setUserName('')
             setText('')
             setRate('')
             setSubmitForm(true)
+            setEmail('')
             // Имага временно по дефолту
             // SetUserImage('')
         } else {
@@ -58,17 +90,10 @@ export const ReviewsForm: FC<ReviewsForm> = ({setReviews, review}) => {
                 setTestRate(true)
                 setErrorRate('Выберите отметку')
             }
-        }
-    }
-
-    const blurHandler = (e: any) => {
-        switch (e.target.name) {
-            case 'username':
-                setTestUserName(true)
-                break
-            case 'textarea' :
-                setTestText(true)
-                break
+            if (!emailtest.test(String(email).toLowerCase())) {
+                setTestEmail(true)
+                setErrorEmail('Введите корректный email')
+            }
         }
     }
 
@@ -95,50 +120,43 @@ export const ReviewsForm: FC<ReviewsForm> = ({setReviews, review}) => {
     }
 
     useEffect(() => {
-        if (errorUserName || errorText) {
+        if (errorUserName || errorText || errorEmail) {
             setFormValid(false)
         } else {
             setFormValid(true)
         }
-    }, [errorText, errorUserName])
+    }, [errorText, errorUserName, errorEmail])
 
     return (
-        <>
-            {!submitForm && (<form className='reviews-modal-forms-form'>
-                {/*Имага временно по дефолту*/}
-                {/*<input value={userImage} type="file" accept='image/jpeg,image/png' onChange={event => SetUserImage(event.target.value)} />*/}
-                <div className='reviews-modal-forms-form-avatar'><img src={UserAvatar}/></div>
-                {(testUserName && errorUserName) && <div style={{color: 'red'}}>{errorUserName}</div>}
-                <input name='username' className='reviews-modal-forms-form-username' value={userName} type='text'
-                       placeholder='Введите имя' onChange={event => userNameHandler(event)}
-                       onBlur={event => blurHandler(event)}/>
-                {(testText && errorText) && <div style={{color: 'red'}}>{errorText}</div>}
-                <textarea name='textarea' className='reviews-modal-forms-form-textarea' value={text} rows={5}
-                          placeholder='Текст отзыва...'
-                          onChange={event => textHandler(event)} onBlur={event => blurHandler(event)}></textarea>
-                <div className='reviews-modal-forms-form-question'>Как вы оцениваете нашу работу?</div>
-                {(testRate && errorRate) && <div style={{color: 'red'}}>{errorRate}</div>}
-                <StarRate setTestRate={setTestRate} setRate={setRate}/>
-                <div className='reviews-modal-forms-form-button'>
-                    <button type='submit' className={text.length <= 4 || userName.length === 0 || rate.length === 0 ?
-                        'reviews-modal-forms-form-button-submit' : 'reviews-modal-forms-form-button-submit disabled'}
-                            onClick={addNewReviews}>Отправить
-                    </button>
-                </div>
-            </form>)}
-            {submitForm && (
-                <div className='form-submit'>
-                    <div className='form-submit-text'>Спасибо за оставленный отзыв!</div>
-                    <div className='form-submit-subtext'>Бро, каждый пользователь может оставить только 1 отзыв. Если
-                        хочешь изменить свой отзыв о магазе жмякай кнопку ниже!
-                    </div>
-                    <div className='form-submit-button'>
-                        <button className='form-submit-button-edit' onClick={() => setSubmitForm(false)}>Изменить
-                        </button>
-                    </div>
-                </div>
-            )
-            }
-        </>
+        <form className='reviews-modal-forms-form'>
+            {/*Имага временно по дефолту*/}
+            {/*<input value={userImage} type="file" accept='image/jpeg,image/png' onChange={event => SetUserImage(event.target.value)} />*/}
+            <div className='reviews-modal-forms-form-avatar'><img src={UserAvatar}/></div>
+
+            {(testUserName && errorUserName) && <div style={{color: 'red'}}>{errorUserName}</div>}
+            <input name='username' className='reviews-modal-forms-form-username' value={userName} type='text'
+                   placeholder='Введите имя' onChange={event => userNameHandler(event)}
+                   onBlur={event => blurHandler(event)}/>
+
+            {(testEmail && errorEmail) && <div style={{color: 'red'}}>{errorEmail}</div>}
+            <input name='email' className='reviews-modal-forms-form-email' type='text' value={email}
+                   placeholder='Введите email...'
+                   onBlur={event => blurHandler(event)} onChange={event => emailHandler(event)}/>
+
+
+            {(testText && errorText) && <div style={{color: 'red'}}>{errorText}</div>}
+            <textarea name='textarea' className='reviews-modal-forms-form-textarea' value={text} rows={5}
+                      placeholder='Текст отзыва...'
+                      onChange={event => textHandler(event)} onBlur={event => blurHandler(event)}></textarea>
+            <div className='reviews-modal-forms-form-question'>Как вы оцениваете нашу работу?</div>
+            {(testRate && errorRate) && <div style={{color: 'red'}}>{errorRate}</div>}
+            <StarRate setTestRate={setTestRate} setRate={setRate}/>
+            <div className='reviews-modal-forms-form-button'>
+                <button type='submit' className={text.length <= 4 || userName.length === 0 || rate.length === 0 ?
+                    'reviews-modal-forms-form-button-submit' : 'reviews-modal-forms-form-button-submit disabled'}
+                        onClick={addNewReviews}>Отправить
+                </button>
+            </div>
+        </form>
     );
 };

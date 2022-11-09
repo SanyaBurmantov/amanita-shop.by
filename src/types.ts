@@ -1,4 +1,4 @@
-import {Dispatch, SetStateAction} from "react";
+import React, {Dispatch, SetStateAction} from "react";
 
 export interface IProduct{
     _id: string
@@ -17,6 +17,7 @@ export interface IRewiews{
     userImage: string
     text: string
     Data: any
+    email: string
 
 }
 
@@ -52,7 +53,7 @@ export type TypeSetState<T> = Dispatch<SetStateAction<T>>
 
 export type FunctionlikeCount = (id: number) => void;
 export type FunctionArrFilter = (Themes: string) => void;
-
+export type FunctionHandler = (e: any) => void;
 
 
 

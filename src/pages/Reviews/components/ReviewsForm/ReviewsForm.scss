@@ -18,6 +18,16 @@
     width: 100%;
   }
 
+  &-email {
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    background-color: $color-light-gray3;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    width: 100%;
+  }
+
   &-question {
     font-size: 2.4rem;
     line-height: 2.9rem;
