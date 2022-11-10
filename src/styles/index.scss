@@ -60,3 +60,15 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
 @import "header";
 @import "footer";
 @import "sections";
+
+/////
+
+.big-text{
+  font-family: $font-bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.8rem;
+}

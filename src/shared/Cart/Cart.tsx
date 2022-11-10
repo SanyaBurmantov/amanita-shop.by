@@ -42,8 +42,11 @@ export const Cart:FC = () => {
                         </div>
 
                     ))}
+                    <div className="cart__form">
+
+                    </div>
                     <div className="cart__total">
-                        Общая сумма: <b>{total}</b>
+                        Общая сумма: <b>{Math.round(total)}</b>
                     </div>
                 </div>
             </div>

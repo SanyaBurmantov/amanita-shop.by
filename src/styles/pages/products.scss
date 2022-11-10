@@ -8,29 +8,31 @@
 }
 
 .product {
-  width: 42%;
+  width: 43%;
   padding: 3.2rem;
-  margin: 2rem 1.5rem;
+  margin: 0.9rem 1rem;
   -webkit-box-shadow: -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
-  -moz-box-shadow:  -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
-  box-shadow:  -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
+  -moz-box-shadow: -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
+  box-shadow: -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
   border-radius: 1rem;
   background-color: $color-white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &__left{
+  &__left {
     width: 55%;
-    border: 1px solid red;
+
   }
 
-  &__right{
+  &__right {
     width: 40%;
-    border: 1px solid red;
-    &--picture{
+
+
+    &--picture {
       text-align: center;
-      img{
+
+      img {
         box-sizing: border-box;
         max-width: 90%;
 
@@ -38,14 +40,14 @@
     }
   }
 
-  &__bottom{
+  &__bottom {
     margin-top: 2.8rem;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
 
-    &--price{
+    &--price {
       margin: auto 0;
       text-align: right;
       font-style: normal;
@@ -55,31 +57,39 @@
       font-family: $font-bold;
       white-space: nowrap;
 
-      &:before{
-        margin-top: -1rem;
-        margin-left: -6rem;
-        position: absolute;
-        content: " ";
-        background-image: url("/../src/assets/icons/money.svg");
-        width: 7rem;
-        height: 5rem;
+      span {
+        position: relative;
         box-sizing: border-box;
-        background-repeat: no-repeat;
-        background-size: contain;
+        overflow:hidden;
+        &:before {
+          box-sizing:border-box;
+          margin-top: -1rem;
+          margin-left: -6rem;
+          position: absolute;
+          content: " ";
+          background-image: url("/../src/assets/icons/money.svg");
+          width: 7rem;
+          height: 5rem;
+          box-sizing: border-box;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
       }
     }
-    &--btn{
-      display: flex;
 
+    &--btn {
+      display: flex;
+      justify-content: flex-end;
     }
-    &--buttons{
+
+    &--buttons {
 
     }
 
   }
 
-  &__text{
-    &--title{
+  &__text {
+    &--title {
       font-style: normal;
       font-weight: 700;
       font-size: 2.6rem;
@@ -87,7 +97,7 @@
       color: $color-red
     }
 
-    &--subtitle{
+    &--subtitle {
       font-style: normal;
       font-weight: 300;
       font-size: 1.4rem;
@@ -96,92 +106,73 @@
       padding-top: 1.4rem;
       padding-bottom: 1.4rem;
     }
+    &--type{
+      font-family: $font-semi-bold;
+      color: $color-gray;
+      font-size: 1.4rem;
+    }
   }
 
   &__checkbox {
+    &--radio{
+      display: inline-block;
+      margin-right: .2rem;
+
+      width: calc((100% - .6rem)/3);
+      text-align: center;
+      input[type=radio] {
+        display: none;
+      }
+
+      label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 0 3.2rem;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        font-family: $font-bold;
+        background-color: $color-products-button;
+        border-radius: .6rem;
+        user-select: none;
+        transition: 200ms;
+        width: calc(100% / 3);
+        margin-bottom: .3rem;
+      }
+
+      input[type=radio]:checked + label {
+        background-color: $color-red;
+        color: $color-white;
+        transition: 500ms;
+      }
+
+      label:hover {
+
+          background-color: $color-red;
+          color: $color-white;
+          transition: 800ms;
+      }
+    }
+  }
+
+  &__capacity{
     display: flex;
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
-    padding: 0.75rem;
-    border-radius: 99px; // just a high number to create pill effect
-    * {
-      z-index: 2;
-    }
-  }
-  &__radio{
-    &--label{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 54px;
-      width: 200px;
-      font-size: 1.25rem;
-      font-weight: 500;
-      border-radius: 99px; // just a high number to create pill effect
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: left;
+    input{
       cursor: pointer;
-      transition: color 0.15s ease-in;
-    }
-    input[type="radio"] {
-      display: none;
+      filter: grayscale(0);
+      filter:hue-rotate(152deg);
+      &:checked{
+
+      }
     }
 
-    input[type="radio"] {
-      &:checked {
-        & + label {
-          color: red;
-          & > .notification {
-            background-color: red;
-            color: #fff;
-          }
-        }
-      }
-    }
-    input[type="radio"] {
-      &:checked {
-        & + label {
-          color: var(--primary-color);
-          & > .notification {
-            background-color: red;
-            color: #fff;
-          }
-        }
-      }
-    }
-    //input[type="radio"] {
-    //  position: absolute;
-    //
-    //
-    //  opacity: 1;
-    //
-    //  padding-top: 3rem;
-    //  padding-left: -4rem;
-    //}
-    //label {
-    //  user-select: none;
-    //  margin: 0.2rem;
-    //  text-align: center;
-    //  display: inline-block;
-    //  padding: .3rem 1rem;
-    //  cursor: pointer;
-    //  width: 7rem;
-    //  background-color: $color-products-button;
-    //
-    //}
-    //input:checked+label {
-    //  background-color: $color-red;
-    //  transition: 500ms;
-    //
-    //}
-    //label:hover {
-    //  background-color: $color-red;
-    //  transition: 500ms;
-    //}
   }
-
 }
-
-
 
 
 
@@ -201,6 +192,7 @@
       pointer-events: none;
       transition: 0.5s;
 
+
       &.active {
         opacity: 1;
         pointer-events: all;
@@ -214,26 +206,35 @@
         top:2%;
         position: fixed;
         transition: 0.3s;
+        display: flex;
         &.active {
-          left: 20%;
+          left: 25%;
+          top: 7%;
           position: fixed;
           opacity: 1;
           transition: 0.5s;
           transform: scale(1);
           flex-wrap: wrap;
           justify-content: space-between;
-          height: 90vh;
-          width: 60vw;
+          height: 80vh;
+          width: 50vw;
           background-color: $color-light-white;
           border-radius: 1.2rem;
-          padding: 2rem;
+          padding: 4rem;
           z-index: 21;
         }
       }
 
       &--pic{
-        width: 40rem;
-        height: 40rem;
+        max-width: 40rem;
+        max-height: 40rem;
+        overflow: hidden;
+        img{
+          width: 100%;
+          box-sizing: border-box;
+
+        }
+
       }
       &--name{
 

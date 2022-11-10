@@ -12,8 +12,24 @@
   text-align: center;
   font-family: $font-bold;
   margin-left: 1.2rem;
+  transition: 300ms;
+  &:hover{
+    cursor: pointer;
+    padding-top: 1.0rem;
+    background-color: #B40000FF;
+    transition: 300ms;
+
+  }
   &-second{
     color: $color-dark-gray;
     background-color: $color-products-button;
+    &:hover{
+      cursor: pointer;
+      padding-top: 1.0rem;
+      background-color: #f3d0d0;
+
+      transition: 300ms;
+
+    }
   }
 }
