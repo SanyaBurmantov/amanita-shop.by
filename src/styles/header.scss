@@ -1,0 +1,37 @@
+header{
+  background: $color-dark-gray;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  align-items: center;
+  font-family: $font-semi-bold;
+  font-weight: 100;
+  padding: 1rem;
+
+  &__logo{
+
+    &--picture{
+      margin-left: 5rem;
+    }
+  }
+  &__menu{display: flex;align-items: center;white-space: nowrap;
+    ul{
+      display: flex;
+      li{
+        list-style-type: none;
+        a{text-decoration: none; color: $color-white}
+      }
+    }
+    &--element{
+      margin: 0 1.2rem;
+    }
+
+  }
+  &__btn{
+    margin: auto 3rem;
+  }
+
+}

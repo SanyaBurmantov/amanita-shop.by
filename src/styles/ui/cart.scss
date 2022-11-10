@@ -22,6 +22,7 @@
       color: $color-white;
       font-family: $font-normal;
       transition: 1.4ms;
+      text-align: center;
     }
   }
   &__data{
@@ -63,7 +64,7 @@
       display: flex;
       width: 40%;
       padding: 2rem;
-      margin: 2.5rem;
+      margin: 1.5rem;
       border-radius: 1.2rem;
       -webkit-box-shadow: -1px 2px 6px 3px rgba(34, 60, 80, 0.2);
       -moz-box-shadow: -1px 2px 6px 3px rgba(34, 60, 80, 0.2);
@@ -74,6 +75,7 @@
       width: 8rem;
       height: 8rem;
       margin: 1rem;
+
     }
     &--name{
 

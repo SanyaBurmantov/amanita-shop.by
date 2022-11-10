@@ -4,10 +4,13 @@ export interface IProduct{
     _id: string
     name: string
     title: string
+    form: number //1- капсулы 2- порошок 3- шляпки
     imagePath: string
     price: number
+    capacity: number[]
     count: number
     type: string
+    text: string
 }
 
 export interface IPost {
@@ -42,6 +45,7 @@ export type TypeSetState<T> = Dispatch<SetStateAction<T>>
 
 export type FunctionlikeCount = (id: number) => void;
 export type FunctionArrFilter = (Themes: string) => void;
+export type FunctionProdFilter = (Types: string) => void;
 
 
 
