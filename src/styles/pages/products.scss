@@ -8,24 +8,185 @@
 }
 
 .product {
-  width: 45%;
-  padding: 0.8rem;
+  width: 42%;
+  padding: 3.2rem;
   margin: 2rem 1.5rem;
   -webkit-box-shadow: -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
   -moz-box-shadow:  -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
   box-shadow:  -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
   border-radius: 1rem;
   background-color: $color-white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  &__item {
+  &__left{
+    width: 55%;
+    border: 1px solid red;
+  }
+
+  &__right{
     width: 40%;
+    border: 1px solid red;
+    &--picture{
+      text-align: center;
+      img{
+        box-sizing: border-box;
+        max-width: 90%;
 
-    &--pic {
-      width: 70%;
+      }
     }
   }
 
-  &-info {
+  &__bottom{
+    margin-top: 2.8rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    &--price{
+      margin: auto 0;
+      text-align: right;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      font-family: $font-bold;
+      white-space: nowrap;
+
+      &:before{
+        margin-top: -1rem;
+        margin-left: -6rem;
+        position: absolute;
+        content: " ";
+        background-image: url("/../src/assets/icons/money.svg");
+        width: 7rem;
+        height: 5rem;
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    &--btn{
+      display: flex;
+
+    }
+    &--buttons{
+
+    }
+
+  }
+
+  &__text{
+    &--title{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+      color: $color-red
+    }
+
+    &--subtitle{
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      font-family: $font-bold;
+      padding-top: 1.4rem;
+      padding-bottom: 1.4rem;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+    padding: 0.75rem;
+    border-radius: 99px; // just a high number to create pill effect
+    * {
+      z-index: 2;
+    }
+  }
+  &__radio{
+    &--label{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 54px;
+      width: 200px;
+      font-size: 1.25rem;
+      font-weight: 500;
+      border-radius: 99px; // just a high number to create pill effect
+      cursor: pointer;
+      transition: color 0.15s ease-in;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"] {
+      &:checked {
+        & + label {
+          color: red;
+          & > .notification {
+            background-color: red;
+            color: #fff;
+          }
+        }
+      }
+    }
+    input[type="radio"] {
+      &:checked {
+        & + label {
+          color: var(--primary-color);
+          & > .notification {
+            background-color: red;
+            color: #fff;
+          }
+        }
+      }
+    }
+    //input[type="radio"] {
+    //  position: absolute;
+    //
+    //
+    //  opacity: 1;
+    //
+    //  padding-top: 3rem;
+    //  padding-left: -4rem;
+    //}
+    //label {
+    //  user-select: none;
+    //  margin: 0.2rem;
+    //  text-align: center;
+    //  display: inline-block;
+    //  padding: .3rem 1rem;
+    //  cursor: pointer;
+    //  width: 7rem;
+    //  background-color: $color-products-button;
+    //
+    //}
+    //input:checked+label {
+    //  background-color: $color-red;
+    //  transition: 500ms;
+    //
+    //}
+    //label:hover {
+    //  background-color: $color-red;
+    //  transition: 500ms;
+    //}
+  }
+
+}
+
+
+
+
+
+
+.product-info {
     &__more {
       height: 100vh;
       width: 100vw;
@@ -50,21 +211,23 @@
       &--item {
         transform: scale(0);
         opacity: 0;
-        top:0;
+        top:2%;
         position: fixed;
         transition: 0.3s;
         &.active {
-          position: relative;
+          left: 20%;
+          position: fixed;
           opacity: 1;
           transition: 0.5s;
           transform: scale(1);
           flex-wrap: wrap;
           justify-content: space-between;
           height: 90vh;
-          width: 80vw;
+          width: 60vw;
           background-color: $color-light-white;
           border-radius: 1.2rem;
           padding: 2rem;
+          z-index: 21;
         }
       }
 
@@ -89,4 +252,4 @@
       }
     }
   }
-}
+

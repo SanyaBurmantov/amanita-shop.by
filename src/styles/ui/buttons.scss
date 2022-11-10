@@ -2,8 +2,16 @@
   background-color: $color-red;
   border: none;
   color: $color-white;
-  padding: 1.1rem 2rem;
-  border-radius: 1rem;
+  padding: 1.2rem 2rem;
+  border-radius: 0.6rem;
+  min-width: 15rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  text-align: center;
+  font-family: $font-bold;
+  margin-left: 1.2rem;
   &-second{
     color: $color-dark-gray;
     background-color: $color-products-button;

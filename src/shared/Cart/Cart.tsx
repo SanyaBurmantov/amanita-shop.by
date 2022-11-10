@@ -23,10 +23,10 @@ export const Cart:FC = () => {
     return(
         <div className="cart">
             <div className="cart__picture">
-                <button className="btn" onClick={() => setIsShowCart(!isShowCart)}>
+                <div className="" onClick={() => setIsShowCart(!isShowCart)}>
                     <img className="cart__picture--img" src={cartIcon} alt="cart" />
                     <div className="cart__picture--text">{cart.length}</div>
-                </button>
+                </div>
             </div>
             <div className={isShowCart ? 'cart__data active' : 'cart__data'} onClick={() => setIsShowCart(false)}>
                 <div className={isShowCart ? 'cart__data--content active' : 'cart__data--content'} onClick={e => e.stopPropagation()}>
