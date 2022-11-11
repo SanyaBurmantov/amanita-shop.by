@@ -1,4 +1,4 @@
-import {Dispatch, SetStateAction} from "react";
+import React, {Dispatch, SetStateAction} from "react";
 
 export interface IProduct{
     _id: string
@@ -13,6 +13,17 @@ export interface IProduct{
     text: string
 }
 
+export interface IRewiews{
+    id: number
+    userName: string
+    rate: string
+    userImage: string
+    text: string
+    Data: any
+    email: string
+
+}
+
 export interface IPost {
     id: number,
     title: string,
@@ -24,6 +35,7 @@ export interface IPost {
     views: number,
     ViewedByUser: boolean,
     PostData: string,
+    Comments: IComment[]
 }
 
 export interface IComment {
@@ -40,12 +52,10 @@ export interface ICartItem extends IProduct{
     count: number
 }
 
-
 export type TypeSetState<T> = Dispatch<SetStateAction<T>>
 
 export type FunctionlikeCount = (id: number) => void;
 export type FunctionArrFilter = (Themes: string) => void;
-export type FunctionProdFilter = (Types: string) => void;
 
 
 

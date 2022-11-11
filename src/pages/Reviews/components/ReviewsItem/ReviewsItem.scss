@@ -1,0 +1,65 @@
+@import "../../../../styles/vars";
+
+.reviews-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+
+
+  &-avatar {
+    flex: 20%;
+    position: relative;
+
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    flex: 80%;
+
+
+    &-desc {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      &-username {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        color: $color-red;
+        font-family: $font-semi-bold;
+
+      }
+    }
+
+    &-data {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      color: $color-gray;
+      margin-bottom: 1.5rem;
+    }
+
+    &-text {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $color-dark-gray;
+      margin-bottom: 1rem;
+    }
+
+    &-button {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      color: $color-gray;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

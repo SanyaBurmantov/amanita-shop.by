@@ -1,18 +1,16 @@
-import React, {useState} from "react";
+import React, {FC, useState} from "react";
 import './Blog.scss'
 import {posts} from "../../data/Posts";
 import {IPost} from "../../types";
 import {Post} from "./components/Post/Post";
 import {Filter} from "./components/Filter/Filter";
 import {Best} from "./components/Best/Best";
-import {useDispatch, useSelector} from "react-redux";
 
 
 interface BlogProps {
-
 }
 
-export const Blog = () => {
+export const Blog: FC <BlogProps> = () => {
 
     const [filtred, setFiltred] = useState(posts)
 
@@ -42,7 +40,7 @@ export const Blog = () => {
     return (
         <div className='background__blog'>
             <div className='blog'>
-                <div className='blog__title'>Блог</div>
+                <div className='blog__title'>Блог </div>
                 <div className='blog__container'>
                     <div className='blog__posts'>
                         <div className='blog__post'>{filtred.map((post: IPost) => <Post

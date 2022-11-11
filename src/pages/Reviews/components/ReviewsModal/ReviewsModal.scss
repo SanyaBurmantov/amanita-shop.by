@@ -1,0 +1,145 @@
+@import "../../../../styles/vars";
+
+.reviews-modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.8s;
+
+  &.active {
+    overflow: auto;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 20;
+  }
+
+  &-item {
+    margin: auto;
+    transform: scale(0);
+    opacity: 0;
+    top: 0;
+    position: fixed;
+    transition: 0.3s;
+
+    &.active {
+      margin-top: 5rem;
+      position: relative;
+      opacity: 1;
+      transition: 0.5s;
+      transform: scale(1);
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 25vw;
+      background-color: $color-light-white;
+      border-radius: 1.2rem;
+      padding: 3rem;
+    }
+  }
+
+  &-forms {
+
+    &-button-remove {
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    &-form {
+
+      &-avatar {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-username {
+        box-sizing: border-box;
+        margin-bottom: 1.5rem;
+        background-color: $color-light-gray3;
+        border: none;
+        padding: 0.8rem;
+        border-radius: 0.3rem;
+        width: 100%;
+      }
+
+      &-question {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        font-family: $font-bold;
+        margin-bottom: 1.6rem;
+        margin-top: 2.6rem;
+        color: $color-dark-gray;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-textarea{
+        box-sizing: border-box;
+        background-color: $color-light-gray3;
+        border: none;
+        border-radius: 0.3rem;
+        padding: 0.8rem;
+        width: 100%;
+        resize: none;
+      }
+
+      &-rate {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
+      &-button {
+        display: flex;
+        justify-content: center;
+
+        &-submit {
+          color: $color-white;
+          background-color: $color-red;
+          font-size: 2.4rem;
+          line-height: 2.9rem;
+          border: 0;
+          border-radius: 0.6rem;
+          font-family: $font-semi-bold;
+          padding: 1.5rem 4.6rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-sent {
+      &-text{
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        font-family: $font-bold;
+        margin-bottom: 1.6rem;
+        margin-top: 2.6rem;
+        color: $color-dark-gray;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-image{
+        img{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import {removeFromCart} from "../../store/cart/actions";
 import cartIcon from "../../assets/icons/cart.svg"
 
 export const Cart:FC = () => {
+
     const [isShowCart, setIsShowCart] = useState(false);
 
     const cart = useTypedSelector(state => state.cart)

@@ -17,6 +17,7 @@ export const CommentsList = ({currentUserId}: CommentsList) => {
     const [backendComments, setBackendComments] = useState<IComment[]>([]);
 
     const [activeComment, setActiveComment] = useState(null);
+
     const rootComments = backendComments.filter(
         (backendComment) => backendComment.parentId === null
     );
