@@ -1,113 +1,113 @@
 import {IProduct} from "../types";
+import imageToAdd1 from "../assets/images/amanita_pretty-red.jpg";
+import imageToAdd2 from "../assets/images/ezhovik.jpg";
+import imageToAdd3 from "../assets/images/pantera.jpg";
+import imageToAdd4 from "../assets/images/pantera_pix.jpg";
+import imageToAdd5 from "../assets/images/red_pix.jpg";
+import imageToAdd6 from "../assets/images/poroshok_red.jpg";
+import imageToAdd7 from "../assets/images/ezhovik_plod.jpg";
 
+
+
+//form: 1- капсулы 2- порошок 3- шляпки
 
 export const products:IProduct[] = [
     {
-        _id: 'hehe',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor1',
-        price: 4545,
-        title: 'блябуду крута',
+        _id: '1',
+        imagePath: imageToAdd5,
+        name: 'Мухомор красный',
+        price: 1.5,
+        form: 1,
+        title: 'Помогает уснуть, укрепляет имунитет, снимает напряжение, увеличивает силу. Теперь в капсулах.',
+        text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'Капсулы',
+        capacity: [0.4, 0.6],
     },
     {
-        _id: 'hea',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor2',
-        price: 4445,
-        title: 'бери, сука',
+        _id: '2',
+        imagePath: imageToAdd4,
+        name: 'Мухомор пантерный',
+        price: 4.5,
+        form: 1,
+        title: 'Помогает уснуть, поднимает настроение, снимает напряжение, увеличивает силу. Теперь в капсулах.',
+        text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'Капсулы',
+        capacity: [0.4, 0.6],
     },
     {
-        _id: 'he234he',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor3',
-        price: 8745,
-        title: 'бери, сука',
+        _id: '3',
+        imagePath: imageToAdd6,
+        name: 'Мухомор красный',
+        price: 1.2,
+        form: 2,
+        title: 'Помогает уснуть вечером, бодрит утром, снимает напряжение, увеличивает силу,',
+        text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'Порошок',
+        capacity: [1],
+
     },
     {
-        _id: 'he12he',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor4',
-        price: 4145,
-        title: 'бери, сука',
+        _id: '4',
+        imagePath: imageToAdd6,
+        name: 'Мухомор пантерный',
+        price: 4.2,
+        form: 2,
+        title: 'Помогает уснуть, снимает напряжение, увеличивает силу',
+        text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'Порошок',
+        capacity: [1],
     },
     {
-        _id: 'he23e',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor5',
-        price: 4545,
-        title: 'блябуду крута',
+        _id: '5',
+        imagePath: imageToAdd1,
+        name: 'Мухомор красный',
+        price: 1.1,
+        form: 3,
+        title: 'Помогает уснуть, снимает напряжение, увеличивает силу',
+        text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'Шляпки',
+        capacity: [1],
     },
     {
-        _id: 'he546a',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor6',
-        price: 4445,
-        title: 'бери, сука',
+        _id: '6',
+        imagePath: imageToAdd3,
+        name: 'Мухомор пантерный',
+        price: 4.1,
+        form: 3,
+        title: 'Помогает уснуть, снимает напряжение, увеличивает силу',
+        text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'Шляпки',
+        capacity: [1],
     },
     {
-        _id: 'he276834he',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor7',
-        price: 8745,
-        title: 'бери, сука',
+        _id: '7',
+        imagePath: imageToAdd7,
+        name: 'Ежовик гребенчатый',
+        price: 1.6,
+        form: 3,
+        title: 'Повышает интеллектуальные способности. Природный ноотроп.',
+        text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'Плоды',
+        capacity: [1],
     },
     {
-        _id: 'he1254he',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor8',
-        price: 4145,
-        title: 'бери, сука',
+        _id: '8',
+        imagePath: imageToAdd2,
+        name: 'Ежовик гребенчатый',
+        price: 3.33,
+        form: 3,
+        title: 'Повышает интеллектуальные способности. Природный ноотроп. Теперь в виде порошка.',
+        text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         count: 30,
-        type: 'россыпь ебана'
+        type: 'Мицелий',
+        capacity: [1],
     },
-    {
-        _id: 'heh3457e',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor9',
-        price: 4545,
-        title: 'блябуду крута',
-        count: 30,
-        type: 'россыпь ебана'
-    },
-    {
-        _id: 'he9876a',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor10',
-        price: 4445,
-        title: 'null',
-        count: 30,
-        type: 'россыпь ебана'
-    },
-    {
-        _id: 'he234567he',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor11',
-        price: 8745,
-        title: 'бери, сука',
-        count: 30,
-        type: 'россыпь ебана'
-    },
-    {
-        _id: 'he17652he',
-        imagePath: 'https://htstatic.imgsmail.ru/pic_image/be89677b6a39f732bbf2b4c3d3a96bc3/840/840/1666361/',
-        name: 'Muhomor12',
-        price: 4145,
-        title: 'бери, сука',
-        count: 30,
-        type: 'россыпь ебана'
-    },
+
 ]

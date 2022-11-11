@@ -8,6 +8,8 @@ import {Provider} from "react-redux";
 import {Cart} from "./shared/Cart/Cart";
 import {PersistGate} from "redux-persist/integration/react";
 import {persistStore} from "redux-persist";
+import {Telegram} from "./pages/Telegram/Telegram";
+
 
 function App() {
 
@@ -19,6 +21,7 @@ function App() {
             <AppRouter/>
             <Cart />
             <Footer/>
+            <Telegram />
         </BrowserRouter>
             </PersistGate>
         </Provider>

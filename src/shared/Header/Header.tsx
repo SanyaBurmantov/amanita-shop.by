@@ -1,13 +1,11 @@
 import React from "react";
 import logo from '../../assets/icons/logo-amanita.svg'
 import {Link} from "react-router-dom";
-import './Header.scss'
 import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE} from "../../utils/consts";
 
 interface Props {
 
 }
-
 
 export const Header = (props: Props) => {
     const items = [{
@@ -20,32 +18,39 @@ export const Header = (props: Props) => {
         name: 'Магазин',
         href: PRODUCTS_ROUTE
     }, {
-        name: 'Доставка и оплата',
+        name: 'Доставка',
         href: PAYMENT_ROUTE
     }, {
         name: 'Отзывы',
         href: REVIEWS_ROUTE
     }];
+
     return (
-        <header className='header'>
+        <header>
             <div className='container'>
-                <div className='container__info'>
-                    <div className='logo'>
-                        <Link to="/">
-                            <img src={logo} alt='logo-amanita'/>
-                        </Link>
+                <div className='header'>
+                    <div className='header__logo'>
+                        <div className="header__logo--picture">
+                            <Link to="/">
+                                <img src={logo} alt='logo-amanita'/>
+                            </Link>
+                        </div>
                     </div>
-                    <ul>
-                        {items.map(item =>
-                            <li>
-                                <Link to={item.href}>{item.name}</Link>
-                            </li>
-                        )}
-                    </ul>
+
+                    <div className="header__menu">
+                        <ul>
+                            {items.map(item =>
+                                <li key={item.name} className="header__menu--element">
+                                    <Link to={item.href}>{item.name}</Link>
+                                </li>
+                            )}
+                        </ul>
+
+                        <div className="header__btn">
+                            <button className="btn">Оформить заказ</button>
+                        </div>
+                    </div>
                 </div>
-
-
-
             </div>
         </header>
 

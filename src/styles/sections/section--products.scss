@@ -1,0 +1,31 @@
+.section-products{
+  &__filter{
+    display: flex;
+
+    &--element{
+      margin: 0.5rem;
+      color: $color-dark-gray;
+      background-color: $color-products-button;
+      border-radius: 2.2rem;
+      padding: 1rem 2rem;
+      font-family: 'Bahnschrift';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      text-align: center;
+      border: none;
+      transition: 500ms;
+      &.active {
+        color: $color-white;
+        background-color: $color-red;
+      }
+      &:hover{
+        color: $color-white;
+        background-color: $color-red;
+        transition: 500ms;
+      }
+    }
+
+  }
+}
