@@ -20,9 +20,13 @@ header{
   &__menu{display: flex;align-items: center;white-space: nowrap;
     ul{
       display: flex;
+
       li{
         list-style-type: none;
         a{text-decoration: none; color: $color-white}
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
     &--element{
