@@ -1,13 +1,11 @@
 import React, {useEffect} from "react";
-// @ts-ignore
-const tg = window.Telegram.WebApp
+
 
 interface Props {
 }
-export const Telegram = (props: Props) => {
-    useEffect(()=> {
-        tg.ready();
-    }, [])
+export const HeaderTelegram = (props: Props) => {
+// @ts-ignore
+    const tg = window.Telegram.WebApp
 
     const onClose = () => {
         tg.close()
@@ -18,7 +16,9 @@ export const Telegram = (props: Props) => {
         <div>
             Amanita-Shop.by
             <button onClick={onClose}></button>
-
+            <span className={'username'}>
+                {tg.initDataUnsafe?.user.username}
+            </span>
         </div>
     )
 }

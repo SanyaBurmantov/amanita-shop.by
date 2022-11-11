@@ -21,6 +21,7 @@ function App() {
             <AppRouter/>
             <Cart />
             <Footer/>
+            <Telegram />
         </BrowserRouter>
             </PersistGate>
         </Provider>
