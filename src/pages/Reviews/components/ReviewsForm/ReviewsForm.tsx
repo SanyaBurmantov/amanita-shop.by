@@ -1,60 +1,79 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useState} from 'react';
 import UserAvatar from "../../../../assets/icons/UserAvatar.svg";
 import {StarRate} from "../StarRate/StarRate";
-import {FunctionHandler, IRewiews, TypeSetState} from "../../../../types";
 import './ReviewsForm.scss'
+import {FunctionHandler, IRewiews, TypeSetState} from "../../../../types";
 
 
 interface ReviewsForm {
-    setReviews: TypeSetState<IRewiews[]>,
     review: IRewiews[],
-    setSubmitForm: TypeSetState<boolean>,
-    setEmail: React.Dispatch<React.SetStateAction<string>>,
+    setReviews: TypeSetState<IRewiews[]>,
+    emailtest: RegExp,
+    userName: string,
+    setUserName: React.Dispatch<React.SetStateAction<string>>,
+    text: string,
+    setText: React.Dispatch<React.SetStateAction<string>>,
+    rate: string,
+    setRate: React.Dispatch<React.SetStateAction<string>>,
     email: string,
-    setTestUserName: React.Dispatch<React.SetStateAction<boolean>>,
-    errorEmail: string,
-    blurHandler: FunctionHandler,
-    emailHandler: FunctionHandler,
+    setEmail: React.Dispatch<React.SetStateAction<string>>,
     testUserName: boolean,
+    setTestUserName: React.Dispatch<React.SetStateAction<boolean>>,
     testEmail: boolean,
+    setTestEmail: React.Dispatch<React.SetStateAction<boolean>>,
     testText: boolean,
     setTestText: React.Dispatch<React.SetStateAction<boolean>>,
-    emailtest: RegExp,
-    setTestEmail: React.Dispatch<React.SetStateAction<boolean>>,
-    setErrorEmail: React.Dispatch<React.SetStateAction<string>>
-
-
+    testRate: boolean,
+    setTestRate: React.Dispatch<React.SetStateAction<boolean>>,
+    errorEmail: string,
+    setErrorEmail: React.Dispatch<React.SetStateAction<string>>,
+    errorUserName: string,
+    setErrorUserName: React.Dispatch<React.SetStateAction<string>>,
+    errorText: string,
+    setErrorText: React.Dispatch<React.SetStateAction<string>>,
+    errorRate: string,
+    setErrorRate: React.Dispatch<React.SetStateAction<string>>,
+    blurHandler: FunctionHandler,
+    emailHandler: FunctionHandler,
+    textHandler: FunctionHandler,
+    userNameHandler: FunctionHandler,
+    setSubmitForm: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
 export const ReviewsForm: FC<ReviewsForm> = ({
                                                  setReviews,
                                                  review,
-                                                 setSubmitForm,
-                                                 setEmail,
+                                                 emailtest,
+                                                 userName,
+                                                 setUserName,
+                                                 text,
+                                                 setText,
+                                                 setRate,
+                                                 rate,
                                                  email,
-                                                 setTestUserName,
-                                                 errorEmail,
-                                                 emailHandler,
-                                                 blurHandler,
-                                                 testUserName,
+                                                 setEmail,
                                                  testEmail,
                                                  testText,
                                                  setTestText,
-                                                 emailtest,
+                                                 setTestRate,
                                                  setTestEmail,
-                                                 setErrorEmail
+                                                 setTestUserName,
+                                                 testUserName,
+                                                 testRate,
+                                                 errorEmail,
+                                                 setErrorEmail,
+                                                 setErrorRate,
+                                                 errorUserName,
+                                                 errorText,
+                                                 setErrorText,
+                                                 setErrorUserName,
+                                                 errorRate,
+                                                 blurHandler,
+                                                 userNameHandler,
+                                                 emailHandler,
+                                                 textHandler,
+                                                 setSubmitForm
                                              }) => {
-
-    const [userName, setUserName] = useState('')
-    const [text, setText] = useState('')
-    const [rate, setRate] = useState('')
-    const [testRate, setTestRate] = useState(false)
-    const [errorUserName, setErrorUserName] = useState('Введите имя')
-    const [errorText, setErrorText] = useState('Введите текст отзыва')
-    const [errorRate, setErrorRate] = useState('Выберите отметку')
-    const [formValid, setFormValid] = useState(false)
-    // Имага временно по дефолту
-    // const [userImage, SetUserImage] = useState('')
 
     const addNewReviews = (e: any) => {
         e.preventDefault()
@@ -96,36 +115,6 @@ export const ReviewsForm: FC<ReviewsForm> = ({
             }
         }
     }
-
-    const userNameHandler = (e: any) => {
-        setUserName(e.target.value)
-        if (!e.target.value) {
-            setErrorUserName('Поле не должно быть пустым')
-        } else {
-            setErrorUserName('')
-        }
-    }
-
-    const textHandler = (e: any) => {
-        setText(e.target.value)
-        if (!e.target.value) {
-            setErrorText('Поле не должно быть пустым')
-        }
-        if (e.target.value.length < 5) {
-            setErrorText('Поле должно содержать 5 или более символов')
-
-        } else {
-            setErrorText('')
-        }
-    }
-
-    useEffect(() => {
-        if (errorUserName || errorText || errorEmail) {
-            setFormValid(false)
-        } else {
-            setFormValid(true)
-        }
-    }, [errorText, errorUserName, errorEmail])
 
     return (
         <form className='reviews-modal-forms-form'>

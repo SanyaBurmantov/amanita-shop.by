@@ -2,33 +2,34 @@ import React, {FC} from 'react';
 import {FunctionHandler, TypeSetState} from "../../../../types";
 
 interface ReviewsSubmit {
-    setSubmitForm: TypeSetState<boolean>,
     testEmail: boolean,
     errorEmail: string,
     email: string,
     blurHandler: FunctionHandler,
     emailHandler: FunctionHandler,
     emailtest: RegExp,
+    setEditForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const ReviewsSubmit: FC<ReviewsSubmit> = ({
-                                                     setSubmitForm,
                                                      testEmail,
                                                      errorEmail,
                                                      email,
                                                      emailHandler,
                                                      blurHandler,
-                                                     emailtest
+                                                     emailtest,
+                                                     setEditForm
                                                  }) => {
 
+
     const CanEditForm = () => {
-        if(emailtest.test(String(email).toLowerCase())) {
-            setSubmitForm(false)
+        if (emailtest.test(String(email).toLowerCase())) {
+            setEditForm(true)
+        } else {
+            alert('Введите корректный email')
         }
-       else {
-           alert('говноооо')
-       }
     }
+
 
     return (
         <div className='form-submit'>
@@ -41,8 +42,9 @@ export const ReviewsSubmit: FC<ReviewsSubmit> = ({
                    placeholder='Введите email...'
                    onBlur={event => blurHandler(event)} onChange={event => emailHandler(event)}/>
             <div className='form-submit-button'>
-                <button className={emailtest.test(String(email).toLowerCase()) ? 'form-submit-button-edit disabled' : 'form-submit-button-edit'}
-                        onClick={CanEditForm}>Изменить
+                <button
+                    className={emailtest.test(String(email).toLowerCase()) ? 'form-submit-button-edit disabled' : 'form-submit-button-edit'}
+                    onClick={CanEditForm}>Изменить
                 </button>
             </div>
         </div>
