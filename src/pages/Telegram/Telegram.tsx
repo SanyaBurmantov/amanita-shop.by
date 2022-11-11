@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
-// @ts-ignore
-const tg = window.Telegram.WebApp
+import {useTelegram} from "../../hooks/useTelegram";
+
 
 interface Props {
 }
@@ -9,16 +9,14 @@ export const Telegram = (props: Props) => {
         tg.ready();
     }, [])
 
-    const onClose = () => {
-        tg.close()
-    }
+   const {onToggleButton} = useTelegram()
 
 
     return (
         <div>
             Amanita-Shop.by
-            <button onClick={onClose}></button>
 
+        <button onClick={onToggleButton}>toggle</button>
         </div>
     )
 }
