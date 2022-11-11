@@ -6,11 +6,12 @@ import {HeaderTelegram} from "../../shared/Header/HeaderTelegram";
 interface Props {
 }
 export const Telegram = (props: Props) => {
+
+   const {onToggleButton, tg} = useTelegram()
+
     useEffect(()=> {
         tg.ready();
     }, [])
-
-   const {onToggleButton} = useTelegram()
 
 
     return (
