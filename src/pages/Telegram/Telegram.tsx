@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 import {useTelegram} from "../../hooks/useTelegram";
+import {HeaderTelegram} from "../../shared/Header/HeaderTelegram";
 
 
 interface Props {
@@ -14,9 +15,10 @@ export const Telegram = (props: Props) => {
 
     return (
         <div>
+            <HeaderTelegram />
             Amanita-Shop.by
 
-        <button onClick={onToggleButton}>toggle</button>
+            <button onClick={onToggleButton}>toggle</button>
         </div>
     )
 }
