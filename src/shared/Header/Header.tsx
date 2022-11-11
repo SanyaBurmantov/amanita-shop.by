@@ -40,7 +40,7 @@ export const Header = (props: Props) => {
                     <div className="header__menu">
                         <ul>
                             {items.map(item =>
-                                <li className="header__menu--element">
+                                <li key={item.name} className="header__menu--element">
                                     <Link to={item.href}>{item.name}</Link>
                                 </li>
                             )}
