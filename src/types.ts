@@ -1,4 +1,5 @@
 import React, {Dispatch, SetStateAction} from "react";
+import Products from "./pages/Products/components/Products";
 
 export interface IProduct{
     _id: string
@@ -56,7 +57,7 @@ export type TypeSetState<T> = Dispatch<SetStateAction<T>>
 
 export type FunctionlikeCount = (id: number) => void;
 export type FunctionArrFilter = (Themes: string) => void;
-
+export type FunctionProdFilter = (Products: string) => void;
 
 
 

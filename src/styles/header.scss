@@ -18,8 +18,20 @@ header{
     }
   }
   &__menu{display: flex;align-items: center;white-space: nowrap;
+    &--burger{
+
+      @media (max-width: 1080px) {
+        display: none;
+        &.active{
+          display: block;
+          margin-right: 20rem;
+        }
+      }
+    }
     ul{
       display: flex;
+      @media (max-width: 1080px) {
+        display: block;}
 
       li{
         list-style-type: none;
@@ -36,6 +48,9 @@ header{
   }
   &__btn{
     margin: auto 3rem;
+    @media (max-width: 1080px) {
+      display: none;
+    }
   }
 
 }

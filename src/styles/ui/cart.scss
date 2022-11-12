@@ -5,9 +5,14 @@
     position: absolute;
     right: 2rem;
     bottom: 20rem;
-    background-color: $color-light-white;
-    &--img{
 
+    @media (max-width: 1080px) {
+      top: 2rem;
+      bottom: 0;
+      background: none;
+    }
+    &--img{
+      z-index:5;
     }
     &--text{
       position: absolute;

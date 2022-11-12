@@ -6,7 +6,7 @@
 
 .blog {
   max-width: 132rem;
-  margin: 0 auto;
+
 
   &__title {
     font-family: $font-bold;
@@ -18,15 +18,27 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1080px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__posts {
     margin-right: 4.7rem;
+    @media (max-width: 1080px) {
+      margin-right: 0;
+    }
   }
 
   &__panel {
-
+    &-best{
+      @media (max-width: 1080px) {
+        display: none;
+      }
+    }
   }
+
+
 
   &__panel-best-title {
     font-size: 2.4rem;
@@ -34,6 +46,7 @@
     margin-bottom: 1rem;
     color: $color-red;
     font-family: $font-bold;
+
   }
 
   &__panel-buttons {
