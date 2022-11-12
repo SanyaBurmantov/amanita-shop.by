@@ -61,7 +61,7 @@ export const Header = (props: Props) => {
                     </div>
 
                     <div className="header__menu">
-                        <div  className={`header__menu--burger ${ setBurger(prev => !prev)? 'active' : ''}`}>
+                        <div>
                         <ul>
                             {items.map(item =>
                                 <li key={item.name} className="header__menu--element">
