@@ -3,9 +3,7 @@ import {IProduct} from "../../../types";
 import Quantity from "./Quantity";
 import {useDispatch} from "react-redux";
 import {addToCart} from "../../../store/cart/actions";
-import {products} from "../../../data/Products";
-import {Form} from "react-router-dom";
-import money from "../../../assets/icons/money.svg"
+
 
 interface IProductItem{
     product: IProduct

@@ -5,7 +5,7 @@ import {IPost} from "../../types";
 import {Post} from "./components/Post/Post";
 import {Filter} from "./components/Filter/Filter";
 import {Best} from "./components/Best/Best";
-
+import {motion} from "framer-motion";
 
 interface BlogProps {
 }
@@ -38,7 +38,11 @@ export const Blog: FC <BlogProps> = () => {
 
 
     return (
-        <div className='background__blog'>
+        <motion.div className='background__blog'
+                    initial={{width: "30%"}}
+                    animate={{width: "100%"}}
+                    exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
+<div className="container">
             <div className='blog'>
                 <div className='blog__title'>Блог </div>
                 <div className='blog__container'>
@@ -68,6 +72,7 @@ export const Blog: FC <BlogProps> = () => {
                     </div>
                 </div>
             </div>
-        </div>
+</div>
+        </motion.div>
     );
 };

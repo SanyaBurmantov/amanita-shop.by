@@ -4,6 +4,7 @@ import {IRewiews} from "../../types";
 import {ReviewsItem} from "./components/ReviewsItem/ReviewsItem";
 import './Reviews.scss'
 import {ReviewsModal} from "./components/ReviewsModal/ReviewsModal";
+import {motion} from "framer-motion";
 
 interface ReviewsProps {
 }
@@ -15,8 +16,11 @@ export const Reviews: FC<ReviewsProps> = () => {
     const [review, setReviews] = useState(reviews)
 
     return (
-        <div className="container">
-            <div className='reviews'>
+        <motion.div className="reviews"
+                    initial={{width: "30%"}}
+                    animate={{width: "100%"}}
+                    exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
+            <div className='container'>
                 <div className='reviews-title'>Отзывы</div>
                 <div className='reviews-desc'>
                     <div className='reviews-desc-subtitle'>Какой-нибудь текст типо “Каждый ваш обосцанный отзыв важен
@@ -32,7 +36,7 @@ export const Reviews: FC<ReviewsProps> = () => {
                 </div>
                 <ReviewsModal visible={visible} setVisible={setVisible} review={review} setReviews={setReviews}/>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
