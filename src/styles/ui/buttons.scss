@@ -36,5 +36,13 @@
     padding: 1rem 1.7rem;
     font-size: 2rem;
     line-height: 2.3rem;
+    @media (max-width: $mobile) {
+      padding: 0.6rem 0.1rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      min-width: 10rem;
+      margin-left: 0.3rem;
+
+    }
   }
 }

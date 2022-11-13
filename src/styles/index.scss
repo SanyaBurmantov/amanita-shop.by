@@ -73,6 +73,12 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
   line-height: 2.2rem;
   margin-top: 1.4rem;
   margin-bottom: 0.8rem;
+  @media (max-width: $mobile) {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -92,4 +98,19 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   border: 2px solid $color-light-white;
 
+}
+
+.filter{
+  @media (max-width: $mobile) {
+
+
+    overflow-x: scroll;
+    scrollbar-width: 0px;
+    width: calc(100% + 36px);
+    margin: 0 -2rem;
+    padding-left: 2rem;
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
 }

@@ -54,9 +54,10 @@ export const Blog: FC <BlogProps> = () => {
                     </div>
                     <div className='blog__panel'>
                         <div className='blog__panel-buttons'>
+
                             <div className='blog__panel-buttons-filter'>Фильтр по тематике</div>
-                            <button onClick={() => ArrFilter('all')}>Все</button>
-                            <Filter ArrFilter={ArrFilter}/>
+                            <div className="filter"> <button onClick={() => ArrFilter('all')}>Все</button>
+                            <Filter ArrFilter={ArrFilter}/></div>
                         </div>
                         <div className='blog__panel-best'>
                             <div className='blog__panel-best-title'>Популярное</div>

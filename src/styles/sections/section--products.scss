@@ -7,18 +7,14 @@
     }
   }
 
-  .filter{
-    overflow-x: scroll;
-
-    ::-webkit-scrollbar {
-      width: 0;
-    }
-  }
   &__filter{
     display: flex;
     flex-wrap: nowrap;
     ::-webkit-scrollbar {
       width: 0;
+      &:first-child{
+        margin-left: 3rem;
+      }
     }
     &--arr{
       flex-wrap: nowrap;
@@ -45,6 +41,7 @@
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 2rem;
+
       }
       &.active {
         color: $color-white;

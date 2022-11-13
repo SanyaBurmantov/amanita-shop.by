@@ -32,12 +32,15 @@ const Products = () => {
 
             <div className="container">
                 <h3>Магазин</h3>
+
                 <div className="filter">
-                <div className="section-products__filter">
-                    <button className="section-products__filter--element"  onClick={() => ArrFilter('all')}>Все</button>
-                    <Filter ProdFilter={ArrFilter}/>
+                    <div className="section-products__filter">
+                        <button className="section-products__filter--element" onClick={() => ArrFilter('all')}>Все
+                        </button>
+                        <Filter ProdFilter={ArrFilter}/>
+                    </div>
                 </div>
-                </div>
+
                 <div className=''>
                     <div className='products'>{filtred.map((product: IProduct) => <ProductItem
                         product={product}
