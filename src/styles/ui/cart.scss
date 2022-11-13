@@ -11,6 +11,8 @@
       bottom: 0;
       background: none;
     }
+    @media (max-width: $mobile) {
+      right: 0;}
     @media (max-width: 550px) {
       position: fixed;
       right: -1rem;
@@ -19,6 +21,8 @@
     }
     &--img{
       z-index:5;
+      @media (max-width: 1000px) {
+        width: 80%;}
       @media (max-width: 550px) {
         width: 80%;
       }
@@ -37,7 +41,7 @@
       font-family: $font-normal;
       transition: 1.4ms;
       text-align: center;
-      @media (max-width: 550px) {
+      @media (max-width: $mobile) {
         height: 3rem;
         width: 3rem;
         top:-1rem;
