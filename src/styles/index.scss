@@ -24,16 +24,18 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
   padding-left: 56px;
   padding-right: 56px;
   @media all and (max-width: 1440px) {
-    max-width: 80%;
+    max-width: 85%;
   }
   @media all and (max-width: 767px) {
     max-width: 90%;
     padding-left: 18px;
     padding-right: 18px
   }
-  @media all and (max-width: 600px) {
-    max-width: 100%;
+  @media (max-width: $mobile) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
+
 }
 
 .section{
@@ -74,7 +76,10 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
 }
 
 body::-webkit-scrollbar {
-  width: 7px;
+  width: 14px;
+  div{
+    width: 0;
+  }
 
 }
 
