@@ -1,79 +1,37 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import UserAvatar from "../../../../assets/icons/UserAvatar.svg";
 import {StarRate} from "../StarRate/StarRate";
 import './ReviewsForm.scss'
-import {FunctionHandler, IRewiews, TypeSetState} from "../../../../types";
+import {IRewiews, TypeSetState} from "../../../../types";
 
 
 interface ReviewsForm {
     review: IRewiews[],
     setReviews: TypeSetState<IRewiews[]>,
-    emailtest: RegExp,
-    userName: string,
-    setUserName: React.Dispatch<React.SetStateAction<string>>,
-    text: string,
-    setText: React.Dispatch<React.SetStateAction<string>>,
-    rate: string,
-    setRate: React.Dispatch<React.SetStateAction<string>>,
-    email: string,
-    setEmail: React.Dispatch<React.SetStateAction<string>>,
-    testUserName: boolean,
-    setTestUserName: React.Dispatch<React.SetStateAction<boolean>>,
-    testEmail: boolean,
-    setTestEmail: React.Dispatch<React.SetStateAction<boolean>>,
-    testText: boolean,
-    setTestText: React.Dispatch<React.SetStateAction<boolean>>,
-    testRate: boolean,
-    setTestRate: React.Dispatch<React.SetStateAction<boolean>>,
-    errorEmail: string,
-    setErrorEmail: React.Dispatch<React.SetStateAction<string>>,
-    errorUserName: string,
-    setErrorUserName: React.Dispatch<React.SetStateAction<string>>,
-    errorText: string,
-    setErrorText: React.Dispatch<React.SetStateAction<string>>,
-    errorRate: string,
-    setErrorRate: React.Dispatch<React.SetStateAction<string>>,
-    blurHandler: FunctionHandler,
-    emailHandler: FunctionHandler,
-    textHandler: FunctionHandler,
-    userNameHandler: FunctionHandler,
-    setSubmitForm: React.Dispatch<React.SetStateAction<boolean>>,
+    setSubmitForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const ReviewsForm: FC<ReviewsForm> = ({
-                                                 setReviews,
-                                                 review,
-                                                 emailtest,
-                                                 userName,
-                                                 setUserName,
-                                                 text,
-                                                 setText,
-                                                 setRate,
-                                                 rate,
-                                                 email,
-                                                 setEmail,
-                                                 testEmail,
-                                                 testText,
-                                                 setTestText,
-                                                 setTestRate,
-                                                 setTestEmail,
-                                                 setTestUserName,
-                                                 testUserName,
-                                                 testRate,
-                                                 errorEmail,
-                                                 setErrorEmail,
-                                                 setErrorRate,
-                                                 errorUserName,
-                                                 errorText,
-                                                 setErrorText,
-                                                 setErrorUserName,
-                                                 errorRate,
-                                                 blurHandler,
-                                                 userNameHandler,
-                                                 emailHandler,
-                                                 textHandler,
-                                                 setSubmitForm
-                                             }) => {
+export const ReviewsForm: FC<ReviewsForm> = ({review, setReviews, setSubmitForm}) => {
+
+    const emailtest = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const [userName, setUserName] = useState('')
+    const [text, setText] = useState('')
+    const [rate, setRate] = useState('')
+    const [email, setEmail] = useState('')
+    // Имага временно по дефолту
+    // const [userImage, SetUserImage] = useState('')
+
+    const [testUserName, setTestUserName] = useState(false)
+    const [testEmail, setTestEmail] = useState(false)
+    const [testText, setTestText] = useState(false)
+    const [testRate, setTestRate] = useState(false)
+
+    const [errorEmail, setErrorEmail] = useState('Введите email')
+    const [errorUserName, setErrorUserName] = useState('Введите имя')
+    const [errorText, setErrorText] = useState('Введите текст отзыва')
+    const [errorRate, setErrorRate] = useState('Выберите отметку')
+
+    const [formValid, setFormValid] = useState(false)
 
     const addNewReviews = (e: any) => {
         e.preventDefault()
@@ -84,7 +42,7 @@ export const ReviewsForm: FC<ReviewsForm> = ({
                 rate,
                 userImage: 'https://sun9-87.userapi.com/impg/z3c-4hgHqhsMh-5UQOrKa873TS9fAoKgnSzDnw/kn14aZIkPzs.jpg?size=539x666&quality=96&sign=4935b0f99a85f97997942247a778c82f&type=album',
                 text,
-                Data: new Date().toLocaleDateString(),
+                Data: new Date(),
                 email,
             }
             setReviews([newReviews, ...review])
@@ -93,6 +51,7 @@ export const ReviewsForm: FC<ReviewsForm> = ({
             setRate('')
             setSubmitForm(true)
             setEmail('')
+            console.dir(newReviews)
             // Имага временно по дефолту
             // SetUserImage('')
         } else {
@@ -115,6 +74,59 @@ export const ReviewsForm: FC<ReviewsForm> = ({
             }
         }
     }
+
+    const blurHandler = (e: any) => {
+        switch (e.target.name) {
+            case 'username':
+                setTestUserName(true)
+                break
+            case 'textarea' :
+                setTestText(true)
+                break
+            case 'email':
+                setTestEmail(true)
+                break
+        }
+    }
+
+    const emailHandler = (e: any) => {
+        setEmail(e.target.value)
+        if (!emailtest.test(String(e.target.value).toLowerCase())) {
+            setErrorEmail('Некорректный email')
+        } else {
+            setErrorEmail('')
+        }
+    }
+
+    const userNameHandler = (e: any) => {
+        setUserName(e.target.value)
+        if (!e.target.value) {
+            setErrorUserName('Поле не должно быть пустым')
+        } else {
+            setErrorUserName('')
+        }
+    }
+
+    const textHandler = (e: any) => {
+        setText(e.target.value)
+        if (!e.target.value) {
+            setErrorText('Поле не должно быть пустым')
+        }
+        if (e.target.value.length < 5) {
+            setErrorText('Поле должно содержать 5 или более символов')
+
+        } else {
+            setErrorText('')
+        }
+    }
+
+    useEffect(() => {
+        if (errorUserName || errorText || errorEmail) {
+            setFormValid(false)
+        } else {
+            setFormValid(true)
+        }
+    }, [errorText, errorUserName, errorEmail])
 
     return (
         <form className='reviews-modal-forms-form'>
