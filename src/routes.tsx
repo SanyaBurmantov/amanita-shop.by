@@ -2,7 +2,7 @@ import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE, TE
 import {Home} from "./pages/Home/Home";
 import {Blog} from "./pages/Blog/Blog";
 import {Reviews} from "./pages/Reviews/Reviews";
-import {PaymentAndDelivery} from "./pages/Payment-and-delivery/components/Payment-and-delivery";
+import {PaymentAndDelivery} from "./pages/Payment-and-delivery/Payment-and-delivery";
 import Products from "./pages/Products/components/Products";
 import {Telegram} from "./pages/Telegram/Telegram";
 
