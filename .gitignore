@@ -13,6 +13,7 @@
 /random*
 /node_modules*
 /.idea
+.idea
 # misc
 .DS_Store
 .env.local
