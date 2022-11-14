@@ -18,7 +18,7 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
 .container {
   max-width: 84%;
   width: 100%;
-
+  overflow-x: hidden;
   margin-left: auto;
   margin-right: auto;
   padding-left: 56px;
