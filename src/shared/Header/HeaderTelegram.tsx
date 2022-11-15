@@ -14,7 +14,9 @@ export const HeaderTelegram = (props: Props) => {
         <div>
             <button onClick={onClose}></button>
             <span className={'username'}>
-                {user?.username}
+                <div> Добро пожаловать, {user?.username} на сайт Amanita-shop.by</div>
+                <div className="hello">У нас вы можете приобрести мухоморы, ежовики и другое по самым выгодным ценам </div>
+
             </span>
         </div>
     )
