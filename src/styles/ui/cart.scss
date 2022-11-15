@@ -5,9 +5,27 @@
     position: absolute;
     right: 2rem;
     bottom: 20rem;
-    background-color: $color-light-white;
+    height: 15rem;
+    @media (max-width: 1080px) {
+      top: 2rem;
+      bottom: 0;
+      background: none;
+    }
+    @media (max-width: $mobile) {
+      right: 0;}
+    @media (max-width: 550px) {
+      position: fixed;
+      right: -1rem;
+      top: auto;
+      bottom: -6rem;
+    }
     &--img{
-
+      z-index:5;
+      @media (max-width: 1000px) {
+        width: 80%;}
+      @media (max-width: 550px) {
+        width: 80%;
+      }
     }
     &--text{
       position: absolute;
@@ -23,6 +41,14 @@
       font-family: $font-normal;
       transition: 1.4ms;
       text-align: center;
+      @media (max-width: $mobile) {
+        height: 3rem;
+        width: 3rem;
+        top:-1rem;
+        right: 1.5rem;
+        font-size: 1.9rem;
+        line-height: 3rem;
+      }
     }
   }
   &__data{

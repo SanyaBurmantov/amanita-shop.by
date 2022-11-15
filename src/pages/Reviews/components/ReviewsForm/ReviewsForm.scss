@@ -1,0 +1,115 @@
+@import "../../../../styles/vars";
+
+.reviews-modal-forms-form {
+
+  &-avatar {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-username {
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    background-color: $color-light-gray3;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    width: 100%;
+  }
+
+  &-email {
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    background-color: $color-light-gray3;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    width: 100%;
+  }
+
+  &-question {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    font-family: $font-bold;
+    margin-bottom: 1.6rem;
+    margin-top: 2.6rem;
+    color: $color-dark-gray;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-textarea{
+    box-sizing: border-box;
+    background-color: $color-light-gray3;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+    width: 100%;
+    resize: none;
+  }
+
+  &-rate {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+
+    &-submit {
+      color: $color-white;
+      background-color: $color-light-gray;
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      border: 0;
+      border-radius: 0.6rem;
+      font-family: $font-semi-bold;
+      padding: 1.5rem 4.6rem;
+      cursor: not-allowed;
+      transition: 0.3s;
+      &.disabled{
+        cursor: pointer;
+        background-color: $color-red;
+      }
+    }
+  }
+}
+.form-submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &-text{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    font-family: $font-bold;
+    color: $color-dark-gray;
+  }
+
+  &-subtext{
+    margin-bottom: 2rem;
+  }
+
+  &-button{
+    display: flex;
+    justify-content: center;
+    &-edit{
+      color: $color-white;
+      background-color: $color-red;
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      border: 0;
+      border-radius: 0.6rem;
+      font-family: $font-semi-bold;
+      padding: 1.5rem 4.6rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+}

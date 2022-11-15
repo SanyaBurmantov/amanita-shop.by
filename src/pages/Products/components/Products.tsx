@@ -5,10 +5,10 @@ import ProductItem from "./ProductItem";
  import {posts} from "../../../data/Posts";
  import {IPost, IProduct} from "../../../types";
  import {Post} from "../../Blog/components/Post/Post";
+ import { motion } from "framer-motion";
 
 
-
-interface Props {
+ interface Props {
 }
 
 const Products = () => {
@@ -25,13 +25,22 @@ const Products = () => {
     }
 
     return (
-        <div className="section section-products">
+        <motion.div className="section section-products"
+             initial={{width: "30%"}}
+             animate={{width: "100%"}}
+             exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
+
             <div className="container">
                 <h3>Магазин</h3>
-                <div className="section-products__filter">
-                    <button className="section-products__filter--element"  onClick={() => ArrFilter('all')}>Все</button>
-                    <Filter ProdFilter={ArrFilter}/>
+
+                <div className="filter">
+                    <div className="section-products__filter">
+                        <button className="section-products__filter--element" onClick={() => ArrFilter('all')}>Все
+                        </button>
+                        <Filter ProdFilter={ArrFilter}/>
+                    </div>
                 </div>
+
                 <div className=''>
                     <div className='products'>{filtred.map((product: IProduct) => <ProductItem
                         product={product}
@@ -39,7 +48,7 @@ const Products = () => {
                     />)}</div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

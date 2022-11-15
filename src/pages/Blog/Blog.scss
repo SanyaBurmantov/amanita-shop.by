@@ -6,7 +6,7 @@
 
 .blog {
   max-width: 132rem;
-  margin: 0 auto;
+
 
   &__title {
     font-family: $font-bold;
@@ -18,15 +18,53 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1080px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__posts {
     margin-right: 4.7rem;
+    @media (max-width: 1080px) {
+      margin-right: 0;
+    }
   }
 
   &__panel {
-
+    &-best{
+      @media (max-width: 1080px) {
+        display: none;
+      }
+    }
+    &-buttons{
+      button{
+        margin: 0.2rem;
+        color: $color-dark-gray;
+        background-color: $color-products-button;
+        border-radius: 2.2rem;
+        padding: 0.6rem 1.5rem;
+        font-family: 'Bahnschrift';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        text-align: center;
+        border: none;
+        transition: 500ms;
+        &.active {
+          color: $color-white;
+          background-color: $color-red;
+        }
+        &:hover{
+          color: $color-white;
+          background-color: $color-red;
+          transition: 500ms;
+        }
+      }
+    }
   }
+
+
 
   &__panel-best-title {
     font-size: 2.4rem;
@@ -34,6 +72,7 @@
     margin-bottom: 1rem;
     color: $color-red;
     font-family: $font-bold;
+
   }
 
   &__panel-buttons {

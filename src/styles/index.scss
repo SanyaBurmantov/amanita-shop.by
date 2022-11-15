@@ -18,22 +18,24 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
 .container {
   max-width: 84%;
   width: 100%;
-
+  overflow-x: hidden;
   margin-left: auto;
   margin-right: auto;
   padding-left: 56px;
   padding-right: 56px;
   @media all and (max-width: 1440px) {
-    max-width: 92%;
+    max-width: 85%;
   }
   @media all and (max-width: 767px) {
-    max-width: 100%;
+    max-width: 90%;
     padding-left: 18px;
     padding-right: 18px
   }
-  @media all and (max-width: 600px) {
-    max-width: 100%;
+  @media (max-width: $mobile) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
+
 }
 
 .section{
@@ -71,4 +73,44 @@ body{color:$color-dark-gray;background:inherit;font: 1.6rem/1.375 $font-normal;
   line-height: 2.2rem;
   margin-top: 1.4rem;
   margin-bottom: 0.8rem;
+  @media (max-width: $mobile) {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+  div{
+    width: 0;
+  }
+
+}
+
+body::-webkit-scrollbar-track {
+  background: $color-light-white
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $color-dark-gray;
+  border-radius: 10px;
+  border: 2px solid $color-light-white;
+
+}
+
+.filter{
+  @media (max-width: $mobile) {
+
+
+    overflow-x: scroll;
+    scrollbar-width: 0px;
+    width: calc(100% + 36px);
+    margin: 0 -2rem;
+    padding-left: 2rem;
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
 }

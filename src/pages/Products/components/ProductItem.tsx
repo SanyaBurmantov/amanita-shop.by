@@ -3,9 +3,7 @@ import {IProduct} from "../../../types";
 import Quantity from "./Quantity";
 import {useDispatch} from "react-redux";
 import {addToCart} from "../../../store/cart/actions";
-import {products} from "../../../data/Products";
-import {Form} from "react-router-dom";
-import money from "../../../assets/icons/money.svg"
+
 
 interface IProductItem{
     product: IProduct
@@ -65,7 +63,7 @@ const ProductItem:FC<IProductItem> = ({product}) => {
 
     return (
         <div className="product">
-
+            <div className='product__data'>
             {/*лево*/}
 
             <div className="product__left">
@@ -95,13 +93,14 @@ const ProductItem:FC<IProductItem> = ({product}) => {
                     <img className="" src={product.imagePath} alt={product.name}/>
                 </div>
             </div>
+            </div>
             {/*/НИЗ?///*/}
             <div className="product__bottom">
 
                     <div className="product__bottom--price"><span></span>  {daun ? "Итого: " + finalPrice : 'Не выбрано'}</div>
                 <div className="product__bottom--btn">
-                    <div className="product__bottom--buttons"><button className="btn " onClick={addHandler}>Купить</button></div>
-                    <div className=""><button className="btn btn-second" onClick={() => setIsShowProduct(!isShowProduct)}>Подробнее
+                    <div className="product__bottom--buttons"><button className="btn btn-shop" onClick={addHandler}>Купить</button></div>
+                    <div className=""><button className="btn btn-second btn-shop" onClick={() => setIsShowProduct(!isShowProduct)}>Подробнее
                     </button></div>
                 </div>
 
@@ -118,7 +117,7 @@ const ProductItem:FC<IProductItem> = ({product}) => {
                     <div className="product-info__more--name">{product.name} </div>
                     <div className="product-info__more--text">{product.text} </div>
                     <div className="product-info__more--type">{product.type}</div>
-                    <div><button className="btn" onClick={addHandler}>В корзину</button></div>
+                    <div><button className="btn btn" onClick={addHandler}>В корзину</button></div>
 
 
                 </div>

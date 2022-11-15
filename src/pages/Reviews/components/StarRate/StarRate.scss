@@ -1,0 +1,78 @@
+@import "../../../../styles/vars";
+
+
+.star-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.star-widget {
+  margin-bottom: 4rem;
+
+  input {
+    display: none;
+
+    &:not(:checked) ~ label:hover,
+    &:not(:checked) ~ label:hover ~ label {
+      color: #fd4;
+    }
+
+    &:checked ~ label {
+      color: #fd4;
+    }
+
+    &#rate-5:checked ~ label {
+      color: #fe7;
+      text-shadow: 0 0 2rem #952;
+    }
+  }
+
+  label {
+    font-size: 7rem;
+    color: $color-gray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    float: right;
+  }
+
+  &-label {
+    display: flex;
+    justify-content: center;
+
+    header {
+      font-size: 2.5rem;
+      font-family: $font-bold;
+      line-height: 2.9rem;
+      color: $color-light-gray;
+
+    }
+  }
+
+  #rate-1:checked ~ form header:before {
+    content: 'Полное говно! 😠';
+  }
+
+  #rate-2:checked ~ form header:before {
+    content: 'Говно! 😒';
+  }
+
+  #rate-3:checked ~ form header:before {
+    content: 'Приемлемо! 😏';
+  }
+
+  #rate-4:checked ~ form header:before {
+    content: 'Отлично! 😃';
+  }
+
+  #rate-5:checked ~ form header:before {
+    content: 'Заебись бро! 😍';
+  }
+
+  form {
+    width: 100%;
+    text-align: center;
+  }
+}
