@@ -78,7 +78,7 @@ export const Cart:FC = () => {
             },
             body: JSON.stringify(data)
         })
-    }, [cart, name, number])
+    }, [name, number, cart, total, queryId])
 
 
 
