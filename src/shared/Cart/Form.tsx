@@ -1,10 +1,26 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {useTelegram} from "../../hooks/useTelegram";
+import {Telegram} from "../../pages/Telegram/Telegram";
 
 const Form = () => {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const {tg} = useTelegram();
+
+    const onSendData = useCallback(() => {
+        const data = {
+            name,
+            number
+        }
+        tg.sendData(JSON.stringify(data))
+    }, [])
+
+    useEffect(() => {
+        tg.WebApp.onEvent('mainButtonClicked', onSendData)
+        return () => {
+            tg.WebApp.offEvent('mainButtonClicked', onSendData)
+        }
+    })
 
     useEffect(() => {
         tg.MainButton.setParams({
@@ -19,6 +35,8 @@ const Form = () => {
             tg.MainButton.show();
         }
     }, [])
+
+
 
     const onChangeName = (e: { target: { value: React.SetStateAction<string>; }; }) => {
         setName(e.target.value)
