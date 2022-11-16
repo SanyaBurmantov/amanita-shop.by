@@ -5,36 +5,39 @@ import {Telegram} from "../../pages/Telegram/Telegram";
 const Form = () => {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
+    //ts-ignore
     const {tg} = useTelegram();
-
+    //ts-ignore
     const onSendData = useCallback(() => {
         const data = {
             name,
-            number
+            number,
         }
-        tg.sendData(JSON.stringify(data))
-    }, [])
-
+        tg.sendData(JSON.stringify(data));
+    }, [name, number])
+    //ts-ignore
     useEffect(() => {
-        tg.WebApp.onEvent('mainButtonClicked', onSendData)
+        tg.onEvent('mainButtonClicked', onSendData)
         return () => {
-            tg.WebApp.offEvent('mainButtonClicked', onSendData)
+            tg.offEvent('mainButtonClicked', onSendData)
         }
-    })
+    }, [onSendData])
 
+    //ts-ignore
     useEffect(() => {
         tg.MainButton.setParams({
             text: 'Отправить данные '
         })
     }, [])
 
+    //ts-ignore
     useEffect(()=> {
         if(!name || !number){
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
         }
-    }, [])
+    }, [name, number])
 
 
 
