@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import {removeFromCart} from "../../store/cart/actions";
 // @ts-ignore
 import cartIcon from "../../assets/icons/cart.svg"
-import Form from "./Form";
+
 import {useTelegram} from "../../hooks/useTelegram";
 
 export const Cart:FC = () => {
@@ -22,17 +22,6 @@ export const Cart:FC = () => {
         acc + item.price * item.count
 
     , 0)
-
-
-
-
-
-    //ts-ignore
-    useEffect(() => {
-        tg.MainButton.setParams({
-            text: 'Отправить данные '
-        })
-    }, [])
 
     //ts-ignore
     useEffect(()=> {
@@ -69,8 +58,8 @@ export const Cart:FC = () => {
         const data = {
             name,
             number,
-            products: {cart},
-            totalPrice: {total},
+            products: cart,
+            totalPrice: total,
             queryId,
         }
         if(cart.length === 0) {
@@ -81,7 +70,7 @@ export const Cart:FC = () => {
                 text: `Купить ${total}`
             })
         }
-        tg.sendData(JSON.stringify(data));
+
         fetch('http://46.53.246.101:8000/web-data', {
             method: 'POST',
             headers: {

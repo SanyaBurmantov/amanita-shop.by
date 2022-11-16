@@ -1,8 +1,7 @@
 import React, {useEffect} from "react";
 import {useTelegram} from "../../hooks/useTelegram";
 import {HeaderTelegram} from "../../shared/Header/HeaderTelegram";
-import Form from "../../shared/Cart/Form";
-// @ts-ignore
+
 
 
 
@@ -23,7 +22,7 @@ export const Telegram = (props: Props) => {
             <div className="container">
 
             <HeaderTelegram />
-                <Form />
+
 
                 Некоторые функции сайта работают в тестовом режиме, приносим извинения за временные неудобства.
 
