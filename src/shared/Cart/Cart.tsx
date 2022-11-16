@@ -69,8 +69,8 @@ export const Cart:FC = () => {
         const data = {
             name,
             number,
-            products: cart,
-            totalPrice: total,
+            products: {cart},
+            totalPrice: {total},
             queryId,
         }
         if(cart.length === 0) {
