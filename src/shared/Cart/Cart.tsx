@@ -1,12 +1,14 @@
-import {FC, useState} from "react";
+import {FC, useCallback, useEffect, useState} from "react";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import {removeFromCart} from "../../store/cart/actions";
 // @ts-ignore
 import cartIcon from "../../assets/icons/cart.svg"
 import Form from "./Form";
+import {useTelegram} from "../../hooks/useTelegram";
 
 export const Cart:FC = () => {
+    const {tg, queryId} = useTelegram();
 
     const [isShowCart, setIsShowCart] = useState(false);
 
@@ -22,6 +24,37 @@ export const Cart:FC = () => {
     const removeHandler = (id:string) => {
         dispatch(removeFromCart(id))
     }
+
+    // const removeAll = (cart: []) => {
+    //     dispatch(removeFromCart())
+    // }
+
+
+    const onSendData = useCallback(() => {
+        const data = {
+            products: cart,
+            totalPrice: total,
+            queryId,
+        }
+        fetch('http://85.119.146.179:8000/web-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+    }, [cart])
+
+
+
+    useEffect(() => {
+        tg.onEvent('mainButtonClicked', onSendData)
+
+        return () => {
+            tg.offEvent('mainButtonClicked', onSendData);
+
+        }
+    }, [onSendData])
 
     return(
         <div className="cart">
@@ -45,9 +78,7 @@ export const Cart:FC = () => {
                         </div>
 
                     ))}
-                    <div className="cart__form">
-
-                    </div>
+                    <div className="btn" onClick={onSendData}>Купить </div>
                     <div className="cart__total">
                         Общая сумма: <b>{Math.round(total)}</b>
                     </div>
