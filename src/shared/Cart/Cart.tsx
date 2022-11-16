@@ -82,13 +82,13 @@ export const Cart:FC = () => {
             })
         }
         tg.sendData(JSON.stringify(data));
-        // fetch('http://85.119.146.179:8000/web-data', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(data)
-        // })
+        fetch('http://46.53.246.101:8000/web-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
     }, [cart, name, number])
 
 
