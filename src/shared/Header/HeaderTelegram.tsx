@@ -11,11 +11,12 @@ export const HeaderTelegram = (props: Props) => {
 
 
     return (
-        <div>
-            <button onClick={onClose}></button>
-            <span className={'username'}>
-                <div> Добро пожаловать, {user?.username} на сайт Amanita-shop.by</div>
-                <div className="hello">У нас вы можете приобрести мухоморы, ежовики и другое по самым выгодным ценам </div>
+        <div className='telegram__header'>
+            <div className='telegram__header--button'>
+            <button className='btn-telegram' onClick={onClose}>Закрыть</button></div>
+            <span className='telegram__username'>
+                <div className="telegram__title"> Добро пожаловать, {user?.username} на сайт Amanita-shop.by</div>
+                <div className="telegram__title">У нас вы можете приобрести мухоморы, ежовики и другое по самым выгодным ценам </div>
 
             </span>
         </div>

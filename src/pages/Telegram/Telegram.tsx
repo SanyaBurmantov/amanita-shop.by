@@ -24,9 +24,9 @@ export const Telegram = (props: Props) => {
 
             <HeaderTelegram />
                 <Form />
-            Amanita-Shop.by
+
                 Некоторые функции сайта работают в тестовом режиме, приносим извинения за временные неудобства.
-            <button onClick={onToggleButton}>Fsdf</button>
+
             </div>
         </div>
     )

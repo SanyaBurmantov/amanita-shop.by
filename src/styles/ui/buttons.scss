@@ -45,4 +45,15 @@
 
     }
   }
+  &-telegram{
+    background-color: #587bda;
+    color: $color-white;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding: 0.4rem 1.1rem;
+    border: 0;
+    border-radius: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
