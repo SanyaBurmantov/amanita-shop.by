@@ -71,7 +71,7 @@ export const Cart:FC = () => {
             })
         }
 
-        fetch('https://amanita-shop.herokuapp.com:8080/web-data', {
+        fetch('https://172.16.218.166:8080/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
