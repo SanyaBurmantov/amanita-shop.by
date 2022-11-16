@@ -71,7 +71,7 @@ export const Cart:FC = () => {
             })
         }
 
-        fetch('http://46.53.246.101:8000/web-data', {
+        fetch('https://46.53.246.101:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
