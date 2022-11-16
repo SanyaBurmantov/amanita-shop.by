@@ -36,6 +36,15 @@ export const Cart:FC = () => {
             totalPrice: total,
             queryId,
         }
+        if(cart.length === 0) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.show();
+            tg.MainButton.setParams({
+                text: `Купить ${total}`
+            })
+        }
+
         fetch('http://85.119.146.179:8000/web-data', {
             method: 'POST',
             headers: {
