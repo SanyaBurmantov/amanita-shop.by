@@ -82,13 +82,13 @@ export const Cart:FC = () => {
             })
         }
         tg.sendData(JSON.stringify(data));
-        fetch('http://85.119.146.179:8000/web-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
+        // fetch('http://85.119.146.179:8000/web-data', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(data)
+        // })
     }, [cart, name, number])
 
 
@@ -127,10 +127,8 @@ export const Cart:FC = () => {
 
                     ))}
                     <div>
-                    <div className="btn" onClick={onSendData}>Купить </div>
-                    <div className="cart__total">
-                        Общая сумма: <b>{Math.round(total)}</b>
-                    </div>
+
+
                    </div>
                     <div className="form">
                         <h3>Введите ваши данные</h3>
@@ -144,6 +142,11 @@ export const Cart:FC = () => {
                                placeholder='Номер телефона'
                                value={number}
                                onChange={onChangeNumber} />
+                    </div>
+
+                    <div className="btn-telegram" onClick={onSendData}>Купить </div>
+                    <div className="cart__total">
+                        Общая сумма: <b>{Math.round(total)}</b>
                     </div>
                 </div>
 
