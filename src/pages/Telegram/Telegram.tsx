@@ -1,7 +1,8 @@
 import React, {useEffect} from "react";
 import {useTelegram} from "../../hooks/useTelegram";
 import {HeaderTelegram} from "../../shared/Header/HeaderTelegram";
-import Products from "../Products/components/Products";
+// @ts-ignore
+
 
 
 interface Props {
@@ -17,12 +18,15 @@ export const Telegram = (props: Props) => {
 
 
     return (
-        <div>
-            <HeaderTelegram />
-            Amanita-Shop.by
-            
-            <button onClick={onToggleButton}>toggle</button>
+        <div className="telegram">
+            <div className="container">
 
+            <HeaderTelegram />
+
+            Amanita-Shop.by
+                Некоторые функции сайта работают в тестовом режиме, приносим извинения за временные неудобства.
+            <button onClick={onToggleButton}>Fsdf</button>
+            </div>
         </div>
     )
 }

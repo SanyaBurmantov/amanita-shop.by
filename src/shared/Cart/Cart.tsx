@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {removeFromCart} from "../../store/cart/actions";
 // @ts-ignore
 import cartIcon from "../../assets/icons/cart.svg"
+import Form from "./Form";
 
 export const Cart:FC = () => {
 
@@ -51,6 +52,7 @@ export const Cart:FC = () => {
                         Общая сумма: <b>{Math.round(total)}</b>
                     </div>
                 </div>
+
             </div>
         </div>
     )

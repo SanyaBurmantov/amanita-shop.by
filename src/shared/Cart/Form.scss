@@ -1,0 +1,19 @@
+.form{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 70vh;
+  z-index: 40;
+}
+
+.input{
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.select{
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
