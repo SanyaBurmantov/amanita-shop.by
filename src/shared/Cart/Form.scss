@@ -1,9 +1,7 @@
 .form{
-  position: fixed;
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 80vw;
-  height: 70vh;
   z-index: 40;
 }
 
