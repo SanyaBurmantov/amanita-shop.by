@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 import './Payment-and-delivery.scss';
 import {PaymentItem} from "./components/PaymentItem/PaymentItem";
 import Arrows from '../../assets/icons/Slider-arrows.svg'
+import {Background} from "../../shared/Background/Background";
 
 
 interface PaymentAndDelivery {
@@ -73,6 +74,7 @@ export const PaymentAndDelivery: FC<PaymentAndDelivery> = () => {
 
 
     return (
+
         <motion.div className="section section-delivery"
                     initial={{width: "30%"}}
                     animate={{width: "100%"}}

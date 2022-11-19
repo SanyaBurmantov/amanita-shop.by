@@ -56,3 +56,13 @@
 
   }
 }
+
+.picture{
+  img{
+    position: fixed;
+    top: 0;
+    z-index: -99;
+    right: 0;
+    margin-top: 2.4rem;
+  }
+}

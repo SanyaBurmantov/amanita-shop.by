@@ -1,19 +1,16 @@
-import React, {useEffect, useState} from "react";
-// @ts-ignore
+import React, {FC, useState} from "react";
 import logo from '../../assets/icons/logo-amanita.svg'
-// @ts-ignore
-import logoMob from '../../assets/icons/logo-amanita-mobile.png'
-import { motion, useScroll } from "framer-motion"
+import {motion} from "framer-motion"
 import {Link} from "react-router-dom";
 import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE} from "../../utils/consts";
-import {products} from "../../data/Products";
 
 
-interface Props {
+interface Header {
 
 }
 
-export const Header = (props: Props) => {
+export const Header: FC<Header> = () => {
+
     const items = [{
         name: 'Главная',
         href: HOME_ROUTE
@@ -35,47 +32,49 @@ export const Header = (props: Props) => {
 
     return (
         <header>
+            <div className='container'>
+                <motion.div className='headers'>
+                    <div className='header'>
+                        <div className='header-menu'>
+                            <div className="header-menu-logo">
+                                <Link to="/">
+                                    <img className='header-menu-logo-img' src={logo} alt='logo-amanita'/>
+                                </Link>
+                            </div>
+                            <div className="header-menu-menu">
+                                <div onClick={() => (setActiveState(prev => !prev))}>
+                                    <div className={`header-menu-menu-burger ${activeState ? 'active' : ''}`}>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <ul className={`${activeState ? 'active' : ''}`}>
+                                    <div className='header-menu-title'>Меню</div>
+                                    <hr/>
+                                    {items.map(item =>
+                                        <Link to={item.href} key={item.name}
+                                              onClick={() => (setActiveState(prev => !prev))}
+                                              className="header-menu-menu-element">
+                                            <div className='header-menu-menu-element-title'>
+                                                <div className='header-menu-menu-element-title-marker'></div>
+                                                <div className='header-menu-menu-element-title-name'>{item.name}</div>
+                                            </div>
+                                            <div className='header-menu-menu-element-arrow'></div>
+                                        </Link>
+                                    )}
+                                </ul>
+                                <div className={`header-blur ${activeState ? 'active' : ''}`}
+                                     onClick={() => (setActiveState(prev => !prev))}></div>
 
-            <motion.div className='header'>
-
-                <div className='header__logo'>
-                    <div className="header__logo--picture">
-                        <Link to="/">
-                            <img src={logo} alt='logo-amanita'/>
-                        </Link>
-                    </div>
-                    <div className="header__logo--mobile">
-                        <Link to="/">
-                            <img src={logoMob} alt='logo-amanita'/>
-                        </Link>
-                    </div>
-
-                </div>
-
-                <div className="header__menu">
-                    <div onClick={() => (setActiveState(prev => !prev))}>
-                        <div className={`header__burger ${activeState ? 'active' : ''}`}>
-                            <span></span>
+                            </div>
+                        </div>
+                        <div className="header-button">
+                            <button className="header-button-btn">Оформить заказ</button>
                         </div>
                     </div>
-                    <ul className={`${activeState ? 'active' : ''}`}>
-                        {items.map(item =>
-                            <li key={item.name} onClick={() => (setActiveState(prev => !prev))} className="header__menu--element">
-                                <Link to={item.href}>{item.name}</Link>
-                            </li>
-                        )}
-                    </ul>
-                    <div className={`header__blur ${activeState ? 'active' : ''}`}
-                         onClick={() => (setActiveState(prev => !prev))}></div>
-
-                    <div className="header__btn">
-                        <button className="btn">Оформить заказ</button>
-                    </div>
-                </div>
-
-            </motion.div>
+                    <hr/>
+                </motion.div>
+            </div>
         </header>
-
     )
 }
 

@@ -1,14 +1,13 @@
- import React, {useState} from 'react';
+import React, {useState} from 'react';
 import {products} from "../../../data/Products"
 import ProductItem from "./ProductItem";
- import {Filter} from "./Filter";
- import {posts} from "../../../data/Posts";
- import {IPost, IProduct} from "../../../types";
- import {Post} from "../../Blog/components/Post/Post";
- import { motion } from "framer-motion";
+import {Filter} from "./Filter";
+import {IProduct} from "../../../types";
+import {motion} from "framer-motion";
+import Background from "../../../assets/images/background-image-products.png";
 
 
- interface Props {
+interface Props {
 }
 
 const Products = () => {
@@ -26,13 +25,12 @@ const Products = () => {
 
     return (
         <motion.div className="section section-products"
-             initial={{width: "30%"}}
-             animate={{width: "100%"}}
-             exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
-
+                    initial={{width: "30%"}}
+                    animate={{width: "100%"}}
+                    exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
             <div className="container">
                 <h3>Магазин</h3>
-
+                <h4>Мухомор сушеный, мухомор красный, пантерный, ежовик гребенчатый, кордицепс и многое другое!</h4>
                 <div className="filter">
                     <div className="section-products__filter">
                         <button className="section-products__filter--element" onClick={() => ArrFilter('all')}>Все
@@ -47,6 +45,7 @@ const Products = () => {
                         key={product._id}
                     />)}</div>
                 </div>
+                <div className='picture'><img src={Background}/></div>
             </div>
         </motion.div>
     );

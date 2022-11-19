@@ -9,6 +9,7 @@ import {Cart} from "./shared/Cart/Cart";
 import {PersistGate} from "redux-persist/integration/react";
 import {persistStore} from "redux-persist";
 import {Telegram} from "./pages/Telegram/Telegram";
+import {Background} from "./shared/Background/Background";
 
 
 function App() {
@@ -16,13 +17,13 @@ function App() {
     return (
         <Provider store={store}>
             <PersistGate persistor={persistStore(store)} loading={<div>Loading...</div>}>
-        <BrowserRouter>
-            <Header/>
-            <AppRouter/>
-            <Cart />
-            <Footer/>
-
-        </BrowserRouter>
+                <BrowserRouter>
+                    <Header/>
+                    <AppRouter/>
+                    <Cart/>
+                    <Background/>
+                    <Footer/>
+                </BrowserRouter>
             </PersistGate>
         </Provider>
 

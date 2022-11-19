@@ -10,12 +10,26 @@ h2{font:bold 3.8rem/1.11 $font-normal;margin:0 0 3.6rem;color:$color-dark-gray;
 
 
 
-h3{font-size: 5.6rem;line-height: 1.29;font-weight:bold;
-  font-family:$font-bold;color:$color-dark-gray;
-  margin-top: 0; margin-bottom: 0;padding-top: 4rem;padding-bottom: 4rem;
+h3{
+  font-size: 4.8rem;
+  line-height: 7.7rem;
+  font-weight:bold;
+  font-family:$font-bold;
+  color:$color-white;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
   @media (max-width:600px){font-size: 2.8rem;margin-bottom: 1.8rem}
 }
-h4{font-size: 2.4rem;line-height: 1;color:$color-dark-gray;
+h4{
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color:$color-h4;
+  font-weight: normal;
+  max-width: 58.2rem;
+  margin-top: 0rem;
+  margin-bottom: 4.5rem;
   @media (max-width:600px){font-size: 1.8rem}
 }
 
