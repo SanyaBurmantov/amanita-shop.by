@@ -5,6 +5,7 @@ import {Filter} from "./Filter";
 import {IProduct} from "../../../types";
 import {motion} from "framer-motion";
 import Background from "../../../assets/images/background-image-products.png";
+import './Products.scss'
 
 
 interface Props {

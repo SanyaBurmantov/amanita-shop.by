@@ -12,7 +12,6 @@ export const Filter: FC<FilterProps> = ({ProdFilter}) => {
     const fill = products.filter(({type}) => (!FillProd[type] && (FillProd[type] = 1)));
 
 
-
     return (
         <div className='section-products__filter'>{fill.map((FillProd) => <button
             className='section-products__filter--element'

@@ -5,13 +5,13 @@ export interface IProduct{
     _id: string
     name: string
     title: string
-    form: number //1- капсулы 2- порошок 3- шляпки
+    form: number
     imagePath: string
-    price: number
-    capacity: number[]
-    count: number
+    price: IPrice[]
     type: string
-    text: string
+    text: string,
+    coefficient: ICoefficient[]
+
 }
 
 export interface IRewiews{
@@ -38,6 +38,19 @@ export interface IPost {
     PostData: string,
     Comments: IComment[]
 }
+
+export interface IPrice {
+    id: number
+    count: number,
+    price: number,
+    priceTwo: number
+}
+
+export interface ICoefficient {
+    id: number
+    coefficient: number,
+}
+
 
 export interface IComment {
     id: any
