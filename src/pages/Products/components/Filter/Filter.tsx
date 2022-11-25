@@ -1,12 +1,12 @@
 import React, {FC, useState} from 'react';
-import {products} from "../../../data/Products";
-import {FunctionProdFilter} from "../../../types";
+import {products} from "../../../../data/Products";
+import {FunctionProdFilter} from "../../../../types";
 
-interface FilterProps {
+interface Filter {
     ProdFilter: FunctionProdFilter
 }
 
-export const Filter: FC<FilterProps> = ({ProdFilter}) => {
+export const Filter: FC<Filter> = ({ProdFilter}) => {
 
     const FillProd: { [Type: string]: number } = {};
     const fill = products.filter(({type}) => (!FillProd[type] && (FillProd[type] = 1)));

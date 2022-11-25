@@ -42,13 +42,17 @@ export interface IPost {
 export interface IPrice {
     id: number
     count: number,
-    price: number,
-    priceTwo: number
 }
 
 export interface ICoefficient {
     id: number
-    coefficient: number,
+    price: number,
+    coff: IGovno[]
+}
+
+export interface IGovno {
+    id: number
+    coefficient: number
 }
 
 

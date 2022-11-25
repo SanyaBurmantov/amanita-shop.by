@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {products} from "../../../data/Products"
-import ProductItem from "./ProductItem";
-import {Filter} from "./Filter";
+import ProductItem from "./ProductsItem/ProductItem";
+import {Filter} from "./Filter/Filter";
 import {IProduct} from "../../../types";
 import {motion} from "framer-motion";
 import Background from "../../../assets/images/background-image-products.png";
