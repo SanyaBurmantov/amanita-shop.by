@@ -2,6 +2,8 @@ import React, {FC, useEffect, useState} from 'react';
 import {IProduct} from "../../../../types";
 import CashImage from '../../../../assets/icons/money.svg'
 import {Counter} from "../ Counter/ Counter";
+import {useDispatch} from "react-redux";
+import {addToCart} from "../../../../store/cart/actions";
 
 
 interface IProductItem {
@@ -47,8 +49,18 @@ const ProductItem: FC<IProductItem> = ({product}) => {
         })
     }, [twoSelector, oneSelector])
 
+    const pizda = (threeSelector * oneSelector / twoSelector) * count;
 
-    let finalPrice = Math.ceil((threeSelector * oneSelector / twoSelector) * count)
+
+    let finalPrice = Math.ceil(pizda)
+
+    const dispatch = useDispatch()
+
+    const addHandler = () => {if(count>0 && threeSelector>0 && oneSelector>0 && twoSelector){
+        dispatch(addToCart(product, pizda))
+    };
+    }
+
 
     return (
         <div className='product'>
@@ -128,7 +140,7 @@ const ProductItem: FC<IProductItem> = ({product}) => {
                         </div>
                         <div className='product-bottom-buttons'>
                             <div className='product-bottom-buttons-pay'>
-                                <button className="product-bottom-buttons-pay-btn">Купить</button>
+                                <button className="product-bottom-buttons-pay-btn" onClick={addHandler}>Купить</button>
                             </div>
                             <div className='product-bottom-buttons-more'>
                                 <button className="product-bottom-buttons-more-btn"

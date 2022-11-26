@@ -19,7 +19,7 @@ export const Cart:FC = () => {
     const cart = useTypedSelector(state => state.cart)
 
     const total = cart.reduce((acc, item) =>
-        acc + item.price * item.count
+        acc + item.count
 
     , 0)
 
@@ -108,7 +108,7 @@ export const Cart:FC = () => {
                             <img className="cart__data--picture" src={item.imagePath} alt={item.name}/>
                             <div>
                                 <div className="cart__data--name">К покупке {item.name}</div>
-                                <div className="cart__data--price">В колличестве {`${item.count} единиц, стоимостью ${item.price} за шт.`}</div>
+                                <div className="cart__data--price">Цена за товар: {`${item.count} BYN, Описание `}</div>
                                 <button className="cart__data--button" onClick={() => removeHandler(item._id)}>Удалить
                                 </button>
                             </div>
