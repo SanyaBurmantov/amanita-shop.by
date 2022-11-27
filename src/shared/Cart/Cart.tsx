@@ -81,7 +81,7 @@ export const Cart:FC = () => {
         axios.post(URL_API, {
             chat_id: chatIdSanya,
 
-            text: 'haha',
+            text: data,
 
         })
             .then((res) => {
