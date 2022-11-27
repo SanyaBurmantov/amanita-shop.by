@@ -1,5 +1,5 @@
-.section-products{
-  h3{
+.section-products {
+  h3 {
     @media (max-width: $mobile) {
       padding: 2rem 0;
       margin: 0;
@@ -7,62 +7,51 @@
     }
   }
 
-  &__filter{
-    display: flex;
-    flex-wrap: nowrap;
-    ::-webkit-scrollbar {
-      width: 0;
-      &:first-child{
-        margin-left: 3rem;
-      }
-    }
-    &--arr{
+
+    &__filter{
+      display: flex;
       flex-wrap: nowrap;
-    }
-    &--element{
-      margin: 0.5rem;
-      color: $color-dark-gray;
-      background-color: $color-products-button;
-      border-radius: 2.2rem;
-      padding: 1rem 2rem;
-      font-family: 'Bahnschrift';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 2.2rem;
-      line-height: 2.6rem;
-      text-align: center;
-      border: none;
-      transition: 500ms;
-      @media (max-width: $mobile) {
-        margin: 0.2rem;
-        padding: .7rem 1.4rem;
-        font-family: 'Bahnschrift';
+      ::-webkit-scrollbar {
+        width: 0;
+        &:first-child{
+          margin-left: 3rem;
+        }
+      }
+      &--arr{
+        flex-wrap: nowrap;
+      }
+      &--element{
+        margin: 0.5rem;
+        color: $color-dark-gray;
+        background-color: $color-products-button;
+        border-radius: 2.2rem;
+        padding: 1rem 2rem;
         font-style: normal;
         font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2rem;
-
-      }
-      &.active {
-        color: $color-white;
-        background-color: $color-red;
-      }
-      &:hover{
-        color: $color-white;
-        background-color: $color-red;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        text-align: center;
+        border: none;
         transition: 500ms;
+        @media (max-width: $mobile) {
+          margin: 0.2rem;
+          padding: .7rem 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2rem;
+
+        }
+        &.active {
+          color: $color-white;
+          background-color: $color-orange;
+        }
+        &:hover{
+          color: $color-white;
+          background-color: $color-orange;
+          transition: 500ms;
+        }
       }
+
     }
-
-  }
-}
-
-.picture{
-  img{
-    position: fixed;
-    top: 0;
-    z-index: -99;
-    right: 0;
-    margin-top: 2.4rem;
-  }
 }

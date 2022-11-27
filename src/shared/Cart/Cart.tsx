@@ -6,6 +6,8 @@ import {removeFromCart} from "../../store/cart/actions";
 import cartIcon from "../../assets/icons/cart.svg"
 
 import {useTelegram} from "../../hooks/useTelegram";
+import axios from "axios";
+
 
 export const Cart:FC = () => {
     const [name, setName] = useState('');
@@ -19,7 +21,7 @@ export const Cart:FC = () => {
     const cart = useTypedSelector(state => state.cart)
 
     const total = cart.reduce((acc, item) =>
-        acc + item.price * item.count
+        acc + item.count
 
     , 0)
 
@@ -55,6 +57,11 @@ export const Cart:FC = () => {
 
 
     const onSendData = useCallback(() => {
+
+        const token = "5395453268:AAFNhZwVm1ScGFb2jiukzA7H8LIZwLxBc9E";
+        const chatIdMark = "424119633" ;
+        const chatIdSanya = "08745156" ;
+        const URL_API = 'https://api.telegram.org/bot5395453268:AAFNhZwVm1ScGFb2jiukzA7H8LIZwLxBc9E/sendMessage';
         const data = {
             name,
             number,
@@ -62,22 +69,30 @@ export const Cart:FC = () => {
             totalPrice: total,
             queryId,
         }
-        if(cart.length === 0) {
-            tg.MainButton.hide();
-        } else {
-            tg.MainButton.show();
-            tg.MainButton.setParams({
-                text: `Купить ${total}`
-            })
-        }
+        // if(cart.length === 0) {
+        //     tg.MainButton.hide();
+        // } else {
+        //     tg.MainButton.show();
+        //     tg.MainButton.setParams({
+        //         text: `Купить ${total}`
+        //     })
+        // }
 
-        fetch('https://172.16.218.166:8080/web-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
+        axios.post(URL_API, {
+            chat_id: chatIdSanya,
+
+            text: data,
+
         })
+            .then((res) => {
+
+            })
+
+            .catch((err)=>{
+                console.warn(err)
+            })
+
+        console.log(name, number, cart, total)
     }, [name, number, cart, total, queryId])
 
 
@@ -108,7 +123,7 @@ export const Cart:FC = () => {
                             <img className="cart__data--picture" src={item.imagePath} alt={item.name}/>
                             <div>
                                 <div className="cart__data--name">К покупке {item.name}</div>
-                                <div className="cart__data--price">В колличестве {`${item.count} единиц, стоимостью ${item.price} за шт.`}</div>
+                                <div className="cart__data--price">Цена за товар: {`${item.count} BYN, Описание `}</div>
                                 <button className="cart__data--button" onClick={() => removeHandler(item._id)}>Удалить
                                 </button>
                             </div>
