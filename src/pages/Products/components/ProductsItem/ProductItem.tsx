@@ -1,5 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
 import {IProduct} from "../../../../types";
+// @ts-ignore
 import CashImage from '../../../../assets/icons/money.svg'
 import {Counter} from "../ Counter/ Counter";
 import {useDispatch} from "react-redux";
