@@ -50,6 +50,7 @@ const ProductItem: FC<IProductItem> = ({product}) => {
         })
     }, [twoSelector, oneSelector])
 
+
     const pizda = (threeSelector * oneSelector / twoSelector) * count;
 
 
@@ -58,7 +59,7 @@ const ProductItem: FC<IProductItem> = ({product}) => {
     const dispatch = useDispatch()
 
     const addHandler = () => {if(count>0 && threeSelector>0 && oneSelector>0 && twoSelector){
-        dispatch(addToCart(product, pizda))
+        dispatch(addToCart(product, pizda, oneSelector, twoSelector, count))
     };
     }
 

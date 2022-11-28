@@ -8,6 +8,10 @@ export enum actionTypes {
 interface ICartAddItemPayload {
     product: IProduct
     count: number
+    oneSelector: any
+    twoSelector: any
+    pizda: number
+
 }
 
 interface ICartAddItem {

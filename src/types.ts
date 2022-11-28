@@ -79,6 +79,9 @@ export interface IPayment {
 
 export interface ICartItem extends IProduct{
     count: number
+    oneSelector: any
+    twoSelector: any
+    pizda: any
 }
 
 export type TypeSetState<T> = Dispatch<SetStateAction<T>>

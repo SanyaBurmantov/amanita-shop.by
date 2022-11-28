@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import {removeFromCart} from "../../store/cart/actions";
 // @ts-ignore
 import cartIcon from "../../assets/icons/cart.svg"
-
+import './Form.scss'
 import {useTelegram} from "../../hooks/useTelegram";
 import axios from "axios";
 import * as url from "url";
@@ -134,16 +134,27 @@ export const Cart:FC = () => {
                 </div>
             </div>
 
-            <div className={isShowCart ? 'cart__data active' : 'cart__data'} onClick={() => setIsShowCart(false)}>
 
-                <div className={isShowCart ? 'cart__data--content active' : 'cart__data--content'} onClick={e => e.stopPropagation()}>
+
+
+
+            <div className={isShowCart ? 'cart__data active' : 'cart__data'} onClick={() => setIsShowCart(false)}>
+                <div className={isShowCart ? 'cart__data--content active' : 'cart__data--content'}
+                     onClick={e => e.stopPropagation()}>
                     {cart.map(item => (
                         <div className="cart__data--elem" key={`cart item ${item.name}`}>
                             <img className="cart__data--picture" src={item.imagePath} alt={item.name}/>
                             <div>
 
                                 <div className="cart__data--name">К покупке {item.name}</div>
-                                <div className="cart__data--price">Цена за товар: {`${item.count} BYN, Описание `}</div>
+                                <div>Описание:
+                                    <div>{item.type}</div>
+                                    <div>{(item.form === 1) ? 'Количество грамм порошка:' : (item.form === 2) ? 'Количество капсул:' : (item.form === 3) ? 'Количество капсул:' : (item.form === 4) ? 'Количество пакетиков:' : (item.form === 5) ? 'Количество грамм:' : 'Объем:'}{`${item.oneSelector}`}</div>
+                                    <div>{(item.form === 2) ? 'Количество грамм в капсуле:' :
+                                        (item.form === 4) ? 'Количество грамм:' : ''} {((item.form === 2) || (item.form === 4)) ? `${item.twoSelector}` : ''}</div>
+                                    <div>Количество единиц товара: {`${item.pizda}`}</div>
+                                </div>
+                                <div className="cart__data--price">Итоговая цена за товар: {`${item.count} BYN`}</div>
                                 <button className="cart__data--button" onClick={() => removeHandler(item._id)}>Удалить
                                 </button>
                             </div>
@@ -153,7 +164,7 @@ export const Cart:FC = () => {
                     <div>
 
 
-                   </div>
+                    </div>
                     <div className="form">
                         <h3>Введите ваши данные</h3>
                         <input className='input'

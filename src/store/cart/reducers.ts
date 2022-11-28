@@ -9,7 +9,7 @@ export const cartReducer = (state = initialState, action:
         case actionTypes.CART_ADD_ITEM:
         {
             const cart = [...state]
-            const {count, product} = action.payload
+            const {product, count, oneSelector, twoSelector, pizda} = action.payload
 
             const foundProduct = cart.find(item => item._id === product._id)
             if(foundProduct) {
@@ -17,7 +17,7 @@ export const cartReducer = (state = initialState, action:
             }else {
                 cart.push({
                     ...product,
-                    count
+                    count, oneSelector, twoSelector, pizda
                 })
             }
 
