@@ -359,10 +359,15 @@
 
 .products {
   display: grid;
-  grid-template-columns: 50%;
+  grid-template-columns: 45%;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 800px) {
+    grid-template-columns: 100%;
+  }
 }
 
 .product {
+  margin: 1rem;
   background: #FFFFFF;
   box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
   border-radius: 2.2rem;

@@ -7,6 +7,8 @@ import cartIcon from "../../assets/icons/cart.svg"
 
 import {useTelegram} from "../../hooks/useTelegram";
 import axios from "axios";
+import * as url from "url";
+import {IPrice} from "../../types";
 
 
 export const Cart:FC = () => {
@@ -22,7 +24,6 @@ export const Cart:FC = () => {
 
     const total = cart.reduce((acc, item) =>
         acc + item.count
-
     , 0)
 
     //ts-ignore
@@ -60,8 +61,7 @@ export const Cart:FC = () => {
 
         const token = "5395453268:AAFNhZwVm1ScGFb2jiukzA7H8LIZwLxBc9E";
         const chatIdMark = "424119633" ;
-        const chatIdSanya = "08745156" ;
-        const URL_API = 'https://api.telegram.org/bot5395453268:AAFNhZwVm1ScGFb2jiukzA7H8LIZwLxBc9E/sendMessage';
+        const chatIdSanya = "408745156" ;
         const data = {
             name,
             number,
@@ -78,21 +78,40 @@ export const Cart:FC = () => {
         //     })
         // }
 
-        axios.post(URL_API, {
-            chat_id: chatIdSanya,
-
-            text: data,
+        // _id: string
+        // name: string
+        // title: string
+        // form: number
+        // imagePath: string
+        // price: IPrice[]
+        // type: string
+        // text: string,
+        let s1 = '';
+        let s2 = '';
+        let s3 = '';
+        let s4 = '';
+        let posValue = data.products.length
+        let strMatrix = ''
+        let strPr = data.products.map(el => {
+            s1 = "%0A %09" + el.name.toString()
+            strMatrix = strMatrix + s1;
+            s2 = "%0A %09" + el.type.toString();
+            strMatrix = strMatrix + s2
+            // s3 = el.price.length.toString()
+            // strMatrix = strMatrix + s3
+            s4 = "%0A %09Цена " + el.count.toString() + "BYN%0A"
+            strMatrix = strMatrix + s4
 
         })
-            .then((res) => {
 
-            })
+        let message = "Клиент: " + data.name + "%0AНомер телефона" + data.number + "%0AЧисло товаров: " + posValue + "%0AТовары: " + strMatrix + "%0AИтоговая цена: " + data.totalPrice.toString() + "BYN"
 
-            .catch((err)=>{
-                console.warn(err)
-            })
+        const URL_API = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdSanya}&text=${message}&parse_mode=html`;
+        let api = new XMLHttpRequest();
+        // @ts-ignore
+        api.open("GET", URL_API, true)
+        api.send();
 
-        console.log(name, number, cart, total)
     }, [name, number, cart, total, queryId])
 
 
@@ -122,6 +141,7 @@ export const Cart:FC = () => {
                         <div className="cart__data--elem" key={`cart item ${item.name}`}>
                             <img className="cart__data--picture" src={item.imagePath} alt={item.name}/>
                             <div>
+
                                 <div className="cart__data--name">К покупке {item.name}</div>
                                 <div className="cart__data--price">Цена за товар: {`${item.count} BYN, Описание `}</div>
                                 <button className="cart__data--button" onClick={() => removeHandler(item._id)}>Удалить

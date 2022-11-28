@@ -1,4 +1,5 @@
 import {IProduct} from "../types";
+// @ts-ignore
 import imageToAdd from "../assets/images/ImageProduct.png";
 
 
