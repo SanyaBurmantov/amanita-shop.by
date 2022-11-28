@@ -1,0 +1,94 @@
+.back{
+  position: fixed;
+  width: 1000vw;
+  height: 1000vh;
+  left: 0;
+  top: 0;
+  background-color: $color-white;
+  z-index: -1;
+}
+.heading{
+  position: absolute;
+  width: 100vw;
+  height: 600px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  &__picture{
+
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.section__join{
+  min-height: 80vh;
+  z-index: 3;
+  .join{
+    padding: 2rem;
+    display: flex;
+    margin-top: 45rem;
+    &__picture{
+      position: relative;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    &__text {
+
+
+      margin-left: 7rem;
+      .btn{
+        padding: 1.5rem 2rem;
+        border-radius: 4rem;
+        margin-top: 2rem;
+      }
+      h3 {
+        font-size: 4.8rem;
+        line-height: 5.5rem;
+        color: $color-dark-gray;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        margin: 0;
+        padding-bottom: 1.5rem;
+        font-size: 1.8rem;
+        line-height: 2.9rem;
+      }
+    }
+  }
+}
+
+.promo{
+  &__text{
+    margin-top: 15rem;
+    color: $color-white;
+    h1{
+      font-size: 7.0rem;
+      line-height: 9.5rem;
+      margin: 0;
+    }
+    p{
+      margin: 0;
+      font-size: 2.5rem;
+      line-height: 4.5rem;
+    }
+  }
+  &__button{
+    text-align: left;
+    display: flex;
+    margin-top: 5rem;
+    .btn{
+      padding: 2rem 3rem;
+      border-radius: 4rem;
+    }
+  }
+}
