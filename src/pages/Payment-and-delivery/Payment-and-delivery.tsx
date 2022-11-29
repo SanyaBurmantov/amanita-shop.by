@@ -81,7 +81,7 @@ export const PaymentAndDelivery: FC<PaymentAndDelivery> = () => {
                     exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
             <div className='container'>
                 <h3>Оплата и доставка</h3>
-                <h4>Здесь вы можете узнать акутальную информацию по возможности доставки.</h4>
+                <h4>Здесь вы можете получить акутальную информацию по возможности доставки.</h4>
                 <div className='slider'>
                     <div className='slider-arrows-left'><img src={Arrows} onClick={prewSlide}/></div>
                     <div ref={sliderRef} className='slider-container'>
