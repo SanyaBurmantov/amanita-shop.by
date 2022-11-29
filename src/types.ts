@@ -87,6 +87,7 @@ export interface ICartItem extends IProduct{
 export type TypeSetState<T> = Dispatch<SetStateAction<T>>
 
 export type FunctionlikeCount = (id: number) => void;
+export type FunctionRemoveHandler = (id: string) => void;
 export type FunctionArrFilter = (Themes: string) => void;
 export type FunctionProdFilter = (Products: string) => void;
 

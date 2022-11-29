@@ -1,0 +1,106 @@
+@import "../../styles/vars";
+
+//.form{
+//  position: relative;
+//  display: flex;
+//  flex-direction: column;
+//
+//}
+//
+//.input{
+//  margin: 0 auto;
+//  width: 70%;
+//  padding: 1rem;
+//  margin-top: 1.5rem;
+//  @media (max-width: $mobile){
+//    height: 1rem;
+//    padding: 0.5rem;
+//    margin-top: 0.5rem;
+//    font-size: 1.5rem;
+//  }
+//}
+//
+//.select{
+//  padding: 1rem;
+//  margin-top: 1.5rem;
+//}
+
+.cart__data--content {
+
+  &-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 5rem;
+    color: $color-dark-gray;
+    margin-bottom: 3rem;
+  }
+
+  &-items{
+    margin-bottom: 2rem;
+  }
+
+  &-no-item {
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    color: $color-orange;
+  }
+
+  &-total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-ico {
+      margin-right: 1rem;
+    }
+
+    &-summ {
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  &-form {
+
+    margin-bottom: 2rem;
+
+    &-title {
+      font-weight: 600;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    input {
+      box-sizing: border-box;
+      margin-bottom: 1.5rem;
+      background-color: $color-light-gray3;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 0.3rem;
+      width: 100%;
+    }
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+
+    &-telegram {
+      color: $color-white;
+      background-color: $color-orange;
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      border: 0;
+      border-radius: 0.6rem;
+      font-family: $font-semi-bold;
+      padding: 1.5rem 4.6rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+}
