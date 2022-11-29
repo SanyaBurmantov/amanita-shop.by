@@ -145,9 +145,9 @@ const ProductItem: FC<IProductItem> = ({product}) => {
                                 <button className="product-bottom-buttons-pay-btn" onClick={addHandler}>Купить</button>
                             </div>
                             <div className='product-bottom-buttons-more'>
-                                <button className="product-bottom-buttons-more-btn"
-                                        onClick={() => setIsShowProduct(!isShowProduct)}>Подробнее
-                                </button>
+                                {/*<button className="product-bottom-buttons-more-btn"*/}
+                                {/*        onClick={() => setIsShowProduct(!isShowProduct)}>Подробнее*/}
+                                {/*</button>*/}
                             </div>
                         </div>
                     </div>
