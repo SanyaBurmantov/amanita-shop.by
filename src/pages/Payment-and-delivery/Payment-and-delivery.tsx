@@ -80,7 +80,7 @@ export const PaymentAndDelivery: FC<PaymentAndDelivery> = () => {
                     animate={{width: "100%"}}
                     exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
             <div className='container'>
-                <div className='reviews-title'>Оплата и доставка</div>
+                <h3>Оплата и доставка</h3>
                 <div className='slider'>
                     <div className='slider-arrows-left'><img src={Arrows} onClick={prewSlide}/></div>
                     <div ref={sliderRef} className='slider-container'>
