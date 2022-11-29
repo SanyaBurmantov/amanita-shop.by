@@ -42,7 +42,7 @@ export const Home = () => {
                                 <h1>Дары природы</h1>
                                 <p>Польза для здоровья каждый день</p>
                                 <div className="promo__button">
-                                    <button className="btn">Переийти в каталог</button>
+                                    <button className="btn"><a href="/products">Переийти в каталог</a></button>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ export const Home = () => {
                                 привычкам (алкоголь, курение), появляется потребность в здоровой пище, мироощущение
                                 становится позитивным. Мухоморный микродозинг не вызывает привыкания и не требует
                                 перерыва между курсами.</p>
-                            <button className="btn ">Интересно. А подробнее?</button>
+                            <button className="btn"><a href="/products">Интересно. А подробнее?</a></button>
                         </div>
 
                     </div>
@@ -133,7 +133,7 @@ export const Home = () => {
                                 которые содержит в себе шляпка мухомора.</p>
                             <p>Каждый день мы упорно работаем, над тем, чтобы сделать жизнь наших клиентов лучше и счастливее.</p>
                             <p>Наш опыт работы с грибами позволяет отбирать для вас только лучшее.</p>
-                            <button className="btn ">Ясно, покажите асортимент!</button>
+                            <button className="btn "><a href="/products">Ясно, покажите асортимент!</a></button>
                         </div>
                         <div className="join__picture">
                             <img src={home_img2} alt="pic"/>
