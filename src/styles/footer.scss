@@ -1,9 +1,13 @@
 footer{
   background: $color-dark-gray;
-
+  margin-top: 4rem;
+  @media (max-width: $mobile) {
+    margin-top: 2rem;
+  }
 }
 
 .footer{
+
   &__text{
     color: $color-white;
     font-size: 1.8rem;

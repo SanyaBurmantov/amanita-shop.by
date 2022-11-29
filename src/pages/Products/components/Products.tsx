@@ -47,7 +47,7 @@ const Products = () => {
                         key={product._id}
                     />)}</div>
                 </div>
-                <div className='picture'><img src={Background}/></div>
+                {/*<div className='picture'><img src={Background}/></div>*/}
             </div>
         </motion.div>
     );

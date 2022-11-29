@@ -1,4 +1,5 @@
 import React, {FC, useState} from "react";
+// @ts-ignore
 import logo from '../../assets/icons/logo-amanita.svg'
 import {motion} from "framer-motion"
 import {Link} from "react-router-dom";
@@ -18,15 +19,20 @@ export const Header: FC<Header> = () => {
         name: 'Магазин',
         href: PRODUCTS_ROUTE
     }, {
-        name: 'Блог',
-        href: BLOG_ROUTE
-    }, {
         name: 'Доставка',
         href: PAYMENT_ROUTE
-    }, {
-        name: 'Отзывы',
-        href: REVIEWS_ROUTE
-    }];
+    },
+        // {
+    //     name: 'Блог',
+    //     href: BLOG_ROUTE
+    // }, {
+    //     name: 'Доставка',
+    //     href: PAYMENT_ROUTE
+    // }, {
+    //     name: 'Отзывы',
+    //     href: REVIEWS_ROUTE
+    // }
+    ];
 
     let [activeState, setActiveState] = useState(false);
 
