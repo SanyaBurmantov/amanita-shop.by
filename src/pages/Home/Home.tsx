@@ -31,23 +31,29 @@ export const Home = () => {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{x: -window.innerWidth, transition: {duration: 0.2}}}>
-            <div className="container">
+
                 <div className="back"></div>
+
                 <div className="heading">
                     <div className="heading__picture">
                         <img src={mainpic} alt='picture'/>
-                    </div>
-                </div>
-                <div className="promo">
-                    <div className="promo__text">
-                        <h1>Дары природы</h1>
-                        <p>Польза для здоровья каждый день</p>
-                        <div className="promo__button">
-                            <button className="btn">Переийти в каталог</button>
+                        <div className="promo">
+                            <div className="promo__text">
+                                <h1>Дары природы</h1>
+                                <p>Польза для здоровья каждый день</p>
+                                <div className="promo__button">
+                                    <button className="btn">Переийти в каталог</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-                <div className="section__join mt-starter">
+
+
+
+            <div className="container">
+                <div className="section__join mobile_mt15">
                     <div className="join">
                         <div className="join__picture">
                             <img src={home_img} alt="pic"/>
@@ -68,7 +74,7 @@ export const Home = () => {
                                 привычкам (алкоголь, курение), появляется потребность в здоровой пище, мироощущение
                                 становится позитивным. Мухоморный микродозинг не вызывает привыкания и не требует
                                 перерыва между курсами.</p>
-                            <button className="btn ">Узнать больше</button>
+                            <button className="btn ">Интересно. А подробнее?</button>
                         </div>
 
                     </div>
@@ -118,14 +124,16 @@ export const Home = () => {
                 <div className="section__join">
                     <div className="join">
                         <div className="join__text join-second">
-                            <h3>Почему мухомор?</h3>
-                            <p>Мусцимол — основное психоактивное вещество мухомора. Обладает успокаивающим эффектом и
-                                меняет восприятие. Мусцимол активирует ГАМК рецепторы и успокаивает
-                                нейронную активность. Вы будете мыслить яснее. Так же мусцимол влияет на выработку
-                                гормонов дофамина, норадреналина и серотонина. Это выражается в приподнятом настроении,
-                                появляется уверенность и смелость, снимается тревожный эффект.</p>
-                            <p>У нас вы можете купить мухомор высочайшего качества. Все грибы проходят ферментацию </p>
-                            <button className="btn ">Узнать больше</button>
+                            <h3>Почему выбирают нас?</h3>
+                            <p>В нашем каталоге есть грибы в разной расфасовке, благодаря чему вы можете подобрать тот
+                                вариант, который отвечает вашим целям. Мы гарантируем качество грибов. Сырье собрано в
+                                экологически чистых местах, перед сушкой прошло предварительный отбор. В сушку попадают
+                                только зрелые плодовые тела. Сушат плодовые тела при температуре не выше 40 градусов.
+                                Такая технология позволяет сохранить все полезные вещества, витамины и микроэлементы,
+                                которые содержит в себе шляпка мухомора.</p>
+                            <p>Каждый день мы упорно работаем, над тем, чтобы сделать жизнь наших клиентов лучше и счастливее.</p>
+                            <p>Наш опыт работы с грибами позволяет отбирать для вас только лучшее.</p>
+                            <button className="btn ">Ясно, покажите асортимент!</button>
                         </div>
                         <div className="join__picture">
                             <img src={home_img2} alt="pic"/>
