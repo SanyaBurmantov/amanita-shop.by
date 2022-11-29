@@ -4,14 +4,18 @@ import {useDispatch} from "react-redux";
 import {removeFromCart} from "../../store/cart/actions";
 // @ts-ignore
 import cartIcon from "../../assets/icons/cart.svg"
-import './Form.scss'
+import './Card.scss'
 import {useTelegram} from "../../hooks/useTelegram";
 import axios from "axios";
 import * as url from "url";
 import {IPrice} from "../../types";
+import {ItemCard} from "./ItemCard";
+import {Modal} from "../Modal/Modal";
+import CashIco from '../../assets/icons/money.svg'
 
 
-export const Cart:FC = () => {
+export const Cart: FC = () => {
+
     const [name, setName] = useState('');
 
     const [number, setNumber] = useState('');
@@ -23,18 +27,17 @@ export const Cart:FC = () => {
     const cart = useTypedSelector(state => state.cart)
 
     const total = cart.reduce((acc, item) =>
-        acc + item.count
-    , 0)
+            acc + item.count
+        , 0)
 
     //ts-ignore
-    useEffect(()=> {
-        if(!name || !number){
+    useEffect(() => {
+        if (!name || !number) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
         }
     }, [name, number])
-
 
 
     const onChangeName = (e: { target: { value: React.SetStateAction<string>; }; }) => {
@@ -48,7 +51,7 @@ export const Cart:FC = () => {
 
     const dispatch = useDispatch()
 
-    const removeHandler = (id:string) => {
+    const removeHandler = (id: string) => {
         dispatch(removeFromCart(id))
     }
 
@@ -60,8 +63,8 @@ export const Cart:FC = () => {
     const onSendData = useCallback(() => {
 
         const token = "5395453268:AAFNhZwVm1ScGFb2jiukzA7H8LIZwLxBc9E";
-        const chatIdMark = "424119633" ;
-        const chatIdSanya = "408745156" ;
+        const chatIdMark = "424119633";
+        const chatIdSanya = "408745156";
         const data = {
             name,
             number,
@@ -115,7 +118,6 @@ export const Cart:FC = () => {
     }, [name, number, cart, total, queryId])
 
 
-
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
 
@@ -125,68 +127,48 @@ export const Cart:FC = () => {
         }
     }, [onSendData])
 
-    return(
+    return (
         <div className="cart">
             <div className="cart__picture">
                 <div className="" onClick={() => setIsShowCart(!isShowCart)}>
-                    <img className="cart__picture--img" src={cartIcon} alt="cart" />
+                    <img className="cart__picture--img" src={cartIcon} alt="cart"/>
                     <div className="cart__picture--text">{cart.length}</div>
                 </div>
             </div>
-
-
-
-
-
-            <div className={isShowCart ? 'cart__data active' : 'cart__data'} onClick={() => setIsShowCart(false)}>
-                <div className={isShowCart ? 'cart__data--content active' : 'cart__data--content'}
-                     onClick={e => e.stopPropagation()}>
-                    {cart.map(item => (
-                        <div className="cart__data--elem" key={`cart item ${item.name}`}>
-                            <img className="cart__data--picture" src={item.imagePath} alt={item.name}/>
-                            <div>
-
-                                <div className="cart__data--name">К покупке {item.name}</div>
-                                <div>Описание:
-                                    <div>{item.type}</div>
-                                    <div>{(item.form === 1) ? 'Количество грамм порошка:' : (item.form === 2) ? 'Количество капсул:' : (item.form === 3) ? 'Количество капсул:' : (item.form === 4) ? 'Количество пакетиков:' : (item.form === 5) ? 'Количество грамм:' : 'Объем:'}{`${item.oneSelector}`}</div>
-                                    <div>{(item.form === 2) ? 'Количество грамм в капсуле:' :
-                                        (item.form === 4) ? 'Количество грамм:' : ''} {((item.form === 2) || (item.form === 4)) ? `${item.twoSelector}` : ''}</div>
-                                    <div>Количество единиц товара: {`${item.pizda}`}</div>
-                                </div>
-                                <div className="cart__data--price">Итоговая цена за товар: {`${item.count} BYN`}</div>
-                                <button className="cart__data--button" onClick={() => removeHandler(item._id)}>Удалить
-                                </button>
-                            </div>
+            <Modal visible={isShowCart} setVisible={setIsShowCart}>
+                <div className='cart__data--content'>
+                    <div className='cart__data--content-title'>Корзина</div>
+                    {(cart.length > 0) && <div className='cart__data--content-items'>
+                        {cart.map((item, key) => <ItemCard item={item} removeHandler={removeHandler}/>)}
+                    </div>}
+                    {(cart.length === 0) && <div className='cart__data--content-no-item'>Ваша корзина пуста!</div>}
+                    <div className='cart__data--content-total'>
+                        <div className='cart__data--content-total-ico'><img src={CashIco}/></div>
+                        <div className='cart__data--content-total-summ'>Общая сумма: <b>{Math.round(total)} BYN</b>
                         </div>
-
-                    ))}
-                    <div>
-
-
                     </div>
-                    <div className="form">
-                        <h3>Введите ваши данные</h3>
-                        <input className='input'
-                               type='text'
-                               placeholder='Имя'
-                               value={name}
-                               onChange={onChangeName} />
-                        <input className='input'
-                               type='text'
-                               placeholder='Номер телефона'
-                               value={number}
-                               onChange={onChangeNumber} />
-                    </div>
-
-                    <div className="btn-telegram" onClick={onSendData}>Купить </div>
-                    <div className="cart__total">
-                        Общая сумма: <b>{Math.round(total)}</b>
-                    </div>
+                    {(cart.length > 0) && <div className='form'>
+                        <div className='cart__data--content-form'>
+                            <div className='cart__data--content-form-title'>Введите ваши данные:</div>
+                            <input className='cart__data--content-form-input-name'
+                                   type='text'
+                                   placeholder='Имя'
+                                   value={name}
+                                   onChange={onChangeName}/>
+                            <input className='cart__data--content-form-input-tel'
+                                   type='text'
+                                   placeholder='Номер телефона'
+                                   value={number}
+                                   onChange={onChangeNumber}/>
+                        </div>
+                        <div className='cart__data--content-button'>
+                            <button className='cart__data--content-button-telegram' onClick={onSendData}>Оформить
+                                заказ
+                            </button>
+                        </div>
+                    </div>}
                 </div>
-
-            </div>
-
+            </Modal>
         </div>
     )
 }
