@@ -1,7 +1,7 @@
 import React, {FC, useCallback, useEffect, useState} from "react";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
-import {removeFromCart} from "../../store/cart/actions";
+import {removeCartAll, removeFromCart} from "../../store/cart/actions";
 // @ts-ignore
 import cartIcon from "../../assets/icons/cart.svg"
 import './Card.scss'
@@ -12,9 +12,13 @@ import {IPrice} from "../../types";
 import {ItemCard} from "./ItemCard";
 import {Modal} from "../Modal/Modal";
 import CashIco from '../../assets/icons/money.svg'
+import {useInput} from "../../hooks/useInput";
 
 
 export const Cart: FC = () => {
+
+    const nameInputHooks = useInput('', {isEmpty: true, minLength: 2, testName: true})
+    const telInputHooks = useInput('', {isEmpty: true, testPhone: true, minLength: 12})
 
     const [name, setName] = useState('');
 
@@ -42,10 +46,12 @@ export const Cart: FC = () => {
 
     const onChangeName = (e: { target: { value: React.SetStateAction<string>; }; }) => {
         setName(e.target.value)
+        nameInputHooks.onChange(e)
     }
 
     const onChangeNumber = (e: { target: { value: React.SetStateAction<string>; }; }) => {
         setNumber(e.target.value)
+        telInputHooks.onChange(e)
     }
 
 
@@ -55,9 +61,9 @@ export const Cart: FC = () => {
         dispatch(removeFromCart(id))
     }
 
-    // const removeAll = (cart: []) => {
-    //     dispatch(removeFromCart())
-    // }
+    const removeAll = () => {
+        dispatch(removeCartAll())
+    }
 
 
     const onSendData = useCallback(() => {
@@ -115,17 +121,10 @@ export const Cart: FC = () => {
         api.open("GET", URL_API, true)
         api.send();
 
+        removeAll()
+
     }, [name, number, cart, total, queryId])
 
-
-    useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData)
-
-        return () => {
-            tg.offEvent('mainButtonClicked', onSendData);
-
-        }
-    }, [onSendData])
 
     return (
         <div className="cart">
@@ -150,19 +149,38 @@ export const Cart: FC = () => {
                     {(cart.length > 0) && <div className='form'>
                         <div className='cart__data--content-form'>
                             <div className='cart__data--content-form-title'>Введите ваши данные:</div>
+                            {(nameInputHooks.isDirty && nameInputHooks.isEmpty) &&
+                                <div style={{color: 'red'}}>Поле не может быть пустым</div>}
+                            {(nameInputHooks.isDirty && nameInputHooks.minLengthError) &&
+                                <div style={{color: 'red'}}>Поле должно содержать более 2 символов</div>}
+                            {(nameInputHooks.isDirty && nameInputHooks.nameError) &&
+                                <div style={{color: 'red'}}>Можно вводить только буквы</div>}
                             <input className='cart__data--content-form-input-name'
                                    type='text'
                                    placeholder='Имя'
-                                   value={name}
-                                   onChange={onChangeName}/>
+                                   value={nameInputHooks.value}
+                                   onBlur={e => nameInputHooks.onBlur(e)}
+                                   onChange={onChangeName}
+                            />
+                            {(telInputHooks.isDirty && telInputHooks.isEmpty) &&
+                                <div style={{color: 'red'}}>Поле не может быть пустым</div>}
+                            {(telInputHooks.isDirty && telInputHooks.PhoneError) &&
+                                <div style={{color: 'red'}}>Можно вводить только цифры</div>}
+                            {(telInputHooks.isDirty && telInputHooks.minLengthError) &&
+                                <div style={{color: 'red'}}>Напишите номер в формате 375ххххххххх</div>}
                             <input className='cart__data--content-form-input-tel'
-                                   type='text'
+                                   type='tel'
+                                   maxLength={13}
                                    placeholder='Номер телефона'
-                                   value={number}
-                                   onChange={onChangeNumber}/>
+                                   value={telInputHooks.value}
+                                   onBlur={e => telInputHooks.onBlur(e)}
+                                   onChange={onChangeNumber}
+                            />
                         </div>
                         <div className='cart__data--content-button'>
-                            <button className='cart__data--content-button-telegram' onClick={onSendData}>Оформить
+                            <button disabled={!telInputHooks.inputValid || !nameInputHooks.inputValid}
+                                    className={(!telInputHooks.inputValid || !nameInputHooks.inputValid) ? 'cart__data--content-button-telegram  disabled' : 'cart__data--content-button-telegram'}
+                                    onClick={onSendData}>Оформить
                                 заказ
                             </button>
                         </div>
