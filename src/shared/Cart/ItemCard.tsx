@@ -21,15 +21,15 @@ export const ItemCard: FC<ItemCard> = ({item, removeHandler}) => {
                     <div className='item-content-top-ico' onClick={() => removeHandler(item._id)}><img src={RemoveIco}/>
                     </div>
                 </div>
-                <div className='item-content-center'>{item.title}</div>
+                {/*<div className='item-content-center'>{item.title}</div>*/}
                 <div className='item-content-bottom'>
-                    <div className='item-content-bottom-title'>Описание товара:</div>
-                    <div className='item-content-bottom-type'>{item.type}</div>
+                    {/*<div className='item-content-bottom-title'>Описание товара:</div>*/}
+                    {/*<div className='item-content-bottom-type'>{item.type}</div>*/}
                     <div
-                        className='item-content-bottom-description-one'>{(item.form === 1) ? 'Количество грамм порошка:' : (item.form === 2) ? 'Количество капсул:' : (item.form === 3) ? 'Количество капсул:' : (item.form === 4) ? 'Количество пакетиков:' : (item.form === 5) ? 'Количество грамм:' : 'Объем:'} {`${item.oneSelector}`}</div>
+                        className='item-content-bottom-description'>{(item.form === 1) ? 'Количество грамм порошка:' : (item.form === 2) ? 'Количество капсул:' : (item.form === 3) ? 'Количество капсул:' : (item.form === 4) ? 'Количество пакетиков:' : (item.form === 5) ? 'Количество грамм:' : 'Объем:'} {`${item.oneSelector}`}</div>
                     <div
-                        className='item-content-bottom-description-two'>{(item.form === 2) ? 'Количество грамм в капсуле:' : (item.form === 4) ? 'Количество грамм:' : ''} {((item.form === 2) || (item.form === 4)) ? `${item.twoSelector}` : ''}</div>
-                    <div className='item-content-bottom-description-three'>Количество единиц
+                        className='item-content-bottom-description'>{(item.form === 2) ? 'Количество грамм в капсуле:' : (item.form === 4) ? 'Количество грамм:' : ''} {((item.form === 2) || (item.form === 4)) ? `${item.twoSelector}` : ''}</div>
+                    <div className='item-content-bottom-description'>Количество единиц
                         товара: {`${item.pizda}`}</div>
                     <div className='item-content-bottom-price'>Итого: {`${item.count} BYN`}</div>
                 </div>

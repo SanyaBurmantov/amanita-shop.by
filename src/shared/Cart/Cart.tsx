@@ -78,23 +78,7 @@ export const Cart: FC = () => {
             totalPrice: total,
             queryId,
         }
-        // if(cart.length === 0) {
-        //     tg.MainButton.hide();
-        // } else {
-        //     tg.MainButton.show();
-        //     tg.MainButton.setParams({
-        //         text: `Купить ${total}`
-        //     })
-        // }
 
-        // _id: string
-        // name: string
-        // title: string
-        // form: number
-        // imagePath: string
-        // price: IPrice[]
-        // type: string
-        // text: string,
         let s1 = '';
         let s2 = '';
         let s3 = '';
@@ -136,7 +120,7 @@ export const Cart: FC = () => {
             </div>
             <Modal visible={isShowCart} setVisible={setIsShowCart}>
                 <div className='cart__data--content'>
-                    <div className='cart__data--content-title'>Корзина</div>
+                    <h3 className='cart__data--content-title'>Корзина</h3>
                     {(cart.length > 0) && <div className='cart__data--content-items'>
                         {cart.map((item, key) => <ItemCard item={item} removeHandler={removeHandler}/>)}
                     </div>}

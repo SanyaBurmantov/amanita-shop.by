@@ -149,6 +149,7 @@
       }
 
       ul {
+
         display: flex;
         list-style-type: none;
         @media (max-width: 1080px) {
@@ -158,6 +159,7 @@
           padding-left: 2rem;
         }
         @media (max-width: $mobile) {
+          z-index: 200;
           display: flex;
           margin-right: 0;
           opacity: 0.4;
@@ -169,7 +171,7 @@
           padding: 0.5rem 1.2rem;
           margin-top: 0;
           right: 0;
-          z-index: 21;
+
           transform: translateX(105%);
           transition: 900ms;
           :nth-child(3) {
@@ -330,11 +332,12 @@
       pointer-events: none;
       transition: 0.5s;
 
+
       &.active {
         opacity: 1;
         pointer-events: all;
         scroll-x: none;
-        z-index: 120;
+        z-index: 122;
         backdrop-filter: blur(0.4rem);
       }
     }
