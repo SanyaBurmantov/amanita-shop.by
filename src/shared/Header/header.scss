@@ -213,6 +213,7 @@
           opacity: 1;
           transform: translateX(0);
           transition: 500ms;
+          z-index: 125;
         }
       }
 
@@ -333,7 +334,7 @@
         opacity: 1;
         pointer-events: all;
         scroll-x: none;
-        z-index: 20;
+        z-index: 120;
         backdrop-filter: blur(0.4rem);
       }
     }
