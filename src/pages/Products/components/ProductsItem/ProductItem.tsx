@@ -80,22 +80,21 @@ const ProductItem: FC<IProductItem> = ({product}) => {
                                 const target = e.target as typeof e.target & {};
                             }}>
                                 <form className="product-top-content-quantity">
-                                    {(product.form === 1) ? 'Количество грамм порошка:' : (product.form === 2) ? 'Количество капсул:' : (product.form === 3) ? 'Количество капсул:' : (product.form === 4) ? 'Количество пакетиков:' : (product.form === 5) ? 'Количество грамм:' : 'Объем:'}
 
-
+                                    <div className='product-top-content-quantity-title'>{(product.form === 1) ? 'Количество грамм порошка:' : (product.form === 2) ? 'Количество капсул:' : (product.form === 3) ? 'Количество капсул:' : (product.form === 4) ? 'Количество пакетиков:' : (product.form === 5) ? 'Количество грамм:' : 'Объем:'}</div>
                                     <div className="product-top-content-quantity-checkbox">
                                         {product.price.map((item, index) =>
-                                                <span>
-                                                        <input className=''
-                                                               type='radio'
-                                                               id={product._id}
-                                                               name="capacity"
-                                                               value={item.count}
-                                                               onClick={() => setOneSelector(item.count)}
-                                                               onChange={() => setCountId(item.id)}
-                                                        />
-                        <label htmlFor={product._id}>{item.count}</label>
-                    </span>
+                                            <>
+                                                <input className=''
+                                                       type='radio'
+                                                       id={product._id}
+                                                       name="capacity"
+                                                       value={item.count}
+                                                       onClick={() => setOneSelector(item.count)}
+                                                       onChange={() => setCountId(item.id)}
+                                                />
+                                                <label htmlFor={product._id}>{item.count}</label>
+                                            </>
                                         )}</div>
 
                                 </form>
@@ -110,20 +109,39 @@ const ProductItem: FC<IProductItem> = ({product}) => {
 
 
                                                 {product.coefficient.map((item, index) =>
-                                                        <span>
-                                <input className=''
-                                       id={product._id}
-                                       type='radio'
-                                       value={item.price}
-                                       name='threeSelector'
-                                       onClick={() => setTwoSelector(item.price)}
-                                       onChange={() => setCountTwoId(item.id)}
-                                />
-                                <label htmlFor={product._id}>{item.price}</label>
-                            </span>
+                                                    <>
+                                                        <input className=''
+                                                               id={product._id}
+                                                               type='radio'
+                                                               value={item.price}
+                                                               name='threeSelector'
+                                                               onClick={() => setTwoSelector(item.price)}
+                                                               onChange={() => setCountTwoId(item.id)}
+                                                        />
+                                                        <label htmlFor={product._id}>{item.price}</label>
+                                                    </>
                                                 )}
                                             </div> : ''}
                                     </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                     <div className='product-top-content-two_box-two'>
                                         <div className='product-top-content-two_box-two-title'>Количество:</div>

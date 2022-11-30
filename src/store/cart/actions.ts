@@ -10,3 +10,7 @@ export const removeFromCart = (productId: string) => ({
     type: actionTypes.CART_REMOVE_ITEM,
     payload: productId,
 })
+
+export const removeCartAll = () => ({
+    type: actionTypes.CART_REMOVE_ALL,
+})
