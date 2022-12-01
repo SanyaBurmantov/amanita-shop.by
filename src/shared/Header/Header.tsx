@@ -4,6 +4,7 @@ import logo from '../../assets/icons/logo-amanita.svg'
 import {motion} from "framer-motion"
 import {Link} from "react-router-dom";
 import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE} from "../../utils/consts";
+import {useModalOpen} from "../../hooks/useModalOpen";
 
 
 interface Header {
@@ -36,6 +37,9 @@ export const Header: FC<Header> = () => {
 
     let [activeState, setActiveState] = useState(false);
 
+    let { doOpen } = useModalOpen(false)
+
+
     return (
         <header>
             <div className='container'>
@@ -48,7 +52,7 @@ export const Header: FC<Header> = () => {
                                 </Link>
                             </div>
                             <div className="header-menu-menu">
-                                <div onClick={() => (setActiveState(prev => !prev))}>
+                                <div onClick={() => ( doOpen() , (setActiveState(prev => !prev)))}>
                                     <div className={`header-menu-menu-burger ${activeState ? 'active' : ''}`}>
                                         <span></span>
                                     </div>
@@ -58,7 +62,7 @@ export const Header: FC<Header> = () => {
                                     <hr/>
                                     {items.map(item =>
                                         <Link to={item.href} key={item.name}
-                                              onClick={() => (setActiveState(prev => !prev))}
+                                              onClick={() => (doOpen(), (setActiveState(prev => !prev)))}
                                               className="header-menu-menu-element">
                                             <div className='header-menu-menu-element-title'>
                                                 <div className='header-menu-menu-element-title-marker'></div>
@@ -69,7 +73,7 @@ export const Header: FC<Header> = () => {
                                     )}
                                 </ul>
                                 <div className={`header-blur ${activeState ? 'active' : ''}`}
-                                     onClick={() => (setActiveState(prev => !prev))}></div>
+                                     onClick={() => (doOpen(), (setActiveState(prev => !prev)))}></div>
 
                             </div>
                         </div>

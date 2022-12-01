@@ -1,7 +1,12 @@
 import {IProduct} from "../types";
 // @ts-ignore
 import imageToAdd from "../assets/images/ImageProduct.png";
-
+// @ts-ignore
+import amanitaRedPiels from "../assets/shop/amanita-red-piels.png";
+// @ts-ignore
+import amanitaRedHuts from "../assets/shop/amanita-red-hut.png";
+// @ts-ignore
+import amanitaPanteriaPiels from "../assets/shop/amanita-panteria-piels.png";
 
 export const products: IProduct[] = [
     {
@@ -120,7 +125,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '4',
-        imagePath: imageToAdd,
+        imagePath: amanitaRedPiels,
         name: 'Мухомор красный',
         coefficient: [
             {
@@ -227,7 +232,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '6',
-        imagePath: imageToAdd,
+        imagePath: amanitaPanteriaPiels,
         name: 'Мухомор пантерный',
         price: [
             {
@@ -354,7 +359,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '9',
-        imagePath: imageToAdd,
+        imagePath: amanitaRedHuts,
         name: 'Мухомор красный',
         coefficient: [
             {

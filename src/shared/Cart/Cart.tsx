@@ -12,8 +12,10 @@ import * as url from "url";
 import {IPrice} from "../../types";
 import {ItemCard} from "./ItemCard";
 import {Modal} from "../Modal/Modal";
+// @ts-ignore
 import CashIco from '../../assets/icons/money.svg'
 import {useInput} from "../../hooks/useInput";
+import {useModalOpen} from "../../hooks/useModalOpen";
 
 
 export const Cart: FC = () => {
@@ -29,7 +31,7 @@ export const Cart: FC = () => {
 
     const [isShowCart, setIsShowCart] = useState(false);
 
-    const [submitTg, setSubmitTg] = useState(true)
+    const [submitTg, setSubmitTg] = useState(false)
 
     const cart = useTypedSelector(state => state.cart)
 
@@ -150,12 +152,14 @@ export const Cart: FC = () => {
                         <div className='cart__data--content-form-submit-subtitle'>В ближайшее время менеджер свяжется с
                             вами для подтверждения заказа!
                         </div>
+                        <div className="cart__data--content-form-submit-line-wrapper">
                         <motion.div
                             className='cart__data--content-form-submit-line'
-                            initial={{width: "5%"}}
-                            animate={{width: "100%"}}
+                            initial={{width: "100%"}}
+                            animate={{width: "1%"}}
                             transition={{duration: 10}}
                         />
+                        </div>
                     </div>}
                     {(cart.length > 0) && <div className='form'>
                         <div className='cart__data--content-form'>

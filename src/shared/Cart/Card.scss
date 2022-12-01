@@ -39,12 +39,14 @@
       text-align: center;
       margin-bottom: 3rem;
     }
-
+    &-line-wrapper{
+      width: 70%;
+      margin: 0 auto;
+    }
     &-line{
       height: 1rem;
       background: -webkit-linear-gradient(90deg, #f15256,#ff6b29);
       background: linear-gradient(90deg, #f15256,#ff6b29);
-      width: 5%;
       border-radius: 0.75rem;
       margin-bottom: 1rem;
     }
@@ -52,7 +54,7 @@
 
   &-items{
     margin-bottom: 2rem;
-    max-height: 45rem;
+    max-height: 32rem;
     overflow-x: auto;
     padding: 0.2rem;
     @media (max-width: $mobile) {
@@ -139,12 +141,12 @@
     &-telegram {
       color: $color-white;
       background-color: $color-orange;
-      font-size: 2.4rem;
-      line-height: 2.9rem;
+      font-size: 2.2rem;
+      line-height: 2.5rem;
       border: 0;
       border-radius: 0.6rem;
       font-family: $font-semi-bold;
-      padding: 1.5rem 4.6rem;
+      padding: 1.5rem 2.6rem;
       cursor: pointer;
       transition: 0.3s;
       @media (max-width: $mobile) {
