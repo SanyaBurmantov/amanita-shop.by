@@ -2,6 +2,7 @@ import React, {FC, useCallback, useEffect, useState} from "react";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import {removeCartAll, removeFromCart} from "../../store/cart/actions";
+import {motion} from "framer-motion";
 // @ts-ignore
 import cartIcon from "../../assets/icons/cart.svg"
 import './Card.scss'
@@ -27,6 +28,8 @@ export const Cart: FC = () => {
     const {tg, queryId} = useTelegram();
 
     const [isShowCart, setIsShowCart] = useState(false);
+
+    const [submitTg, setSubmitTg] = useState(true)
 
     const cart = useTypedSelector(state => state.cart)
 
@@ -63,6 +66,10 @@ export const Cart: FC = () => {
 
     const removeAll = () => {
         dispatch(removeCartAll())
+    }
+
+    const hideSubmitMessage = () => {
+        setTimeout(() => setSubmitTg(false), 10000);
     }
 
 
@@ -106,8 +113,13 @@ export const Cart: FC = () => {
         api.send();
 
         removeAll()
+        setSubmitTg(true)
+        hideSubmitMessage()
 
     }, [name, number, cart, total, queryId])
+
+
+
 
 
     return (
@@ -124,12 +136,27 @@ export const Cart: FC = () => {
                     {(cart.length > 0) && <div className='cart__data--content-items'>
                         {cart.map((item, key) => <ItemCard item={item} removeHandler={removeHandler}/>)}
                     </div>}
-                    {(cart.length === 0) && <div className='cart__data--content-no-item'>Ваша корзина пуста!</div>}
-                    <div className='cart__data--content-total'>
-                        <div className='cart__data--content-total-ico'><img src={CashIco}/></div>
-                        <div className='cart__data--content-total-summ'>Общая сумма: <b>{Math.round(total)} BYN</b>
+                    {(cart.length === 0 && !submitTg) && <>
+                        <div className='cart__data--content-no-item'>Ваша корзина пуста!</div>
+                        <div className='cart__data--content-total'>
+                            <div className='cart__data--content-total-ico'><img src={CashIco}/></div>
+                            <div className='cart__data--content-total-summ'>Общая
+                                сумма: <b>{Math.round(total)} BYN</b>
+                            </div>
                         </div>
-                    </div>
+                    </>}
+                    {submitTg && <div className='cart__data--content-form-submit'>
+                        <div className='cart__data--content-form-submit-title'>Спасибо за заказ!</div>
+                        <div className='cart__data--content-form-submit-subtitle'>В ближайшее время менеджер свяжется с
+                            вами для подтверждения заказа!
+                        </div>
+                        <motion.div
+                            className='cart__data--content-form-submit-line'
+                            initial={{width: "5%"}}
+                            animate={{width: "100%"}}
+                            transition={{duration: 10}}
+                        />
+                    </div>}
                     {(cart.length > 0) && <div className='form'>
                         <div className='cart__data--content-form'>
                             <div className='cart__data--content-form-title'>Введите ваши данные:</div>

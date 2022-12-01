@@ -12,12 +12,49 @@
 
   }
 
+  &-form-submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    :last-child {
+      align-self: stretch;
+    }
+
+    &-title{
+      margin-top: 2rem;
+      font-weight: 700;
+      font-size: 2.6rem;
+      line-height: 3rem;
+      margin-bottom: 1rem;
+      color: $color-orange;
+    }
+
+    &-subtitle{
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      max-width: 40rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    &-line{
+      height: 1rem;
+      background: -webkit-linear-gradient(90deg, #f15256,#ff6b29);
+      background: linear-gradient(90deg, #f15256,#ff6b29);
+      width: 5%;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+    }
+  }
+
   &-items{
     margin-bottom: 2rem;
     max-height: 45rem;
     overflow-x: auto;
     padding: 0.2rem;
-    background-color: $color-white;
     @media (max-width: $mobile) {
       max-height: 20rem;
     }
