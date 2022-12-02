@@ -1,17 +1,25 @@
 import {IProduct} from "../types";
 // @ts-ignore
 import imageToAdd from "../assets/images/ImageProduct.png";
-// @ts-ignore
-import amanitaRedPiels from "../assets/shop/amanita-red-piels.png";
-// @ts-ignore
-import amanitaRedHuts from "../assets/shop/amanita-red-hut.png";
-// @ts-ignore
-import amanitaPanteriaPiels from "../assets/shop/amanita-panteria-piels.png";
+
+import imageToAdd1 from '../assets/shop/Мухомор красный порошок.png'
+import imageToAdd2 from '../assets/shop/Мухомор пантерный порошок.png'
+import imageToAdd3 from '../assets/shop/Ежовик порошок.png'
+import imageToAdd4 from '../assets/shop/Мухомор красный капсулы.png'
+import imageToAdd5 from '../assets/shop/Аманита-микс капсулы.png'
+import imageToAdd6 from '../assets/shop/Мухомор пантерный капсулы.png'
+
+
+import imageToAdd9 from '../assets/shop/Мухомор красный шляпки.png'
+
+import imageToAdd11 from '../assets/shop/Калея чай.png'
+
+import imageToAdd13 from '../assets/shop/Мухомор красный настойка.png'
 
 export const products: IProduct[] = [
     {
         _id: '1',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd1,
         name: 'Мухомор красный',
         coefficient: [
             {
@@ -49,7 +57,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '2',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd2,
         name: 'Мухомор пантерный',
         coefficient: [
             {
@@ -87,7 +95,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '3',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd3,
         name: 'Ежовик гребенчатый',
         coefficient: [
             {
@@ -125,7 +133,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '4',
-        imagePath: amanitaRedPiels,
+        imagePath: imageToAdd4,
         name: 'Мухомор красный',
         coefficient: [
             {
@@ -192,7 +200,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '5',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd5,
         name: 'AMANITA MIX',
         coefficient: [
             {
@@ -232,7 +240,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '6',
-        imagePath: amanitaPanteriaPiels,
+        imagePath: imageToAdd6,
         name: 'Мухомор пантерный',
         price: [
             {
@@ -359,7 +367,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '9',
-        imagePath: amanitaRedHuts,
+        imagePath: imageToAdd9,
         name: 'Мухомор красный',
         coefficient: [
             {
@@ -451,7 +459,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '11',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd11,
         name: 'Листья бога',
         coefficient: [
             {
@@ -527,7 +535,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '13',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd13,
         name: 'Настойка Мухомора красного',
         coefficient: [
             {
