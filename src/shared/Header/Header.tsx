@@ -42,7 +42,7 @@ export const Header: FC<Header> = () => {
 
     return (
         <header>
-            <div className='container'>
+
                 <motion.div className='headers'>
                     <div className='header'>
                         <div className='header-menu'>
@@ -83,7 +83,6 @@ export const Header: FC<Header> = () => {
                     </div>
                     <hr/>
                 </motion.div>
-            </div>
         </header>
     )
 }

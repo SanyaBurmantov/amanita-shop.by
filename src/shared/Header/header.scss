@@ -1,6 +1,10 @@
 @import "../../styles/vars";
 
 .headers {
+  margin: 0 8rem;
+  @media (max-width: $mobile){
+    margin: 0 2rem;
+  }
   hr {
     border: none;
     color: $color-white;
@@ -40,7 +44,10 @@
     }
 
     &-menu {
-
+      margin-right: 5rem;
+      @media (max-width: $mobile){
+        margin-right: 0rem;
+      }
       nav {
         display: flex;
         width: 100%;

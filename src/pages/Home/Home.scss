@@ -17,7 +17,7 @@
   margin-top: -10rem;
   &__picture{
     position: relative;
-
+    z-index: -2;
     width: 100%;
     max-height: 1000px;
     min-height: 800px;
@@ -37,6 +37,7 @@
 }
 
 .promo{
+  z-index: 60;
   @media (max-width: $mobile) {
 
     background: $color-dark-gray;
@@ -76,7 +77,7 @@
     }
   }
   &__button{
-
+    z-index: 61;
     text-align: left;
     display: flex;
     margin-top: 5rem;
@@ -84,6 +85,7 @@
       margin-top: 2rem;
     }
     .btn{
+      z-index: 62;
       padding: 2rem 3rem;
       border-radius: 4rem;
       @media (max-width: $mobile) {
@@ -94,7 +96,7 @@
         border-radius: 3rem;
         border: 1.5px solid $color-white;
       }
-
+      a{z-index: 63}
     }
   }
 }
