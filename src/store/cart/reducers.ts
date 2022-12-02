@@ -24,17 +24,6 @@ export const cartReducer = (state = initialState, action:
             return cart
         }
 
-        case actionTypes.CART_HAS_ITEM: {
-            const cart = [...state]
-            let res = false
-            let foundProduct = cart.find(item => item._id === action.payload)
-            if(foundProduct !== undefined){res = true}
-            return false
-        }
-
-
-
-
         case actionTypes.CART_REMOVE_ITEM: {
             return state.filter(item => item._id !== action.payload)
         }
