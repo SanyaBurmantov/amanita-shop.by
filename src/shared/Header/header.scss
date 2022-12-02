@@ -1,16 +1,30 @@
 @import "../../styles/vars";
 
-.headers {
-  margin: 0 8rem;
-  @media (max-width: $mobile){
-    margin: 0 2rem;
+header{
+
+  &.sticky{
+    position: fixed;
+    background-color: $color-white;
+    top:0;
+    width: 100%;
+    z-index: 100000;
+    border-radius: 0 0 2.5rem 2.5rem;
+    .header-menu-menu-element{
+      color: $color-dark-gray;
+    }
+    .header-menu-logo{
+      background-color: $color-dark-gray;
+      border-radius: 50rem;
+    }
   }
-  hr {
+  hr{
     border: none;
     color: $color-white;
     background-color: $color-white;
     height: 0.1rem;
-    margin: 0rem;
+    margin: 0 auto;
+    padding: 0 10rem;
+    width: 70%;
     @media (max-width: 1000px) {
       height: 0.2rem;
     }
@@ -20,10 +34,13 @@
   }
 }
 
+
 .header {
+  padding: 0 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 
   &-menu {
     display: flex;
