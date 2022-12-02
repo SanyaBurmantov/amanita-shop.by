@@ -68,7 +68,7 @@ const ProductItem: FC<IProductItem> = ({product}) => {
     }
 
     const cart = useTypedSelector(state => state.cart)
-
+    //@ts-ignore
     const inCart = cart.some(el => product._id === el._id);
 
 

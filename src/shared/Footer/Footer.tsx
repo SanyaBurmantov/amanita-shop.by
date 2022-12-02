@@ -1,4 +1,5 @@
 import React from "react";
+import {Contacts} from "../Contacts/Contacts";
 
 
 
@@ -10,6 +11,7 @@ export const Footer = (props: Props) => {
         <footer>
             <div className="container">
                 <div className="footer">
+                    <Contacts />
                     <p className="footer__text">© Amanita Shop, 2022 </p>
                 </div>
             </div>

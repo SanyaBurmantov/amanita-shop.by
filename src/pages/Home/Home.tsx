@@ -18,6 +18,7 @@ import home_detox from '../../assets/images/home_detox.png';
 import home_badHabits from '../../assets/images/home_bad-habits.png';
 // @ts-ignore
 import home_performance from '../../assets/images/home_performance.png';
+import {Contacts} from "../../shared/Contacts/Contacts";
 
 interface Props {
 
@@ -42,7 +43,7 @@ export const Home = () => {
                                 <h1>Дары природы</h1>
                                 <p>Польза для здоровья каждый день</p>
                                 <div className="promo__button">
-                                    <button className="btn"><a href="/products">Переийти в каталог</a></button>
+                                    <button className="btn"><a href="/products">Посмотреть каталог</a></button>
                                 </div>
                             </div>
                         </div>

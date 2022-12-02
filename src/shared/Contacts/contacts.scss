@@ -1,0 +1,21 @@
+.contacts{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
+}
+
+.contact{
+  margin: 1rem;
+  &__info{
+    color: $color-white;
+    z-index: 50;
+    &--text{
+      z-index: 51;
+      cursor: pointer;
+    }
+  }
+}
