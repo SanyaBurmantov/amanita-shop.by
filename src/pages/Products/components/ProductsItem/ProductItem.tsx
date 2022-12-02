@@ -3,8 +3,10 @@ import {IProduct} from "../../../../types";
 // @ts-ignore
 import CashImage from '../../../../assets/icons/money.svg'
 import {Counter} from "../ Counter/ Counter";
-import {useDispatch} from "react-redux";
-import {addToCart} from "../../../../store/cart/actions";
+import {useDispatch, useSelector} from "react-redux";
+import {addToCart, hasInCart} from "../../../../store/cart/actions";
+import {useTypedSelector} from "../../../../hooks/useTypedSelector";
+import {cartReducer} from "../../../../store/cart/reducers";
 
 
 interface IProductItem {
@@ -58,10 +60,16 @@ const ProductItem: FC<IProductItem> = ({product}) => {
 
     const dispatch = useDispatch()
 
-    const addHandler = () => {if(count>0 && threeSelector>0 && oneSelector>0 && twoSelector){
-        dispatch(addToCart(product, pizda, oneSelector, twoSelector, count))
-    };
+
+    const addHandler = () => {
+        if (count > 0 && threeSelector > 0 && oneSelector > 0 && twoSelector) {
+            dispatch(addToCart(product, pizda, oneSelector, twoSelector, count))
+        };
     }
+
+    const cart = useTypedSelector(state => state.cart)
+
+    const inCart = cart.some(el => product._id === el._id);
 
 
     return (
@@ -124,25 +132,6 @@ const ProductItem: FC<IProductItem> = ({product}) => {
                                             </div> : ''}
                                     </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                     <div className='product-top-content-two_box-two'>
                                         <div className='product-top-content-two_box-two-title'>Количество:</div>
                                         <Counter count={count} setCount={setCount}/>
@@ -160,7 +149,8 @@ const ProductItem: FC<IProductItem> = ({product}) => {
                         </div>
                         <div className='product-bottom-buttons'>
                             <div className='product-bottom-buttons-pay'>
-                                <button className="product-bottom-buttons-pay-btn" onClick={addHandler}>Купить</button>
+                                <button className={`${inCart ? 'product-bottom-buttons-pay-btn buying' : 'product-bottom-buttons-pay-btn'}`} onClick={addHandler}>{inCart ? `Добавлено` : `Купить`}</button>
+
                             </div>
                             <div className='product-bottom-buttons-more'>
                                 {/*<button className="product-bottom-buttons-more-btn"*/}

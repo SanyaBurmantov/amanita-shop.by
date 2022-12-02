@@ -418,6 +418,9 @@
         color: white;
         padding: 1.2rem 4rem;
         cursor: pointer;
+        &.buying{
+          background-color: $color-gray;
+        }
       }
     }
 

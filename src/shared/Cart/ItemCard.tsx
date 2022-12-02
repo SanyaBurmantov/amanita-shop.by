@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {FunctionRemoveHandler, ICartItem} from "../../types";
 import './ItemCard.scss'
+// @ts-ignore
 import RemoveIco from '../../assets/icons/remove-add.svg'
 
 interface ItemCard {

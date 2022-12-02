@@ -15,7 +15,6 @@ import {Modal} from "../Modal/Modal";
 // @ts-ignore
 import CashIco from '../../assets/icons/money.svg'
 import {useInput} from "../../hooks/useInput";
-import {useModalOpen} from "../../hooks/useModalOpen";
 
 
 export const Cart: FC = () => {
