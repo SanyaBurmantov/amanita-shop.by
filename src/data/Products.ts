@@ -2,19 +2,19 @@ import {IProduct} from "../types";
 // @ts-ignore
 import imageToAdd from "../assets/images/ImageProduct.png";
 
-import imageToAdd1 from '../assets/shop/Мухомор красный порошок.png'
-import imageToAdd2 from '../assets/shop/Мухомор пантерный порошок.png'
-import imageToAdd3 from '../assets/shop/Ежовик порошок.png'
-import imageToAdd4 from '../assets/shop/Мухомор красный капсулы.png'
-import imageToAdd5 from '../assets/shop/Аманита-микс капсулы.png'
-import imageToAdd6 from '../assets/shop/Мухомор пантерный капсулы.png'
+import imageToAdd1 from '../assets/shop/AmanitaMuscariaPowder.png'
+import imageToAdd2 from '../assets/shop/AmanitaPantherinaPowder.png'
+import imageToAdd3 from '../assets/shop/HericiumErinaceusPowder.png'
+import imageToAdd4 from '../assets/shop/AmanitaMuscariaCapsules.png'
+import imageToAdd5 from '../assets/shop/AmanitaMixCapsules.png'
+import imageToAdd6 from '../assets/shop/AmanitaPantherinaCapsules.png'
 
 
-import imageToAdd9 from '../assets/shop/Мухомор красный шляпки.png'
+import imageToAdd9 from '../assets/shop/AmanitaMuscariaHats.png'
 
-import imageToAdd11 from '../assets/shop/Калея чай.png'
+import imageToAdd11 from '../assets/shop/CaleaZacatechichiTea.png'
 
-import imageToAdd13 from '../assets/shop/Мухомор красный настойка.png'
+import imageToAdd13 from '../assets/shop/AmanitaMuscariaTincture.png'
 
 export const products: IProduct[] = [
     {
