@@ -10,7 +10,7 @@ header{
     position: fixed;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
-    border: .05rem solid $color-dark-gray;
+    border-bottom: .2rem solid $color-dark-gray;
     background-color: $color-white;
     top:0;
     width: 100%;
@@ -356,10 +356,7 @@ header{
   }
 
   &-button {
-    &:hover{
-      background-color: $color-orange;
-      border-radius: 1.2rem;
-    }
+
     @media (max-width: $mobile) {
       display: none;
     }
@@ -384,7 +381,10 @@ header{
       border-radius: 6px;
       background: transparent;
       cursor: pointer;
-
+      &:hover{
+        background-color: $color-orange;
+        border-radius: 1.2rem;
+      }
       @media (max-width: 1300px) {
         font-size: 1.7rem;
       }
