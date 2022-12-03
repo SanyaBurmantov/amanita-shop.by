@@ -27,6 +27,7 @@ body{color:$color-dark-gray;
   &.noscroll{overflow: hidden !important;}}
 
 .container {
+  padding-top: 7rem;
   max-width: 84%;
   width: 100%;
   overflow-x: hidden;

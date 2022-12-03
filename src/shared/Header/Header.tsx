@@ -5,6 +5,7 @@ import {motion, useScroll} from "framer-motion"
 import {Link} from "react-router-dom";
 import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE} from "../../utils/consts";
 import {useModalOpen} from "../../hooks/useModalOpen";
+import {Cart} from "../Cart/Cart";
 
 
 interface Header {
@@ -92,7 +93,7 @@ export const Header: FC<Header> = () => {
 
                 </div>
             </div>
-            <div className="header-button">
+            <div className="header-button"> <div className="header_cart"><Cart /></div>
                 <button className="header-button-btn">Оформить заказ</button>
             </div>
             </div>
