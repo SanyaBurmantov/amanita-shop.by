@@ -7,48 +7,58 @@ header{
   width: 100%;
 
   &.sticky{
+
+    opacity: 0;
     position: fixed;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: .2rem solid $color-dark-gray;
-    background-color: $color-white;
-    top:0;
-    width: 100%;
-    z-index: 100000;
-    border-radius: 0 0 2.5rem 2.5rem;
-    @media (max-width: $mobile) {
-      background-color: $color-dark-gray;
-      padding: 1rem 0;
-    }
-    ul{
-      margin: .5rem 0;
-    }
-    .header-menu-menu-element{
-      color: $color-dark-gray;
-    }
-    .header-menu-logo{
-      a{
 
-      }
-      img{
+
+    &.sticked{
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: .2rem solid $color-dark-gray;
+      background-color: $color-white;
+      top:-25rem;
+      width: 100%;
+      z-index: 100000;
+      border-radius: 0 0 2.5rem 2.5rem;
+      top: 0;
+      transition: 500ms;
+      opacity: 1;
+      @media (max-width: $mobile) {
         background-color: $color-dark-gray;
-        border-radius: 50rem;
-        width: 50%;
-        @media (max-width: $mobile) {
+        padding: 1rem 0;
+      }
+      ul{
+        margin: .5rem 0;
+      }
+      .header-menu-menu-element{
+        color: $color-dark-gray;
+      }
+      .header-menu-logo{
+        a{
 
-          width: 100%;
+        }
+        img{
+          background-color: $color-dark-gray;
+          border-radius: 50rem;
+          width: 50%;
+          @media (max-width: $mobile) {
+
+            width: 100%;
+          }
         }
       }
+      .header-button-btn{
+        padding: 1rem 1.5rem;
+        color: $color-dark-gray;
+        padding: 0.6rem 1.5rem;
+        border: 1px solid $color-dark-gray;
+      }
+      hr{
+        display: none;
+      }
     }
-    .header-button-btn{
-      padding: 1rem 1.5rem;
-      color: $color-dark-gray;
-      padding: 0.6rem 1.5rem;
-      border: 1px solid $color-dark-gray;
-    }
-    hr{
-      display: none;
-    }
+
   }
   hr{
     border: none;
@@ -80,6 +90,7 @@ header{
   align-items: center;
   @media (max-width: $mobile) {
     padding: 0 2rem;
+
   }
 
   &-menu {

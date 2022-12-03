@@ -55,11 +55,18 @@ export const Header: FC<Header> = () => {
             if(latest<=500 && header!.classList.contains('sticky')){
                 header!.classList.remove('sticky')
             }
+            if(latest>=625){
+                header!.classList.add('sticked');
+            }
+            if(latest<=625 && header!.classList.contains('sticky')){
+                header!.classList.remove('sticked')
+            }
         })
     }, [])
 
     return (
         <header id='header' className=''>
+
             <div className="header">
             <div className="header-menu-logo">
                 <Link to="/">
