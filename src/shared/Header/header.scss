@@ -280,6 +280,7 @@ header{
           transform: translateX(0);
           transition: 500ms;
           z-index: 125;
+          position: fixed;
         }
       }
 
@@ -418,6 +419,7 @@ header{
         scroll-x: none;
         z-index: 122;
         backdrop-filter: blur(0.4rem);
+        position: fixed;
       }
     }
   }
