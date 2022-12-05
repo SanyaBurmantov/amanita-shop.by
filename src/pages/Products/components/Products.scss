@@ -1,350 +1,3 @@
-
-
-
-//.products {
-//  display: flex;
-//  flex-wrap: wrap;
-//  align-content: space-between;
-//  margin: 0 auto;
-//  justify-content: center;
-//  @media (max-width: $mobile) {
-//    margin-top: 1rem;
-//  }
-//}
-//
-//.product {
-//  width: 43%;
-//  padding: 3.2rem;
-//  margin: 0.9rem 1rem;
-//  -webkit-box-shadow: -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
-//  -moz-box-shadow: -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
-//  box-shadow: -1px 3px 3px 4px rgba(34, 60, 80, 0.1);
-//  border-radius: 1rem;
-//  background-color: $color-white;
-//  display: flex;
-//  flex-wrap: wrap;
-//  justify-content: space-between;
-//  @media (max-width: 1412px) {
-//    width: 40%;
-//    padding: 2.7rem;
-//    margin: 0.7rem 0.9rem;
-//    -webkit-box-shadow: -1px 2px 2px 3px rgba(34, 60, 80, 0.1);
-//    -moz-box-shadow: -1px 2px 2px 3px rgba(34, 60, 80, 0.1);
-//    box-shadow: -1px 2px 2px 3px rgba(34, 60, 80, 0.1);
-//
-//  }
-//  @media (max-width: $mobile) {
-//    width: 41%;
-//    padding: 1.2rem;
-//    margin: 1.2rem 0.8rem;
-//  }
-//  @media (max-width: 590px) {
-//    width: 100%;
-//  }
-//
-//
-//  &__data{
-//    display: flex;
-//    @media (max-width: $mobile) {
-//      flex-direction: column-reverse;
-//    }
-//
-//  }
-//  &__left {
-//    width: 55%;
-//    @media (max-width: $mobile) {
-//      width: 100%;
-//    }
-//  }
-//
-//  &__right {
-//    width: 40%;
-//    @media (max-width: $mobile) {
-//      width: 100%;
-//    }
-//    @media (max-width: 590px) {
-//      width: 90%;
-//    }
-//
-//    &--picture {
-//      text-align: center;
-//      @media (max-width: 590px) {
-//        text-align: left;
-//      }
-//      img {
-//        box-sizing: border-box;
-//        max-width: 90%;
-//        object-fit: cover;
-//        @media (max-width: 590px) {
-//          width: 70%;
-//        }
-//      }
-//    }
-//
-//  }
-//
-//  &__bottom {
-//    margin-top: 2.8rem;
-//    width: 100%;
-//    display: flex;
-//    flex-wrap: wrap;
-//    justify-content: flex-end;
-//    @media (max-width: $mobile) {
-//      margin-top: 1rem;
-//    }
-//
-//    &--price {
-//      margin: auto 0;
-//      text-align: right;
-//      font-style: normal;
-//      font-weight: 700;
-//      font-size: 2.4rem;
-//      line-height: 2.9rem;
-//      font-family: $font-bold;
-//      white-space: nowrap;
-//      @media (max-width: 1440px) {
-//        font-size: 2.2rem;
-//        line-height: 2.5rem;
-//        margin-bottom: 1rem;
-//      }
-//      @media (max-width: $mobile) {
-//        font-size: 1.6rem;
-//        line-height: 2.0rem;
-//      }
-//
-//      span {
-//        position: relative;
-//        box-sizing: border-box;
-//        overflow:hidden;
-//        &:before {
-//          box-sizing:border-box;
-//          margin-top: -1rem;
-//          margin-left: -6rem;
-//          position: absolute;
-//          content: " ";
-//          background-image: url("/../src/assets/icons/money.svg");
-//          width: 7rem;
-//          height: 5rem;
-//          box-sizing: border-box;
-//          background-repeat: no-repeat;
-//          background-size: contain;
-//          @media (max-width: 1440px) {
-//            width: 5rem;
-//            height: 4rem;
-//            margin-left: -5rem;
-//          }
-//          @media (max-width: $mobile) {
-//            width: 3rem;
-//            height: 3rem;
-//            margin-left: -3.5rem;
-//            margin-top: -.3rem;
-//          }
-//        }
-//      }
-//    }
-//
-//    &--btn {
-//      display: flex;
-//      justify-content: flex-end;
-//    }
-//
-//    &--buttons {
-//
-//    }
-//
-//  }
-//
-//  &__text {
-//    &--title {
-//      font-style: normal;
-//      font-weight: 700;
-//      font-size: 2.6rem;
-//      line-height: 3.1rem;
-//      color: $color-red;
-//      @media (max-width: $mobile) {
-//        font-style: 2.4rem;
-//        line-height: 2.7rem;
-//      }
-//    }
-//
-//    &--subtitle {
-//      font-style: normal;
-//      font-weight: 300;
-//      font-size: 1.4rem;
-//      line-height: 1.7rem;
-//      font-family: $font-bold;
-//      padding-top: 1.4rem;
-//      padding-bottom: 1.4rem;
-//      @media (max-width:  $mobile) {
-//        font-size: 1.3rem;
-//        line-height: 1.6rem;
-//        padding-top: 1.1rem;
-//        padding-bottom: 1.1rem;
-//      }
-//    }
-//    &--type{
-//      font-family: $font-semi-bold;
-//      color: $color-gray;
-//      font-size: 1.4rem;
-//    }
-//  }
-//
-//  &__checkbox {
-//    @media (max-width: $mobile) {
-//      width: 80%;
-//      text-align: left;
-//    }
-//    &--radio{
-//      display: inline-block;
-//      margin-right: .2rem;
-//
-//      width: calc((100% - .6rem)/3);
-//      text-align: center;
-//      input[type=radio] {
-//        display: none;
-//      }
-//
-//      label {
-//        display: inline-block;
-//        cursor: pointer;
-//        padding: 0 3.2rem;
-//        font-style: normal;
-//        font-weight: 700;
-//        font-size: 1.8rem;
-//        line-height: 3.2rem;
-//        font-family: $font-bold;
-//        background-color: $color-products-button;
-//        border-radius: .6rem;
-//        user-select: none;
-//        transition: 200ms;
-//        width: calc(100% / 3);
-//        margin-bottom: .3rem;
-//        @media (max-width: $mobile) {
-//          font-size: 1.4rem;
-//          line-height: 2rem;
-//          width: calc((100% / 3) - 1.5rem );
-//          padding: 0 2.6rem 0 2.1rem;
-//          text-align: center;
-//        }
-//        @media (max-width: 590px) {
-//          width: calc(100% / 3);
-//
-//        }
-//      }
-//
-//      input[type=radio]:checked + label {
-//        background-color: $color-red;
-//        color: $color-white;
-//        transition: 500ms;
-//      }
-//
-//      label:hover {
-//
-//          background-color: $color-red;
-//          color: $color-white;
-//          transition: 800ms;
-//      }
-//    }
-//  }
-//
-//  &__capacity{
-//    display: flex;
-//    margin-right: 4rem;
-//    margin-bottom: 1rem;
-//    flex-wrap: wrap;
-//    justify-content: left;
-//    input{
-//      cursor: pointer;
-//      filter: grayscale(0);
-//      filter:hue-rotate(152deg);
-//      &:checked{
-//
-//      }
-//    }
-//
-//  }
-//}
-//
-//
-//
-//
-//.product-info {
-//    &__more {
-//      height: 100vh;
-//      width: 100vw;
-//      background-color: rgba(0, 0, 0, 0.8);
-//      position: fixed;
-//      top: 0;
-//      left: 0;
-//      display: flex;
-//      align-items: center;
-//      justify-content: center;
-//      opacity: 0;
-//      pointer-events: none;
-//      transition: 0.5s;
-//
-//
-//      &.active {
-//        opacity: 1;
-//        pointer-events: all;
-//        scroll-x: none;
-//        z-index: 20;
-//      }
-//
-//      &--item {
-//        transform: scale(0);
-//        opacity: 0;
-//        top:2%;
-//        position: fixed;
-//        transition: 0.3s;
-//        display: flex;
-//        &.active {
-//          left: 25%;
-//          top: 7%;
-//          position: fixed;
-//          opacity: 1;
-//          transition: 0.5s;
-//          transform: scale(1);
-//          flex-wrap: wrap;
-//          justify-content: space-between;
-//          height: 80vh;
-//          width: 50vw;
-//          background-color: $color-light-white;
-//          border-radius: 1.2rem;
-//          padding: 4rem;
-//          z-index: 21;
-//        }
-//      }
-//
-//      &--pic{
-//        max-width: 40rem;
-//        max-height: 40rem;
-//        overflow: hidden;
-//        img{
-//          width: 100%;
-//          box-sizing: border-box;
-//
-//        }
-//
-//      }
-//      &--name{
-//
-//      }
-//      &--title{
-//
-//      }
-//      &--count{
-//
-//      }
-//      &--price{
-//
-//      }
-//      &--text{
-//
-//      }
-//    }
-//  }
-
 @import "../../../styles/vars";
 
 .filter {
@@ -390,7 +43,17 @@
     justify-content: space-between;
 
     &-image {
-
+      text-align: center;
+      img{
+        @media (max-width: $tablet) {
+          width: 80%;
+          height: 80%;
+        }
+        @media (max-width: $phone) {
+          width: 90%;
+          height: 90%;
+        }
+      }
     }
 
     &-number {
@@ -398,6 +61,9 @@
       font-weight: 700;
       font-size: 2.4rem;
       line-height: 2.9rem;
+      @media (max-width: $phone) {
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -418,6 +84,11 @@
         color: white;
         padding: 1.2rem 4rem;
         cursor: pointer;
+        @media (max-width: $phone) {
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          padding: 1.2rem 3rem;
+        }
         &.buying{
           background-color: $color-gray;
         }
@@ -441,9 +112,17 @@
 .product-top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
+  @media (max-width: $phone) {
+    flex-direction: column-reverse;
+  }
 
   &-content {
-    flex: 70%;
+    flex: 1 1 65%;
+    margin-right: 0.5rem;
+    @media (max-width: 1400px) {
+      flex: 60%;
+    }
     &-title {
       font-style: normal;
       font-weight: 700;
@@ -451,6 +130,9 @@
       line-height: 3.1rem;
       color: #FF4026;
       padding-bottom: 0.5rem;
+      @media (max-width: 1400px) {
+        font-size: 2.2rem;
+      }
     }
 
     &-type {
@@ -469,6 +151,11 @@
       color: #464646;
       padding-bottom: 1.5rem;
       max-width: 38.2rem;
+      @media (max-width: $mobile) {
+        max-width: 30rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
     }
 
     &-quantity {
@@ -477,14 +164,60 @@
       font-size: 1.8rem;
       line-height: 2.2rem;
       color: #464646;
-      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      @media (max-width: 1400px) {
+        font-size: 1.4rem;
+      }
 
+      &-title{
+        margin-bottom: 0.6rem;
+      }
+
+      &-checkbox{
+        display: flex;
+        &-button{
+          font-weight: 700;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          color: $color-dark-gray;
+          padding: 0.4rem 0rem;
+          width: 100%;
+          border: 0;
+          cursor: pointer;
+          background: $color-products-button;
+          transition: 500ms;
+          @media (max-width: $tablet) {
+            font-size: 1.6rem;
+            line-height: 1.4rem;
+          }
+          @media (max-width: $mobile) {
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+          }
+
+          &.active{
+            background: $color-orange;
+            color: $color-white;
+          }
+
+        }
+        :not(:last-child){
+          margin-right: 0.2rem;
+        }
+        :first-child{
+          border-radius: 6px 0px 0px 6px;
+
+        }
+        :last-child{
+          border-radius: 0px 6px 6px 0px;
+        }
+      }
 
     }
 
     &-two_box {
       display: flex;
-
+      justify-content: space-between;
 
       &-one {
         flex: 0 1 50%;
@@ -495,17 +228,24 @@
           line-height: 2.2rem;
           color: #464646;
           margin-bottom: 1rem;
+          @media (max-width: 1400px) {
+            font-size: 1.4rem;
+          }
+
         }
       }
 
       &-two{
-        flex: 0 1 50%;
+
         &-title{
           text-align: center;
           font-weight: 700;
           font-size: 1.8rem;
           line-height: 2.2rem;
           margin-bottom: 1.7rem;
+          @media (max-width: 1400px) {
+            font-size: 1.4rem;
+          }
         }
 
         &-box{
@@ -515,13 +255,26 @@
 
           &-left_arrow{
             cursor: pointer;
+            text-align: center;
             img{
               transform: rotate(180deg);
+
+              @media (max-width: 1200px) {
+                width: 70%;
+                height: 70%;
+              }
             }
           }
 
           &-right_arrow{
             cursor: pointer;
+            text-align: center;
+            img{
+              @media (max-width: 1200px) {
+                width: 70%;
+                height: 70%;
+              }
+            }
           }
 
           &-number{
@@ -529,6 +282,10 @@
             font-size: 2rem;
             line-height: 2.4rem;
             padding: 0rem 2rem;
+            @media (max-width: 1200px) {
+              padding: 0rem 1rem;
+            }
+
           }
         }
       }
@@ -536,7 +293,14 @@
   }
 
   &-image{
-    flex: 30%;
+    flex: 0 0 35%;
+    text-align: center;
+    @media (max-width: 1400px) {
+      flex: 40%;
+    }
+    @media (max-width: 1300px) {
+      flex: 50%;
+    }
     img{
       position: relative;
       width: 100%;
@@ -544,6 +308,18 @@
       top: 0;
       left: 0;
       object-fit: cover;
+      @media (max-width: 1300px) {
+        width: 80%;
+        height: 90%;
+      }
+      @media (max-width: $phone) {
+        width: 50%;
+        height: 50%;
+      }
+      @media (max-width: $mobile) {
+        width: 50%;
+        height: 50%;
+      }
     }
   }
 }

@@ -87,30 +87,24 @@ const ProductItem: FC<IProductItem> = ({product}) => {
                                 e.preventDefault();
                                 const target = e.target as typeof e.target & {};
                             }}>
-                                <form className="product-top-content-quantity">
 
+
+                                <div className="product-top-content-quantity">
                                     <div className='product-top-content-quantity-title'>{(product.form === 1) ? 'Количество грамм порошка:' : (product.form === 2) ? 'Количество капсул:' : (product.form === 3) ? 'Количество капсул:' : (product.form === 4) ? 'Количество пакетиков:' : (product.form === 5) ? 'Количество грамм:' : 'Объем:'}</div>
                                     <div className="product-top-content-quantity-checkbox">
                                         {product.price.map((item, index) =>
-                                            <>
-                                                <input className=''
-                                                       type='radio'
-                                                       id={product._id}
-                                                       name="capacity"
-                                                       value={item.count}
-                                                       onClick={() => setOneSelector(item.count)}
-                                                       onChange={() => setCountId(item.id)}
-                                                />
-                                                <label htmlFor={product._id}>{item.count}</label>
-                                            </>
+                                                <button className={(item.count===oneSelector) ? 'product-top-content-quantity-checkbox-button active' : 'product-top-content-quantity-checkbox-button'} onClick={()=> {setCountId(item.id); setOneSelector(item.count);}}>
+                                                    {item.count}
+                                                </button>
                                         )}</div>
+                                </div>
 
-                                </form>
+
 
                                 <div className='product-top-content-two_box'>
-                                    <form className='product-top-content-two_box-one'>
-                                        <div
-                                            className='product-top-content-two_box-one-title'>{(product.form === 2) ? 'Количество грамм в капсуле:' :
+
+                                    {((product.form === 4) || (product.form === 2)) && <form className='product-top-content-two_box-one'>
+                                        <div className='product-top-content-two_box-one-title'>{(product.form === 2) ? 'Количество грамм в капсуле:' :
                                             (product.form === 4) ? 'Количество грамм:' : ''}</div>
                                         {((product.form === 4) || (product.form === 2)) ?
                                             <div className='product-top-content-two_box-one-box'>
@@ -130,7 +124,11 @@ const ProductItem: FC<IProductItem> = ({product}) => {
                                                     </>
                                                 )}
                                             </div> : ''}
-                                    </form>
+                                    </form>}
+
+
+
+
 
                                     <div className='product-top-content-two_box-two'>
                                         <div className='product-top-content-two_box-two-title'>Количество:</div>
