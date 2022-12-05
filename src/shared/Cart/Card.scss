@@ -12,6 +12,8 @@
 
   }
 
+
+
   &-form-submit{
     display: flex;
     flex-direction: column;
@@ -73,7 +75,15 @@
   &-total {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 3rem;
+    color: $color-orange;
+    margin-right: 1rem;
+    @media (max-width: $mobile){
+      font-size: 1.7rem;
+    }
 
     &-ico {
       margin-right: 1rem;

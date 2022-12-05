@@ -6,7 +6,6 @@
   -moz-box-shadow: 0px 0px 5px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 0px 5px 0px rgba(34, 60, 80, 0.2);
   border-radius: 11px;
-  min-width: 77rem;
   padding: 1.5rem;
   margin: 1rem;
     @media (max-width: $tablet){
@@ -18,10 +17,18 @@
   }
 
   &-image{
-    max-height: 20rem;
+    flex: 0 1 20%;
+    text-align: center;
+    @media (max-width: $mobile) {
+      flex: 0 1 30%;
+    }
     img{
+      position: relative;
       width: 100%;
       height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
       @media (max-width: $mobile){
         width: 85%;
         height: 85%;
@@ -35,6 +42,9 @@
 
   &-content {
     flex: 0 1 80%;
+    @media (max-width: $mobile) {
+      flex: 0 1 70%;
+    }
     &-top {
       display: flex;
       justify-content: space-between;
@@ -43,26 +53,38 @@
         margin-bottom: .5rem;
       }
       &-ico {
+        text-align: center;
         img {
           cursor: pointer;
+          @media (max-width: $tablet) {
+            width: 70%;
+            height: 70%;
+          }
         }
       }
 
       &-title {
         display: flex;
         align-items: center;
+        @media (max-width: $phone){
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
         &-name {
           font-weight: 700;
-          font-size: 2.6rem;
+          font-size: 2.1rem;
           line-height: 3rem;
           color: $color-orange;
           margin-right: 1rem;
           @media (max-width: $tablet){
-            font-size: 1.8rem;
-            line-height: 2rem;
-            margin-right: .8rem;
+            font-size: 2.8rem;
           }
+          @media (max-width: $mobile){
+            font-size: 1.7rem;
+            line-height: 1.7rem;
+          }
+
         }
 
         &-type {
@@ -71,8 +93,12 @@
           line-height: 1.8rem;
           color: $color-gray;
           @media (max-width: $tablet){
-            font-size: 1.2rem;
+            font-size: 2rem;
           }
+          @media (max-width: $mobile){
+            font-size: 1.4rem;
+          }
+
         }
       }
     }
@@ -99,12 +125,13 @@
         display: flex;
         align-items: flex-end;
         font-weight: 700;
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         line-height: 2.6rem;
         color: $color-orange;
-        @media (max-width: $tablet){
-          font-size: 1.5rem;
+        @media (max-width: $mobile){
+          font-size: 1.7rem;
         }
+
       }
 
       &-description{
@@ -113,11 +140,14 @@
         line-height: 1.8rem;
         color: $color-dark-gray;
         @media (max-width: $tablet){
-          font-size: 1.5rem;
+          font-size: 2rem;
         }
         @media (max-width: $mobile){
-          font-size: 1.3rem;
-          line-height: 1.5rem;
+          font-size: 1.4rem;
+        }
+        @media (max-width: $phone){
+          font-size: 1.2rem;
+          line-height: 1.2rem;
         }
       }
     }
