@@ -53,7 +53,7 @@ const ProductItem: FC<IProductItem> = ({product}) => {
     }, [twoSelector, oneSelector])
 
 
-    const pizda = (threeSelector * oneSelector / twoSelector) * count;
+    const pizda = Math.ceil((threeSelector * oneSelector / twoSelector) * count);
 
 
     let finalPrice = Math.ceil(pizda)
