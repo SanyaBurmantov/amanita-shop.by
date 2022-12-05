@@ -1,19 +1,16 @@
 import {IProduct} from "../types";
-// @ts-ignore
-import imageToAdd from "../assets/images/ImageProduct.png";
-
 import imageToAdd1 from '../assets/shop/AmanitaMuscariaPowder.png'
 import imageToAdd2 from '../assets/shop/AmanitaPantherinaPowder.png'
 import imageToAdd3 from '../assets/shop/HericiumErinaceusPowder.png'
 import imageToAdd4 from '../assets/shop/AmanitaMuscariaCapsules.png'
 import imageToAdd5 from '../assets/shop/AmanitaMixCapsules.png'
 import imageToAdd6 from '../assets/shop/AmanitaPantherinaCapsules.png'
-
-
+import imageToAdd7 from '../assets/shop/NoImage.png'
+import imageToAdd8 from '../assets/shop/NoImage.png'
 import imageToAdd9 from '../assets/shop/AmanitaMuscariaHats.png'
-
+import imageToAdd10 from '../assets/shop/NoImage.png'
 import imageToAdd11 from '../assets/shop/CaleaZacatechichiTea.png'
-
+import imageToAdd12 from '../assets/shop/NoImage.png'
 import imageToAdd13 from '../assets/shop/AmanitaMuscariaTincture.png'
 
 export const products: IProduct[] = [
@@ -297,7 +294,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '7',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd7,
         name: 'Зерномицелий ежовика',
         coefficient: [
             {
@@ -329,7 +326,7 @@ export const products: IProduct[] = [
     },
     {
         _id: '8',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd8,
         name: 'Кордицепс военный',
         coefficient: [
             {
@@ -399,13 +396,13 @@ export const products: IProduct[] = [
                 count: 100,
             }],
         form: 5,
-        title: 'в вакуумной упаковке',
+        title: 'Мухоморы в вакуумной упаковке для длительного хранения и качественного применения. Мухоморы в вакууме не теряют своих свойств!',
         text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         type: 'Шляпки',
     },
     {
         _id: '10',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd10,
         name: 'Мухомор красный',
         coefficient: [
             {
@@ -453,7 +450,7 @@ export const products: IProduct[] = [
                 count: 100,
             }],
         form: 4,
-        title: 'в вакуумной упаковке',
+        title: 'Чай из сухих мухоморов обладает полезными свойствами и вносит разнообразие в обычную чайную церемонию.',
         text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         type: 'Чай',
     },
@@ -491,13 +488,13 @@ export const products: IProduct[] = [
                 count: 50,
             }],
         form: 5,
-        title: 'растение Калея Закатечичи',
+        title: 'Чай из растения Калея Закатечичи. Отличная возможность углубиться в свое бесконечное сознание.',
         text: 'Собирались в чистых лесах Беларуси. Наш мухомор сохраняет максимальное количество полезных свойств. Сушка до 45 градусов. 2 месяца ферментации в вакууме без поступления воздуха. Капсулы делаются только из лучший шляпок мухомора.',
         type: 'Чай',
     },
     {
         _id: '12',
-        imagePath: imageToAdd,
+        imagePath: imageToAdd12,
         name: 'Мазь Мухомора красного',
         coefficient: [
             {
