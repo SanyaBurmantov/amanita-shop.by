@@ -134,17 +134,12 @@ export const Cart: FC = () => {
             <Modal visible={isShowCart} setVisible={setIsShowCart}>
                 <div className='cart__data--content'>
                     <h3 className='cart__data--content-title'>Корзина</h3>
-                    {(cart.length > 0) && <div className='cart__data--content-items'>
+                    {(cart.length > 0) &&
+                        <div className='cart__data--content-items'>
                         {cart.map((item, key) => <ItemCard item={item} removeHandler={removeHandler}/>)}
                     </div>}
                     {(cart.length === 0 && !submitTg) && <>
                         <div className='cart__data--content-no-item'>Ваша корзина пуста!</div>
-                        <div className='cart__data--content-total'>
-                            <div className='cart__data--content-total-ico'><img src={CashIco}/></div>
-                            <div className='cart__data--content-total-summ'>Общая
-                                сумма: <b>{Math.round(total)} BYN</b>
-                            </div>
-                        </div>
                     </>}
                     {submitTg && <div className='cart__data--content-form-submit'>
                         <div className='cart__data--content-form-submit-title'>Спасибо за заказ!</div>
@@ -160,6 +155,12 @@ export const Cart: FC = () => {
                         />
                         </div>
                     </div>}
+                    <div className='cart__data--content-total'>
+                        <div className='cart__data--content-total-ico'><img src={CashIco}/></div>
+                        <div className='cart__data--content-total-summ'>Общая
+                            сумма: <b>{Math.round(total)} BYN</b>
+                        </div>
+                    </div>
                     {(cart.length > 0) && <div className='form'>
                         <div className='cart__data--content-form'>
                             <div className='cart__data--content-form-title'>Введите ваши данные:</div>
