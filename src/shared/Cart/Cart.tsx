@@ -107,11 +107,15 @@ export const Cart: FC = () => {
 
         let message = "Клиент: " + data.name + "%0AНомер телефона" + data.number + "%0AЧисло товаров: " + posValue + "%0AТовары: " + strMatrix + "%0AИтоговая цена: " + data.totalPrice.toString() + "BYN"
 
-        const URL_API = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdSanya}&text=${message}&parse_mode=html`;
+        const URL_API_1 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdSanya}&text=${message}&parse_mode=html`;
+        const URL_API_2 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdMark}&text=${message}&parse_mode=html`;
         let api = new XMLHttpRequest();
+        let api1 = new XMLHttpRequest();
         // @ts-ignore
-        api.open("GET", URL_API, true)
+        api.open("GET", URL_API_1, true);
+        api1.open("GET", URL_API_2, true);
         api.send();
+        api1.send();
 
         removeAll()
         setSubmitTg(true)
