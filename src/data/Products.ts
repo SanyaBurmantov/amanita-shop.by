@@ -6,11 +6,11 @@ import imageToAdd4 from '../assets/shop/AmanitaMuscariaCapsules.png'
 import imageToAdd5 from '../assets/shop/AmanitaMixCapsules.png'
 import imageToAdd6 from '../assets/shop/AmanitaPantherinaCapsules.png'
 import imageToAdd7 from '../assets/shop/NoImage.png'
-import imageToAdd8 from '../assets/shop/NoImage.png'
+import imageToAdd8 from '../assets/shop/CordycepsCapsules.png'
 import imageToAdd9 from '../assets/shop/AmanitaMuscariaHats.png'
 import imageToAdd10 from '../assets/shop/NoImage.png'
 import imageToAdd11 from '../assets/shop/CaleaZacatechichiTea.png'
-import imageToAdd12 from '../assets/shop/NoImage.png'
+import imageToAdd12 from '../assets/shop/Ointment.png'
 import imageToAdd13 from '../assets/shop/AmanitaMuscariaTincture.png'
 
 export const products: IProduct[] = [
