@@ -32,29 +32,26 @@ export const Home = () => {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{x: -window.innerWidth, transition: {duration: 0.2}}}>
-
-                <div className="back"></div>
-
-                <div className="heading">
-                    <div className="heading__picture">
-                        <img src={mainpic} alt='picture'/>
-                        <div className="promo">
-                            <div className="promo__text">
-                                <h1>Дары природы</h1>
-                                <p>Польза для здоровья каждый день</p>
-                                <div className="promo__button">
-                                    <button className="btn"><a href="/products">Посмотреть каталог</a></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+            <div className="back"></div>
+            <div className="heading">
+                <div className="heading__picture">
+                    {/*<img src={mainpic} alt='picture'/>*/}
                 </div>
-
-
-
+                <div className="container container--promo">
+                <div className="promo">
+                    <div className="promo__text">
+                        <h1>Дары природы</h1>
+                        <p>Польза для здоровья каждый день</p>
+                    </div>
+                    <div className="promo__button">
+                        <button className="btn"><a href="/products">Посмотреть каталог</a></button>
+                    </div>
+                </div>
+                </div>
+            </div>
             <div className="container">
-                <div className="section__join mobile_mt15">
+
+                <div className="section__join">
                     <div className="join">
                         <div className="join__picture">
                             <img src={home_img} alt="pic"/>
