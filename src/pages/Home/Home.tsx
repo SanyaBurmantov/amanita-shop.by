@@ -1,7 +1,7 @@
 import React from "react";
 import {motion} from "framer-motion";
 // @ts-ignore
-import mainpic from '../../assets/page/mainpic.png';
+import mainpic from '../../assets/page/mainpic.jpg';
 // @ts-ignore
 import home_img from '../../assets/page/home_img.png';
 // @ts-ignore
