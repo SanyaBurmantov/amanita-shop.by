@@ -11,6 +11,17 @@ header{
     opacity: 0;
     position: fixed;
 
+    .header-menu-menu-burger{
+      span{
+        background-color: $color-dark-gray;
+      }
+      &:before{
+        background-color: $color-dark-gray;
+      }
+      &:after{
+        background-color: $color-dark-gray;
+      }
+    }
 
     &.sticked{
       padding-top: 1rem;
@@ -25,7 +36,7 @@ header{
       transition: 500ms;
       opacity: 1;
       @media (max-width: $mobile) {
-        background-color: $color-dark-gray;
+
         padding: 1rem 0;
       }
       ul{
@@ -35,18 +46,24 @@ header{
         color: $color-dark-gray;
       }
       .header-menu-logo{
+
         a{
 
         }
-        img{
-          background-color: $color-dark-gray;
-          border-radius: 50rem;
-          width: 50%;
-          @media (max-width: $mobile) {
+
+        &-img{display: none;
+        &.sticky{
+          position: relative;
+          display: block;
+          width: 80%;
+          margin-top: -1rem;
+          img{
 
             width: 100%;
+            height: 100%;
+
           }
-        }
+        }}
       }
       .header-button-btn{
         padding: 1rem 1.5rem;
@@ -109,7 +126,11 @@ header{
       @media (max-width: 1300px) {
         margin-right: 3rem;
       }
-    }
+      &-img{
+        &.sticky{
+        display: none;
+      }
+    }}
 
     &-menu {
       margin-right: 5rem;

@@ -6,7 +6,8 @@ import {Link} from "react-router-dom";
 import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE} from "../../utils/consts";
 import {useModalOpen} from "../../hooks/useModalOpen";
 import {Cart} from "../Cart/Cart";
-
+// @ts-ignore
+import logostick from '../../assets/icons/logo-amanita-sticky.svg'
 
 interface Header {
 
@@ -71,6 +72,7 @@ export const Header: FC<Header> = () => {
             <div className="header-menu-logo">
                 <Link to="/">
                     <img className='header-menu-logo-img' src={logo} alt='logo-amanita'/>
+                    <img className='header-menu-logo-img sticky' src={logostick} alt='logo-amanita'/>
                 </Link>
             </div>
             <div className='header-menu'>

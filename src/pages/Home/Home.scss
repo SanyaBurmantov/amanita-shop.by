@@ -16,9 +16,10 @@
   background-image: url("../../assets/page/mainpic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border: 0.001px solid $color-white;
+
   @media (max-width: $mobile) {
     margin-bottom: -5rem;
+    border: 0.001px solid $color-white;
   }
 
   .container{
@@ -46,7 +47,7 @@
 }
 
 .promo{
-  padding: 15rem 0 10rem 0;
+  padding: 25rem 0 15rem 0;
   @media (max-width: $mobile) {
     margin: 20rem 1rem -10rem 1rem;
     background: $color-dark-gray;
