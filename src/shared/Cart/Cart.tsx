@@ -91,6 +91,7 @@ export const Cart: FC = () => {
         let s2 = '';
         let s3 = '';
         let s4 = '';
+
         let posValue = data.products.length
         let strMatrix = ''
         let strPr = data.products.map(el => {
@@ -98,8 +99,9 @@ export const Cart: FC = () => {
             strMatrix = strMatrix + s1;
             s2 = "%0A %09" + el.type.toString();
             strMatrix = strMatrix + s2
-            // s3 = el.price.length.toString()
-            // strMatrix = strMatrix + s3
+            s3 = "%0A %09"+ el.oneSelector.toString() + " грамм/капсул"
+            strMatrix = strMatrix + s3
+
             s4 = "%0A %09Цена " + el.count.toString() + "BYN%0A"
             strMatrix = strMatrix + s4
 
@@ -110,12 +112,12 @@ export const Cart: FC = () => {
         const URL_API_1 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdSanya}&text=${message}&parse_mode=html`;
         const URL_API_2 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdMark}&text=${message}&parse_mode=html`;
         let api = new XMLHttpRequest();
-        let api1 = new XMLHttpRequest();
+       // let api1 = new XMLHttpRequest();
         // @ts-ignore
         api.open("GET", URL_API_1, true);
-        api1.open("GET", URL_API_2, true);
+       // api1.open("GET", URL_API_2, true);
         api.send();
-        api1.send();
+        //api1.send();
 
         removeAll()
         setSubmitTg(true)
