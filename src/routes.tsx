@@ -1,11 +1,19 @@
-import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE, TELEGRAM_ROUTE} from "./utils/consts";
+import {
+    BLOG_ROUTE,
+    FAQ_ROUTE,
+    HOME_ROUTE,
+    PAYMENT_ROUTE,
+    PRODUCTS_ROUTE,
+    REVIEWS_ROUTE,
+    TELEGRAM_ROUTE
+} from "./utils/consts";
 import {Home} from "./pages/Home/Home";
 import {Blog} from "./pages/Blog/Blog";
 import {Reviews} from "./pages/Reviews/Reviews";
 import {PaymentAndDelivery} from "./pages/Payment-and-delivery/Payment-and-delivery";
 import Products from "./pages/Products/components/Products";
 import {Telegram} from "./pages/Telegram/Telegram";
-
+import Faq from './pages/Faq/Faq'
 export const publicRoutes = [
     {
         path: HOME_ROUTE,
@@ -25,6 +33,9 @@ export const publicRoutes = [
     },{
         path: TELEGRAM_ROUTE,
         Component: Telegram,
+    },{
+        path: FAQ_ROUTE,
+        Component: Faq,
     }
 
 ]

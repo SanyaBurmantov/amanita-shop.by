@@ -3,7 +3,7 @@ import React, {FC, useEffect, useRef, useState} from "react";
 import logo from '../../assets/icons/logo-amanita.svg'
 import {motion, useScroll} from "framer-motion"
 import {Link} from "react-router-dom";
-import {BLOG_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE} from "../../utils/consts";
+import {BLOG_ROUTE, FAQ_ROUTE, HOME_ROUTE, PAYMENT_ROUTE, PRODUCTS_ROUTE, REVIEWS_ROUTE} from "../../utils/consts";
 import {useModalOpen} from "../../hooks/useModalOpen";
 import {Cart} from "../Cart/Cart";
 // @ts-ignore
@@ -24,7 +24,12 @@ export const Header: FC<Header> = () => {
     }, {
         name: 'Доставка',
         href: PAYMENT_ROUTE
+    },{
+        name: 'Информация',
+        href: FAQ_ROUTE
     },
+
+
         // {
     //     name: 'Блог',
     //     href: BLOG_ROUTE

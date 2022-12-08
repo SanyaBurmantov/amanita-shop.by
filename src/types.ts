@@ -74,7 +74,10 @@ export interface IPayment {
     payment: string
 }
 
-
+export interface IFaqItem{
+    title: string
+    description: string
+}
 
 
 export interface ICartItem extends IProduct{

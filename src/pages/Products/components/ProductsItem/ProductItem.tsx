@@ -4,7 +4,7 @@ import {IProduct} from "../../../../types";
 import CashImage from '../../../../assets/icons/money.svg'
 import {Counter} from "../ Counter/ Counter";
 import {useDispatch, useSelector} from "react-redux";
-import {addToCart, hasInCart} from "../../../../store/cart/actions";
+import {addToCart} from "../../../../store/cart/actions";
 import {useTypedSelector} from "../../../../hooks/useTypedSelector";
 import {cartReducer} from "../../../../store/cart/reducers";
 
