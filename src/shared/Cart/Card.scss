@@ -56,12 +56,8 @@
 
   &-items{
     margin-bottom: 2rem;
-    max-height: 32rem;
     overflow-x: auto;
     padding: 0.2rem;
-    @media (max-width: $mobile) {
-      max-height: 20rem;
-    }
   }
 
   &-no-item {

@@ -2,6 +2,7 @@ html{min-height:100%;
   box-sizing: border-box;
   font-size: 10px;
   scroll-behavior: smooth;
+
 }
 body{overflow-x: hidden;
   overflow-y: scroll;
@@ -24,7 +25,7 @@ body{color:$color-dark-gray;
   background-size: 100%;
   font: 1.6rem/1.375 $font-normal;
   -webkit-text-size-adjust:none;
-  &.noscroll{overflow: hidden !important;}}
+  &.no-scroll{overflow-y: hidden; overflow-x: hidden;}}
 
 .container {
   padding-top: 7rem;
