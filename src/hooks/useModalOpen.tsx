@@ -1,14 +1,10 @@
-import {useLayoutEffect, useState} from "react";
 
-export const useModalOpen = (modalOpen:boolean) => {
+export const useModalOpen = (value: boolean) => {
 
-    const [open, setOpen] = useState(modalOpen);
+    value ? document.body.classList.add('no-scroll') : document.body.classList.remove('no-scroll')
 
-    const doOpen = () => setOpen(prev => !prev)
 
-   // open ? document.body.style.overflow = "hidden" : document.body.style.overflow = "scroll";
-
-    return { doOpen, modalOpen }
+    return {
+        value
+    }
 }
-
-
