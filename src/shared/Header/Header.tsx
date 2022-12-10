@@ -44,8 +44,6 @@ export const Header: FC<Header> = () => {
 
     let [activeState, setActiveState] = useState(false);
 
-    let { doOpen } = useModalOpen(false)
-
 
     const { scrollY } = useScroll();
 
@@ -82,7 +80,7 @@ export const Header: FC<Header> = () => {
             </div>
             <div className='header-menu'>
                 <div className="header-menu-menu">
-                    <div onClick={() => (doOpen() , (setActiveState(prev => !prev)))}>
+                    <div onClick={() => setActiveState(prev => !prev)}>
                         <div className={`header-menu-menu-burger ${activeState ? 'active' : ''}`}>
                             <span></span>
                         </div>
@@ -92,7 +90,7 @@ export const Header: FC<Header> = () => {
 
                         {items.map(item =>
                             <Link to={item.href} key={item.name}
-                                  onClick={() => (doOpen(), (setActiveState(prev => !prev)))}
+                                  onClick={() => setActiveState(prev => !prev)}
                                   className="header-menu-menu-element">
                                 <div className='header-menu-menu-element-title'>
                                     <div className='header-menu-menu-element-title-marker'></div>
@@ -103,7 +101,7 @@ export const Header: FC<Header> = () => {
                         )}
                     </ul>
                     <div className={`header-blur ${activeState ? 'active' : ''}`}
-                         onClick={() => (doOpen(), (setActiveState(prev => !prev)))}></div>
+                         onClick={() => setActiveState(prev => !prev)}></div>
 
                 </div>
             </div>
