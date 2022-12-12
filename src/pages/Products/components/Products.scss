@@ -36,6 +36,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: $phone) {
+    flex-wrap: wrap;
+  }
 
   &-cash {
     display: flex;
@@ -43,8 +46,12 @@
     justify-content: space-between;
 
     &-image {
-      text-align: center;
+
       img{
+        @media (max-width: $tablet) {
+          width: 80%;
+          height: 80%;
+        }
         @media (max-width: $tablet) {
           width: 80%;
           height: 80%;
@@ -61,6 +68,10 @@
       font-weight: 700;
       font-size: 2.4rem;
       line-height: 2.9rem;
+      @media (max-width: 1448px) {
+        font-size: 2rem;
+        line-height: 2.2rem;
+      }
       @media (max-width: $phone) {
         font-size: 1.6rem;
       }
@@ -84,11 +95,27 @@
         color: white;
         padding: 1.2rem 4rem;
         cursor: pointer;
-        @media (max-width: $phone) {
-          font-size: 1.6rem;
+        @media (max-width: 1448px) {
+          padding: 1.2rem 2.5rem;
+          font-size: 1.8rem;
+          line-height: 2rem;
+        }
+        @media (max-width: $mobile) {
+          padding: 1rem 2rem;
+          font-size: 1.4rem;
           line-height: 1.6rem;
+        }
+        @media (max-width: $phone) {
+          font-size: 2rem;
+          line-height: 2.2rem;
           padding: 1.2rem 3rem;
         }
+        @media (max-width: 400px) {
+          font-size: 1.5rem;
+          line-height: 1.7rem;
+          padding: 1.2rem 2.8rem;
+        }
+
         &.buying{
           background-color: $color-gray;
         }
@@ -97,6 +124,7 @@
 
     &-more {
       &-btn {
+        cursor: pointer;
         background: #EBEBEB;
         border-radius: 6px;
         color: #464646;
@@ -104,6 +132,26 @@
         font-size: 2.2rem;
         line-height: 2.6rem;
         padding: 1.2rem 4rem;
+        @media (max-width: 1448px) {
+          padding: 1.2rem 2.5rem;
+          font-size: 1.8rem;
+          line-height: 2rem;
+        }
+        @media (max-width: $mobile) {
+          padding: 1rem 2rem;
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+        }
+        @media (max-width: $phone) {
+          font-size: 2rem;
+          line-height: 2.2rem;
+          padding: 1.2rem 3rem;
+        }
+        @media (max-width: 400px) {
+          font-size: 1.5rem;
+          line-height: 1.7rem;
+          padding: 1.2rem 2.8rem;
+        }
       }
     }
   }

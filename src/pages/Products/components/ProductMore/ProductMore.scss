@@ -1,0 +1,97 @@
+@import "../../../../styles/vars";
+
+.more{
+
+  &-top{
+    display: flex;
+    overflow: hidden;
+    &-content{
+      flex: 1 0 60%;
+
+      &-name{
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3.1rem;
+        color: $color-orange;
+        margin-bottom: 1.2rem;
+      }
+
+      &-text{
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        color: $color-dark-gray;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    &-image{
+      flex: 0 0 40%;
+      margin-left: 1rem;
+      img{
+        position: relative;
+        width: 80%;
+        height: 80%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+  &-bottom{
+
+    &__item{
+      margin-top: 0.5rem;
+      position: relative;
+
+      h3{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        color: $color-dark-gray;
+        margin-bottom: 1rem;
+        transition: 0.4s;
+
+
+        &.active{
+          color: $color-orange;
+        }
+
+        img{
+          width: 2%;
+          height: 2%;
+          cursor: pointer;
+          transform: rotate(-45deg);
+          transition: 0.4s;
+          &.active{
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      p{
+        margin: 0;
+        margin-bottom: 0.5rem;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+      }
+
+      hr{
+        border: none;
+        color: $color-gray;
+        background-color: $color-gray;
+        height: 0.1rem;
+        margin: 0 auto;
+      }
+
+    }
+  }
+}
