@@ -1,4 +1,5 @@
 .section-products {
+  overflow: hidden;
   h3 {
     @media (max-width: $mobile) {
       padding: 2rem 0;
