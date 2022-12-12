@@ -376,7 +376,7 @@ export const products: IProduct[] = [
                         coefficient: 1
                     }, {
                         id: 2,
-                        coefficient: 0.8333333333333333
+                        coefficient: 1
                     }, {
                         id: 3,
                         coefficient: 1
@@ -390,7 +390,7 @@ export const products: IProduct[] = [
                 count: 30,
             }, {
                 id: 2,
-                count: 60,
+                count: 50,
             }, {
                 id: 3,
                 count: 100,
