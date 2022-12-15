@@ -1,20 +1,22 @@
-import React, {FC, useEffect, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 import {IProduct} from "../../../../types";
-// @ts-ignore
 import CashImage from '../../../../assets/icons/money.svg'
 import {Counter} from "../ Counter/ Counter";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {addToCart} from "../../../../store/cart/actions";
 import {useTypedSelector} from "../../../../hooks/useTypedSelector";
-import {cartReducer} from "../../../../store/cart/reducers";
+import {Modal} from "../../../../shared/Modal/Modal";
+import {ProductMore} from "../ProductMore/ProductMore";
+import {motion} from "framer-motion";
 
 
 interface IProductItem {
-    product: IProduct
+    product: IProduct,
+    index: number
 }
 
 
-const ProductItem: FC<IProductItem> = ({product}) => {
+const ProductItem: FC<IProductItem> = ({product, index}) => {
 
     const [count, setCount] = useState(1)
     const [isShowProduct, setIsShowProduct] = useState(false);
@@ -27,8 +29,19 @@ const ProductItem: FC<IProductItem> = ({product}) => {
     const [threeSelector, setThreeSelector] = useState(0)
 
 
+    const animateProducts= {
+        visible: (index: number)=> ({
+            opacity: 1,
+            transition: {
+                delay: index*0.2,
+            }
+        }),
+        hidden: {opacity: 0}
+    };
+
+
     useEffect(() => {
-        if ((product.form === 1) || (product.form === 3) || (product.form === 5) || (product.form === 6)) {
+        if ((product.form === 1) || (product.form === 3) || (product.form === 5) || (product.form === 6) || (product.form === 7)) {
             product.coefficient.find(function (item, index) {
                 setTwoSelector(item.price)
                 setCountTwoId(item.id)
@@ -40,6 +53,7 @@ const ProductItem: FC<IProductItem> = ({product}) => {
             })
         }
     }, [twoSelector])
+
 
 
     useEffect(() => {
@@ -64,7 +78,8 @@ const ProductItem: FC<IProductItem> = ({product}) => {
     const addHandler = () => {
         if (count > 0 && threeSelector > 0 && oneSelector > 0 && twoSelector) {
             dispatch(addToCart(product, pizda, oneSelector, twoSelector, count))
-        };
+        }
+        ;
     }
 
     const cart = useTypedSelector(state => state.cart)
@@ -73,7 +88,12 @@ const ProductItem: FC<IProductItem> = ({product}) => {
 
 
     return (
-        <div className='product'>
+        <motion.div
+            variants={animateProducts}
+            initial='hidden'
+            animate='visible'
+            custom={index}
+            className='product'>
             <div className='product-container'>
                 <div className='product-column'>
                     <div className='product-top'>
@@ -90,44 +110,48 @@ const ProductItem: FC<IProductItem> = ({product}) => {
 
 
                                 <div className="product-top-content-quantity">
-                                    <div className='product-top-content-quantity-title'>{(product.form === 1) ? 'Количество грамм порошка:' : (product.form === 2) ? 'Количество капсул:' : (product.form === 3) ? 'Количество капсул:' : (product.form === 4) ? 'Количество пакетиков:' : (product.form === 5) ? 'Количество грамм:' : 'Объем:'}</div>
+                                    <div
+                                        className='product-top-content-quantity-title'>{(product.form === 1) ? 'Количество грамм порошка:' : (product.form === 2) ? 'Количество капсул:' : (product.form === 3) ? 'Количество капсул:' : (product.form === 4) ? 'Количество пакетиков:' : (product.form === 5) ? 'Количество грамм:' : (product.form === 7) ? 'Количество штук:' : 'Объем:'}</div>
                                     <div className="product-top-content-quantity-checkbox">
                                         {product.price.map((item, index) =>
-                                                <button className={(item.count===oneSelector) ? 'product-top-content-quantity-checkbox-button active' : 'product-top-content-quantity-checkbox-button'} onClick={()=> {setCountId(item.id); setOneSelector(item.count);}}>
-                                                    {item.count}
-                                                </button>
+                                            <button
+                                                className={(item.count === oneSelector) ? 'product-top-content-quantity-checkbox-button active' : 'product-top-content-quantity-checkbox-button'}
+                                                onClick={() => {
+                                                    setCountId(item.id);
+                                                    setOneSelector(item.count);
+                                                }}>
+                                                {item.count}
+                                            </button>
                                         )}</div>
                                 </div>
 
 
-
                                 <div className='product-top-content-two_box'>
 
-                                    {((product.form === 4) || (product.form === 2)) && <form className='product-top-content-two_box-one'>
-                                        <div className='product-top-content-two_box-one-title'>{(product.form === 2) ? 'Количество грамм в капсуле:' :
-                                            (product.form === 4) ? 'Количество грамм:' : ''}</div>
-                                        {((product.form === 4) || (product.form === 2)) ?
-                                            <div className='product-top-content-two_box-one-box'>
+                                    {((product.form === 4) || (product.form === 2)) &&
+                                        <form className='product-top-content-two_box-one'>
+                                            <div
+                                                className='product-top-content-two_box-one-title'>{(product.form === 2) ? 'Количество грамм в капсуле:' :
+                                                (product.form === 4) ? 'Количество грамм:' : ''}</div>
+                                            {((product.form === 4) || (product.form === 2)) ?
+                                                <div className='product-top-content-two_box-one-box'>
 
 
-                                                {product.coefficient.map((item, index) =>
-                                                    <>
-                                                        <input className=''
-                                                               id={product._id}
-                                                               type='radio'
-                                                               value={item.price}
-                                                               name='threeSelector'
-                                                               onClick={() => setTwoSelector(item.price)}
-                                                               onChange={() => setCountTwoId(item.id)}
-                                                        />
-                                                        <label htmlFor={product._id}>{item.price}</label>
-                                                    </>
-                                                )}
-                                            </div> : ''}
-                                    </form>}
-
-
-
+                                                    {product.coefficient.map((item, index) =>
+                                                        <>
+                                                            <input className=''
+                                                                   id={product._id}
+                                                                   type='radio'
+                                                                   value={item.price}
+                                                                   name='threeSelector'
+                                                                   onClick={() => setTwoSelector(item.price)}
+                                                                   onChange={() => setCountTwoId(item.id)}
+                                                            />
+                                                            <label htmlFor={product._id}>{item.price}</label>
+                                                        </>
+                                                    )}
+                                                </div> : ''}
+                                        </form>}
 
 
                                     <div className='product-top-content-two_box-two'>
@@ -147,19 +171,24 @@ const ProductItem: FC<IProductItem> = ({product}) => {
                         </div>
                         <div className='product-bottom-buttons'>
                             <div className='product-bottom-buttons-pay'>
-                                <button className={`${inCart ? 'product-bottom-buttons-pay-btn buying' : 'product-bottom-buttons-pay-btn'}`} onClick={addHandler}>{inCart ? `Добавлено` : `Купить`}</button>
+                                <button
+                                    className={`${inCart ? 'product-bottom-buttons-pay-btn buying' : 'product-bottom-buttons-pay-btn'}`}
+                                    onClick={addHandler}>{inCart ? `Добавлено` : `Купить`}</button>
 
                             </div>
-                            <div className='product-bottom-buttons-more'>
-                                {/*<button className="product-bottom-buttons-more-btn"*/}
-                                {/*        onClick={() => setIsShowProduct(!isShowProduct)}>Подробнее*/}
-                                {/*</button>*/}
-                            </div>
+                            {/*<div className='product-bottom-buttons-more'>*/}
+                            {/*    <button className="product-bottom-buttons-more-btn"*/}
+                            {/*            onClick={() => setIsShowProduct(true)}>Подробнее*/}
+                            {/*    </button>*/}
+                            {/*    <Modal visible={isShowProduct} setVisible={setIsShowProduct}>*/}
+                            {/*        <ProductMore product={product}/>*/}
+                            {/*    </Modal>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

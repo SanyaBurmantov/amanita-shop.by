@@ -23,7 +23,7 @@ export const ItemCard: FC<ItemCard> = ({item, removeHandler}) => {
                     </div>
                 </div>
                 <div className='item-content-bottom'>
-                    <div className='item-content-bottom-description'>{(item.form === 1) ? 'Количество грамм порошка:' : (item.form === 2) ? 'Количество капсул:' : (item.form === 3) ? 'Количество капсул:' : (item.form === 4) ? 'Количество пакетиков:' : (item.form === 5) ? 'Количество грамм:' : 'Объем:'} {`${item.oneSelector}`}</div>
+                    <div className='item-content-bottom-description'>{(item.form === 1) ? 'Количество грамм порошка:' : (item.form === 2) ? 'Количество капсул:' : (item.form === 3) ? 'Количество капсул:' : (item.form === 4) ? 'Количество пакетиков:' : (item.form === 5) ? 'Количество грамм:' : (item.form === 7) ? 'Количество штук:' : 'Объем:'} {`${item.oneSelector}`}</div>
                     <div className='item-content-bottom-description'>{(item.form === 2) ? 'Количество грамм в капсуле:' : (item.form === 4) ? 'Количество грамм:' : ''} {((item.form === 2) || (item.form === 4)) ? `${item.twoSelector}` : ''}</div>
                     <div className='item-content-bottom-description'>Количество единиц
                         товара: {`${item.pizda}`}</div>

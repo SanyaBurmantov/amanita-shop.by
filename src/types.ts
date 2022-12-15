@@ -11,8 +11,22 @@ export interface IProduct{
     type: string
     text: string,
     coefficient: ICoefficient[]
-
+    more: IMore[]
+    slider: ISlider[]
+    moreName: string
 }
+
+export interface IMore {
+    id: number,
+    title: string,
+    subtitle: string,
+}
+
+export interface ISlider {
+    id: number,
+    image: string,
+}
+
 
 export interface IRewiews{
     id: number
@@ -54,7 +68,6 @@ export interface IGovno {
     id: number
     coefficient: number
 }
-
 
 export interface IComment {
     id: any

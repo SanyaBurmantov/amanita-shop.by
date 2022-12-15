@@ -1,0 +1,146 @@
+@import "../../../../styles/vars";
+
+.more {
+
+  &__top_content {
+
+    h3 {
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 3.1rem;
+      color: $color-orange;
+      padding-bottom: 0rem;
+      margin-bottom: 1.4rem;
+      padding-top: 2rem;
+    }
+
+    p {
+      padding: 1rem 1rem;
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      color: $color-dark-gray;
+      margin-top: 0rem;
+      margin-bottom: 1.2rem;
+      user-select: text;
+      white-space: pre-line;
+    }
+  }
+
+
+  &__center_images {
+
+
+    &-items {
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      position: relative;
+      margin-bottom: 1.2rem;
+
+      img {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &.active {
+          position: relative;
+          transform: scale(1.5);
+          z-index: 100;
+          margin: 0 auto;
+
+        }
+
+        &:first-child {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+
+      }
+    }
+
+  }
+
+  &-bottom {
+    padding-bottom: 2rem;
+
+    h3 {
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 2rem;
+      color: $color-orange;
+      padding-bottom: 0rem;
+      margin-bottom: 1.4rem;
+      padding-top: 2rem;
+    }
+
+    &__item {
+      margin-top: 0.5rem;
+      position: relative;
+
+      h3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        color: $color-dark-gray;
+        margin-bottom: 1rem;
+        transition: 0.4s;
+
+
+        &.active {
+          color: $color-orange;
+        }
+
+        img {
+          width: 2%;
+          height: 2%;
+          cursor: pointer;
+          transform: rotate(-45deg);
+          transition: 0.4s;
+
+          &.active {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      p {
+        padding: 1rem 2rem;
+        user-select: text;
+        margin: 0;
+        margin-bottom: 0.5rem;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        white-space: pre-line;
+      }
+
+      hr {
+        border: none;
+        color: $color-gray;
+        background-color: $color-gray;
+        height: 0.1rem;
+        margin: 0 auto;
+      }
+
+    }
+  }
+
+  hr {
+    border: none;
+    color: $color-gray;
+    background-color: $color-gray;
+    height: 0.1rem;
+    margin: 0 auto;
+  }
+}
