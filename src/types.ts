@@ -88,8 +88,6 @@ export interface IPayment {
 }
 
 export interface IFaqItem{
-    title: string
-    description: string
 }
 
 
