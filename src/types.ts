@@ -13,8 +13,7 @@ export interface IProduct{
     coefficient: ICoefficient[]
     more: IMore[]
     slider: ISlider[]
-    moreImage: string
-
+    moreName: string
 }
 
 export interface IMore {

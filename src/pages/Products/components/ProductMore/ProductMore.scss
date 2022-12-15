@@ -1,52 +1,89 @@
 @import "../../../../styles/vars";
 
-.more{
+.more {
 
-  &-top{
-    display: flex;
-    overflow: hidden;
-    &-content{
-      flex: 1 0 60%;
+  &__top_content {
 
-      &-name{
-        font-weight: 700;
-        font-size: 3rem;
-        line-height: 3.1rem;
-        color: $color-orange;
-        margin-bottom: 1.2rem;
-      }
-
-      &-text{
-        font-weight: 300;
-        font-size: 1.6rem;
-        line-height: 1.8rem;
-        color: $color-dark-gray;
-        margin-bottom: 1.2rem;
-      }
+    h3 {
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 3.1rem;
+      color: $color-orange;
+      padding-bottom: 0rem;
+      margin-bottom: 1.4rem;
+      padding-top: 2rem;
     }
 
-    &-image{
-      flex: 0 0 40%;
-      margin-left: 1rem;
-      img{
+    p {
+      padding: 1rem 1rem;
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      color: $color-dark-gray;
+      margin-top: 0rem;
+      margin-bottom: 1.2rem;
+      user-select: text;
+      white-space: pre-line;
+    }
+  }
+
+
+  &__center_images {
+
+
+    &-items {
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      position: relative;
+      margin-bottom: 1.2rem;
+
+      img {
         position: relative;
-        width: 80%;
-        height: 80%;
         top: 0;
         left: 0;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &.active {
+          position: relative;
+          transform: scale(1.5);
+          z-index: 100;
+          margin: 0 auto;
+
+        }
+
+        &:first-child {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+
       }
     }
 
   }
 
-  &-bottom{
+  &-bottom {
+    padding-bottom: 2rem;
 
-    &__item{
+    h3 {
+      font-weight: 700;
+      font-size: 2.2rem;
+      line-height: 2rem;
+      color: $color-orange;
+      padding-bottom: 0rem;
+      margin-bottom: 1.4rem;
+      padding-top: 2rem;
+    }
+
+    &__item {
       margin-top: 0.5rem;
       position: relative;
 
-      h3{
+      h3 {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -60,31 +97,35 @@
         transition: 0.4s;
 
 
-        &.active{
+        &.active {
           color: $color-orange;
         }
 
-        img{
+        img {
           width: 2%;
           height: 2%;
           cursor: pointer;
           transform: rotate(-45deg);
           transition: 0.4s;
-          &.active{
+
+          &.active {
             transform: rotate(0deg);
           }
         }
       }
 
-      p{
+      p {
+        padding: 1rem 2rem;
+        user-select: text;
         margin: 0;
         margin-bottom: 0.5rem;
         font-weight: 300;
         font-size: 1.6rem;
         line-height: 1.8rem;
+        white-space: pre-line;
       }
 
-      hr{
+      hr {
         border: none;
         color: $color-gray;
         background-color: $color-gray;
@@ -93,5 +134,13 @@
       }
 
     }
+  }
+
+  hr {
+    border: none;
+    color: $color-gray;
+    background-color: $color-gray;
+    height: 0.1rem;
+    margin: 0 auto;
   }
 }

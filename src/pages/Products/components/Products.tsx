@@ -1,18 +1,16 @@
-import React, {useState} from 'react';
+import {FC, useState} from 'react';
 import {products} from "../../../data/Products"
 import ProductItem from "./ProductsItem/ProductItem";
 import {Filter} from "./Filter/Filter";
 import {IProduct} from "../../../types";
 import {motion} from "framer-motion";
-// @ts-ignore
-import Background from "../../../assets/images/background-image-products.png";
 import './Products.scss'
 
 
-interface Props {
+interface Products {
 }
 
-const Products = () => {
+const Products: FC<Products> = () => {
 
     const [filtred, setFiltred] = useState(products)
 
@@ -26,7 +24,8 @@ const Products = () => {
     }
 
     return (
-        <motion.div className="section section-products"
+        <motion.div
+            className="section section-products"
                     initial={{width: "30%"}}
                     animate={{width: "100%"}}
                     exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
@@ -42,7 +41,9 @@ const Products = () => {
                 </div>
 
                 <div className=''>
-                    <div className='products'>{filtred.map((product: IProduct) => <ProductItem
+                    <div className='products'>{filtred.map((product: IProduct, index) =>
+                        <ProductItem
+                            index={index}
                         product={product}
                         key={product._id}
                     />)}</div>

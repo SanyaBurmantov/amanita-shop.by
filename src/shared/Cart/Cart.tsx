@@ -99,7 +99,7 @@ export const Cart: FC = () => {
             strMatrix = strMatrix + s1;
             s2 = "%0A %09" + el.type.toString();
             strMatrix = strMatrix + s2
-            s3 = "%0A %09"+ el.oneSelector.toString() + " грамм/капсул"
+            s3 = "%0A %09"+ el.oneSelector.toString() + " грамм/капсул/штук"
             strMatrix = strMatrix + s3
 
             s4 = "%0A %09Цена " + el.count.toString() + "BYN%0A"

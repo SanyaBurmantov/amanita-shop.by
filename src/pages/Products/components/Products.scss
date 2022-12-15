@@ -2,6 +2,7 @@
 
 .filter {
   margin-bottom: 2rem;
+  user-select: none;
 }
 
 .picture {
@@ -28,6 +29,7 @@
   border-radius: 2.2rem;
 
   &-container {
+    user-select: none;
     padding: 3.2rem 2.9rem;
   }
 }
