@@ -17,16 +17,6 @@ interface Faq{
 }
 const Faq = () => {
 
-
-const toggles = document.querySelectorAll('.faq__item');
-toggles.forEach(toggle => {
-  toggle.addEventListener('click', () => {
-      if(toggle.classList.contains('active')){
-          toggle.classList.remove('active');
-      }else{toggle.classList.add('active');}
-  });
-});
-
     return (
         <motion.div className="section section-faq"
                     initial={{width: "30%"}}
