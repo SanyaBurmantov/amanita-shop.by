@@ -14,6 +14,6 @@ export const Filter: FC<FilterProps> = ({ArrFilter}) => {
 
     return (
         <div className='blog__panel-buttons-button'>{fill.map((FillArr) => <button
-            onClick={() => ArrFilter(FillArr.Themes)}>{FillArr.Themes}</button>)}</div>
+            key='F'onClick={() => ArrFilter(FillArr.Themes)}>{FillArr.Themes}</button>)}</div>
     );
 };

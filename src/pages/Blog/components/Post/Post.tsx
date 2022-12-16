@@ -1,7 +1,9 @@
 import React, {FC, useState} from 'react';
 import {IPost} from "../../../../types";
 import './Post.scss'
+// @ts-ignore
 import AdminIco from '../../../../assets/icons/AdminIco.svg'
+// @ts-ignore
 import NoLikesHeart from '../../../../assets/icons/noLike.svg'
 import {BlogModal} from "../BlogModal/BlogModal";
 import {posts} from "../../../../data/Posts";

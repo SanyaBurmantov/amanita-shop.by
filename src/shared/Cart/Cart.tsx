@@ -142,7 +142,7 @@ export const Cart: FC = () => {
                     <h3 className='cart__data--content-title'>Корзина</h3>
                     {(cart.length > 0) &&
                         <div className='cart__data--content-items'>
-                        {cart.map((item, key) => <ItemCard item={item} removeHandler={removeHandler}/>)}
+                        {cart.map((item, key) => <ItemCard key={cart.indexOf(item)} item={item} removeHandler={removeHandler}/>)}
                     </div>}
                     {(cart.length === 0 && !submitTg) && <>
                         <div className='cart__data--content-no-item'>Ваша корзина пуста!</div>

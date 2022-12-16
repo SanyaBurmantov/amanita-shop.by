@@ -44,7 +44,7 @@ export const Home = () => {
                         <p>Польза для здоровья каждый день</p>
                     </div>
                     <div className="promo__button">
-                        <button className="btn"><a href="/faq">Посмотреть каталог</a></button>
+                        <button className="btn"><a href="/products">Посмотреть каталог</a></button>
                     </div>
                 </div>
                 </div>

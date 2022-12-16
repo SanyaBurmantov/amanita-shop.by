@@ -2,6 +2,7 @@ import React, {FC, useEffect, useLayoutEffect, useRef, useState} from "react";
 import {motion} from "framer-motion";
 import './Payment-and-delivery.scss';
 import {PaymentItem} from "./components/PaymentItem/PaymentItem";
+// @ts-ignore
 import Arrows from '../../assets/icons/Slider-arrows.svg'
 import {Background} from "../../shared/Background/Background";
 

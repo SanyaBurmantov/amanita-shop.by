@@ -14,7 +14,7 @@ export const Filter: FC<Filter> = ({ProdFilter}) => {
 
     return (
         <div className='section-products__filter'>{fill.map((FillProd) => <button
-            className='section-products__filter--element'
+            className='section-products__filter--element' key={FillProd._id}
             onClick={() => ProdFilter(FillProd.type)}>{FillProd.type}</button>)}</div>
     );
 };

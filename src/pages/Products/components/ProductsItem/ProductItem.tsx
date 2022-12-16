@@ -1,5 +1,6 @@
 import {FC, useEffect, useState} from 'react';
 import {IProduct} from "../../../../types";
+// @ts-ignore
 import CashImage from '../../../../assets/icons/money.svg'
 import {Counter} from "../ Counter/ Counter";
 import {useDispatch} from "react-redux";
@@ -114,7 +115,7 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                         className='product-top-content-quantity-title'>{(product.form === 1) ? 'Количество грамм порошка:' : (product.form === 2) ? 'Количество капсул:' : (product.form === 3) ? 'Количество капсул:' : (product.form === 4) ? 'Количество пакетиков:' : (product.form === 5) ? 'Количество грамм:' : (product.form === 7) ? 'Количество штук:' : 'Объем:'}</div>
                                     <div className="product-top-content-quantity-checkbox">
                                         {product.price.map((item, index) =>
-                                            <button
+                                            <button key={item.id}
                                                 className={(item.count === oneSelector) ? 'product-top-content-quantity-checkbox-button active' : 'product-top-content-quantity-checkbox-button'}
                                                 onClick={() => {
                                                     setCountId(item.id);
@@ -140,6 +141,7 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                                     {product.coefficient.map((item, index) =>
                                                         <>
                                                             <input className=''
+                                                                   key={product._id}
                                                                    id={product._id}
                                                                    type='radio'
                                                                    value={item.price}
