@@ -16,6 +16,16 @@ export interface IProduct{
     moreName: string
 }
 
+export interface IPayment{
+    id: number,
+    image: string,
+    location: string,
+    subtitle: string,
+    delivery: string,
+    payment: string
+}
+
+
 export interface IMore {
     id: number,
     title: string,

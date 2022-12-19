@@ -1,9 +1,8 @@
 import React, {FC} from 'react';
 import './PaymentItem.scss'
-import {IPayment} from "../../../../types";
 
 interface PaymentItem {
-    item: IPayment,
+    item: any,
 }
 
 export const PaymentItem: FC<PaymentItem> = ({item}) => {

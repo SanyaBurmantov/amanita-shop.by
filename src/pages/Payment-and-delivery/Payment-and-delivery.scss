@@ -12,49 +12,14 @@
   }
 }
 
-
-.slider {
-  @media (max-width: $mobile) {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  &-arrows-left {
-    transform: rotate(180deg);
-    display: none;
-    z-index: 5;
-    @media (max-width: $mobile) {
-      display: flex;
-      padding: 0rem 0rem 0rem 1rem;
+.swiper-pagination{
+  position: relative !important;
+  span{
+    background: inherit;
+    opacity: 1;
+    border: 0.1rem solid $color-gray;
+    &.swiper-pagination-bullet-active{
+      background: $color-gray;
     }
-  }
-
-  &-arrows-right {
-    display: none;
-    z-index: 5;
-    @media (max-width: $mobile) {
-      display: flex;
-      padding: 0rem 0rem 0rem 1rem;
-    }
-  }
-}
-
-
-.payment-cards {
-  display: flex;
-  margin: 0rem -2rem;
-  @media (max-width: $mobile) {
-    margin: 0rem 0rem;
-    transition: translate;
-    transition-property: transform;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
-  }
-}
-.slider-container {
-  @media (max-width: $mobile) {
-   overflow: hidden;
-    width: 100%;
   }
 }
