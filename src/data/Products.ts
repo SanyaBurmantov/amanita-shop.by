@@ -15,30 +15,47 @@ import imageToAdd13 from '../assets/shop/AmanitaMuscariaTincture.png'
 import imageToAdd14 from '../assets/shop/Candy.png'
 import imageToAdd15 from '../assets/shop/Cookie.png'
 
-import imageMoreCaleaZacatechichi1 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi1.jpg'
-import imageMoreCaleaZacatechichi2 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi2.jpg'
-import imageMoreCaleaZacatechichi3 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi3.jpg'
-import imageMoreCaleaZacatechichi4 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi4.jpg'
-import imageMoreCaleaZacatechichi5 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi5.jpg'
+import amanitaMuscaria1 from '../assets/sliderMore/amanitaMuscaria/amanitaMuscaria1.jpg'
+import amanitaMuscaria2 from '../assets/sliderMore/amanitaMuscaria/amanitaMuscaria2.jpg'
+import amanitaMuscaria3 from '../assets/sliderMore/amanitaMuscaria/amanitaMuscaria3.jpg'
+import amanitaMuscaria4 from '../assets/sliderMore/amanitaMuscaria/amanitaMuscaria4.jpg'
+import amanitaMuscaria5 from '../assets/sliderMore/amanitaMuscaria/amanitaMuscaria5.jpg'
 
-import imageMoreHericiumErinaceus1 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus1.jpg'
-import imageMoreHericiumErinaceus2 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus2.jpg'
-import imageMoreHericiumErinaceus3 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus3.jpg'
-import imageMoreHericiumErinaceus4 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus4.jpg'
-import imageMoreHericiumErinaceus5 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus5.jpg'
+import amanitaPantherina1 from '../assets/sliderMore/amanitaPantherina/amanitaPantherina1.jpg'
+import amanitaPantherina2 from '../assets/sliderMore/amanitaPantherina/amanitaPantherina2.jpg'
+import amanitaPantherina3 from '../assets/sliderMore/amanitaPantherina/amanitaPantherina3.jpg'
+import amanitaPantherina4 from '../assets/sliderMore/amanitaPantherina/amanitaPantherina4.jpg'
+import amanitaPantherina5 from '../assets/sliderMore/amanitaPantherina/amanitaPantherina5.jpg'
 
-import imageMoreCordyceps1 from '../assets/sliderMore/Cordyceps/Cordyceps1.jpg'
-import imageMoreCordyceps2 from '../assets/sliderMore/Cordyceps/Cordyceps2.jpg'
-import imageMoreCordyceps3 from '../assets/sliderMore/Cordyceps/Cordyceps3.jpg'
-import imageMoreCordyceps4 from '../assets/sliderMore/Cordyceps/Cordyceps4.jpg'
-import imageMoreCordyceps5 from '../assets/sliderMore/Cordyceps/Cordyceps5.jpg'
+import caleaZacatechichi1 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi1.jpg'
+import caleaZacatechichi2 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi2.jpg'
+import caleaZacatechichi3 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi3.jpg'
+import caleaZacatechichi4 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi4.jpg'
+import caleaZacatechichi5 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi5.jpg'
+import caleaZacatechichi6 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi6.jpg'
+
+
+import cordyceps1 from '../assets/sliderMore/cordyceps/Cordyceps1.jpg'
+import cordyceps2 from '../assets/sliderMore/cordyceps/Cordyceps2.jpg'
+import cordyceps3 from '../assets/sliderMore/cordyceps/Cordyceps3.jpg'
+import cordyceps4 from '../assets/sliderMore/cordyceps/Cordyceps4.jpg'
+import cordyceps5 from '../assets/sliderMore/cordyceps/Cordyceps5.jpg'
+
+import hericiumErinaceus1 from '../assets/sliderMore/hericiumErinaceus/HericiumErinaceus1.jpeg'
+import hericiumErinaceus2 from '../assets/sliderMore/hericiumErinaceus/HericiumErinaceus2.jpg'
+import hericiumErinaceus3 from '../assets/sliderMore/hericiumErinaceus/HericiumErinaceus3.jpg'
+import hericiumErinaceus4 from '../assets/sliderMore/hericiumErinaceus/HericiumErinaceus4.jpg'
+import hericiumErinaceus5 from '../assets/sliderMore/hericiumErinaceus/HericiumErinaceus5.jpg'
+import hericiumErinaceus6 from '../assets/sliderMore/hericiumErinaceus/HericiumErinaceus6.jpg'
+
+
 
 export const products: IProduct[] = [
     {
         _id: '1',
         imagePath: imageToAdd1,
         name: 'Мухомор красный',
-        moreName: 'Калея закатечичи',
+        moreName: 'Мухомор красный',
         coefficient: [
             {
                 id: 1,
@@ -83,10 +100,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
+        slider: [
+            {
             id: 1,
-            image: 'sssssssss',
-        }]
+            image: amanitaMuscaria1,
+            },{
+                id: 2,
+                image: amanitaMuscaria2,
+            },{
+                id: 3,
+                image: amanitaMuscaria3,
+            },{
+                id: 4,
+                image: amanitaMuscaria4,
+            },{
+                id: 5,
+                image: amanitaMuscaria5,
+            }
+        ]
     },
     {
         _id: '2',
@@ -137,10 +168,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaPantherina1,
+            },{
+                id: 2,
+                image: amanitaPantherina2,
+            },{
+                id: 3,
+                image: amanitaPantherina3,
+            },{
+                id: 4,
+                image: amanitaPantherina4,
+            },{
+                id: 5,
+                image: amanitaPantherina5,
+            }
+        ]
     },
     {
         _id: '3',
@@ -191,10 +236,27 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: hericiumErinaceus1,
+            },{
+                id: 2,
+                image: hericiumErinaceus2,
+            },{
+                id: 3,
+                image: hericiumErinaceus3,
+            },{
+                id: 4,
+                image: hericiumErinaceus4,
+            },{
+                id: 5,
+                image: hericiumErinaceus5,
+            },{
+                id: 6,
+                image: hericiumErinaceus6,
+            }
+        ]
     },
     {
         _id: '4',
@@ -274,10 +336,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaMuscaria1,
+            },{
+                id: 2,
+                image: amanitaMuscaria2,
+            },{
+                id: 3,
+                image: amanitaMuscaria3,
+            },{
+                id: 4,
+                image: amanitaMuscaria4,
+            },{
+                id: 5,
+                image: amanitaMuscaria5,
+            }
+        ]
     },
     {
         _id: '5',
@@ -330,10 +406,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaMuscaria1,
+            },{
+                id: 2,
+                image: amanitaMuscaria2,
+            },{
+                id: 3,
+                image: amanitaMuscaria3,
+            },{
+                id: 4,
+                image: amanitaMuscaria4,
+            },{
+                id: 5,
+                image: amanitaMuscaria5,
+            }
+        ]
     },
     {
         _id: '6',
@@ -403,10 +493,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaPantherina1,
+            },{
+                id: 2,
+                image: amanitaPantherina2,
+            },{
+                id: 3,
+                image: amanitaPantherina3,
+            },{
+                id: 4,
+                image: amanitaPantherina4,
+            },{
+                id: 5,
+                image: amanitaPantherina5,
+            }
+        ]
     },
 
 
@@ -472,7 +576,7 @@ export const products: IProduct[] = [
                     'Шикарно приводит в порядок ЖКТ.\n',
             },{
                 id: 3,
-                title: 'Употребление Ежовика',
+                title: 'Употребление Ежовика (капсулы)',
                 subtitle: 'В качестве пищевой добавки принимать 2-3 капсулы  утром натощак и перед сном в течение 1—3 месяцев. Как долго принимать, каждый решает сам. Противопоказаний нет. Ведь грибы это полезный продукт.\n' +
                     'Можно принимать по мере необходимости, до исчезновения проблемы.'
             }
@@ -480,20 +584,22 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: imageMoreHericiumErinaceus1,
-            },
-            {
+                image: hericiumErinaceus1,
+            },{
                 id: 2,
-                image: imageMoreHericiumErinaceus2,
+                image: hericiumErinaceus2,
             },{
                 id: 3,
-                image: imageMoreHericiumErinaceus3,
+                image: hericiumErinaceus3,
             },{
                 id: 4,
-                image: imageMoreHericiumErinaceus4,
+                image: hericiumErinaceus4,
             },{
                 id: 5,
-                image: imageMoreHericiumErinaceus5,
+                image: hericiumErinaceus5,
+            },{
+                id: 6,
+                image: hericiumErinaceus6,
             }
         ]
     },
@@ -588,22 +694,22 @@ export const products: IProduct[] = [
         ],
         slider: [
             {
-            id: 1,
-            image: imageMoreCordyceps1,
-        },
-            {
+                id: 1,
+                image: cordyceps1,
+            },{
                 id: 2,
-                image: imageMoreCordyceps2,
+                image: cordyceps2,
             },{
                 id: 3,
-                image: imageMoreCordyceps3,
+                image: cordyceps3,
             },{
                 id: 4,
-                image: imageMoreCordyceps4,
+                image: cordyceps4,
             },{
                 id: 5,
-                image: imageMoreCordyceps5,
-            }]
+                image: cordyceps5,
+            }
+        ]
     },
 
 
@@ -615,7 +721,7 @@ export const products: IProduct[] = [
         _id: '9',
         imagePath: imageToAdd9,
         name: 'Мухомор красный',
-        moreName: 'Ежовик гребенчатый',
+        moreName: 'Мухомор красный',
         coefficient: [
             {
                 id: 1,
@@ -660,10 +766,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaMuscaria1,
+            },{
+                id: 2,
+                image: amanitaMuscaria2,
+            },{
+                id: 3,
+                image: amanitaMuscaria3,
+            },{
+                id: 4,
+                image: amanitaMuscaria4,
+            },{
+                id: 5,
+                image: amanitaMuscaria5,
+            }
+        ]
     },
     {
         _id: '10',
@@ -730,10 +850,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaMuscaria1,
+            },{
+                id: 2,
+                image: amanitaMuscaria2,
+            },{
+                id: 3,
+                image: amanitaMuscaria3,
+            },{
+                id: 4,
+                image: amanitaMuscaria4,
+            },{
+                id: 5,
+                image: amanitaMuscaria5,
+            }
+        ]
     },
 
 
@@ -817,22 +951,25 @@ export const products: IProduct[] = [
         ],
         slider: [
             {
-            id: 1,
-            image: imageMoreCaleaZacatechichi1,
-        },
-            {
-            id: 2,
-            image: imageMoreCaleaZacatechichi2,
-        },{
-            id: 3,
-            image: imageMoreCaleaZacatechichi3,
-        },{
-            id: 4,
-            image: imageMoreCaleaZacatechichi4,
-        },{
-            id: 5,
-            image: imageMoreCaleaZacatechichi5,
-        }]
+                id: 1,
+                image: caleaZacatechichi1,
+            },{
+                id: 2,
+                image: caleaZacatechichi2,
+            },{
+                id: 3,
+                image: caleaZacatechichi3,
+            },{
+                id: 4,
+                image: caleaZacatechichi4,
+            },{
+                id: 5,
+                image: caleaZacatechichi5,
+            },{
+                id: 6,
+                image: caleaZacatechichi6,
+            }
+        ]
     },
 
 
@@ -847,7 +984,7 @@ export const products: IProduct[] = [
         _id: '12',
         imagePath: imageToAdd12,
         name: 'Мазь Мухомора красного',
-        moreName: 'Калея закатечичи',
+        moreName: 'Мазь Мухомора красного',
         coefficient: [
             {
                 id: 1,
@@ -884,28 +1021,38 @@ export const products: IProduct[] = [
         more: [
             {
                 id: 1,
-                title: 'Что лечит мухоморная мазь:',
+                title: 'Что лечит мухоморная мазь?\n',
                 subtitle: '1. Суставные заболевания (артрозы, артриты, полиартрит, псориатический артрит, остеохондроз), в онкологии при метастазировании в костную ткань.\n' +
-                    '2. Труднозаживляемые раны и язвы (тромбофлебитные, раковые, свищи, пролежни, чирьи, фурункулы).\\n' +
-                    '3. Кожные заболевания (дерматиты, микозы, пиодермия, псориаз, экзема, грибковые заболевания стоп и ногтевые поражения).\\n' +
-                    '4. Варикозное заболевание вен, варикозные «сеточки», тромбофлебит.\\n' +
-                    '5. Доброкачественные образования на коже (папилломы, липомы, бородавки).\\n',
-            },            {
-                id: 2,
-                title: 'dddddddddddddddd',
-                subtitle: 'xxxxxxxxxxxxxxxxxxxx',
-            },
+                    '2. Труднозаживляемые раны и язвы (тромбофлебитные, раковые, свищи, пролежни, чирьи, фурункулы).\n' +
+                    '3. Кожные заболевания (дерматиты, микозы, пиодермия, псориаз, экзема, грибковые заболевания стоп и ногтевые поражения).\n' +
+                    '4. Варикозное заболевание вен, варикозные «сеточки», тромбофлебит.\n' +
+                    '5. Доброкачественные образования на коже (папилломы, липомы, бородавки).\n',
+            }
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaMuscaria1,
+            },{
+                id: 2,
+                image: amanitaMuscaria2,
+            },{
+                id: 3,
+                image: amanitaMuscaria3,
+            },{
+                id: 4,
+                image: amanitaMuscaria4,
+            },{
+                id: 5,
+                image: amanitaMuscaria5,
+            }
+        ]
     },
     {
         _id: '13',
         imagePath: imageToAdd13,
         name: 'Настойка Мухомора красного',
-        moreName: 'Калея закатечичи',
+        moreName: 'Настойка Мухомора красного',
         coefficient: [
             {
                 id: 1,
@@ -936,18 +1083,34 @@ export const products: IProduct[] = [
         more: [
             {
                 id: 1,
-                title: 'dddddddddddddddd',
-                subtitle: 'xxxxxxxxxxxxxxxxxxxx',
+                title: 'Применение настойки из мухоморов для суставов',
+                subtitle: 'При артрите, артрозе, остеохондрозе поможет компресс. Ткань смачивают в настойке из мухоморов, располагают ее на больном суставе, накрывают пищевой пленкой и теплым платком. Если поражены суставы рук, на них надевают смоченные в растворе хлопковые перчатки, пакеты и сверху теплые варежки. В случае, когда больной страдает повышенным артериальным давлением, процедуру проводят без укутывания.\n' +
+                    '\n' +
+                    'Настойку из мухоморов для лечения суставов советуют применять внутрь, начиная с одной капли средства в день и доводя постепенно до 20. Следующие десять дней принимают по 20 капель, а затем снова постепенно снижают прием до 1.',
             },            {
                 id: 2,
                 title: 'dddddddddddddddd',
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaMuscaria1,
+            },{
+                id: 2,
+                image: amanitaMuscaria2,
+            },{
+                id: 3,
+                image: amanitaMuscaria3,
+            },{
+                id: 4,
+                image: amanitaMuscaria4,
+            },{
+                id: 5,
+                image: amanitaMuscaria5,
+            }
+        ]
     }
     ,
     {
@@ -999,10 +1162,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaPantherina1,
+            },{
+                id: 2,
+                image: amanitaPantherina2,
+            },{
+                id: 3,
+                image: amanitaPantherina3,
+            },{
+                id: 4,
+                image: amanitaPantherina4,
+            },{
+                id: 5,
+                image: amanitaPantherina5,
+            }
+        ]
     } ,
     {
         _id: '15',
@@ -1053,9 +1230,23 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: amanitaPantherina1,
+            },{
+                id: 2,
+                image: amanitaPantherina2,
+            },{
+                id: 3,
+                image: amanitaPantherina3,
+            },{
+                id: 4,
+                image: amanitaPantherina4,
+            },{
+                id: 5,
+                image: amanitaPantherina5,
+            }
+        ]
     }
 ]
