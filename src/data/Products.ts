@@ -1,44 +1,11 @@
 import {IProduct} from "../types";
-import imageToAdd1 from '../assets/shop/AmanitaMuscariaPowder.png'
-import imageToAdd2 from '../assets/shop/AmanitaPantherinaPowder.png'
-import imageToAdd3 from '../assets/shop/HericiumErinaceusPowder.png'
-import imageToAdd4 from '../assets/shop/AmanitaMuscariaCapsules.png'
-import imageToAdd5 from '../assets/shop/AmanitaMixCapsules.png'
-import imageToAdd6 from '../assets/shop/AmanitaPantherinaCapsules.png'
-import imageToAdd7 from '../assets/shop/HericiumErinaceusCapsules.png'
-import imageToAdd8 from '../assets/shop/CordycepsCapsules.png'
-import imageToAdd9 from '../assets/shop/AmanitaMuscariaHats.png'
-import imageToAdd10 from '../assets/shop/AmanitaMuscariaTea.png'
-import imageToAdd11 from '../assets/shop/CaleaZacatechichiTea.png'
-import imageToAdd12 from '../assets/shop/Ointment.png'
-import imageToAdd13 from '../assets/shop/AmanitaMuscariaTincture.png'
-import imageToAdd14 from '../assets/shop/Candy.png'
-import imageToAdd15 from '../assets/shop/Cookie.png'
-
-import imageMoreCaleaZacatechichi1 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi1.jpg'
-import imageMoreCaleaZacatechichi2 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi2.jpg'
-import imageMoreCaleaZacatechichi3 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi3.jpg'
-import imageMoreCaleaZacatechichi4 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi4.jpg'
-import imageMoreCaleaZacatechichi5 from '../assets/sliderMore/caleaZacatechichi/caleaZacatechichi5.jpg'
-
-import imageMoreHericiumErinaceus1 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus1.jpg'
-import imageMoreHericiumErinaceus2 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus2.jpg'
-import imageMoreHericiumErinaceus3 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus3.jpg'
-import imageMoreHericiumErinaceus4 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus4.jpg'
-import imageMoreHericiumErinaceus5 from '../assets/sliderMore/HericiumErinaceus/HericiumErinaceus5.jpg'
-
-import imageMoreCordyceps1 from '../assets/sliderMore/Cordyceps/Cordyceps1.jpg'
-import imageMoreCordyceps2 from '../assets/sliderMore/Cordyceps/Cordyceps2.jpg'
-import imageMoreCordyceps3 from '../assets/sliderMore/Cordyceps/Cordyceps3.jpg'
-import imageMoreCordyceps4 from '../assets/sliderMore/Cordyceps/Cordyceps4.jpg'
-import imageMoreCordyceps5 from '../assets/sliderMore/Cordyceps/Cordyceps5.jpg'
 
 export const products: IProduct[] = [
     {
         _id: '1',
-        imagePath: imageToAdd1,
+        imagePath: 'https://sun9-54.userapi.com/impg/oH0Y_q6SfLb0VfVGcRTVVF2mVKNBT_fteSUZHg/d0Ra7jX9r_E.jpg?size=1620x2160&quality=95&sign=1992b863a9de20020e284295846821ef&type=album',
         name: 'Мухомор красный',
-        moreName: 'Калея закатечичи',
+        moreName: 'Мухомор красный',
         coefficient: [
             {
                 id: 1,
@@ -83,14 +50,28 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
+        slider: [
+            {
             id: 1,
-            image: 'sssssssss',
-        }]
+            image: 'https://sun9-78.userapi.com/impg/xr1dPtp4rtp6I7qyvQGoL6sWwze_AWYb-ppB1g/-ClDUpaLhFE.jpg?size=1200x900&quality=95&sign=c03989e3e3db53fdaae3b92db2275a86&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-68.userapi.com/impg/VTQNYrhGtO7sY5bN-i7WioVzLJCyxG0dU5njvw/k755lQckU8g.jpg?size=1920x1080&quality=95&sign=934445ee13718be39d47a87abb305d18&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-7.userapi.com/impg/uc3g7buG55vt3c-HWJmgxp78ghMd-h-eXsTp2g/MB1ua4LvPOo.jpg?size=794x529&quality=95&sign=edda49043e99926b1fb43bf66b2b448c&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-32.userapi.com/impg/2tlh4BOHr8oRvY7GHnYUNYNGv4ge9jLOy4p_Fg/4r3KE1NRE58.jpg?size=1024x683&quality=95&sign=63222eb9ca431710cea3e56d286e1fc5&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-74.userapi.com/impg/CymnPgfio-9IhTfFbPcVjkUvDOx_PvbQllVAyA/dBelNozHhQ0.jpg?size=1440x810&quality=95&sign=2677ee20aa3c272c228c8f6db200a6a3&type=album',
+            }
+        ]
     },
     {
         _id: '2',
-        imagePath: imageToAdd2,
+        imagePath: 'https://sun9-70.userapi.com/impg/ItSfyGDCoxpGpk5Ijbp_9Ar39iYd_zolDU-tRg/IztqBLbxcXw.jpg?size=1620x2160&quality=95&sign=e9811698c1d7a877144ec95f65d2177b&type=album',
         name: 'Мухомор пантерный',
         moreName: 'Калея закатечичи',
         coefficient: [
@@ -137,14 +118,28 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-22.userapi.com/impg/v7XSlGBcEIwJ7y0kejzUNOMKwJWohPPDHn2Xvg/hocgZgN1TI0.jpg?size=1024x749&quality=95&sign=97ef0012ca4dee0d5685fd795c010e63&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-53.userapi.com/impg/9UZNxHBFxMcxslVK33LeY6JxybPiLSRUE3OaJA/yjCV8FSV4Ss.jpg?size=1280x816&quality=95&sign=4610a0cac6909de93fb5b0c30dad3957&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-19.userapi.com/impg/sXFHTUVY3GKwUPNZhl6XL1MyOPsYVC_ecUUrXw/mVAE1Tu0DUU.jpg?size=790x523&quality=95&sign=4d225bfaeeb4c0d926d86db89c701207&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-33.userapi.com/impg/FfRGUyqA19QFCHtT28YY72dNKw0BxUvwyzzFrQ/HzbN7KIjxfg.jpg?size=1170x780&quality=95&sign=dd920f509266cf836bab90aa3c04f928&type=album',
+            },{
+                id: 5,
+                image: 'https://sun1.velcom-by-minsk.userapi.com/impg/RjgKyteVewaHSe1lNfBWvO6vpiL8JSvvUlEKhg/9O5bTHjAwHI.jpg?size=1024x683&quality=95&sign=56db19f6c8995f31b7a2b939e208bb34&type=album',
+            }
+        ]
     },
     {
         _id: '3',
-        imagePath: imageToAdd3,
+        imagePath: 'https://sun9-70.userapi.com/impg/y6j4CRtDhhLE3M9n7K9JqZt-O82hV0SxeQjcpg/VeiizADZfs8.jpg?size=1620x2160&quality=95&sign=eb21bc0e106ce176b779900093e6f279&type=album',
         name: 'Ежовик гребенчатый',
         moreName: 'Калея закатечичи',
         coefficient: [
@@ -191,14 +186,31 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-15.userapi.com/impg/8EmFrjlEzehng5V5aziJGUk4D099rQw7Jx93KA/xdrJiPsMQ4c.jpg?size=1347x750&quality=95&sign=5ae8af82d5aca52bfb31e2f5615ff346&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-25.userapi.com/impg/4dCQBx-pC-yGClojlj9bXL6k1FrS5miFatHCQQ/xUcphd26Ua8.jpg?size=2450x1712&quality=95&sign=0b578f6a968f38d6c47b8928f4daf14e&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-65.userapi.com/impg/uPZvlAmJCQzFl7R7vx_OFHRxdrcS0YACi95Psw/5OKsQg7pghk.jpg?size=1200x900&quality=95&sign=29d5f12f5c2341ba75817c64947540a9&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-57.userapi.com/impg/eKMbKnqzQO_kb-uLFAyDaf636z9dQ1-SPymJvw/XBH5x8QjwGo.jpg?size=1170x780&quality=95&sign=c9419426bc493f91b024883e9ace7e28&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-56.userapi.com/impg/2ue6gkoTa6HqcAuLlWaQFavQm4UoF29-XjVosQ/OYfifCHktrc.jpg?size=1170x778&quality=95&sign=7bea55b9d309627ef9228c2e03b72527&type=album',
+            },{
+                id: 6,
+                image: 'https://sun9-86.userapi.com/impg/rj7MNoWMn9dw10Q53ofsgDU_kF9s3bVQAAN7fg/UXi7mh85IhM.jpg?size=1170x828&quality=95&sign=157b51732d1bb7bf589b30fd5d886393&type=album',
+            }
+        ]
     },
     {
         _id: '4',
-        imagePath: imageToAdd4,
+        imagePath: 'https://sun9-5.userapi.com/impg/oW2NQsb8asOVGqRCMBNUoRtVxPbIrDg1pZqvPg/sdhuwnpXP1Y.jpg?size=1620x2160&quality=95&sign=72d107b1bdbc575aa92c58570a3ac67e&type=album',
         name: 'Мухомор красный',
         moreName: 'Калея закатечичи',
         coefficient: [
@@ -274,14 +286,28 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-78.userapi.com/impg/xr1dPtp4rtp6I7qyvQGoL6sWwze_AWYb-ppB1g/-ClDUpaLhFE.jpg?size=1200x900&quality=95&sign=c03989e3e3db53fdaae3b92db2275a86&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-68.userapi.com/impg/VTQNYrhGtO7sY5bN-i7WioVzLJCyxG0dU5njvw/k755lQckU8g.jpg?size=1920x1080&quality=95&sign=934445ee13718be39d47a87abb305d18&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-7.userapi.com/impg/uc3g7buG55vt3c-HWJmgxp78ghMd-h-eXsTp2g/MB1ua4LvPOo.jpg?size=794x529&quality=95&sign=edda49043e99926b1fb43bf66b2b448c&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-32.userapi.com/impg/2tlh4BOHr8oRvY7GHnYUNYNGv4ge9jLOy4p_Fg/4r3KE1NRE58.jpg?size=1024x683&quality=95&sign=63222eb9ca431710cea3e56d286e1fc5&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-74.userapi.com/impg/CymnPgfio-9IhTfFbPcVjkUvDOx_PvbQllVAyA/dBelNozHhQ0.jpg?size=1440x810&quality=95&sign=2677ee20aa3c272c228c8f6db200a6a3&type=album',
+            }
+        ]
     },
     {
         _id: '5',
-        imagePath: imageToAdd5,
+        imagePath: 'https://sun9-15.userapi.com/impg/wrBCjwOHBN8VMIhbgiO9VvHfVaJE59A2hyjKpA/AwlmnLLj1Xc.jpg?size=1620x2160&quality=95&sign=371433103749cfae606212812a915be7&type=album',
         name: 'AMANITA MIX',
         moreName: 'Калея закатечичи',
         coefficient: [
@@ -330,14 +356,28 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-78.userapi.com/impg/xr1dPtp4rtp6I7qyvQGoL6sWwze_AWYb-ppB1g/-ClDUpaLhFE.jpg?size=1200x900&quality=95&sign=c03989e3e3db53fdaae3b92db2275a86&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-68.userapi.com/impg/VTQNYrhGtO7sY5bN-i7WioVzLJCyxG0dU5njvw/k755lQckU8g.jpg?size=1920x1080&quality=95&sign=934445ee13718be39d47a87abb305d18&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-7.userapi.com/impg/uc3g7buG55vt3c-HWJmgxp78ghMd-h-eXsTp2g/MB1ua4LvPOo.jpg?size=794x529&quality=95&sign=edda49043e99926b1fb43bf66b2b448c&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-32.userapi.com/impg/2tlh4BOHr8oRvY7GHnYUNYNGv4ge9jLOy4p_Fg/4r3KE1NRE58.jpg?size=1024x683&quality=95&sign=63222eb9ca431710cea3e56d286e1fc5&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-74.userapi.com/impg/CymnPgfio-9IhTfFbPcVjkUvDOx_PvbQllVAyA/dBelNozHhQ0.jpg?size=1440x810&quality=95&sign=2677ee20aa3c272c228c8f6db200a6a3&type=album',
+            }
+        ]
     },
     {
         _id: '6',
-        imagePath: imageToAdd6,
+        imagePath: 'https://sun9-67.userapi.com/impg/Evyy2irw6E10-cDRqnQJCgBSRS0z2T5v5YQEnA/gPsdhkRzIMI.jpg?size=1620x2160&quality=95&sign=d7e1490055529ef09f5abee7f737f96e&type=album',
         name: 'Мухомор пантерный',
         moreName: 'Калея закатечичи',
         price: [
@@ -403,10 +443,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-22.userapi.com/impg/v7XSlGBcEIwJ7y0kejzUNOMKwJWohPPDHn2Xvg/hocgZgN1TI0.jpg?size=1024x749&quality=95&sign=97ef0012ca4dee0d5685fd795c010e63&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-53.userapi.com/impg/9UZNxHBFxMcxslVK33LeY6JxybPiLSRUE3OaJA/yjCV8FSV4Ss.jpg?size=1280x816&quality=95&sign=4610a0cac6909de93fb5b0c30dad3957&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-19.userapi.com/impg/sXFHTUVY3GKwUPNZhl6XL1MyOPsYVC_ecUUrXw/mVAE1Tu0DUU.jpg?size=790x523&quality=95&sign=4d225bfaeeb4c0d926d86db89c701207&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-33.userapi.com/impg/FfRGUyqA19QFCHtT28YY72dNKw0BxUvwyzzFrQ/HzbN7KIjxfg.jpg?size=1170x780&quality=95&sign=dd920f509266cf836bab90aa3c04f928&type=album',
+            },{
+                id: 5,
+                image: 'https://sun1.velcom-by-minsk.userapi.com/impg/RjgKyteVewaHSe1lNfBWvO6vpiL8JSvvUlEKhg/9O5bTHjAwHI.jpg?size=1024x683&quality=95&sign=56db19f6c8995f31b7a2b939e208bb34&type=album',
+            }
+        ]
     },
 
 
@@ -415,7 +469,7 @@ export const products: IProduct[] = [
 
     {
         _id: '7',
-        imagePath: imageToAdd7,
+        imagePath: 'https://sun9-1.userapi.com/impg/vc08GwN2xTd-MgOo0ZwvgDS0VkPHGbyG9zM3nw/bP5RI_6rdsk.jpg?size=1620x2160&quality=95&sign=8a84a1435b046da3c5da4c9550d45de7&type=album',
         name: 'Зерномицелий ежовика',
         moreName: 'Ежовик гребенчатый',
         coefficient: [
@@ -472,7 +526,7 @@ export const products: IProduct[] = [
                     'Шикарно приводит в порядок ЖКТ.\n',
             },{
                 id: 3,
-                title: 'Употребление Ежовика',
+                title: 'Употребление Ежовика (капсулы)',
                 subtitle: 'В качестве пищевой добавки принимать 2-3 капсулы  утром натощак и перед сном в течение 1—3 месяцев. Как долго принимать, каждый решает сам. Противопоказаний нет. Ведь грибы это полезный продукт.\n' +
                     'Можно принимать по мере необходимости, до исчезновения проблемы.'
             }
@@ -480,27 +534,29 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: imageMoreHericiumErinaceus1,
-            },
-            {
+                image: 'https://sun9-15.userapi.com/impg/8EmFrjlEzehng5V5aziJGUk4D099rQw7Jx93KA/xdrJiPsMQ4c.jpg?size=1347x750&quality=95&sign=5ae8af82d5aca52bfb31e2f5615ff346&type=album',
+            },{
                 id: 2,
-                image: imageMoreHericiumErinaceus2,
+                image: 'https://sun9-25.userapi.com/impg/4dCQBx-pC-yGClojlj9bXL6k1FrS5miFatHCQQ/xUcphd26Ua8.jpg?size=2450x1712&quality=95&sign=0b578f6a968f38d6c47b8928f4daf14e&type=album',
             },{
                 id: 3,
-                image: imageMoreHericiumErinaceus3,
+                image: 'https://sun9-65.userapi.com/impg/uPZvlAmJCQzFl7R7vx_OFHRxdrcS0YACi95Psw/5OKsQg7pghk.jpg?size=1200x900&quality=95&sign=29d5f12f5c2341ba75817c64947540a9&type=album',
             },{
                 id: 4,
-                image: imageMoreHericiumErinaceus4,
+                image: 'https://sun9-57.userapi.com/impg/eKMbKnqzQO_kb-uLFAyDaf636z9dQ1-SPymJvw/XBH5x8QjwGo.jpg?size=1170x780&quality=95&sign=c9419426bc493f91b024883e9ace7e28&type=album',
             },{
                 id: 5,
-                image: imageMoreHericiumErinaceus5,
+                image: 'https://sun9-56.userapi.com/impg/2ue6gkoTa6HqcAuLlWaQFavQm4UoF29-XjVosQ/OYfifCHktrc.jpg?size=1170x778&quality=95&sign=7bea55b9d309627ef9228c2e03b72527&type=album',
+            },{
+                id: 6,
+                image: 'https://sun9-86.userapi.com/impg/rj7MNoWMn9dw10Q53ofsgDU_kF9s3bVQAAN7fg/UXi7mh85IhM.jpg?size=1170x828&quality=95&sign=157b51732d1bb7bf589b30fd5d886393&type=album',
             }
         ]
     },
 
     {
         _id: '8',
-        imagePath: imageToAdd8,
+        imagePath: 'https://sun9-18.userapi.com/impg/4CqwWNpiFW7UcAJ5D_dET-kmWBV8QFYz0mOq5A/9O84wMKFPhc.jpg?size=1620x2160&quality=95&sign=f74a275b58df17199095893ff027ac37&type=album',
         name: 'Кордицепс военный',
         moreName: 'Кордицепс военный',
         coefficient: [
@@ -588,22 +644,22 @@ export const products: IProduct[] = [
         ],
         slider: [
             {
-            id: 1,
-            image: imageMoreCordyceps1,
-        },
-            {
+                id: 1,
+                image: 'https://sun9-32.userapi.com/impg/so_Xl9L-br9awZQ7pRD9PBMZkVJxF_sNjlKJbQ/qhpPqnmoxgo.jpg?size=1024x768&quality=95&sign=310be70605fc1e536bf071e9445530ea&type=album',
+            },{
                 id: 2,
-                image: imageMoreCordyceps2,
+                image: 'https://sun9-17.userapi.com/impg/kslNf1oO4Fz-RK2LkbtlTplpug1OTyms_E3dhQ/jO6bej3lPZc.jpg?size=1000x666&quality=95&sign=d2f7586077d0758d16f4c94cbaaa4172&type=album',
             },{
                 id: 3,
-                image: imageMoreCordyceps3,
+                image: 'https://sun9-6.userapi.com/impg/rBcreiGQOc4W58Qfp47n3-qaAlEGm0h6llX4Dw/wJkmMvgCy98.jpg?size=1200x786&quality=95&sign=9e4ecd8055039b7d98458631dcbd7d9b&type=album',
             },{
                 id: 4,
-                image: imageMoreCordyceps4,
+                image: 'https://sun9-19.userapi.com/impg/XybuUxDfVJowv0twuQkJnNJeDgXBmjZK8vOw3g/XzQKMnv0Sts.jpg?size=1024x682&quality=95&sign=fc349f52b8eb1fd9a9cb5bceeea5aada&type=album',
             },{
                 id: 5,
-                image: imageMoreCordyceps5,
-            }]
+                image: 'https://sun9-8.userapi.com/impg/9ADwHbEFd7enqLhpi5foahVeLW8m-LSvlOmcNg/Owj1Xk75TcU.jpg?size=1024x665&quality=95&sign=4f6d4f86e6a5abd590e4c79b18a7de03&type=album',
+            }
+        ]
     },
 
 
@@ -613,9 +669,9 @@ export const products: IProduct[] = [
 
     {
         _id: '9',
-        imagePath: imageToAdd9,
+        imagePath: 'https://sun9-73.userapi.com/impg/pKJdhb3Xk_FgcQjE2NLH7NsIEldIAlTqNzz2kQ/e1cG90EshDI.jpg?size=1620x2160&quality=95&sign=50945d65384c60c1aede149b98136b16&type=album',
         name: 'Мухомор красный',
-        moreName: 'Ежовик гребенчатый',
+        moreName: 'Мухомор красный',
         coefficient: [
             {
                 id: 1,
@@ -660,14 +716,28 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-78.userapi.com/impg/xr1dPtp4rtp6I7qyvQGoL6sWwze_AWYb-ppB1g/-ClDUpaLhFE.jpg?size=1200x900&quality=95&sign=c03989e3e3db53fdaae3b92db2275a86&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-68.userapi.com/impg/VTQNYrhGtO7sY5bN-i7WioVzLJCyxG0dU5njvw/k755lQckU8g.jpg?size=1920x1080&quality=95&sign=934445ee13718be39d47a87abb305d18&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-7.userapi.com/impg/uc3g7buG55vt3c-HWJmgxp78ghMd-h-eXsTp2g/MB1ua4LvPOo.jpg?size=794x529&quality=95&sign=edda49043e99926b1fb43bf66b2b448c&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-32.userapi.com/impg/2tlh4BOHr8oRvY7GHnYUNYNGv4ge9jLOy4p_Fg/4r3KE1NRE58.jpg?size=1024x683&quality=95&sign=63222eb9ca431710cea3e56d286e1fc5&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-74.userapi.com/impg/CymnPgfio-9IhTfFbPcVjkUvDOx_PvbQllVAyA/dBelNozHhQ0.jpg?size=1440x810&quality=95&sign=2677ee20aa3c272c228c8f6db200a6a3&type=album',
+            }
+        ]
     },
     {
         _id: '10',
-        imagePath: imageToAdd10,
+        imagePath: 'https://sun9-26.userapi.com/impg/0PI_u-vA8m8HTMT7L4rwDs9H6xNUTcnh87Zu8w/yLlz8Ww-rjY.jpg?size=1620x2160&quality=95&sign=446d3e522c40be8bf1f1aa24d157f3d0&type=album',
         name: 'Мухомор красный',
         moreName: 'Ежовик гребенчатый',
         coefficient: [
@@ -730,10 +800,24 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-78.userapi.com/impg/xr1dPtp4rtp6I7qyvQGoL6sWwze_AWYb-ppB1g/-ClDUpaLhFE.jpg?size=1200x900&quality=95&sign=c03989e3e3db53fdaae3b92db2275a86&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-68.userapi.com/impg/VTQNYrhGtO7sY5bN-i7WioVzLJCyxG0dU5njvw/k755lQckU8g.jpg?size=1920x1080&quality=95&sign=934445ee13718be39d47a87abb305d18&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-7.userapi.com/impg/uc3g7buG55vt3c-HWJmgxp78ghMd-h-eXsTp2g/MB1ua4LvPOo.jpg?size=794x529&quality=95&sign=edda49043e99926b1fb43bf66b2b448c&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-32.userapi.com/impg/2tlh4BOHr8oRvY7GHnYUNYNGv4ge9jLOy4p_Fg/4r3KE1NRE58.jpg?size=1024x683&quality=95&sign=63222eb9ca431710cea3e56d286e1fc5&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-74.userapi.com/impg/CymnPgfio-9IhTfFbPcVjkUvDOx_PvbQllVAyA/dBelNozHhQ0.jpg?size=1440x810&quality=95&sign=2677ee20aa3c272c228c8f6db200a6a3&type=album',
+            }
+        ]
     },
 
 
@@ -743,7 +827,7 @@ export const products: IProduct[] = [
 
     {
         _id: '11',
-        imagePath: imageToAdd11,
+        imagePath: 'https://sun9-61.userapi.com/impg/DM8rPOGwqZzfTu0KMefnyrId5DMW7yatPn04Sg/SANiVu1GHRM.jpg?size=1620x2160&quality=95&sign=bdd2253722cee7d0e595fa3c468651cf&type=album',
         name: 'Листья бога',
         moreName: 'Калея закатечичи',
         coefficient: [
@@ -817,22 +901,25 @@ export const products: IProduct[] = [
         ],
         slider: [
             {
-            id: 1,
-            image: imageMoreCaleaZacatechichi1,
-        },
-            {
-            id: 2,
-            image: imageMoreCaleaZacatechichi2,
-        },{
-            id: 3,
-            image: imageMoreCaleaZacatechichi3,
-        },{
-            id: 4,
-            image: imageMoreCaleaZacatechichi4,
-        },{
-            id: 5,
-            image: imageMoreCaleaZacatechichi5,
-        }]
+                id: 1,
+                image: 'https://sun9-78.userapi.com/impg/ru2dDiFulI-_q6oQlx6EV6Vnb7XeDj7tHqt60A/9q4bO6cAe7Y.jpg?size=1600x1200&quality=95&sign=f40818688ce68b277ab4d9282ade3a39&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-23.userapi.com/impg/4FivIhCAZbbsSwJ5R-Sp-HZvN7Nso6qcj-1lMQ/DP187DJjWZ8.jpg?size=1680x1260&quality=95&sign=6822211bdddaf9dc9b427ac5664b7a04&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-24.userapi.com/impg/Q3BL7jUHrMlJXMhaJHQPPZPZ6wtG27-zAPPcXA/1iFmDiLOQTg.jpg?size=2560x1701&quality=95&sign=2eed6794ad3ce81f6bae79da775a2f2e&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-37.userapi.com/impg/-euYnuc4rBA45lP8u91zoMGi8qvOJ_qyy8UW4Q/UUE1BPzsdI8.jpg?size=1280x853&quality=95&sign=61c9ebc7201612be291afffbc9f36cd4&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-45.userapi.com/impg/zyplt00vh8jqTGZPdqF0EvdNFQ9Bz5I8zY2-xw/MI4gbC7J_Xk.jpg?size=2048x1360&quality=95&sign=c451f26b8142ca79e185508315d33011&type=album',
+            },{
+                id: 6,
+                image: 'https://sun9-35.userapi.com/impg/SKj8B_2Y2LQAjCTiBDu_igpGNB6kecCZ0WIc5A/eRCYxjaGS2o.jpg?size=1919x1440&quality=95&sign=309b5f0505ef2c11eb4fdb809a128bba&type=album',
+            }
+        ]
     },
 
 
@@ -845,9 +932,9 @@ export const products: IProduct[] = [
 
     {
         _id: '12',
-        imagePath: imageToAdd12,
+        imagePath: 'https://sun9-22.userapi.com/impg/mGT5qqqFUsjm2ajHilRqSMm8dEye8vuEjKni8g/W5eS6qmxO64.jpg?size=1620x2160&quality=95&sign=fc6b0c4ea148b4ddeb32279a39c4f930&type=album',
         name: 'Мазь Мухомора красного',
-        moreName: 'Калея закатечичи',
+        moreName: 'Мазь Мухомора красного',
         coefficient: [
             {
                 id: 1,
@@ -884,28 +971,38 @@ export const products: IProduct[] = [
         more: [
             {
                 id: 1,
-                title: 'Что лечит мухоморная мазь:',
+                title: 'Что лечит мухоморная мазь?\n',
                 subtitle: '1. Суставные заболевания (артрозы, артриты, полиартрит, псориатический артрит, остеохондроз), в онкологии при метастазировании в костную ткань.\n' +
-                    '2. Труднозаживляемые раны и язвы (тромбофлебитные, раковые, свищи, пролежни, чирьи, фурункулы).\\n' +
-                    '3. Кожные заболевания (дерматиты, микозы, пиодермия, псориаз, экзема, грибковые заболевания стоп и ногтевые поражения).\\n' +
-                    '4. Варикозное заболевание вен, варикозные «сеточки», тромбофлебит.\\n' +
-                    '5. Доброкачественные образования на коже (папилломы, липомы, бородавки).\\n',
-            },            {
-                id: 2,
-                title: 'dddddddddddddddd',
-                subtitle: 'xxxxxxxxxxxxxxxxxxxx',
-            },
+                    '2. Труднозаживляемые раны и язвы (тромбофлебитные, раковые, свищи, пролежни, чирьи, фурункулы).\n' +
+                    '3. Кожные заболевания (дерматиты, микозы, пиодермия, псориаз, экзема, грибковые заболевания стоп и ногтевые поражения).\n' +
+                    '4. Варикозное заболевание вен, варикозные «сеточки», тромбофлебит.\n' +
+                    '5. Доброкачественные образования на коже (папилломы, липомы, бородавки).\n',
+            }
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-78.userapi.com/impg/xr1dPtp4rtp6I7qyvQGoL6sWwze_AWYb-ppB1g/-ClDUpaLhFE.jpg?size=1200x900&quality=95&sign=c03989e3e3db53fdaae3b92db2275a86&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-68.userapi.com/impg/VTQNYrhGtO7sY5bN-i7WioVzLJCyxG0dU5njvw/k755lQckU8g.jpg?size=1920x1080&quality=95&sign=934445ee13718be39d47a87abb305d18&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-7.userapi.com/impg/uc3g7buG55vt3c-HWJmgxp78ghMd-h-eXsTp2g/MB1ua4LvPOo.jpg?size=794x529&quality=95&sign=edda49043e99926b1fb43bf66b2b448c&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-32.userapi.com/impg/2tlh4BOHr8oRvY7GHnYUNYNGv4ge9jLOy4p_Fg/4r3KE1NRE58.jpg?size=1024x683&quality=95&sign=63222eb9ca431710cea3e56d286e1fc5&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-74.userapi.com/impg/CymnPgfio-9IhTfFbPcVjkUvDOx_PvbQllVAyA/dBelNozHhQ0.jpg?size=1440x810&quality=95&sign=2677ee20aa3c272c228c8f6db200a6a3&type=album',
+            }
+        ]
     },
     {
         _id: '13',
-        imagePath: imageToAdd13,
+        imagePath: 'https://sun9-53.userapi.com/impg/sBIwdTvCwJzx2pHeNPzZzEGZRvpMB2fqpSmGEQ/bg2RWqwc_y0.jpg?size=1659x2160&quality=95&sign=c19b5ed138cef1489729d6af9342d39f&type=album',
         name: 'Настойка Мухомора красного',
-        moreName: 'Калея закатечичи',
+        moreName: 'Настойка Мухомора красного',
         coefficient: [
             {
                 id: 1,
@@ -936,23 +1033,39 @@ export const products: IProduct[] = [
         more: [
             {
                 id: 1,
-                title: 'dddddddddddddddd',
-                subtitle: 'xxxxxxxxxxxxxxxxxxxx',
+                title: 'Применение настойки из мухоморов для суставов',
+                subtitle: 'При артрите, артрозе, остеохондрозе поможет компресс. Ткань смачивают в настойке из мухоморов, располагают ее на больном суставе, накрывают пищевой пленкой и теплым платком. Если поражены суставы рук, на них надевают смоченные в растворе хлопковые перчатки, пакеты и сверху теплые варежки. В случае, когда больной страдает повышенным артериальным давлением, процедуру проводят без укутывания.\n' +
+                    '\n' +
+                    'Настойку из мухоморов для лечения суставов советуют применять внутрь, начиная с одной капли средства в день и доводя постепенно до 20. Следующие десять дней принимают по 20 капель, а затем снова постепенно снижают прием до 1.',
             },            {
                 id: 2,
                 title: 'dddddddddddddddd',
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-78.userapi.com/impg/xr1dPtp4rtp6I7qyvQGoL6sWwze_AWYb-ppB1g/-ClDUpaLhFE.jpg?size=1200x900&quality=95&sign=c03989e3e3db53fdaae3b92db2275a86&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-68.userapi.com/impg/VTQNYrhGtO7sY5bN-i7WioVzLJCyxG0dU5njvw/k755lQckU8g.jpg?size=1920x1080&quality=95&sign=934445ee13718be39d47a87abb305d18&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-7.userapi.com/impg/uc3g7buG55vt3c-HWJmgxp78ghMd-h-eXsTp2g/MB1ua4LvPOo.jpg?size=794x529&quality=95&sign=edda49043e99926b1fb43bf66b2b448c&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-32.userapi.com/impg/2tlh4BOHr8oRvY7GHnYUNYNGv4ge9jLOy4p_Fg/4r3KE1NRE58.jpg?size=1024x683&quality=95&sign=63222eb9ca431710cea3e56d286e1fc5&type=album',
+            },{
+                id: 5,
+                image: 'https://sun9-74.userapi.com/impg/CymnPgfio-9IhTfFbPcVjkUvDOx_PvbQllVAyA/dBelNozHhQ0.jpg?size=1440x810&quality=95&sign=2677ee20aa3c272c228c8f6db200a6a3&type=album',
+            }
+        ]
     }
     ,
     {
         _id: '14',
-        imagePath: imageToAdd14,
+        imagePath: 'https://sun9-7.userapi.com/impg/jwntrvktagGE0jBC8E71lTABfqvYcgbA5vI5Ew/G5KCZnfDmuM.jpg?size=1620x2160&quality=95&sign=c9622a4b7848af1125bfaf0392304b5c&type=album',
         name: 'Конфета "Wakanda", 28 г.',
         moreName: 'Конфеты',
         coefficient: [
@@ -999,14 +1112,28 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-22.userapi.com/impg/v7XSlGBcEIwJ7y0kejzUNOMKwJWohPPDHn2Xvg/hocgZgN1TI0.jpg?size=1024x749&quality=95&sign=97ef0012ca4dee0d5685fd795c010e63&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-53.userapi.com/impg/9UZNxHBFxMcxslVK33LeY6JxybPiLSRUE3OaJA/yjCV8FSV4Ss.jpg?size=1280x816&quality=95&sign=4610a0cac6909de93fb5b0c30dad3957&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-19.userapi.com/impg/sXFHTUVY3GKwUPNZhl6XL1MyOPsYVC_ecUUrXw/mVAE1Tu0DUU.jpg?size=790x523&quality=95&sign=4d225bfaeeb4c0d926d86db89c701207&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-33.userapi.com/impg/FfRGUyqA19QFCHtT28YY72dNKw0BxUvwyzzFrQ/HzbN7KIjxfg.jpg?size=1170x780&quality=95&sign=dd920f509266cf836bab90aa3c04f928&type=album',
+            },{
+                id: 5,
+                image: 'https://sun1.velcom-by-minsk.userapi.com/impg/RjgKyteVewaHSe1lNfBWvO6vpiL8JSvvUlEKhg/9O5bTHjAwHI.jpg?size=1024x683&quality=95&sign=56db19f6c8995f31b7a2b939e208bb34&type=album',
+            }
+        ]
     } ,
     {
         _id: '15',
-        imagePath: imageToAdd15,
+        imagePath: 'https://sun9-57.userapi.com/impg/33xEbMBwQuBzi9o9Wff52_-TyxpazGPIQ8zrMw/ir-AQlyFeFM.jpg?size=1620x2160&quality=95&sign=83323088e2c0298a6244a46bcd4fa585&type=album',
         name: 'Печенье "Сердце пантеры", 55 г.',
         moreName: 'Печенье',
         coefficient: [
@@ -1053,9 +1180,23 @@ export const products: IProduct[] = [
                 subtitle: 'xxxxxxxxxxxxxxxxxxxx',
             },
         ],
-        slider: [{
-            id: 1,
-            image: 'sssssssss',
-        }]
+        slider: [
+            {
+                id: 1,
+                image: 'https://sun9-22.userapi.com/impg/v7XSlGBcEIwJ7y0kejzUNOMKwJWohPPDHn2Xvg/hocgZgN1TI0.jpg?size=1024x749&quality=95&sign=97ef0012ca4dee0d5685fd795c010e63&type=album',
+            },{
+                id: 2,
+                image: 'https://sun9-53.userapi.com/impg/9UZNxHBFxMcxslVK33LeY6JxybPiLSRUE3OaJA/yjCV8FSV4Ss.jpg?size=1280x816&quality=95&sign=4610a0cac6909de93fb5b0c30dad3957&type=album',
+            },{
+                id: 3,
+                image: 'https://sun9-19.userapi.com/impg/sXFHTUVY3GKwUPNZhl6XL1MyOPsYVC_ecUUrXw/mVAE1Tu0DUU.jpg?size=790x523&quality=95&sign=4d225bfaeeb4c0d926d86db89c701207&type=album',
+            },{
+                id: 4,
+                image: 'https://sun9-33.userapi.com/impg/FfRGUyqA19QFCHtT28YY72dNKw0BxUvwyzzFrQ/HzbN7KIjxfg.jpg?size=1170x780&quality=95&sign=dd920f509266cf836bab90aa3c04f928&type=album',
+            },{
+                id: 5,
+                image: 'https://sun1.velcom-by-minsk.userapi.com/impg/RjgKyteVewaHSe1lNfBWvO6vpiL8JSvvUlEKhg/9O5bTHjAwHI.jpg?size=1024x683&quality=95&sign=56db19f6c8995f31b7a2b939e208bb34&type=album',
+            }
+        ]
     }
 ]

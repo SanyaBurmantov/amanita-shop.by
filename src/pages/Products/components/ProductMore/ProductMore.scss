@@ -28,15 +28,21 @@
   }
 
   &__center_images {
-    max-height: 50rem;
     overflow: hidden;
+
+    .swiper-pagination{
+      margin-top: 1rem;
+    }
 
     .swiper-slide{
 
       img{
-        max-width: 100%;
-        max-height: 100%;
-        flex: 0 0 auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
       }
     }
   }
