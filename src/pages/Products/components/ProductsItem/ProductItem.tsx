@@ -1,8 +1,8 @@
-import {FC, useEffect, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {IProduct} from "../../../../types";
 // @ts-ignore
 import CashImage from '../../../../assets/icons/money.svg'
-import {Counter} from "../ Counter/ Counter";
+import {Counter} from "../Counter/ Counter";
 import {useDispatch} from "react-redux";
 import {addToCart} from "../../../../store/cart/actions";
 import {useTypedSelector} from "../../../../hooks/useTypedSelector";
@@ -178,14 +178,14 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                     onClick={addHandler}>{inCart ? `Добавлено` : `Купить`}</button>
 
                             </div>
-                            {/*<div className='product-bottom-buttons-more'>*/}
-                            {/*    <button className="product-bottom-buttons-more-btn"*/}
-                            {/*            onClick={() => setIsShowProduct(true)}>Подробнее*/}
-                            {/*    </button>*/}
-                            {/*    <Modal visible={isShowProduct} setVisible={setIsShowProduct}>*/}
-                            {/*        <ProductMore product={product}/>*/}
-                            {/*    </Modal>*/}
-                            {/*</div>*/}
+                            <div className='product-bottom-buttons-more'>
+                                {/*<button className="product-bottom-buttons-more-btn"*/}
+                                {/*        onClick={() => setIsShowProduct(true)}>Подробнее*/}
+                                {/*</button>*/}
+                                {/*<Modal visible={isShowProduct} setVisible={setIsShowProduct}>*/}
+                                {/*    <ProductMore product={product}/>*/}
+                                {/*</Modal>*/}
+                            </div>
                         </div>
                     </div>
                 </div>

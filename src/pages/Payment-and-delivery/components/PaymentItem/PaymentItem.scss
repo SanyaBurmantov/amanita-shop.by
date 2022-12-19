@@ -3,7 +3,6 @@
 .payment-card {
   display: flex;
   flex: 0 1 30.333%;
-  padding: 0rem 2rem;
   width: 100%;
   @media (max-width: $mobile) {
     padding: 0rem 0rem;
@@ -63,7 +62,6 @@
     &-title {
       font-size: 3rem;
       line-height: 3.6rem;
-      color: $color-red;
       font-weight: 600;
       margin-bottom: 0.8rem;
       @media (max-width: 1470px) {

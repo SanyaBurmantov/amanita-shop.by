@@ -105,7 +105,6 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(4px);
   @media (max-width: $mobile) {
     padding: 0 4rem;
 

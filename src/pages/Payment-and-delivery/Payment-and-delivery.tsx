@@ -1,11 +1,14 @@
-import React, {FC, useEffect, useLayoutEffect, useRef, useState} from "react";
+import {FC} from "react";
 import {motion} from "framer-motion";
 import './Payment-and-delivery.scss';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
 import {PaymentItem} from "./components/PaymentItem/PaymentItem";
-// @ts-ignore
-import Arrows from '../../assets/icons/Slider-arrows.svg'
-import {Background} from "../../shared/Background/Background";
-
+import Image1 from '../../assets/Payment/1.png'
+import Image2 from '../../assets/Payment/2.png'
+import Image3 from '../../assets/Payment/3.png'
+import 'swiper/css/pagination';
+import {Pagination} from "swiper";
 
 interface PaymentAndDelivery {
 
@@ -13,66 +16,30 @@ interface PaymentAndDelivery {
 
 export const PaymentAndDelivery: FC<PaymentAndDelivery> = () => {
 
-    const [offset, setOffset] = useState(0)
-    const [width, setWidth] = useState(0)
-    const sliderRef = useRef()
-
     const payment = [
         {
             id: 0,
-            image: 'https://sun9-20.userapi.com/impg/GDgkfybsGkLGmd7WDhXzDji7JEsUBc-LrXs9Tg/-mfuEEtPHmY.jpg?size=1536x2048&quality=96&sign=a0fd2c6eab669f914576fd72926391f8&type=album',
+            image: Image1,
             location: "Доставка по Минску",
             subtitle: 'До подъезда',
             delivery: '5 BYN',
             payment: 'Наличными курьеру'
         }, {
             id: 1,
-            image: 'https://sun9-20.userapi.com/impg/GDgkfybsGkLGmd7WDhXzDji7JEsUBc-LrXs9Tg/-mfuEEtPHmY.jpg?size=1536x2048&quality=96&sign=a0fd2c6eab669f914576fd72926391f8&type=album',
+            image: Image2,
             location: "Доставка по Беларуси",
             subtitle: 'Отправка "Белпочта" или "Европочта" наложенным платёжом',
             delivery: '5-6 BYN',
             payment: 'На почте при получении'
         }, {
             id: 2,
-            image: 'https://sun9-20.userapi.com/impg/GDgkfybsGkLGmd7WDhXzDji7JEsUBc-LrXs9Tg/-mfuEEtPHmY.jpg?size=1536x2048&quality=96&sign=a0fd2c6eab669f914576fd72926391f8&type=album',
+            image: Image3,
             location: "Доставка по всему миру",
             subtitle: 'По предоплате',
             delivery: 'Договорная',
             payment: 'На почте при получении'
         }
     ]
-
-    useEffect(()=>{
-
-        const resizeHandler = () => {
-            // @ts-ignore
-            const  _width = sliderRef.current.offsetWidth;
-            setWidth(_width)
-            console.dir(_width)
-        }
-        resizeHandler();
-        window.addEventListener('resize', resizeHandler)
-        return () => {
-            window.removeEventListener('resize', resizeHandler)
-        }
-
-    },[])
-
-    const nextSlide = () => {
-        setOffset((currentOffset)=>{
-            const newOffset = currentOffset - width;
-            const maxOffset = -(width * (payment.length-1))
-            return Math.max(newOffset, maxOffset)
-        })
-    }
-
-    const prewSlide = () => {
-        setOffset((currentOffset)=>{
-            const newOffset = currentOffset + width;
-            return Math.min(newOffset, 0);
-        })
-    }
-
 
     return (
 
@@ -83,13 +50,20 @@ export const PaymentAndDelivery: FC<PaymentAndDelivery> = () => {
             <div className='container'>
                 <h3>Оплата и доставка</h3>
                 <h4>Здесь вы можете получить акутальную информацию по возможности доставки.</h4>
-                <div className='slider'>
-                    <div className='slider-arrows-left'><img src={Arrows} onClick={prewSlide}/></div>
-                    <div ref={sliderRef} className='slider-container'>
-                        <div className='payment-cards' style={{transform: `translateX(${offset}px)`}}>{payment.map((item) => <PaymentItem item={item} key={item.id}/>)}</div>
-                    </div>
-                    <div className='slider-arrows-right'><img src={Arrows} onClick={nextSlide}/></div>
-                </div>
+
+                    <Swiper
+                        modules={[Pagination]}
+                        loop={(window.innerWidth <= 767) ? true : false}
+                        pagination={{clickable: true}}
+                        slidesPerView={(window.innerWidth <= 767) ? 1 : 3}
+                        spaceBetween={(window.innerWidth <= 767) ? 0 : 20}>
+                        {payment.map((item, index) => (
+                            <div key={index}>
+                                <SwiperSlide><PaymentItem item={item}/></SwiperSlide>
+                            </div>
+                        ))}
+                    </Swiper>
+
             </div>
         </motion.div>
     )
