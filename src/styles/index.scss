@@ -121,7 +121,7 @@ body::-webkit-scrollbar-thumb {
   user-select: none;
   margin-bottom: 2rem;
   @media (max-width: $mobile) {
-    width: calc(100% + 36px);
+    //width: calc(100% + 36px);
     margin-bottom: 0rem;
     overflow-x: scroll;
     &::-webkit-scrollbar {
