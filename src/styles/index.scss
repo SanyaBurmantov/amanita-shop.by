@@ -118,14 +118,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .filter{
+  user-select: none;
+  margin-bottom: 2rem;
   @media (max-width: $mobile) {
-
-
-    overflow-x: scroll;
-    scrollbar-width: 0px;
     width: calc(100% + 36px);
-    margin: 0 -2rem;
-    padding-left: 2rem;
+    margin-bottom: 0rem;
+    overflow-x: scroll;
     &::-webkit-scrollbar {
       width: 0px;
     }

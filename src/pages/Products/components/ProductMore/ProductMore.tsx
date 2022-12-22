@@ -40,7 +40,7 @@ export const ProductMore: FC<ProductMore> = ({product}) => {
             <div className='more-bottom'>
                 <h3>Полезная информация</h3>
                 <hr/>
-                {product.more.map((attr, index) =>
+                {product.more?.map((attr, index) =>
                     <MoreItem key={attr.id} item={attr}/>
                 )}
             </div>
