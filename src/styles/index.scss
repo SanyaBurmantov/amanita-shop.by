@@ -36,6 +36,7 @@ body{color:$color-dark-gray;
   margin-right: auto;
   padding-left: 56px;
   padding-right: 56px;
+  padding-bottom: 2rem;
   @media all and (max-width: 1440px) {
     max-width: 85%;
   }
@@ -73,7 +74,7 @@ body{color:$color-dark-gray;
 @import "ui/ui.scss";
 
 @import "src/shared/Header/header";
-@import "footer";
+@import "src/shared/Footer/footer";
 @import "sections";
 @import "../shared/Cart/Card";
 @import "src/shared/Contacts/contacts.scss";
