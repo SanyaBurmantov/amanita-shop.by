@@ -8,6 +8,7 @@ import {useModalOpen} from "../../hooks/useModalOpen";
 import {Cart} from "../Cart/Cart";
 // @ts-ignore
 import logostick from '../../assets/icons/logo-amanita-sticky.svg'
+import {Pages} from '../../data/Pages'
 
 interface Header {
 
@@ -15,32 +16,7 @@ interface Header {
 
 export const Header: FC<Header> = () => {
 
-    const items = [{
-        name: 'Главная',
-        href: HOME_ROUTE
-    }, {
-        name: 'Магазин',
-        href: PRODUCTS_ROUTE
-    }, {
-        name: 'Доставка',
-        href: PAYMENT_ROUTE
-    },{
-        name: 'Информация',
-        href: FAQ_ROUTE
-    },
 
-
-        // {
-    //     name: 'Блог',
-    //     href: BLOG_ROUTE
-    // }, {
-    //     name: 'Доставка',
-    //     href: PAYMENT_ROUTE
-    // }, {
-    //     name: 'Отзывы',
-    //     href: REVIEWS_ROUTE
-    // }
-    ];
 
     let [activeState, setActiveState] = useState(false);
 
@@ -88,7 +64,7 @@ export const Header: FC<Header> = () => {
                     <ul className={`${activeState ? 'active' : ''}`}>
                         <div className='header-menu-title'>Меню</div>
 
-                        {items.map(item =>
+                        {Pages.map(item =>
                             <Link to={item.href} key={item.name}
                                   onClick={() => setActiveState(prev => !prev)}
                                   className="header-menu-menu-element">

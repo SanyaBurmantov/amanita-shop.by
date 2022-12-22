@@ -1,5 +1,5 @@
-import React, {Dispatch, SetStateAction} from "react";
-import Products from "./pages/Products/components/Products";
+import {Dispatch, SetStateAction} from "react";
+
 
 export interface IProduct{
     _id: string

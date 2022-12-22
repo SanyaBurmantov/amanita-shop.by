@@ -1,0 +1,101 @@
+@import "../../styles/vars";
+
+footer{
+  background-color: $color-white;
+  padding: 2rem 0.5rem;
+  .container{
+    padding-top: 0rem;
+  }
+}
+
+
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &-left{
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @media (max-width: $mobile) {
+      margin-bottom: 2rem;
+    }
+    &__top{
+      margin-bottom: 2rem;
+      a{
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        color: $color-dark-gray;
+        &:not(:last-child){
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    &__center{
+      margin-bottom: 2rem;
+      a{
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        color: $color-dark-gray;
+      }
+      p{
+        margin: 0rem 0rem;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        color: $color-gray;
+      }
+    }
+
+    &__bottom{
+      p{
+        margin: 0rem 0rem;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        color: $color-gray;
+      }
+    }
+  }
+
+  &-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: $mobile) {
+      align-items: flex-start;
+    }
+
+
+    &__messages{
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $mobile) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        a{
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    p{
+      margin: 0rem 0rem;
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      color: $color-dark-gray;
+      margin-bottom: 0.5rem;
+      @media (max-width: $mobile) {
+        color: $color-gray;
+      }
+    }
+  }
+}
