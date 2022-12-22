@@ -11,7 +11,7 @@ export interface IProduct{
     type: string
     text: string,
     coefficient: ICoefficient[]
-    more: IMore[]
+    more?: IMore[]
     slider: ISlider[]
     moreName: string
 }
@@ -110,9 +110,11 @@ export interface ICartItem extends IProduct{
 
 export type TypeSetState<T> = Dispatch<SetStateAction<T>>
 
+export type FunctionUpdateFilter = (attr: IProduct[]) => void
 export type FunctionlikeCount = (id: number) => void;
 export type FunctionRemoveHandler = (id: string) => void;
 export type FunctionArrFilter = (Themes: string) => void;
+export type FunctionArrFilters = (type: string) => void;
 export type FunctionProdFilter = (Products: string) => void;
 
 

@@ -12,43 +12,35 @@ interface Products {
 
 const Products: FC<Products> = () => {
 
-    const [filtred, setFiltred] = useState(products)
+    const [filter, setFilter] = useState(products)
 
-    function ArrFilter(type: string) {
-        if (type === 'all') {
-            setFiltred(products)
-        } else {
-            let newArr = [...products].filter(products => products.type === type)
-            setFiltred(newArr)
-        }
+    const updateFilter = (attr: IProduct[]) => {
+        setFilter(attr)
     }
 
     return (
         <motion.div
             className="section section-products"
-                    initial={{width: "30%"}}
-                    animate={{width: "100%"}}
-                    exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
+            initial={{width: "30%"}}
+            animate={{width: "100%"}}
+            exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
             <div className="container">
                 <h3>Магазин</h3>
                 <h4>Мухомор сушеный, мухомор красный, пантерный, ежовик гребенчатый, кордицепс и многое другое!</h4>
                 <div className="filter">
                     <div className="section-products__filter">
-                        <button className="section-products__filter--element" onClick={() => ArrFilter('all')}>Все
-                        </button>
-                        <Filter ProdFilter={ArrFilter}/>
+                        <Filter updateFilter={updateFilter} setFilter={setFilter}/>
                     </div>
                 </div>
 
                 <div className=''>
-                    <div className='products'>{filtred.map((product: IProduct, index) =>
+                    <div className='products'>{filter.map((product: IProduct, index) =>
                         <ProductItem
                             index={index}
-                        product={product}
-                        key={product._id}
-                    />)}</div>
+                            product={product}
+                            key={product._id}
+                        />)}</div>
                 </div>
-                {/*<div className='picture'><img src={Background}/></div>*/}
             </div>
         </motion.div>
     );

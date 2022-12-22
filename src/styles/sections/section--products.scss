@@ -33,7 +33,7 @@
         line-height: 2.4rem;
         text-align: center;
         border: none;
-        transition: 500ms;
+        transition: 0.5s;
         @media (max-width: $mobile) {
           margin: 0.2rem;
           padding: .7rem 1.4rem;
@@ -46,11 +46,7 @@
         &.active {
           color: $color-white;
           background-color: $color-orange;
-        }
-        &:hover{
-          color: $color-white;
-          background-color: $color-orange;
-          transition: 500ms;
+          transition: 0.5s;
         }
       }
 
