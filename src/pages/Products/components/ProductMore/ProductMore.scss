@@ -30,12 +30,19 @@
   &__center_images {
     overflow: hidden;
 
+    .swiper{
+      padding-top: 3rem;
+    }
+
     .swiper-pagination{
       margin-top: 1rem;
     }
+    .swiper-button-prev{
+      top: 0;
+    }
 
     .swiper-slide{
-
+      height: auto;
       img{
         position: relative;
         width: 100%;
@@ -76,6 +83,9 @@
         color: $color-dark-gray;
         margin-bottom: 1rem;
         transition: 0.4s;
+        @media (max-width: $mobile) {
+          padding: 1rem 0 !important;
+        }
 
 
         &.active {
@@ -83,8 +93,8 @@
         }
 
         img {
-          width: 2%;
-          height: 2%;
+          width: 1.8rem;
+          height: 1.8rem;
           cursor: pointer;
           transform: rotate(-45deg);
           transition: 0.4s;

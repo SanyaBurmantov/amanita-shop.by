@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommentItem.scss'
 import {CommentForm} from "./CommentForm";
-import AdminIco from '../../../../assets/icons/AdminIco.svg'
+import AdminIco from '../../../../assets/icons/Other/AdminIco.svg'
 
 interface CommentItemProps {
     comment: any,

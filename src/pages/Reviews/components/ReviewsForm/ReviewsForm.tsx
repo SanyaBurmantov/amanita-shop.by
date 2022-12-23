@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
-import UserAvatar from "../../../../assets/icons/UserAvatar.svg";
+import UserAvatar from "../../../../assets/icons/Other/UserAvatar.svg";
 import {StarRate} from "../StarRate/StarRate";
 import './ReviewsForm.scss'
 import {IRewiews, TypeSetState} from "../../../../types";

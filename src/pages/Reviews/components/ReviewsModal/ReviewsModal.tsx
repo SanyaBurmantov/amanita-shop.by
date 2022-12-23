@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 import {IRewiews, TypeSetState} from "../../../../types";
 import './ReviewsModal.scss'
-import RemoveIco from "../../../../assets/icons/remove-add.svg";
+import RemoveIco from "../../../../assets/icons/UI/remove-add.svg";
 import {ReviewsForm} from "../ReviewsForm/ReviewsForm";
 import {ReviewsSubmit} from "../ReviewsSubmit/ReviewsSubmit";
 

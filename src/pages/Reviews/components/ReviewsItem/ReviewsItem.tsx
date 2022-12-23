@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import {IRewiews} from "../../../../types";
 import './ReviewsItem.scss'
-import GoldStar from '../../../../assets/icons/Star-gold.svg'
-import GrayStar from '../../../../assets/icons/Star-gray.svg'
+import GoldStar from '../../../../assets/icons/Other/Star-gold.svg'
+import GrayStar from '../../../../assets/icons/Other/Star-gray.svg'
 
 interface ReviewsItem {
     rew: IRewiews

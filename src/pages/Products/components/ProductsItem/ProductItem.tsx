@@ -1,7 +1,6 @@
-import React, {FC, useEffect, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 import {IProduct} from "../../../../types";
-// @ts-ignore
-import CashImage from '../../../../assets/icons/money.svg'
+import CashImage from '../../../../assets/icons/Shop/money.svg'
 import {Counter} from "../Counter/ Counter";
 import {useDispatch} from "react-redux";
 import {addToCart} from "../../../../store/cart/actions";

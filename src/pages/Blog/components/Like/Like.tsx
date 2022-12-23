@@ -1,9 +1,9 @@
 import React, {FC, useState} from 'react';
 import {posts} from "../../../../data/Posts";
 // @ts-ignore
-import LikesHeart from "../../../../assets/icons/Likes.svg";
+import LikesHeart from "../../../../assets/icons/Other/Likes.svg";
 // @ts-ignore
-import NoLikesHeart from "../../../../assets/icons/noLike.svg";
+import NoLikesHeart from "../../../../assets/icons/Other/noLike.svg";
 import {IPost} from "../../../../types";
 
 interface LikeProps {

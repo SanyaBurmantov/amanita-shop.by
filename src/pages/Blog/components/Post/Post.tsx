@@ -2,9 +2,9 @@ import React, {FC, useState} from 'react';
 import {IPost} from "../../../../types";
 import './Post.scss'
 // @ts-ignore
-import AdminIco from '../../../../assets/icons/AdminIco.svg'
+import AdminIco from '../../../../assets/icons/Other/AdminIco.svg'
 // @ts-ignore
-import NoLikesHeart from '../../../../assets/icons/noLike.svg'
+import NoLikesHeart from '../../../../assets/icons/Other/noLike.svg'
 import {BlogModal} from "../BlogModal/BlogModal";
 import {posts} from "../../../../data/Posts";
 import {Like} from "../Like/Like";
