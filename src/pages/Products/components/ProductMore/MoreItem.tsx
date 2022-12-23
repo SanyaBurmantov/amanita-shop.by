@@ -1,6 +1,6 @@
 import {FC, useState} from 'react';
 import {IMore} from "../../../../types";
-import Remove from '../../../../assets/icons/remove-add.svg'
+import Remove from '../../../../assets/icons/UI/remove-add.svg'
 import {AnimatePresence, motion} from "framer-motion";
 
 interface MoreItem {

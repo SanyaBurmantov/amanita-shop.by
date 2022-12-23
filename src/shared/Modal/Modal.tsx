@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import './Modal.scss'
 import {TypeSetState} from "../../types";
-import RemoveIco from '../../assets/icons/remove-add.svg'
+import RemoveIco from '../../assets/icons/UI/remove-add.svg'
 import {useModalOpen} from "../../hooks/useModalOpen";
 
 interface Modal {

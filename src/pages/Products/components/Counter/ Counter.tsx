@@ -1,5 +1,5 @@
 import React, {Dispatch, FC, SetStateAction, useState} from 'react';
-import Arrows from "../../../../assets/icons/Slider-arrows.svg";
+import Arrows from "../../../../assets/icons/Other/Slider-arrows.svg";
 
 interface Counter {
     count: number,

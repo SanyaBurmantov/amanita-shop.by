@@ -155,13 +155,13 @@ header{
           display: none;
           @media (max-width: $mobile) {
             display: flex;
-            content: url("/../src/assets/icons/li-arrow.svg");
+            content: url("/../src/assets/icons/headerIco/li-arrow.svg");
           }
         }
 
         &-title {
           @media (max-width: $mobile) {
-            padding-right: 7.5rem;
+            padding-right: 4rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -273,38 +273,38 @@ header{
           :nth-child(2) {
             :first-child {
               :first-child {
-                content: url("/../src/assets/icons/li-home.svg");
+                content: url("/../src/assets/icons/headerIco/li-home.svg");
               }
             }
           }
           :nth-child(3) {
             :first-child {
               :first-child {
-                content: url("/../src/assets/icons/li-basket.svg");
+                content: url("/../src/assets/icons/headerIco/li-shop.svg");
               }
             }
           }
           :nth-child(4) {
             :first-child {
               :first-child {
-                content: url("/../src/assets/icons/li-blog.svg");
+                content: url("/../src/assets/icons/headerIco/li-delivery.svg");
               }
             }
           }
-          :nth-child(6) {
+          :nth-child(5) {
             :first-child {
               :first-child {
-                content: url("/../src/assets/icons/li-develiry.svg");
+                content: url("/../src/assets/icons/headerIco/li-faq.svg");
               }
             }
           }
-          :nth-child(7) {
-            :first-child {
-              :first-child {
-                content: url("/../src/assets/icons/li-reviews.svg");
-              }
-            }
-          }
+          //:nth-child(7) {
+          //  :first-child {
+          //    :first-child {
+          //      content: url("/../src/assets/icons/headerIco/li-reviews.svg");
+          //    }
+          //  }
+          //}
         }
 
         &.active {

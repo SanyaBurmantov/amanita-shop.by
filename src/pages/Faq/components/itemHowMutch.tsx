@@ -1,7 +1,7 @@
 import React, {FC, useState} from "react";
 import {IFaqItem} from "../../../types";
 // @ts-ignore
-import remove from "../../../assets/icons/remove-add.svg";
+import remove from "../../../assets/icons/UI/remove-add.svg";
 export const ItemHowMutch: FC<IFaqItem> = (faqItem) => {
 
 

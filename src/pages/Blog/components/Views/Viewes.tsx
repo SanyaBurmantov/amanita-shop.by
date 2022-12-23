@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import OpenEyes from "../../../../assets/icons/openeyes.png";
-import CloseEyes from "../../../../assets/icons/closeeyes.png";
+import OpenEyes from "../../../../assets/icons/Other/openeyes.png";
+import CloseEyes from "../../../../assets/icons/Other/closeeyes.png";
 import {IPost} from "../../../../types";
 
 interface ViewesProps {

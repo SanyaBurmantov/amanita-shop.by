@@ -12,7 +12,7 @@ export const Pages = [{
 },{
     name: 'Информация',
     href: FAQ_ROUTE
-},
+}
     // {
     //     name: 'Блог',
     //     href: BLOG_ROUTE

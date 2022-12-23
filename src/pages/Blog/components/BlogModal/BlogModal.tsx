@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-import AdminIco from "../../../../assets/icons/AdminIco.svg";
-import RemoveIco from "../../../../assets/icons/remove-add.svg";
-import OpenEyes from "../../../../assets/icons/openeyes.png";
+import AdminIco from "../../../../assets/icons/Other/AdminIco.svg";
+import RemoveIco from "../../../../assets/icons/UI/remove-add.svg";
+import OpenEyes from "../../../../assets/icons/Other/openeyes.png";
 import {CommentsList} from "../Commets/CommentList";
 import './BlogModal.scss'
 import {IPost, TypeSetState} from "../../../../types";

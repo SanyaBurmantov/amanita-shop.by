@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import {removeCartAll, removeFromCart} from "../../store/cart/actions";
 import {motion} from "framer-motion";
 // @ts-ignore
-import cartIcon from "../../assets/icons/cart.svg"
+import cartIcon from "../../assets/icons/UI/cart.svg"
 import './Card.scss'
 import {useTelegram} from "../../hooks/useTelegram";
 import axios from "axios";
@@ -13,7 +13,7 @@ import {IPrice} from "../../types";
 import {ItemCard} from "./ItemCard";
 import {Modal} from "../Modal/Modal";
 // @ts-ignore
-import CashIco from '../../assets/icons/money.svg'
+import CashIco from '../../assets/icons/Shop/money.svg'
 import {useInput} from "../../hooks/useInput";
 
 

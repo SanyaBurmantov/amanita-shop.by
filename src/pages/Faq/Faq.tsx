@@ -2,7 +2,7 @@ import {ItemMicrodosing} from "./components/ItemMicrodosing";
 import React, {useState} from "react";
 import { motion } from "framer-motion";
 // @ts-ignore
-import remove from '../../assets/icons/remove-add.svg';
+import remove from '../../assets/icons/UI/remove-add.svg';
 import {ItemWhyMicrodos} from "./components/ItemWhyMicrodos";
 import {ItemHowMicrodos} from "./components/ItemHowMicrodos";
 import {ItemHowMutch} from "./components/itemHowMutch";
