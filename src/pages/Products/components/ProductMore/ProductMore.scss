@@ -31,15 +31,41 @@
     overflow: hidden;
 
     .swiper{
-      padding-top: 3rem;
+
+      &-button-next{
+        right: 0;
+        color: $color-gray;
+        top: 91%;
+        margin-top: 0;
+        width: auto;
+        height: auto;
+        z-index: 11;
+        &::after{
+          content: url("/../src/assets/icons/Arrows/slider-arrow-more.svg");
+          font-size: 0;
+        }
+      }
+
+      &-button-prev{
+        left: 0;
+        color: $color-gray;
+        top: 91%;
+        margin-top: 0;
+        width: auto;
+        height: auto;
+        z-index: 11;
+        &::after{
+          transform: rotate(180deg);
+          content: url("/../src/assets/icons/Arrows/slider-arrow-more.svg");
+          font-size: 0;
+        }
+      }
+
+      &-pagination{
+        margin-top: 1rem;
+      }
     }
 
-    .swiper-pagination{
-      margin-top: 1rem;
-    }
-    .swiper-button-prev{
-      top: 0;
-    }
 
     .swiper-slide{
       height: auto;

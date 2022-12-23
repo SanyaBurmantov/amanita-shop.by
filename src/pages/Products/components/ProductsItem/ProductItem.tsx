@@ -177,14 +177,14 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                     onClick={addHandler}>{inCart ? `Добавлено` : `Купить`}</button>
 
                             </div>
-                            {/*{(product.form != 7) && <div className='product-bottom-buttons-more'>*/}
-                            {/*    <button className="product-bottom-buttons-more-btn"*/}
-                            {/*            onClick={() => setIsShowProduct(true)}>Подробнее*/}
-                            {/*    </button>*/}
-                            {/*    <Modal visible={isShowProduct} setVisible={setIsShowProduct}>*/}
-                            {/*        <ProductMore product={product}/>*/}
-                            {/*    </Modal>*/}
-                            {/*</div>}*/}
+                            {(product.form != 7) && <div className='product-bottom-buttons-more'>
+                                <button className="product-bottom-buttons-more-btn"
+                                        onClick={() => setIsShowProduct(true)}>Подробнее
+                                </button>
+                                <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
+                                    <ProductMore product={product}/>
+                                </Modal>
+                            </div>}
                         </div>
                     </div>
                 </div>
