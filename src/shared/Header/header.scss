@@ -35,16 +35,6 @@ header{
       top: 0;
       transition: 500ms;
       opacity: 1;
-      @media (max-width: $mobile) {
-
-        padding: 1rem 0;
-      }
-      ul{
-        margin: .5rem 0;
-      }
-      .header-menu-menu-element{
-        color: $color-dark-gray;
-      }
       .header-menu-logo{
 
         a{
