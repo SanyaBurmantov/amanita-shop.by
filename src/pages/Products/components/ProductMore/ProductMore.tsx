@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import {Pagination, Navigation} from "swiper";
 import 'swiper/css/navigation';
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 interface ProductMore {
     product: IProduct
@@ -32,7 +33,7 @@ export const ProductMore: FC<ProductMore> = ({product}) => {
                 >
                     {product.slider.map((item, idx) => (
                         <div key={idx}>
-                            <SwiperSlide><img src={item.image}/></SwiperSlide>
+                            <SwiperSlide><LazyLoadImage src={item.image}/></SwiperSlide>
                         </div>
                     ))}
                 </Swiper>

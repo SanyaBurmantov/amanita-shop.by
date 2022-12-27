@@ -19,6 +19,7 @@ import home_badHabits from '../../assets/images/home_bad-habits.png';
 // @ts-ignore
 import home_performance from '../../assets/images/home_performance.png';
 import {Contacts} from "../../shared/Contacts/Contacts";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 interface Props {
 
@@ -54,7 +55,7 @@ export const Home = () => {
                 <div className="section__join">
                     <div className="join">
                         <div className="join__picture">
-                            <img src={home_img} alt="pic"/>
+                            <LazyLoadImage src={home_img} alt="pic"/>
                         </div>
                         <div className="join__text">
 
@@ -82,37 +83,37 @@ export const Home = () => {
                     <div className="advantages">
                         <div className="advantages__item">
                             <div className="advantages__item--pic">
-                                <img src={home_sleep} alt="сон"/>
+                                <LazyLoadImage src={home_sleep} alt="сон"/>
                             </div>
                             <div className="btn">Нормализует сон</div>
                         </div>
                         <div className="advantages__item">
                             <div className="advantages__item--pic">
-                                <img src={home_antistress} alt="антистресс"/>
+                                <LazyLoadImage src={home_antistress} alt="антистресс"/>
                             </div>
                             <div className="btn">Снимает тревожность</div>
                         </div>
                         <div className="advantages__item">
                             <div className="advantages__item--pic">
-                                <img src={home_imun} alt="Имунитет"/>
+                                <LazyLoadImage src={home_imun} alt="Имунитет"/>
                             </div>
                             <div className="btn">Укрепляет иммунитет</div>
                         </div>
                         <div className="advantages__item">
                             <div className="advantages__item--pic">
-                                <img src={home_detox} alt="детокс"/>
+                                <LazyLoadImage src={home_detox} alt="детокс"/>
                             </div>
                             <div className="btn">Выводит токсины</div>
                         </div>
                         <div className="advantages__item">
                             <div className="advantages__item--pic">
-                                <img src={home_badHabits} alt="антизависиость"/>
+                                <LazyLoadImage src={home_badHabits} alt="антизависиость"/>
                             </div>
                             <div className="btn">Избавляет от зависимостей</div>
                         </div>
                         <div className="advantages__item">
                             <div className="advantages__item--pic">
-                                <img src={home_performance} alt="работоспособность"/>
+                                <LazyLoadImage src={home_performance} alt="работоспособность"/>
                             </div>
                             <div className="btn">Повышает концентрацию</div>
                         </div>
@@ -134,7 +135,7 @@ export const Home = () => {
                             <button className="btn "><a href="/products">Ясно, покажите асортимент!</a></button>
                         </div>
                         <div className="join__picture">
-                            <img src={home_img2} alt="pic"/>
+                            <LazyLoadImage src={home_img2} alt="pic"/>
                         </div>
                     </div>
                 </div>

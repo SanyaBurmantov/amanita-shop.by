@@ -4,6 +4,7 @@ import './ItemCard.scss'
 // @ts-ignore
 import RemoveIco from '../../assets/icons/UI/remove-add.svg'
 
+
 interface ItemCard {
     item: ICartItem,
     removeHandler: FunctionRemoveHandler,

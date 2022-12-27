@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import './PaymentItem.scss'
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 interface PaymentItem {
     item: any,
@@ -9,7 +10,7 @@ export const PaymentItem: FC<PaymentItem> = ({item}) => {
     return (
         <div className="payment-card">
                 <div className='payment-card-column'>
-                    <div className='payment-card-column-image'><img src={item.image}/></div>
+                    <div className='payment-card-column-image'><LazyLoadImage src={item.image}/></div>
                     <hr/>
                     <div className='payment-card-column-title'>{item.location}</div>
                     <div className='payment-card-column-subtitle'>{item.subtitle}</div>

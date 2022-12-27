@@ -6,6 +6,7 @@ import icoTG from '../../assets/icons/messagers/tg.svg'
 import icoInstagram from '../../assets/icons/messagers/insta.svg'
 import icoWhatsapp from '../../assets/icons/messagers/whatsapp.svg'
 import icoViber from '../../assets/icons/messagers/viber.svg'
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 interface Footer {
 }
@@ -32,13 +33,13 @@ export const Footer: FC<Footer> = () => {
                     <div className='footer-right'>
                         <p>Для связи в мессенджерах:</p>
                         <div className='footer-right__messages'>
-                            <a target="_blank" href='https://t.me/Muhomormnsk'><img src={icoTG}/></a>
-                            <a target="_blank" href='https://www.instagram.com/amanita_shops/?igshid=YmMyMTA2M2Y%3D'><img
+                            <a target="_blank" href='https://t.me/Muhomormnsk'><LazyLoadImage src={icoTG}/></a>
+                            <a target="_blank" href='https://www.instagram.com/amanita_shops/?igshid=YmMyMTA2M2Y%3D'><LazyLoadImage
                                 src={icoInstagram}/></a>
                             <a target="_blank"
-                               href='https://api.whatsapp.com/send/?phone=%2B375293487675&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5+%D0%BC%D0%BD%D0%B5+%D0%BD%D1%83%D0%B6%D0%BD%D0%BE+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F+%D0%BF%D0%BE+%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D0%B4%D0%BE%D0%B7%D0%B8%D0%BD%D0%B3%D1%83&type=phone_number&app_absent=0'><img
+                               href='https://api.whatsapp.com/send/?phone=%2B375293487675&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5+%D0%BC%D0%BD%D0%B5+%D0%BD%D1%83%D0%B6%D0%BD%D0%BE+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F+%D0%BF%D0%BE+%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D0%B4%D0%BE%D0%B7%D0%B8%D0%BD%D0%B3%D1%83&type=phone_number&app_absent=0'><LazyLoadImage
                                 src={icoWhatsapp}/></a>
-                            <a target="_blank" href='https://viber//chat?number=%2B375293487675'><img src={icoViber}/></a>
+                            <a target="_blank" href='https://viber//chat?number=%2B375293487675'><LazyLoadImage src={icoViber}/></a>
                         </div>
                     </div>
                 </div>

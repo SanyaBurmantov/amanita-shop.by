@@ -10,7 +10,7 @@ import './Products.scss'
 interface Products {
 }
 
-const Products: FC<Products> = () => {
+export const Products: FC<Products> = () => {
 
     const [filter, setFilter] = useState(products)
 
@@ -45,6 +45,3 @@ const Products: FC<Products> = () => {
         </motion.div>
     );
 };
-
-export default Products;
-

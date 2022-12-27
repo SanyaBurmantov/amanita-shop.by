@@ -1,4 +1,3 @@
-import React from 'react';
 import AppRouter from "./components/AppRouter";
 import {Header} from "./shared/Header/Header";
 import {Footer} from "./shared/Footer/Footer";
@@ -8,9 +7,7 @@ import {Provider} from "react-redux";
 import {Cart} from "./shared/Cart/Cart";
 import {PersistGate} from "redux-persist/integration/react";
 import {persistStore} from "redux-persist";
-import {Telegram} from "./pages/Telegram/Telegram";
 import {Background} from "./shared/Background/Background";
-import {Contacts} from "./shared/Contacts/Contacts";
 
 
 function App() {
@@ -20,7 +17,6 @@ function App() {
             <PersistGate persistor={persistStore(store)} loading={<div>Loading...</div>}>
                 <BrowserRouter>
                     <Header/>
-
                     <AppRouter/>
                     <Cart/>
                     <Background/>
@@ -28,7 +24,6 @@ function App() {
                 </BrowserRouter>
             </PersistGate>
         </Provider>
-
     )
 }
 

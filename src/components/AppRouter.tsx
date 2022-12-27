@@ -1,7 +1,6 @@
-import React from 'react';
+import {Suspense} from 'react';
 import {Route, Routes, useLocation} from 'react-router-dom';
 import {publicRoutes} from "../routes";
-import {Home} from "../pages/Home/Home";
 import {AnimatePresence} from "framer-motion";
 
 const AppRouter = () => {
@@ -10,13 +9,13 @@ const AppRouter = () => {
 
     return (
         <AnimatePresence>
-        <Routes location={location} key={location.pathname}>
-            {publicRoutes.map(({path, Component}) =>
-                <Route key={path.toString()} path={path} element={<Component />}/>
-            )}
-            <Route
-                path="*" element={<Home/>}/>
-        </Routes>
+            <Routes location={location} key={location.pathname}>
+                {publicRoutes.map(({path, Component}) =>
+                    <Route key={path.toString()} path={path} element={<Suspense fallback={<div>Loading</div>}>
+                        <Component/>
+                    </Suspense>}/>
+                )}
+            </Routes>
         </AnimatePresence>
     );
 };
