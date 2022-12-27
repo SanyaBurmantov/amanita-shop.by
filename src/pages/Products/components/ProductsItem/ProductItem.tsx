@@ -8,7 +8,7 @@ import {useTypedSelector} from "../../../../hooks/useTypedSelector";
 import {Modal} from "../../../../shared/Modal/Modal";
 import {ProductMore} from "../ProductMore/ProductMore";
 import {motion} from "framer-motion";
-
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 interface IProductItem {
     product: IProduct,
@@ -29,8 +29,8 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
     const [threeSelector, setThreeSelector] = useState(0)
 
 
-    const animateProducts= {
-        visible: (index: number)=> ({
+    const animateProducts = {
+        visible: (index: number) => ({
             opacity: 1,
             transition: {
                 delay: index*0.2,
@@ -162,7 +162,7 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                 </div>
                             </form>
                         </div>
-                        <div className='product-top-image'><img src={product.imagePath}/></div>
+                        <div className='product-top-image'><LazyLoadImage src={product.imagePath}/></div>
                     </div>
                     <div className='product-bottom'>
                         <div className='product-bottom-cash'>
@@ -181,9 +181,11 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                 <button className="product-bottom-buttons-more-btn"
                                         onClick={() => setIsShowProduct(true)}>Подробнее
                                 </button>
-                                <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
-                                    <ProductMore product={product}/>
-                                </Modal>
+
+                                    <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
+                                        <ProductMore product={product}/>
+                                    </Modal>
+
                             </div>}
                         </div>
                     </div>

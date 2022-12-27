@@ -1,5 +1,5 @@
 import {ItemMicrodosing} from "./components/ItemMicrodosing";
-import React, {useState} from "react";
+import {FC} from "react";
 import { motion } from "framer-motion";
 // @ts-ignore
 import remove from '../../assets/icons/UI/remove-add.svg';
@@ -15,7 +15,7 @@ import {ItemSwitch} from "./components/itemSwitch";
 interface Faq{
 
 }
-const Faq = () => {
+export const Faq: FC<Faq> = () => {
 
     return (
         <motion.div className="section section-faq"
@@ -58,5 +58,3 @@ const Faq = () => {
         </motion.div>
     )
 }
-
-export default Faq;

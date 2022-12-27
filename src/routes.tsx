@@ -11,9 +11,9 @@ import {Home} from "./pages/Home/Home";
 import {Blog} from "./pages/Blog/Blog";
 import {Reviews} from "./pages/Reviews/Reviews";
 import {PaymentAndDelivery} from "./pages/Payment-and-delivery/Payment-and-delivery";
-import Products from "./pages/Products/components/Products";
+import {Products} from "./pages/Products/components/Products";
 import {Telegram} from "./pages/Telegram/Telegram";
-import Faq from './pages/Faq/Faq'
+import {Faq} from './pages/Faq/Faq'
 export const publicRoutes = [
     {
         path: HOME_ROUTE,

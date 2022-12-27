@@ -3,6 +3,7 @@ import {IMore} from "../../../../types";
 import Remove from '../../../../assets/icons/UI/remove-add.svg'
 import {AnimatePresence, motion} from "framer-motion";
 
+
 interface MoreItem {
     item: IMore,
 }

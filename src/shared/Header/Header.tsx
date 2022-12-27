@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import {Cart} from "../Cart/Cart";
 import logostick from '../../assets/icons/headerIco/logo-amanita-sticky.svg'
 import {Pages} from '../../data/Pages'
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 interface Header {
 
@@ -16,11 +17,7 @@ export const Header: FC<Header> = () => {
 
     let [activeState, setActiveState] = useState(false);
 
-
     const { scrollY } = useScroll();
-
-
-
 
     useEffect(() => {
         return scrollY.onChange((latest) => {
@@ -46,8 +43,8 @@ export const Header: FC<Header> = () => {
             <div className="header">
             <div className="header-menu-logo">
                 <Link to="/">
-                    <img className='header-menu-logo-img' src={logo} alt='logo-amanita'/>
-                    <img className='header-menu-logo-img sticky' src={logostick} alt='logo-amanita'/>
+                    <LazyLoadImage className='header-menu-logo-img' src={logo} alt='logo-amanita'/>
+                    <LazyLoadImage className='header-menu-logo-img sticky' src={logostick} alt='logo-amanita'/>
                 </Link>
             </div>
             <div className='header-menu'>
