@@ -42,6 +42,8 @@ export const Products: FC<Products> = () => {
                         />)}</div>
                 </div>
             </div>
-        </motion.div>
+
+            // </motion.div>
+
     );
 };

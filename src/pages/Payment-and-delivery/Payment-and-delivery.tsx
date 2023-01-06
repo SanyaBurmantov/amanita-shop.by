@@ -47,23 +47,27 @@ export const PaymentAndDelivery: FC<PaymentAndDelivery> = () => {
                     initial={{width: "30%"}}
                     animate={{width: "100%"}}
                     exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
-            <div className='container'>
-                <h3>Оплата и доставка</h3>
-                <h4>Здесь вы можете получить акутальную информацию по возможности доставки.</h4>
 
-                <Swiper
-                    modules={[Pagination]}
-                    loop={(window.innerWidth <= 767) ? true : false}
-                    pagination={{clickable: true}}
-                    slidesPerView={(window.innerWidth <= 767) ? 1 : 3}
-                    spaceBetween={(window.innerWidth <= 767) ? 0 : 20}>
-                    {payment.map((item, index) => (
-                        <div key={index}>
-                            <SwiperSlide><PaymentItem item={item}/></SwiperSlide>
-                        </div>
-                    ))}
-                </Swiper>
-            </div>
+
+
+                <div className='container'>
+                    <h3>Оплата и доставка</h3>
+                    <h4>Здесь вы можете получить акутальную информацию по возможности доставки.</h4>
+
+                    <Swiper
+                        modules={[Pagination]}
+                        loop={(window.innerWidth <= 767) ? true : false}
+                        pagination={{clickable: true}}
+                        slidesPerView={(window.innerWidth <= 767) ? 1 : 3}
+                        spaceBetween={(window.innerWidth <= 767) ? 0 : 20}>
+                        {payment.map((item, index) => (
+                            <div key={index}>
+                                <SwiperSlide><PaymentItem item={item}/></SwiperSlide>
+                            </div>
+                        ))}
+                    </Swiper>
+                </div>
+
         </motion.div>
     )
 }
