@@ -41,7 +41,7 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
 
 
     useEffect(() => {
-        if ((product.form === 1) || (product.form === 3) || (product.form === 5) || (product.form === 6) || (product.form === 7)) {
+        if ((product.form === 1) || (product.form === 3) || (product.form === 5) || (product.form === 6) || (product.form === 7) || (product.form === 8) || (product.form === 9) ||(product.form === 10)) {
             product.coefficient.find(function (item, index) {
                 setTwoSelector(item.price)
                 setCountTwoId(item.id)
@@ -53,7 +53,6 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
             })
         }
     }, [twoSelector])
-
 
 
     useEffect(() => {
@@ -111,15 +110,16 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
 
                                 <div className="product-top-content-quantity">
                                     <div
-                                        className='product-top-content-quantity-title'>{(product.form === 1) ? 'Количество грамм порошка:' : (product.form === 2) ? 'Количество капсул:' : (product.form === 3) ? 'Количество капсул:' : (product.form === 4) ? 'Количество пакетиков:' : (product.form === 5) ? 'Количество грамм:' : (product.form === 7) ? 'Количество штук:' : 'Объем:'}</div>
+                                        className='product-top-content-quantity-title'>{(product.form === 1) ? 'Количество грамм порошка:' : (product.form === 2 ||product.form === 9) ? 'Количество капсул:' : (product.form === 3) ? 'Количество капсул:' : (product.form === 4)
+                                        ? 'Количество пакетиков:' : (product.form === 5 || product.form===8) ? 'Количество грамм:' : (product.form === 7) ? 'Количество штук:' :  'Объем:'}</div>
                                     <div className="product-top-content-quantity-checkbox">
                                         {product.price.map((item, index) =>
                                             <button key={item.id}
-                                                className={(item.count === oneSelector) ? 'product-top-content-quantity-checkbox-button active' : 'product-top-content-quantity-checkbox-button'}
-                                                onClick={() => {
-                                                    setCountId(item.id);
-                                                    setOneSelector(item.count);
-                                                }}>
+                                                    className={(item.count === oneSelector) ? 'product-top-content-quantity-checkbox-button active' : 'product-top-content-quantity-checkbox-button'}
+                                                    onClick={() => {
+                                                        setCountId(item.id);
+                                                        setOneSelector(item.count);
+                                                    }}>
                                                 {item.count}
                                             </button>
                                         )}</div>
@@ -128,11 +128,9 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
 
                                 <div className='product-top-content-two_box'>
 
-                                    {((product.form === 4) || (product.form === 2)) &&
-                                        <form className='product-top-content-two_box-one'>
-                                            <div
-                                                className='product-top-content-two_box-one-title'>{(product.form === 2) ? 'Количество грамм в капсуле:' :
-                                                (product.form === 4) ? 'Количество грамм:' : ''}</div>
+                                    {((product.form === 4) || (product.form === 2)) && <form className='product-top-content-two_box-one'>
+                                            <div className='product-top-content-two_box-one-title'>{(product.form === 2) ? 'Количество грамм в капсуле:' :
+                                                (product.form === 4 ) ? 'Количество грамм:' : ''}</div>
                                             {((product.form === 4) || (product.form === 2)) ?
                                                 <div className='product-top-content-two_box-one-box'>
 
