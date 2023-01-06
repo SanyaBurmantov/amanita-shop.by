@@ -317,11 +317,11 @@ export const products: IProduct[] = [
         coefficient: [
             {
                 id: 1,
-                price: 1,
+                price: 500,
                 coff: [
                     {
                         id: 1,
-                        coefficient: 0.07
+                        coefficient: 17500
                     }
                 ]
             }
@@ -329,7 +329,7 @@ export const products: IProduct[] = [
         price: [
             {
                 id: 1,
-                count: 500,
+                count: 1,
             }
         ],
         form: 8,
@@ -1000,11 +1000,11 @@ export const products: IProduct[] = [
         coefficient: [
             {
                 id: 1,
-                price: 1,
+                price: 90,
                 coff: [
                     {
                         id: 1,
-                        coefficient: 0.7666666666
+                        coefficient: 6210
                     }
                 ]
             }
@@ -1012,7 +1012,7 @@ export const products: IProduct[] = [
         price: [
             {
                 id: 1,
-                count: 90,
+                count: 1,
             }],
         form: 9,
         title: 'Экстракт чаги сибирской в капсулах.',
@@ -1378,11 +1378,11 @@ export const products: IProduct[] = [
         coefficient: [
             {
                 id: 1,
-                price: 1,
+                price: 200,
                 coff: [
                     {
                         id: 1,
-                        coefficient: 0.105
+                        coefficient: 4200
                     }
                 ]
             }
@@ -1390,7 +1390,7 @@ export const products: IProduct[] = [
         price: [
             {
                 id: 1,
-                count: 200,
+                count: 1,
             }],
         form: 8,
         title: 'Чага, обработанная паром.',
@@ -1454,11 +1454,11 @@ export const products: IProduct[] = [
         coefficient: [
             {
                 id: 1,
-                price: 1,
+                price: 200,
                 coff: [
                     {
                         id: 1,
-                        coefficient: 0.105
+                        coefficient: 4200
                     }
                 ]
             }
@@ -1466,7 +1466,7 @@ export const products: IProduct[] = [
         price: [
             {
                 id: 1,
-                count: 200,
+                count: 1,
             }],
         form: 8,
         title: 'Чага, обработанная паром, родиола розовая (золотой корень).',
@@ -1530,11 +1530,11 @@ export const products: IProduct[] = [
         coefficient: [
             {
                 id: 1,
-                price: 1,
+                price: 200,
                 coff: [
                     {
                         id: 1,
-                        coefficient: 0.105
+                        coefficient: 4200
                     }
                 ]
             }
@@ -1542,7 +1542,7 @@ export const products: IProduct[] = [
         price: [
             {
                 id: 1,
-                count: 200,
+                count: 1,
             }],
         form: 8,
         title: 'Чага, обработанная паром с чабрецом.',
@@ -1921,11 +1921,11 @@ export const products: IProduct[] = [
         coefficient: [
             {
                 id: 1,
-                price: 1,
+                price: 500,
                 coff: [
                     {
                         id: 1,
-                        coefficient: 0.1
+                        coefficient: 25000
                     }
                 ]
             }
@@ -1933,7 +1933,7 @@ export const products: IProduct[] = [
         price: [
             {
                 id: 1,
-                count: 500,
+                count: 1,
             }
         ],
         form: 8,
@@ -1998,11 +1998,11 @@ export const products: IProduct[] = [
         coefficient: [
             {
                 id: 1,
-                price: 1,
+                price: 250,
                 coff: [
                     {
                         id: 1,
-                        coefficient: 0.06
+                        coefficient: 3750
                     }
                 ]
             }
@@ -2010,7 +2010,7 @@ export const products: IProduct[] = [
         price: [
             {
                 id: 1,
-                count: 250,
+                count: 1,
             }],
         form: 10,
         title: 'Сироп березового гриба Чаги, 100% природный.',
@@ -2074,11 +2074,11 @@ export const products: IProduct[] = [
         coefficient: [
             {
                 id: 1,
-                price: 1,
+                price: 250,
                 coff: [
                     {
                         id: 1,
-                        coefficient: 0.092
+                        coefficient: 5750
                     }
                 ]
             }
@@ -2086,7 +2086,7 @@ export const products: IProduct[] = [
         price: [
             {
                 id: 1,
-                count: 250,
+                count: 1,
             }],
         form: 10,
         title: 'Водяной настой чаги. Вода, тело гриба чаги.',
@@ -2140,4 +2140,5 @@ export const products: IProduct[] = [
             }
         ]
     },
+
 ]
