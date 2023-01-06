@@ -43,7 +43,7 @@ export const Products: FC<Products> = () => {
                 </div>
             </div>
 
-            // </motion.div>
+           </motion.div>
 
     );
 };
