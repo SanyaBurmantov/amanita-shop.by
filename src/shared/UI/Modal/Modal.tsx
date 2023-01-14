@@ -1,8 +1,8 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 import './Modal.scss'
-import {TypeSetState} from "../../types";
-import RemoveIco from '../../assets/icons/UI/remove-add.svg'
-import {useModalOpen} from "../../hooks/useModalOpen";
+import {TypeSetState} from "../../../types";
+import RemoveIco from '../../../assets/icons/UI/remove-add.svg'
+import {useModalOpen} from "../../../hooks/useModalOpen";
 
 interface Modal {
     children: any,
@@ -12,7 +12,6 @@ interface Modal {
 
 
 export const Modal: FC<Modal> = ({children, visible, setVisible}) => {
-
 
     useModalOpen(visible)
 

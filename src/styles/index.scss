@@ -1,10 +1,12 @@
-html{min-height:100%;
+html{
+  min-height:100%;
   box-sizing: border-box;
   font-size: 10px;
   scroll-behavior: smooth;
 
 }
-body{overflow-x: hidden;
+body{
+  overflow-x: hidden;
   overflow-y: scroll;
   min-width: 320px;
   margin: 0;
@@ -12,7 +14,6 @@ body{overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust:none;
-
 }
 
 
@@ -28,6 +29,7 @@ body{color:$color-dark-gray;
   &.no-scroll{overflow-y: hidden; overflow-x: hidden;}}
 
 .container {
+
   padding-top: 7rem;
   max-width: 84%;
   width: 100%;
@@ -71,12 +73,12 @@ body{color:$color-dark-gray;
 
 @import "typo.scss";
 @import "pages/pages.scss";
-@import "ui/ui.scss";
+@import "UI/ui.scss";
 
 @import "src/shared/Header/header";
 @import "src/shared/Footer/footer";
 @import "sections";
-@import "../shared/Cart/Card";
+@import "../shared/UI/Cart/Card";
 @import "src/shared/Contacts/contacts.scss";
 
 /////

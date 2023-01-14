@@ -1,0 +1,85 @@
+@import "../../../styles/vars";
+
+.header-desktop {
+
+  .container {
+    padding: 0rem;
+
+    .header-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    hr {
+      background-color: $color-white;
+      border: none;
+      color: $color-white;
+      height: 0.1rem;
+      margin: 0 auto;
+      padding: 0 10rem;
+    }
+  }
+
+  &-menu {
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 0rem;
+      margin: 0;
+
+
+      li {
+        list-style: none;
+
+        a {
+          color: $color-white;
+          font-size: 2rem;
+          font-weight: 500;
+          line-height: 3.2rem;
+
+
+          &:hover::after {
+            width: 100%;
+            left: 0;
+          }
+
+          &::after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 0.2rem;
+            right: 0;
+            background: $color-orange;
+            transition: width .5s ease 0s, right .5s ease 0s;
+            width: 0;
+          }
+
+        }
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+
+    }
+  }
+
+  &-button {
+
+    &__btn {
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 3.2rem;
+      color: $color-white;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid $color-white;
+      border-radius: 6px;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+}

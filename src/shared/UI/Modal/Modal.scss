@@ -1,4 +1,4 @@
-@import "../../styles/vars";
+@import "../../../styles/vars";
 
 .modal {
   height: 100vh;
@@ -11,7 +11,7 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.8s;
-  overflow-x: hidden ;
+  overflow-x: hidden;
 
 
   &-content {

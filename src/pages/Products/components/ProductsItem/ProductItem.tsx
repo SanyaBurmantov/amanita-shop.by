@@ -5,7 +5,7 @@ import {Counter} from "../Counter/ Counter";
 import {useDispatch} from "react-redux";
 import {addToCart} from "../../../../store/cart/actions";
 import {useTypedSelector} from "../../../../hooks/useTypedSelector";
-import {Modal} from "../../../../shared/Modal/Modal";
+import {Modal} from "../../../../shared/UI/Modal/Modal";
 import {ProductMore} from "../ProductMore/ProductMore";
 import {motion} from "framer-motion";
 import {LazyLoadImage} from "react-lazy-load-image-component";
@@ -96,12 +96,7 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
     //@ts-ignore
     const inCart = cart.some(el => product._id === el._id);
 
-    console.log(countTwoId) //1
-    console.log(twoSelector) //500
 
-    console.log(oneSelector) // 0
-    console.log(threeSelector) //0
-    console.log(countId) //0
 
 
 

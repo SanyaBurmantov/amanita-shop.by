@@ -1,0 +1,129 @@
+@import "../../../styles/vars";
+
+.header-bottom {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  width: 100%;
+  z-index: 19;
+  background-color: $color-white;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.2);
+  min-height: 6rem;
+  max-height: 6rem;
+  transition: 0.5s;
+
+
+  &__menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    :nth-child(3) {
+      position: relative;
+      top: -0.6rem;
+    }
+  }
+
+  &__item {
+    flex: 0 0 20%;
+    max-width: 20%;
+    max-height: 6rem;
+    display: flex;
+    align-items: center;
+
+    &.active {
+      a {
+        & * {
+          transition: 0.5s;
+          fill: $color-orange-elements;
+        }
+
+        p {
+          transition: 0.5s;
+          color: $color-orange-elements;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    border: 0;
+    background: 0 0;
+    outline: 0;
+    padding: 0.3rem 0rem;
+  }
+
+  &__circle-one {
+    background-color: $color-orange-elements;
+    border-radius: 50%;
+    min-height: 7rem;
+    min-width: 7rem;
+    max-height: 7rem;
+    max-width: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+
+
+  }
+
+  &__circle-two {
+    background-color: $color-white;
+    border-radius: 50%;
+    min-height: 6.6rem;
+    min-width: 6.6rem;
+    max-height: 6.6rem;
+    max-width: 6.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__circle-three {
+    background-color: $color-orange-elements;
+    border-radius: 50%;
+    min-height: 6rem;
+    min-width: 6rem;
+    max-height: 6rem;
+    max-width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+      color: $color-white;
+      font-weight: 500;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: #3e3e59;
+
+
+  }
+
+  &__title {
+    padding-top: 0.3rem;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $color-header-text-white;
+
+
+  }
+}
