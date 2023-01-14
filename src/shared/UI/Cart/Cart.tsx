@@ -1,23 +1,27 @@
 import React, {FC, useCallback, useEffect, useState} from "react";
-import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {useTypedSelector} from "../../../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
-import {removeCartAll, removeFromCart} from "../../store/cart/actions";
+import {removeCartAll, removeFromCart} from "../../../store/cart/actions";
 import {motion} from "framer-motion";
 // @ts-ignore
-import cartIcon from "../../assets/icons/UI/cart.svg"
+import cartIcon from "../../../assets/icons/UI/cart.svg"
 import './Card.scss'
-import {useTelegram} from "../../hooks/useTelegram";
+import {useTelegram} from "../../../hooks/useTelegram";
 import axios from "axios";
 import * as url from "url";
-import {IPrice} from "../../types";
+import {IPrice} from "../../../types";
 import {ItemCard} from "./ItemCard";
 import {Modal} from "../Modal/Modal";
 // @ts-ignore
-import CashIco from '../../assets/icons/Shop/money.svg'
-import {useInput} from "../../hooks/useInput";
+import CashIco from '../../../assets/icons/Shop/money.svg'
+import {useInput} from "../../../hooks/useInput";
 
 
-export const Cart: FC = () => {
+interface Cart {
+    updateBasketCount?: any
+}
+
+export const Cart: FC<Cart> = ({updateBasketCount}) => {
 
     const nameInputHooks = useInput('', {isEmpty: true, minLength: 2, testName: true})
     const telInputHooks = useInput('', {isEmpty: true, testPhone: true, minLength: 12})
@@ -28,7 +32,7 @@ export const Cart: FC = () => {
 
     const {tg, queryId} = useTelegram();
 
-    const [isShowCart, setIsShowCart] = useState(false);
+    // const [isShowCart, setIsShowCart] = useState(false);
 
     const [submitTg, setSubmitTg] = useState(false)
 
@@ -126,18 +130,22 @@ export const Cart: FC = () => {
     }, [name, number, cart, total, queryId])
 
 
-
+    useEffect(() => {
+        if (updateBasketCount) {
+            updateBasketCount(cart.length)
+        }
+    }, [cart.length])
 
 
     return (
         <div className="cart">
             <div className="cart__picture">
-                <div className="" onClick={() => setIsShowCart(!isShowCart)}>
-                    <img className="cart__picture--img" src={cartIcon} alt="cart"/>
-                    <div className="cart__picture--text">{cart.length}</div>
-                </div>
+                {/*<div className="" onClick={() => setIsShowCart(!isShowCart)}>*/}
+                {/*    <img className="cart__picture--img" src={cartIcon} alt="cart"/>*/}
+                {/*    <div className="cart__picture--text">{cart.length}</div>*/}
+                {/*</div>*/}
             </div>
-            <Modal visible={isShowCart} setVisible={setIsShowCart}>
+            {/*<Modal visible={isShowCart} setVisible={setIsShowCart}>*/}
                 <div className='cart__data--content'>
                     <h3 className='cart__data--content-title'>Корзина</h3>
                     {(cart.length > 0) &&
@@ -207,7 +215,7 @@ export const Cart: FC = () => {
                         </div>
                     </div>}
                 </div>
-            </Modal>
+            {/*</Modal>*/}
         </div>
     )
 }

@@ -14,6 +14,8 @@ interface Footer {
 export const Footer: FC<Footer> = () => {
 
     return (
+
+
         <footer>
             <div className="container">
                 <div className="footer">

@@ -38,42 +38,46 @@ export const Blog: FC <BlogProps> = () => {
 
 
     return (
-        <motion.div className='background__blog'
-                    initial={{width: "30%"}}
-                    animate={{width: "100%"}}
-                    exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
-<div className="container">
-            <div className='blog'>
-                <div className='blog__title'>Блог </div>
-                <div className='blog__container'>
-                    <div className='blog__posts'>
-                        <div className='blog__post'>{filtred.map((post: IPost) => <Post
-                            post={post}
-                            key={post.id}
-                        />)}</div>
-                    </div>
-                    <div className='blog__panel'>
-                        <div className='blog__panel-buttons'>
+        // <motion.div className='background__blog'
+        //             initial={{width: "30%"}}
+        //             animate={{width: "100%"}}
+        //             exit={{x: -window.innerWidth, transition: {duration: 0.3}}}>
 
-                            <div className='blog__panel-buttons-filter'>Фильтр по тематике</div>
-                            <div className="filter"> <button onClick={() => ArrFilter('all')}>Все</button>
-                            <Filter ArrFilter={ArrFilter}/></div>
-                        </div>
-                        <div className='blog__panel-best'>
-                            <div className='blog__panel-best-title'>Популярное</div>
-                            <div className='blog__panel-best-post'>
-                                <div className='blog__best'>
-                                    {maxNumbers.map((post: IPost) => <Best
-                                        post={post}
-                                        key={post.id}
-                                    />)}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-</div>
-        </motion.div>
+        <>
+            {/*<div className="container">*/}
+            {/*    <div className='blog'>*/}
+            {/*        <div className='blog__title'>Блог </div>*/}
+                    {/*<div className='blog__container'>*/}
+                    {/*    <div className='blog__posts'>*/}
+                    {/*        <div className='blog__post'>{filtred.map((post: IPost) => <Post*/}
+                    {/*            post={post}*/}
+                    {/*            key={post.id}*/}
+                    {/*        />)}</div>*/}
+                    {/*    </div>*/}
+                    {/*    <div className='blog__panel'>*/}
+                    {/*        <div className='blog__panel-buttons'>*/}
+
+                    {/*            <div className='blog__panel-buttons-filter'>Фильтр по тематике</div>*/}
+                    {/*            <div className="filter"> <button onClick={() => ArrFilter('all')}>Все</button>*/}
+                    {/*                <Filter ArrFilter={ArrFilter}/></div>*/}
+                    {/*        </div>*/}
+                    {/*        <div className='blog__panel-best'>*/}
+                    {/*            <div className='blog__panel-best-title'>Популярное</div>*/}
+                    {/*            <div className='blog__panel-best-post'>*/}
+                    {/*                <div className='blog__best'>*/}
+                    {/*                    {maxNumbers.map((post: IPost) => <Best*/}
+                    {/*                        post={post}*/}
+                    {/*                        key={post.id}*/}
+                    {/*                    />)}*/}
+                    {/*                </div>*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+        </>
+        //
+        // </motion.div>
     );
 };
