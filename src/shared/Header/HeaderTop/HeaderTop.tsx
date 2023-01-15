@@ -6,12 +6,13 @@ import MobileLogoWhiteTheme from '../../../assets/icons/Header/LogoIco.svg'
 import './HeaderTop.scss'
 
 import {BasketIcoAndCount} from "../../UI/Basket/BasketIcoAndCount";
+import {TypeSetState} from "../../../types";
 
 interface HeaderTop {
-
+    setCurrentPage: TypeSetState<string>
 }
 
-export const HeaderTop: FC<HeaderTop> = ({}) => {
+export const HeaderTop: FC<HeaderTop> = ({setCurrentPage}) => {
 
 
     return (
@@ -24,7 +25,7 @@ export const HeaderTop: FC<HeaderTop> = ({}) => {
                         <LazyLoadImage src={SunIcoWhiteTheme} alt='SunIcoWhiteTheme'/>
                     </div>
 
-                    <Link to='/'>
+                    <Link to='/' onClick={() => setCurrentPage('/')}>
                         <LazyLoadImage src={MobileLogoWhiteTheme} alt='MobileLogoWhiteTheme'/>
                     </Link>
 

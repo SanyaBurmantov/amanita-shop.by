@@ -1,16 +1,17 @@
-import {FC, useState} from 'react';
+import {FC} from 'react';
 import {Link} from "react-router-dom";
 import {Pages} from "../../../data/Pages";
 import './HeaderBottom.scss'
+import {TypeSetState} from "../../../types";
 
 interface HeaderBottom {
-
+    currentPage: string,
+    setCurrentPage: TypeSetState<string>
 }
 
 
-export const HeaderBottom: FC<HeaderBottom> = ({}) => {
+export const HeaderBottom: FC<HeaderBottom> = ({currentPage, setCurrentPage}) => {
 
-    const [currentPage, setCurrentPage] = useState(window.location.pathname)
 
     return (
         <header className='header-bottom'>
