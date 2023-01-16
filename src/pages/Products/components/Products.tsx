@@ -20,6 +20,33 @@ export const Products: FC<Products> = () => {
 
     return (
 
+        <>
+            <div className="section section-products">
+                <div className="container">
+                    <h3>Магазин</h3>
+                    <h4>Мухомор сушеный, мухомор красный, пантерный, ежовик гребенчатый, кордицепс и многое другое!</h4>
+                    <div className="filter">
+                        <div className="section-products__filter">
+                            <Filter updateFilter={updateFilter} setFilter={setFilter}/>
+                        </div>
+                    </div>
+
+                    <div className=''>
+                        <div className='products'>{filter.map((product: IProduct, index) =>
+                            <ProductItem
+                                index={index}
+                                product={product}
+                                key={product._id}
+                            />)}</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </>
+
+
+
 
         // <div className="section section-products">
         // <motion.div
@@ -47,6 +74,6 @@ export const Products: FC<Products> = () => {
         //     </div>
         // </div>
         //    </motion.div>
-<></>
+
     );
 };
