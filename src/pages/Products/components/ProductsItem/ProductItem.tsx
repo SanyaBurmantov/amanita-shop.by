@@ -1,4 +1,4 @@
-import {FC, useEffect, useState} from 'react';
+import {FC, useEffect, useState, Suspense, lazy} from 'react';
 import {IProduct} from "../../../../types";
 import CashImage from '../../../../assets/icons/Shop/money.svg'
 import {Counter} from "../Counter/ Counter";
@@ -6,9 +6,10 @@ import {useDispatch} from "react-redux";
 import {addToCart} from "../../../../store/cart/actions";
 import {useTypedSelector} from "../../../../hooks/useTypedSelector";
 import {Modal} from "../../../../shared/UI/Modal/Modal";
-import {ProductMore} from "../ProductMore/ProductMore";
+// import {ProductMore} from "../ProductMore/ProductMore";
 import {motion} from "framer-motion";
 import {LazyLoadImage} from "react-lazy-load-image-component";
+const ProductMore = lazy(() => import('../ProductMore/ProductMore'));
 
 interface IProductItem {
     product: IProduct,
@@ -101,12 +102,13 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
 
 
     return (
-        <motion.div
-            variants={animateProducts}
-            initial='hidden'
-            animate='visible'
-            custom={index}
-            className='product'>
+        // <motion.div
+        //     variants={animateProducts}
+        //     initial='hidden'
+        //     animate='visible'
+        //     custom={index}
+        //     className='product'>
+        <div className='product'>
             <div className='product-container'>
                 <div className='product-column'>
                     <div className='product-top'>
@@ -194,16 +196,19 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                         onClick={() => setIsShowProduct(true)}>Подробнее
                                 </button>
 
-                                    <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
-                                        <ProductMore product={product}/>
-                                    </Modal>
+                                <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
+                                    <Suspense fallback={<div>Loading...</div>}>
+                                        <ProductMore product={product} />
+                                    </Suspense>
+                                </Modal>
 
                             </div>}
                         </div>
                     </div>
                 </div>
             </div>
-        </motion.div>
+</div>
+        // </motion.div>
     );
 };
 

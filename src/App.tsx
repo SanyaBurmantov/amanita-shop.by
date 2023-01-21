@@ -18,9 +18,8 @@ function App() {
                 <BrowserRouter>
                     <Header/>
                     <AppRouter/>
-                    {/*<Cart/>*/}
                     <Background/>
-                    <Footer/>
+                    {/*<Footer/>*/}
                 </BrowserRouter>
             </PersistGate>
         </Provider>

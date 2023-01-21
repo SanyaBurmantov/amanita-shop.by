@@ -13,7 +13,7 @@ interface ProductMore {
     product: IProduct
 }
 
-export const ProductMore: FC<ProductMore> = ({product}) => {
+const ProductMore: FC<ProductMore> = ({product}) => {
 
 
     return (
@@ -48,3 +48,4 @@ export const ProductMore: FC<ProductMore> = ({product}) => {
         </div>
     );
 };
+export default ProductMore;
