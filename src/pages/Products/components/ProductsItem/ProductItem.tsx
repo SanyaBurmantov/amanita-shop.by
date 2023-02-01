@@ -61,6 +61,9 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
 
     return (
 
+
+
+    <>
         <div className='product'>
             <div className='product-wrapper'>
                 <div className='product-image'><LazyLoadImage src={product.imagePath}/></div>
@@ -105,7 +108,7 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                                setProductIdTwo(item.id);
                                                setCountFormTwo(item.count);
                                            }
-                                    }
+                                           }
                                     />
                                     <span>{item.count}</span>
                                 </div>
@@ -117,19 +120,20 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                         <span className='product-form-total__total-title'>Итого</span>
                         <span className='product-form-total__total-count'>{finalPrice} BYN</span>
                     </div>
-                <div className='product-buttons'>
-                    <button className={inCart ? 'product-buttons__pay buying' : 'product-buttons__pay'}
-                            onClick={addHandler}>{inCart ? `Добавлено` : `В корзину`}</button>
-                    {product.more && <button className='product-buttons__more' onClick={()=> setIsShowProduct(true)}>Подробнее</button>}
-                </div>
+                    <div className='product-buttons'>
+                        <button className={inCart ? 'product-buttons__pay buying' : 'product-buttons__pay'}
+                                onClick={addHandler}>{inCart ? `Добавлено` : `В корзину`}</button>
+                        {product.more && <button className='product-buttons__more' onClick={()=> setIsShowProduct(true)}>Подробнее</button>}
+                    </div>
                 </form>
-                <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
-                    <Suspense fallback={<div><Preloader/></div>}>
-                        {isShowProduct && <ProductMore product={product}/>}
-                    </Suspense>
-                </Modal>
             </div>
         </div>
+        <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
+            <Suspense fallback={<div><Preloader/></div>}>
+                {isShowProduct && <ProductMore product={product}/>}
+            </Suspense>
+        </Modal>
+    </>
     );
 };
 

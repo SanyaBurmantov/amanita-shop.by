@@ -14,7 +14,7 @@ export const HeaderBottom: FC<HeaderBottom> = ({currentPage, setCurrentPage}) =>
 
 
     return (
-        <header className='header-bottom'>
+        <header className='header-bottom' id='header-bottom'>
             <ul className='header-bottom__menu'>
                 {Pages.map((item) =>
                     (item.name === 'Магазин') ?

@@ -16,7 +16,7 @@ export const HeaderTop: FC<HeaderTop> = ({setCurrentPage}) => {
 
     return (
         <>
-            <header className='header-top'>
+            <header className='header-top' id='header-top'>
 
                 <div className='header-top-elements'>
 
