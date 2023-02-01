@@ -30,11 +30,11 @@ body{color:$color-dark-gray;
   &.no-scroll{overflow-y: hidden; overflow-x: hidden;}}
 
 .container {
-
+  position: relative;
   padding-top: 7rem;
   max-width: 84%;
   width: 100%;
-  z-index: -1;
+  z-index: 10;
   margin-left: auto;
   margin-right: auto;
   padding-left: 56px;
@@ -49,13 +49,15 @@ body{color:$color-dark-gray;
     padding-right: 18px
   }
   @media (max-width: $mobile) {
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 11rem 0rem 0rem 0rem;
   }
 
 }
 
 .section{
+  width: 100vw;
   min-height:79vh;
   @media (max-width: 1000px ){
     min-height: 60vh;
@@ -120,16 +122,16 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid $color-light-white;
 
 }
-
-.filter{
-  user-select: none;
-  margin-bottom: 2rem;
-  @media (max-width: $mobile) {
-    //width: calc(100% + 36px);
-    margin-bottom: 0rem;
-    overflow-x: scroll;
-    &::-webkit-scrollbar {
-      width: 0px;
-    }
-  }
-}
+//
+//.filter{
+//  user-select: none;
+//  margin-bottom: 2rem;
+//  @media (max-width: $mobile) {
+//    //width: calc(100% + 36px);
+//    margin-bottom: 0rem;
+//    overflow-x: scroll;
+//    &::-webkit-scrollbar {
+//      width: 0px;
+//    }
+//  }
+//}

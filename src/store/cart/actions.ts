@@ -1,9 +1,9 @@
 import {IProduct} from "../../types";
 import {actionTypes} from "./types";
 
-export const addToCart = (product: IProduct, count: number, oneSelector: number, twoSelector: number, pizda: number) => ({
+export const addToCart = (product: IProduct, count: number, countFormOne: number, countFormTwo: number, finalPrice: number) => ({
     type: actionTypes.CART_ADD_ITEM,
-    payload: {product, count,  oneSelector, twoSelector, pizda}
+    payload: {product, count, countFormOne, countFormTwo, finalPrice}
 })
 
 export const removeFromCart = (productId: string) => ({

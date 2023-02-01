@@ -13,6 +13,7 @@ interface ProductMore {
     product: IProduct
 }
 
+
 const ProductMore: FC<ProductMore> = ({product}) => {
 
 
@@ -31,7 +32,7 @@ const ProductMore: FC<ProductMore> = ({product}) => {
                     spaceBetween={5}
                     loop
                 >
-                    {product.slider.map((item, idx) => (
+                    {product.slider?.map((item, idx) => (
                         <div key={idx}>
                             <SwiperSlide><LazyLoadImage src={item.image}/></SwiperSlide>
                         </div>

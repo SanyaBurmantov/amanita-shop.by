@@ -33,9 +33,6 @@ export const Home = () => {
 <>
     <div className="back"></div>
     <div className="heading">
-        <div className="heading__picture">
-            {/*<img src={mainpic} alt='picture'/>*/}
-        </div>
         <div className="container container--promo">
             <div className="promo">
                 <div className="promo__text">

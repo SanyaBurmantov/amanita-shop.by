@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 import SunIcoWhiteTheme from '../../../assets/icons/Header/SunThemeIco.svg'
 import MobileLogoWhiteTheme from '../../../assets/icons/Header/LogoIco.svg'
 import './HeaderTop.scss'
-
 import {BasketIcoAndCount} from "../../UI/Basket/BasketIcoAndCount";
 import {TypeSetState} from "../../../types";
 

@@ -18,7 +18,7 @@ export const HeaderBottom: FC<HeaderBottom> = ({currentPage, setCurrentPage}) =>
             <ul className='header-bottom__menu'>
                 {Pages.map((item) =>
                     (item.name === 'Магазин') ?
-                        <li className='header-bottom__item'>
+                        <li className='header-bottom__item' key={item.id}>
                             <Link to={item.href} className='header-bottom__link' key={item.id}
                                   onClick={() => setCurrentPage(item.href)}>
                                 <div className='header-bottom__item-wrapper'>
@@ -37,7 +37,7 @@ export const HeaderBottom: FC<HeaderBottom> = ({currentPage, setCurrentPage}) =>
                             </Link>
                         </li>
                         :
-                        <li className={currentPage === item.href ? 'header-bottom__item active' : 'header-bottom__item'}>
+                        <li className={currentPage === item.href ? 'header-bottom__item active' : 'header-bottom__item'} key={item.id}>
                             <Link to={item.href} className='header-bottom__link' key={item.id}
                                   onClick={() => setCurrentPage(item.href)}>
                                 <div className='header-bottom__icon'>

@@ -24,7 +24,7 @@ export const Footer: FC<Footer> = () => {
                             <Link to={item.href}>{item.name}</Link>
                         )}</div>
                         <div className='footer-left__center'>
-                            <a href="tel:+375293487676">375 29 348 76 76</ a>
+                            <a href="tel:+375293487676">375 29 348 76 75</ a>
                             <p>Для звонков по Беларуси</p>
                         </div>
                         <div className='footer-left__bottom'>

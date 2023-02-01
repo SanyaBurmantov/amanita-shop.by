@@ -2,6 +2,7 @@ import {FC, useState} from 'react';
 import {products} from "../../../../data/Products";
 import {FilterItem} from "./FilterItem";
 import {FunctionUpdateFilter, IProduct, TypeSetState} from "../../../../types";
+import './Filter.scss'
 
 interface Filter {
     updateFilter: FunctionUpdateFilter;
@@ -27,19 +28,16 @@ export const Filter: FC<Filter> = ({updateFilter, setFilter}) => {
 
 
     return (
-        <>
-            <button
-                className={active === 'Все' ? 'section-products__filter--element active' : 'section-products__filter--element'}
-                onClick={() => {
-                    ArrFilter('all');
-                    updateFilter(products);
-                    setActive('Все')
-                }}>Все
-            </button>
-            <div className='section-products__filter'>
-                {fill.map((item, index) => <FilterItem active={active} setActive={setActive} item={item}
+        <div className='filter'>
+            <button className={active === 'Все' ? 'product-filter__item active' : 'product-filter__item'} onClick={() => {
+                        ArrFilter('all');
+                        updateFilter(products);
+                        setActive('Все')
+                    }}>Все</button>
+            <div className='product-filter__items'>
+                {fill.map((item, index) => <FilterItem key={item.id} active={active} setActive={setActive} item={item}
                                                        ArrFilter={ArrFilter}/>)}
             </div>
-        </>
+        </div>
     );
 };

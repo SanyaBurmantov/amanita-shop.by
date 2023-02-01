@@ -63,7 +63,7 @@ export const PaymentAndDelivery: FC<PaymentAndDelivery> = () => {
             slidesPerView={(window.innerWidth <= 767) ? 1 : 3}
             spaceBetween={(window.innerWidth <= 767) ? 0 : 20}>
             {payment.map((item, index) => (
-                <div key={index}>
+                <div key={item.id}>
                     <SwiperSlide><PaymentItem item={item}/></SwiperSlide>
                 </div>
             ))}

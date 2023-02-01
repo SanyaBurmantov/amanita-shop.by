@@ -9,9 +9,9 @@ export enum actionTypes {
 interface ICartAddItemPayload {
     product: IProduct
     count: number
-    oneSelector: any
-    twoSelector: any
-    pizda: number
+    countFormOne: number
+    countFormTwo: number
+    finalPrice: number
 
 }
 

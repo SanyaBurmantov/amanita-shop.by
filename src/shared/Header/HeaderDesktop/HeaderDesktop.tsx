@@ -1,12 +1,13 @@
-import {FC, useEffect, useState} from 'react';
+import {FC, lazy, Suspense, useEffect, useState} from 'react';
 import {ReactComponent as AmanitaLogo} from '../../../assets/icons/headerIco/logo-amanita.svg'
 import {Link} from "react-router-dom";
 import {Pages} from "../../../data/Pages";
-import {Modal} from "../../UI/Modal/Modal";
-import {Cart} from "../../UI/Cart/Cart";
 import {BasketIcoAndCount} from "../../UI/Basket/BasketIcoAndCount";
 import './HeaderDesktop.scss'
 import {useScroll} from "framer-motion";
+import Modal from "../../UI/Modal/Modal";
+import Preloader from "../../UI/Preloader/Preloader";
+const Cart = lazy(() => import('../../UI/Cart/Cart'));
 
 
 interface HeaderDesktop {
@@ -66,7 +67,9 @@ export const HeaderDesktop: FC<HeaderDesktop> = () => {
                             <button className='header-desktop-button__btn'>Оформить заказ</button>
                         </div>
                         <Modal visible={showBasket} setVisible={setShowBasket}>
-                            <Cart/>
+                            <Suspense fallback={<Preloader/>}>
+                                {showBasket && <Cart/>}
+                            </Suspense>
                         </Modal>
                     </>}
 

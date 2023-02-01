@@ -1,8 +1,11 @@
-import {FC, useState} from 'react';
+import {FC, useState, lazy, Suspense} from 'react';
 import {ReactComponent as BasketIco} from '../../../assets/icons/Header/BasketIco.svg'
-import {Modal} from "../Modal/Modal";
-import {Cart} from "../Cart/Cart";
 import './BasketIcoAndCount.scss';
+import Modal from "../Modal/Modal";
+import {useTypedSelector} from "../../../hooks/useTypedSelector";
+import Preloader from "../Preloader/Preloader";
+const Cart = lazy(() => import('../Cart/Cart'));
+
 
 interface BasketIcoAndCount {
 
@@ -10,25 +13,23 @@ interface BasketIcoAndCount {
 
 export const BasketIcoAndCount: FC<BasketIcoAndCount> = ({}) => {
 
-    const [countBasket, setCountBasket] = useState(0)
-
     const [showBasket, setShowBasket] = useState(false)
 
-    const updateBasketCount = (count: number) => {
-        setCountBasket(count)
-    }
+    const cart = useTypedSelector(state => state.cart)
 
     return (
         <>
             <div className={window.innerWidth > 536 ? 'header-basket tablet' : 'header-basket'}
                  onClick={() => setShowBasket(true)}>
-                <span>{countBasket}</span>
+                <span>{cart.length}</span>
                 <BasketIco/>
             </div>
+
             <Modal visible={showBasket} setVisible={setShowBasket}>
-                <Cart updateBasketCount={updateBasketCount}/>
+                <Suspense fallback={<div><Preloader/></div>}>
+                    {showBasket && <Cart />}
+                </Suspense>
             </Modal>
         </>
-
     );
 };
