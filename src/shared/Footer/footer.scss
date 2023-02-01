@@ -1,6 +1,8 @@
 @import "../../styles/vars";
 
 footer{
+  position: relative;
+  z-index: 6;
   background-color: $color-white;
   padding: 2rem 0.5rem;
   .container{

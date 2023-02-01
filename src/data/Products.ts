@@ -1,20 +1,28 @@
 import {IProduct} from "../types";
 
-import Image1 from '../assets/Shop/PowderAmanitaMuscaria.png'
-import Image2 from '../assets/Shop/PowderAmanitaPantherina.png'
-import Image3 from '../assets/Shop/PowderHericiumErinaceus.png'
-import Image4 from '../assets/Shop/ChagaGround.png'
-
-
-
-
-import Image10 from '../assets/Shop/ChagaCapsules.jpg'
-import Image14 from '../assets/Shop/ChagaTee3.jpg'
-import Image15 from '../assets/Shop/ChagaTee1.jpg'
-import Image16 from '../assets/Shop/ChagaTee2.jpg'
-import Image21 from '../assets/Shop/ChagaPieces.jpg'
-import Image22 from '../assets/Shop/ChagaSyrup.jpg'
-import Image23 from '../assets/Shop/ChagaDrink.jpg'
+import Image1 from '../assets/Shop/1PowderAmanitaMuscaria.png'
+import Image2 from '../assets/Shop/2PowderAmanitaPantherina.png'
+import Image3 from '../assets/Shop/3PowderHericiumErinaceus.png'
+import Image4 from '../assets/Shop/4ChagaGround.png'
+import Image5 from '../assets/Shop/5CapsulesAmanitaMuscaria.png'
+import Image6 from '../assets/Shop/6AmanitaMixCapsules.png'
+import Image7 from '../assets/Shop/7CapsulesAmanitaPantherina.png'
+import Image8 from '../assets/Shop/8CapsulesHericiumErinaceus.png'
+import Image9 from '../assets/Shop/9CapsulesCordyceps.png'
+import Image10 from '../assets/Shop/10CapsulesChaga.png'
+import Image11 from '../assets/Shop/11AmanitaMuscaria.png'
+import Image12 from '../assets/Shop/12TeaAmanitaMuscaria.png'
+import Image13 from '../assets/Shop/13TeaCaleaZacatechichi.png'
+import Image14 from '../assets/Shop/14TeaChaga1.png'
+import Image15 from '../assets/Shop/15TeaChaga2.png'
+import Image16 from '../assets/Shop/16TeaChaga3.png'
+import Image17 from '../assets/Shop/17OintmentAmanitaMuscaria.png'
+import Image18 from '../assets/Shop/18TinctureAmanitaMuscaria.png'
+import Image19 from '../assets/Shop/19Candy.png'
+import Image20 from '../assets/Shop/20Biscuit.png'
+import Image21 from '../assets/Shop/21ChagaPieces.png'
+import Image22 from '../assets/Shop/22ChagaSyrup.png'
+import Image23 from '../assets/Shop/23ChagaDrink.png'
 
 export const products: IProduct[] = [
 
@@ -436,7 +444,7 @@ export const products: IProduct[] = [
 
     {
         id: '5',
-        imagePath: 'https://sun9-3.userapi.com/impg/xR3CT6W666BlpYrXNG96AsdjDAeBlHzw8_MleA/f30J-Zjp_9g.jpg?size=960x1280&quality=95&sign=8c2af6a3d02fbecdcb0f794e5196d2fe&type=album',
+        imagePath: Image5,
         name: 'Мухомор красный',
         subtitle: 'Мухомор красный в веганских капсулах.',
         type: 'Капсулы',
@@ -565,9 +573,10 @@ export const products: IProduct[] = [
             }
         ]
     },
+
     {
         id: '6',
-        imagePath: 'https://sun9-87.userapi.com/impg/g-JeVe7doJLo6ojJc1VxIVI8aj9eSSIEutdiBg/fXtWWWLjJNw.jpg?size=960x1280&quality=95&sign=891ffb413e9b663426fe0701bb4134e4&type=album',
+        imagePath: Image6,
         name: 'AMANITA MIX',
         subtitle: 'Состав: мухомор красный (75%)/ мухомор пантерный (25%) 1/4',
         type: 'Капсулы',
@@ -735,7 +744,7 @@ export const products: IProduct[] = [
 
     {
         id: '7',
-        imagePath: 'https://sun9-40.userapi.com/impg/cp-I7XkRPAtseJatCNkOGcABgWLrHK9Ef2Tx0A/XsYc2sFEXnI.jpg?size=960x1280&quality=95&sign=16732d6f0db35e86883cebc106b24f87&type=album',
+        imagePath: Image7,
         name: 'Мухомор пантерный',
         subtitle: 'Мухомор пантерный в веганских капсулах.',
         type: 'Капсулы',
@@ -874,7 +883,7 @@ export const products: IProduct[] = [
 
     {
         id: '8',
-        imagePath: 'https://sun9-43.userapi.com/impg/2zBrsFr_agRjMdfkUKq7RfrzWmWLUUdhUJp5gg/tsbbi9feXvM.jpg?size=1620x2160&quality=95&sign=e72eb5455576a1325d187d3a2a4a0369&type=album',
+        imagePath: Image8,
         name: 'Зерномицелий ежовика',
         subtitle: 'Зерномицелий ежовика на буром рисе сушеный, молотый, в растительных капсулах.',
         type: 'Капсулы',
@@ -969,9 +978,10 @@ export const products: IProduct[] = [
             }
         ]
     },
+
     {
         id: '9',
-        imagePath: 'https://sun9-26.userapi.com/impg/7PmL_fh0VRXE-cruzMpsNq-DhECfWQZqOlX91g/38PkCU_7VyM.jpg?size=960x1280&quality=95&sign=17f670cc5797169851858aa9e155ef1f&type=album',
+        imagePath: Image9,
         name: 'Кордицепс военный',
         subtitle: 'Плодовые тела+мицелий на буром рисе сушеный, молотый, в растительных капсулах.',
         type: 'Капсулы',
@@ -1093,6 +1103,7 @@ export const products: IProduct[] = [
             }
         ]
     },
+
     {
         id: '10',
         imagePath: Image10,
@@ -1174,9 +1185,10 @@ export const products: IProduct[] = [
             }
         ]
     },
+
     {
         id: '11',
-        imagePath: 'https://sun9-37.userapi.com/impg/Bs-VXFhpQU04MCMU6_8rqmkzThTn3EoeGNMMAA/ana3w_1AVCQ.jpg?size=960x1280&quality=95&sign=e9a75fb1181421ff0b002230651e476d&type=album',
+        imagePath: Image11,
         name: 'Мухомор красный',
         subtitle: 'Мухоморы в вакуумной упаковке для длительного хранения и качественного применения. Мухоморы в вакууме не теряют своих свойств!',
         type: 'Шляпки',
@@ -1273,10 +1285,9 @@ export const products: IProduct[] = [
         ]
     },
 
-
     {
         id: '12',
-        imagePath: 'https://sun9-86.userapi.com/impg/h17m4g6_aGQufjLiq-CEk0rmlKyaVT3RQLE8cQ/DhtWx2OWtn0.jpg?size=1620x2160&quality=95&sign=190a99899443c7745af37ed27d9683da&type=album',
+        imagePath: Image12,
         name: 'Мухомор красный',
         subtitle: 'Чай из сухих мухоморов обладает полезными свойствами и вносит разнообразие в обычную чайную церемонию.',
         type: 'Чай',
@@ -1403,10 +1414,9 @@ export const products: IProduct[] = [
         ]
     },
 
-
     {
         id: '13',
-        imagePath: 'https://sun9-49.userapi.com/impg/Z_YC8WeOzFA1UpntwgkyuJhDY5PV-ERz1a6X9w/adxsmT0dN0c.jpg?size=960x1280&quality=95&sign=8c9f411c80908d8466482029583d0cc0&type=album',
+        imagePath: Image13,
         name: 'Листья бога',
         subtitle: 'Чай из растения Калея Закатечичи. Отличная возможность углубиться в свое бесконечное сознание.',
         type: 'Чай',
@@ -1512,7 +1522,6 @@ export const products: IProduct[] = [
             }
         ]
     },
-
 
     {
         id: '14',
@@ -1680,7 +1689,6 @@ export const products: IProduct[] = [
         ]
     },
 
-
     {
         id: '16',
         imagePath: Image16,
@@ -1763,10 +1771,9 @@ export const products: IProduct[] = [
         ]
     },
 
-
     {
         id: '17',
-        imagePath: 'https://sun9-13.userapi.com/impg/7F3s0r-1rj3EBX_AzZJDuXyJ1_Nh4APjKjNaXg/V3PrI4-PZJo.jpg?size=1620x2160&quality=95&sign=a1df3474b4000e13ea3ea960f2a63945&type=album',
+        imagePath: Image17,
         name: 'Мазь Мухомора красного',
         subtitle: 'Мазь мухомора красного на основе масла ГХИ.',
         type: 'Прочее',
@@ -1860,10 +1867,9 @@ export const products: IProduct[] = [
         ]
     },
 
-
     {
         id: '18',
-        imagePath: 'https://sun9-65.userapi.com/impg/BfmS_K2GEkOH-zs5v6NF98uh1c-KQa_u179OTQ/6-9AKbKDcaY.jpg?size=983x1280&quality=95&sign=7a5cf90da0237ecc66443989eadab330&type=album',
+        imagePath: Image18,
         name: 'Настойка Мухомора красного',
         subtitle: 'На ферментированной вытяжке спирт 50%. Для наружного и внутреннего применения.',
         type: 'Прочее',
@@ -1983,10 +1989,9 @@ export const products: IProduct[] = [
         ]
     },
 
-
     {
         id: '19',
-        imagePath: 'https://sun2.velcom-by-minsk.userapi.com/impg/B3uCaDb-0Dc2nV-jteq7N5YwOkZdaI-3Yysi2Q/3PGGvOdnSQk.jpg?size=1620x2160&quality=95&sign=df1faa2a39bd934699162ce443207161&type=album',
+        imagePath: Image19,
         name: 'Конфета "Wakanda", 28 г.',
         subtitle: 'Состав: финики, миндаль, банан, льняные семена, кокосовая стружка, пантерный мухомор (1 г.)',
         type: 'Прочее',
@@ -2033,11 +2038,10 @@ export const products: IProduct[] = [
 
         ],
     } ,
-//
-//
+
     {
         id: '20',
-        imagePath: 'https://sun9-68.userapi.com/impg/UIg2Gm9R3uoCTcmBsE092ximDQrx0q0jpgK2hw/lM0cRv8dVi4.jpg?size=1620x2160&quality=95&sign=1f936e6682f7dbef07cbd428266b2f23&type=album',
+        imagePath: Image20,
         name: 'Печенье "Сердце пантеры", 55 г.',
         subtitle: 'Состав: овсяные хлопья, льняная мука, банан, яблоко, корица, финики, мед, пантерный мухомор (1 г.)',
         type: 'Прочее',
