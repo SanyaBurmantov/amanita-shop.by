@@ -4,7 +4,6 @@ import {Footer} from "./shared/Footer/Footer";
 import {BrowserRouter} from "react-router-dom";
 import store from "./store/store";
 import {Provider} from "react-redux";
-import {Cart} from "./shared/UI/Cart/Cart";
 import {PersistGate} from "redux-persist/integration/react";
 import {persistStore} from "redux-persist";
 import {Background} from "./shared/Background/Background";
@@ -18,8 +17,8 @@ function App() {
                 <BrowserRouter>
                     <Header/>
                     <AppRouter/>
+                    <Footer/>
                     <Background/>
-                    {/*<Footer/>*/}
                 </BrowserRouter>
             </PersistGate>
         </Provider>

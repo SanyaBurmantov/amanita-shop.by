@@ -2,19 +2,52 @@ import {Dispatch, SetStateAction} from "react";
 
 
 export interface IProduct{
-    _id: string
-    name: string
-    title: string
-    form: number
-    imagePath: string
-    price: IPrice[]
-    type: string
-    text: string,
-    coefficient: ICoefficient[]
-    more?: IMore[]
-    slider: ISlider[]
-    moreName: string
+    id: string
+    imagePath: string,
+    name: string,
+    subtitle: string,
+    type: string,
+    form: number,
+    productDescription: {title?: string, subtitle?: string},
+    productCountOne: IProductCountOne[],
+    productCountTwo: IProductCountTwo[],
+    text?: string,
+    moreName?: string,
+    more?: IMore[],
+    slider?: ISlider[]
 }
+
+export interface IProductCountOne{
+    id: number,
+    count: number
+}
+
+export interface IProductCountTwo {
+    id: number,
+    count: number,
+    coefficient: ICoefficient[]
+}
+
+export interface ICoefficient {
+    id: number,
+    count: number
+}
+
+export interface ISlider {
+    id: number,
+    image: string,
+}
+
+export interface IMore {
+    id: number,
+    title: string,
+    subtitle: string,
+}
+
+
+
+
+
 
 export interface IPayment{
     id: number,
@@ -25,17 +58,6 @@ export interface IPayment{
     payment: string
 }
 
-
-export interface IMore {
-    id: number,
-    title: string,
-    subtitle: string,
-}
-
-export interface ISlider {
-    id: number,
-    image: string,
-}
 
 
 export interface IRewiews{
@@ -68,11 +90,7 @@ export interface IPrice {
     count: number,
 }
 
-export interface ICoefficient {
-    id: number
-    price: number,
-    coff: IGovno[]
-}
+
 
 export interface IGovno {
     id: number
@@ -97,15 +115,14 @@ export interface IPayment {
     payment: string
 }
 
-export interface IFaqItem{
-}
+
 
 
 export interface ICartItem extends IProduct{
     count: number
-    oneSelector: any
-    twoSelector: any
-    pizda: any
+    countFormOne: number
+    countFormTwo: number
+    finalPrice: number
 }
 
 export type TypeSetState<T> = Dispatch<SetStateAction<T>>

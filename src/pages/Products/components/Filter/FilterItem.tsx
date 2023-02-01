@@ -13,8 +13,8 @@ export const FilterItem: FC<FilterItem> = ({item, ArrFilter, setActive, active})
 
     return (
         <button
-            className={active === item.type ? 'section-products__filter--element active' : 'section-products__filter--element'}
-            key={item._id}
+            className={active === item.type ? 'product-filter__item active' : 'product-filter__item'}
+            key={item.id}
             onClick={() => {
                 ArrFilter(item.type);
                 setActive(item.type)

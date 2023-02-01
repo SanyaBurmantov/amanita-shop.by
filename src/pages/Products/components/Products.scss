@@ -1,372 +1,390 @@
 @import "../../../styles/vars";
 
-.picture {
-  position: fixed;
-  top: 10%;
-  z-index: -99;
-  right: 10%;
-  object-fit: cover;
+.section-products {
+
+  .products-subtitle {
+    @media (max-width: $phone) {
+      margin-bottom: 3.5rem;
+    }
+  }
+
+
+
+  .products{
+    margin-top: 3.8rem;
+  }
+
 }
 
-.products {
-  display: grid;
-  grid-template-columns: 45%;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: 800px) {
-    grid-template-columns: 100%;
-  }
-}
 
-.product {
-  margin: 1rem;
-  background: #FFFFFF;
-  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-  border-radius: 2.2rem;
 
-  &-container {
-    user-select: none;
-    padding: 3.2rem 2.9rem;
-  }
-}
-
-.product-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @media (max-width: $phone) {
-    flex-wrap: wrap;
-  }
-
-  &-cash {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-
-    &-image {
-
-      img{
-        @media (max-width: $tablet) {
-          width: 80%;
-          height: 80%;
-        }
-        @media (max-width: $tablet) {
-          width: 80%;
-          height: 80%;
-        }
-        @media (max-width: $phone) {
-          width: 90%;
-          height: 90%;
-        }
-      }
-    }
-
-    &-number {
-      margin-left: 1.2rem;
-      font-weight: 700;
-      font-size: 2.4rem;
-      line-height: 2.9rem;
-      @media (max-width: 1448px) {
-        font-size: 2rem;
-        line-height: 2.2rem;
-      }
-      @media (max-width: $phone) {
-        font-size: 1.6rem;
-      }
-    }
-  }
-
-  &-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    &-pay {
-      margin-right: 1.2rem;
-
-      &-btn {
-        background: #FF4026;
-        border-radius: 6px;
-        border: 0;
-        font-size: 2.2rem;
-        line-height: 2.6rem;
-        color: white;
-        padding: 1.2rem 4rem;
-        cursor: pointer;
-        @media (max-width: 1448px) {
-          padding: 1.2rem 2.5rem;
-          font-size: 1.8rem;
-          line-height: 2rem;
-        }
-        @media (max-width: $mobile) {
-          padding: 1rem 2rem;
-          font-size: 1.4rem;
-          line-height: 1.6rem;
-        }
-        @media (max-width: $phone) {
-          font-size: 2rem;
-          line-height: 2.2rem;
-          padding: 1.2rem 3rem;
-        }
-        @media (max-width: 400px) {
-          font-size: 1.5rem;
-          line-height: 1.7rem;
-          padding: 1.2rem 2.8rem;
-        }
-
-        &.buying{
-          background-color: $color-gray;
-        }
-      }
-    }
-
-    &-more {
-      &-btn {
-        cursor: pointer;
-        background: #EBEBEB;
-        border-radius: 6px;
-        color: #464646;
-        border: 0;
-        font-size: 2.2rem;
-        line-height: 2.6rem;
-        padding: 1.2rem 4rem;
-        @media (max-width: 1448px) {
-          padding: 1.2rem 2.5rem;
-          font-size: 1.8rem;
-          line-height: 2rem;
-        }
-        @media (max-width: $mobile) {
-          padding: 1rem 2rem;
-          font-size: 1.4rem;
-          line-height: 1.6rem;
-        }
-        @media (max-width: $phone) {
-          font-size: 2rem;
-          line-height: 2.2rem;
-          padding: 1.2rem 3rem;
-        }
-        @media (max-width: 400px) {
-          font-size: 1.5rem;
-          line-height: 1.7rem;
-          padding: 1.2rem 2.8rem;
-        }
-      }
-    }
-  }
-}
-
-.product-top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  @media (max-width: $phone) {
-    flex-direction: column-reverse;
-  }
-
-  &-content {
-    flex: 1 1 65%;
-    margin-right: 0.5rem;
-    @media (max-width: 1400px) {
-      flex: 60%;
-    }
-    &-title {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 2.6rem;
-      line-height: 3.1rem;
-      color: #FF4026;
-      padding-bottom: 0.5rem;
-      @media (max-width: 1400px) {
-        font-size: 2.2rem;
-      }
-    }
-
-    &-type {
-      color: #a0a0a0;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 1.4rem;
-      line-height: 1.7rem;
-      padding-bottom: 1.5rem;
-    }
-
-    &-subtitle {
-      font-weight: 300;
-      font-size: 1.4rem;
-      line-height: 1.7rem;
-      color: #464646;
-      padding-bottom: 1.5rem;
-      max-width: 38.2rem;
-      @media (max-width: $mobile) {
-        max-width: 30rem;
-        font-size: 1rem;
-        line-height: 1.2rem;
-      }
-    }
-
-    &-quantity {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 1.8rem;
-      line-height: 2.2rem;
-      color: #464646;
-      margin-bottom: 1rem;
-      @media (max-width: 1400px) {
-        font-size: 1.4rem;
-      }
-
-      &-title{
-        margin-bottom: 0.6rem;
-      }
-
-      &-checkbox{
-        display: flex;
-        &-button{
-          font-weight: 700;
-          font-size: 1.8rem;
-          line-height: 2.2rem;
-          color: $color-dark-gray;
-          padding: 0.4rem 0rem;
-          width: 100%;
-          border: 0;
-          cursor: pointer;
-          background: $color-products-button;
-          transition: 500ms;
-          @media (max-width: $tablet) {
-            font-size: 1.6rem;
-            line-height: 1.4rem;
-          }
-          @media (max-width: $mobile) {
-            font-size: 1.4rem;
-            line-height: 1.4rem;
-          }
-
-          &.active{
-            background: $color-orange;
-            color: $color-white;
-          }
-
-        }
-        :not(:last-child){
-          margin-right: 0.2rem;
-        }
-        :first-child{
-          border-radius: 6px 0px 0px 6px;
-
-        }
-        :last-child{
-          border-radius: 0px 6px 6px 0px;
-        }
-      }
-
-    }
-
-    &-two_box {
-      display: flex;
-      justify-content: space-between;
-
-      &-one {
-        flex: 0 1 50%;
-
-        &-title {
-          font-weight: 700;
-          font-size: 1.8rem;
-          line-height: 2.2rem;
-          color: #464646;
-          margin-bottom: 1rem;
-          @media (max-width: 1400px) {
-            font-size: 1.4rem;
-          }
-
-        }
-      }
-
-      &-two{
-
-        &-title{
-          text-align: center;
-          font-weight: 700;
-          font-size: 1.8rem;
-          line-height: 2.2rem;
-          margin-bottom: 1.7rem;
-          @media (max-width: 1400px) {
-            font-size: 1.4rem;
-          }
-        }
-
-        &-box{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          &-left_arrow{
-            cursor: pointer;
-            text-align: center;
-            img{
-              transform: rotate(180deg);
-
-              @media (max-width: 1200px) {
-                width: 70%;
-                height: 70%;
-              }
-            }
-          }
-
-          &-right_arrow{
-            cursor: pointer;
-            text-align: center;
-            img{
-              @media (max-width: 1200px) {
-                width: 70%;
-                height: 70%;
-              }
-            }
-          }
-
-          &-number{
-            font-weight: 700;
-            font-size: 2rem;
-            line-height: 2.4rem;
-            padding: 0rem 2rem;
-            @media (max-width: 1200px) {
-              padding: 0rem 1rem;
-            }
-
-          }
-        }
-      }
-    }
-  }
-
-  &-image{
-    flex: 0 0 35%;
-    text-align: center;
-    @media (max-width: 1400px) {
-      flex: 40%;
-    }
-    @media (max-width: 1300px) {
-      flex: 50%;
-    }
-    img{
-      position: relative;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      @media (max-width: 1300px) {
-        width: 80%;
-        height: 90%;
-      }
-      @media (max-width: $phone) {
-        width: 50%;
-        height: 50%;
-      }
-      @media (max-width: $mobile) {
-        width: 50%;
-        height: 50%;
-      }
-    }
-  }
-}
+//.picture {
+//  position: fixed;
+//  top: 10%;
+//  z-index: -99;
+//  right: 10%;
+//  object-fit: cover;
+//}
+//
+//.products {
+//  display: grid;
+//  grid-template-columns: 45%;
+//  grid-template-columns: repeat(2, 1fr);
+//  @media (max-width: 800px) {
+//    grid-template-columns: 100%;
+//  }
+//}
+//
+//.product {
+//  margin: 1rem;
+//  background: #FFFFFF;
+//  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+//  border-radius: 2.2rem;
+//
+//  &-container {
+//    user-select: none;
+//    padding: 3.2rem 2.9rem;
+//  }
+//}
+//
+//.product-bottom {
+//  display: flex;
+//  align-items: center;
+//  justify-content: space-between;
+//  @media (max-width: $phone) {
+//    flex-wrap: wrap;
+//  }
+//
+//  &-cash {
+//    display: flex;
+//    align-items: flex-end;
+//    justify-content: space-between;
+//
+//    &-image {
+//
+//      img{
+//        @media (max-width: $tablet) {
+//          width: 80%;
+//          height: 80%;
+//        }
+//        @media (max-width: $tablet) {
+//          width: 80%;
+//          height: 80%;
+//        }
+//        @media (max-width: $phone) {
+//          width: 90%;
+//          height: 90%;
+//        }
+//      }
+//    }
+//
+//    &-number {
+//      margin-left: 1.2rem;
+//      font-weight: 700;
+//      font-size: 2.4rem;
+//      line-height: 2.9rem;
+//      @media (max-width: 1448px) {
+//        font-size: 2rem;
+//        line-height: 2.2rem;
+//      }
+//      @media (max-width: $phone) {
+//        font-size: 1.6rem;
+//      }
+//    }
+//  }
+//
+//  &-buttons {
+//    display: flex;
+//    align-items: center;
+//    justify-content: space-between;
+//    flex-wrap: wrap;
+//
+//    &-pay {
+//      margin-right: 1.2rem;
+//
+//      &-btn {
+//        background: #FF4026;
+//        border-radius: 6px;
+//        border: 0;
+//        font-size: 2.2rem;
+//        line-height: 2.6rem;
+//        color: white;
+//        padding: 1.2rem 4rem;
+//        cursor: pointer;
+//        @media (max-width: 1448px) {
+//          padding: 1.2rem 2.5rem;
+//          font-size: 1.8rem;
+//          line-height: 2rem;
+//        }
+//        @media (max-width: $mobile) {
+//          padding: 1rem 2rem;
+//          font-size: 1.4rem;
+//          line-height: 1.6rem;
+//        }
+//        @media (max-width: $phone) {
+//          font-size: 2rem;
+//          line-height: 2.2rem;
+//          padding: 1.2rem 3rem;
+//        }
+//        @media (max-width: 400px) {
+//          font-size: 1.5rem;
+//          line-height: 1.7rem;
+//          padding: 1.2rem 2.8rem;
+//        }
+//
+//        &.buying{
+//          background-color: $color-gray;
+//        }
+//      }
+//    }
+//
+//    &-more {
+//      &-btn {
+//        cursor: pointer;
+//        background: #EBEBEB;
+//        border-radius: 6px;
+//        color: #464646;
+//        border: 0;
+//        font-size: 2.2rem;
+//        line-height: 2.6rem;
+//        padding: 1.2rem 4rem;
+//        @media (max-width: 1448px) {
+//          padding: 1.2rem 2.5rem;
+//          font-size: 1.8rem;
+//          line-height: 2rem;
+//        }
+//        @media (max-width: $mobile) {
+//          padding: 1rem 2rem;
+//          font-size: 1.4rem;
+//          line-height: 1.6rem;
+//        }
+//        @media (max-width: $phone) {
+//          font-size: 2rem;
+//          line-height: 2.2rem;
+//          padding: 1.2rem 3rem;
+//        }
+//        @media (max-width: 400px) {
+//          font-size: 1.5rem;
+//          line-height: 1.7rem;
+//          padding: 1.2rem 2.8rem;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//.product-top {
+//  display: flex;
+//  justify-content: space-between;
+//  margin-bottom: 1rem;
+//  @media (max-width: $phone) {
+//    flex-direction: column-reverse;
+//  }
+//
+//  &-content {
+//    flex: 1 1 65%;
+//    margin-right: 0.5rem;
+//    @media (max-width: 1400px) {
+//      flex: 60%;
+//    }
+//    &-title {
+//      font-style: normal;
+//      font-weight: 700;
+//      font-size: 2.6rem;
+//      line-height: 3.1rem;
+//      color: #FF4026;
+//      padding-bottom: 0.5rem;
+//      @media (max-width: 1400px) {
+//        font-size: 2.2rem;
+//      }
+//    }
+//
+//    &-type {
+//      color: #a0a0a0;
+//      font-style: normal;
+//      font-weight: 500;
+//      font-size: 1.4rem;
+//      line-height: 1.7rem;
+//      padding-bottom: 1.5rem;
+//    }
+//
+//    &-subtitle {
+//      font-weight: 300;
+//      font-size: 1.4rem;
+//      line-height: 1.7rem;
+//      color: #464646;
+//      padding-bottom: 1.5rem;
+//      max-width: 38.2rem;
+//      @media (max-width: $mobile) {
+//        max-width: 30rem;
+//        font-size: 1rem;
+//        line-height: 1.2rem;
+//      }
+//    }
+//
+//    &-quantity {
+//      font-style: normal;
+//      font-weight: 700;
+//      font-size: 1.8rem;
+//      line-height: 2.2rem;
+//      color: #464646;
+//      margin-bottom: 1rem;
+//      @media (max-width: 1400px) {
+//        font-size: 1.4rem;
+//      }
+//
+//      &-title{
+//        margin-bottom: 0.6rem;
+//      }
+//
+//      &-checkbox{
+//        display: flex;
+//        &-button{
+//          font-weight: 700;
+//          font-size: 1.8rem;
+//          line-height: 2.2rem;
+//          color: $color-dark-gray;
+//          padding: 0.4rem 0rem;
+//          width: 100%;
+//          border: 0;
+//          cursor: pointer;
+//          background: $color-products-button;
+//          transition: 500ms;
+//          @media (max-width: $tablet) {
+//            font-size: 1.6rem;
+//            line-height: 1.4rem;
+//          }
+//          @media (max-width: $mobile) {
+//            font-size: 1.4rem;
+//            line-height: 1.4rem;
+//          }
+//
+//          &.active{
+//            background: $color-orange;
+//            color: $color-white;
+//          }
+//
+//        }
+//        :not(:last-child){
+//          margin-right: 0.2rem;
+//        }
+//        :first-child{
+//          border-radius: 6px 0px 0px 6px;
+//
+//        }
+//        :last-child{
+//          border-radius: 0px 6px 6px 0px;
+//        }
+//      }
+//
+//    }
+//
+//    &-two_box {
+//      display: flex;
+//      justify-content: space-between;
+//
+//      &-one {
+//        flex: 0 1 50%;
+//
+//        &-title {
+//          font-weight: 700;
+//          font-size: 1.8rem;
+//          line-height: 2.2rem;
+//          color: #464646;
+//          margin-bottom: 1rem;
+//          @media (max-width: 1400px) {
+//            font-size: 1.4rem;
+//          }
+//
+//        }
+//      }
+//
+//      &-two{
+//
+//        &-title{
+//          text-align: center;
+//          font-weight: 700;
+//          font-size: 1.8rem;
+//          line-height: 2.2rem;
+//          margin-bottom: 1.7rem;
+//          @media (max-width: 1400px) {
+//            font-size: 1.4rem;
+//          }
+//        }
+//
+//        &-box{
+//          display: flex;
+//          align-items: center;
+//          justify-content: center;
+//
+//          &-left_arrow{
+//            cursor: pointer;
+//            text-align: center;
+//            img{
+//              transform: rotate(180deg);
+//
+//              @media (max-width: 1200px) {
+//                width: 70%;
+//                height: 70%;
+//              }
+//            }
+//          }
+//
+//          &-right_arrow{
+//            cursor: pointer;
+//            text-align: center;
+//            img{
+//              @media (max-width: 1200px) {
+//                width: 70%;
+//                height: 70%;
+//              }
+//            }
+//          }
+//
+//          &-number{
+//            font-weight: 700;
+//            font-size: 2rem;
+//            line-height: 2.4rem;
+//            padding: 0rem 2rem;
+//            @media (max-width: 1200px) {
+//              padding: 0rem 1rem;
+//            }
+//
+//          }
+//        }
+//      }
+//    }
+//  }
+//
+//  &-image{
+//    flex: 0 0 35%;
+//    text-align: center;
+//    @media (max-width: 1400px) {
+//      flex: 40%;
+//    }
+//    @media (max-width: 1300px) {
+//      flex: 50%;
+//    }
+//    img{
+//      position: relative;
+//      width: 100%;
+//      height: 100%;
+//      top: 0;
+//      left: 0;
+//      object-fit: cover;
+//      @media (max-width: 1300px) {
+//        width: 80%;
+//        height: 90%;
+//      }
+//      @media (max-width: $phone) {
+//        width: 50%;
+//        height: 50%;
+//      }
+//      @media (max-width: $mobile) {
+//        width: 50%;
+//        height: 50%;
+//      }
+//    }
+//  }
+//}
 

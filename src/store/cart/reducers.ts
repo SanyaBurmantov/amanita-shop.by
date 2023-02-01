@@ -9,15 +9,15 @@ export const cartReducer = (state = initialState, action:
 
         case actionTypes.CART_ADD_ITEM: {
             const cart = [...state]
-            const {product, count, oneSelector, twoSelector, pizda} = action.payload
+            const {product, count, countFormOne, countFormTwo, finalPrice} = action.payload
 
-            const foundProduct = cart.find(item => item._id === product._id)
+            const foundProduct = cart.find(item => item.id === product.id)
             if (foundProduct) {
                 foundProduct.count = count
             } else {
                 cart.push({
                     ...product,
-                    count, oneSelector, twoSelector, pizda
+                    count, countFormOne, countFormTwo, finalPrice
                 })
             }
 
@@ -25,7 +25,7 @@ export const cartReducer = (state = initialState, action:
         }
 
         case actionTypes.CART_REMOVE_ITEM: {
-            return state.filter(item => item._id !== action.payload)
+            return state.filter(item => item.id !== action.payload)
         }
 
         case actionTypes.CART_REMOVE_ALL: {

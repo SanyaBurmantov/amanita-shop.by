@@ -1,13 +1,11 @@
 
-.background-index{
-  position: fixed;
-  top: 0;
-  z-index: -100;
-  width: 100vw;
-  left: 0;
-  height: 75%;
-  background: -webkit-linear-gradient(90deg, #ffffff, rgb(51, 143, 0), #184200);
-  -moz-background-size: 100%;
-  -webkit-background-size: 100%;
-  -o-background-size: 100%;
+.bg-background {
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 40vh;
+  }
 }
