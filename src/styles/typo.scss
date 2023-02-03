@@ -21,7 +21,7 @@ h3{
   padding-top: 4rem;
   padding-bottom: 2.5rem;
   @media (max-width: $phone){
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 3rem;
     margin: 0;
     padding: 0;
@@ -42,6 +42,13 @@ h4{
     margin: 0;
     padding: 0;
     max-width: 24rem;
+  }
+  @media (max-width: $mobile){
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    margin: 0;
+    padding: 0;
+    max-width: 30rem;
   }
 }
 

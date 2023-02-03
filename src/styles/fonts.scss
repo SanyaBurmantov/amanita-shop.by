@@ -1,36 +1,27 @@
-@font-face {font-family: 'Light';
-  src: url('../fonts/open-sans-light.eot');
-  src: url('../fonts/open-sans-light.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/open-sans-light.woff') format('woff'),
-  url("../fonts/open-sans-light.woff2") format("woff2"),
-  url('../fonts/open-sans-light.ttf') format('truetype'),
-  url('../fonts/open-sans-light.svg#open-sans-light') format('svg');
- font-style:normal; font-display: swap;
+
+@font-face {
+  font-family: "amanita_sans-bold";
+  src: url("../fonts/amanita_textsans-bold.eot");
+  src: url("../fonts/amanita_textsans-bold.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/amanita_textsans-bold.woff") format("woff"),
+  url("../fonts/amanita_textsans-bold.ttf") format("truetype"),
+  url("../fonts/amanita_textsans-bold.svg#amanita_textsans-bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
-@font-face {font-family: 'Bold';
-  src: url('../fonts/open-sans-bold.eot');
-  src: url('../fonts/open-sans-bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/open-sans-bold.woff') format('woff'),
-  url("../fonts/open-sans-bold.woff2") format("woff2"),
-  url('../fonts/open-sans-bold.ttf') format('truetype'),
-  url('../fonts/open-sans-bold.svg#open-sans-bold') format('svg');
-  font-style:normal; font-display: swap;
+
+
+@font-face {
+  font-family: "amanita_sans-regular";
+  src: url("../fonts/amanita_textsans-regular.eot");
+  src: url("../fonts/amanita_textsans-regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/amanita_textsans-regular.woff") format("woff"),
+  url("../fonts/amanita_textsans-regular.ttf") format("truetype"),
+  url("../fonts/amanita_textsans-regular.svg#amanita_textsans_regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-@font-face {font-family: 'SemiBold';
-  src: url('../fonts/open-sans-semibold.eot');
-  src: url('../fonts/open-sans-semibold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/open-sans-semibold.woff') format('woff'),
-  url("../fonts/open-sans-semibold.woff2") format("woff2"),
-  url('../fonts/open-sans-semibold.ttf') format('truetype'),
-  url('../fonts/open-sans-semibold.svg#Bahnschrift') format('svg');
-  font-style:normal; font-display: swap;
-}
-@font-face {font-family: 'Regular';
-  src: url('../fonts/open-sans.eot');
-  src: url('../fonts/open-sans.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/open-sans.woff') format('woff'),
-  url("../fonts/open-sans.woff2") format("woff2"),
-  url('../fonts/open-sans.ttf') format('truetype'),
-  url('../fonts/open-sans.svg#open-sans') format('svg');
-  font-style:normal; font-display: swap;
-}
+
+

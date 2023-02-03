@@ -138,14 +138,5 @@ export const Home = () => {
 
 </>
 
-
-
-        // {/*// <motion.div*/}
-        // {/*//     initial={{opacity: 0}}*/}
-        // {/*//     animate={{opacity: 1}}*/}
-        // {/*//     exit={{x: -window.innerWidth, transition: {duration: 0.2}}}>*/}
-
-
-        // </motion.div>
     )
 }

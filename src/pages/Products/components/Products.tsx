@@ -4,7 +4,7 @@ import ProductItem from "./ProductsItem/ProductItem";
 import {Filter} from "./Filter/Filter";
 import {IProduct} from "../../../types";
 import './Products.scss'
-
+import bgIcoProduct from '../../../assets/Background/Image-products.png'
 
 interface Products {
 }
@@ -18,7 +18,6 @@ export const Products: FC<Products> = () => {
     }
 
     return (
-
         <div className='section section-products'>
             <div className="container">
                 <h3>Магазин</h3>
@@ -31,6 +30,7 @@ export const Products: FC<Products> = () => {
                     )}
                 </div>
             </div>
+            <div className='products-ico-image'><img src={bgIcoProduct}/></div>
         </div>
     );
 };

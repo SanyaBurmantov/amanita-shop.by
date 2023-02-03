@@ -137,8 +137,8 @@
               border-radius: 100%;
               border: 0.2rem solid $color-orange-elements;
               display: inline-block;
-              width: 2.8rem;
-              height: 2.8rem;
+              width: 2.4rem;
+              height: 2.4rem;
               position: relative;
               vertical-align: top;
               cursor: pointer;
@@ -233,14 +233,16 @@
     justify-content: space-between;
 
     &__pay {
+      width: 100%;
       border-radius: 0.6rem;
       font-weight: 500;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       line-height: 2.2rem;
       color: $color-white;
       background-color: $color-orange-elements;
       border: 0;
-      padding: 1rem 2.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       transition: 0.3s;
 
       &.buying{
@@ -250,14 +252,17 @@
 
 
     &__more {
+      margin-left: 2rem;
+      width: 100%;
       border-radius: 0.6rem;
       font-weight: 500;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       line-height: 2.2rem;
       color: $color-dark-one;
       background-color: $color-white-interface;
       border: 0;
-      padding: 1rem 2.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
   }
 }

@@ -32,28 +32,22 @@ body{color:$color-dark-gray;
 .container {
   position: relative;
   padding-top: 7rem;
-  max-width: 84%;
-  width: 100%;
+  width: 94%;
+  margin: 0 auto;
   z-index: 10;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 56px;
   padding-right: 56px;
   padding-bottom: 2rem;
   @media all and (max-width: 1440px) {
-    max-width: 85%;
   }
   @media all and (max-width: 767px) {
-    max-width: 90%;
     padding-left: 18px;
     padding-right: 18px
   }
   @media (max-width: $mobile) {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 11rem 0rem 0rem 0rem;
-  }
 
+    padding: 30% 0rem 0rem 0rem;
+  }
 }
 
 .section{
