@@ -88,7 +88,7 @@
   }
 
   &__circle-three {
-    background-color: $color-orange-elements;
+    background: $color-orange-elements;
     border-radius: 50%;
     min-height: 6rem;
     min-width: 6rem;
@@ -125,5 +125,17 @@
     color: $color-header-text-white;
 
 
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 80% 0%;
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0%;
   }
 }
