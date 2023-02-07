@@ -11,23 +11,42 @@ interface ItemCard {
 
 export const ItemCard: FC<ItemCard> = ({item, removeHandler}) => {
     return (
-        <div className='item' key={item.name}>
-            <div className='item-image'><LazyLoadImage src={item.imagePath} alt={item.name}/></div>
-            <div className='item-content'>
-                <div className='item-content-top'>
-                    <div className='item-content-top-title'>
-                        <div className='item-content-top-title-name'>{item.name}</div>
-                        <div className='item-content-top-title-type'>{item.type}</div>
+
+
+        <div className='card-item'>
+
+
+            <div className='card-item-top'>
+                <div className='card_image'><LazyLoadImage src={item.imagePath}/></div>
+                <div className='card-ico_remove'><LazyLoadImage src={RemoveIco} onClick={() => removeHandler(item.id)}/>
+                </div>
+
+            </div>
+
+            <div className='card-item-bottom'>
+                <div className='card-title'>
+                    <span className='card-title'>{item.name}</span>
+                    <span className='card-type'>{item.type}</span>
+                </div>
+
+
+                <div className='card-description'>
+                    <div className='card-description__item'>
+                        {item.form != 3 && <><span>{item.productDescription.title}</span> {item.countFormOne}</>}
                     </div>
-                    <div className='item-content-top-ico' onClick={() => removeHandler(item.id)}><img src={RemoveIco}/>
+                    <div className='card-description__item'>
+                        {item.form != 1 && <><span>{item.productDescription.subtitle}</span> {item.countFormTwo}</>}
+                    </div>
+                    <div className='card-description__item'>
+                        <span>Количество единиц товара:</span> {item.count}
                     </div>
                 </div>
-                <div className='item-content-bottom'>
-                    {item.form !=3 && <div className='item-content-bottom-description'>{item.productDescription.title} {item.countFormOne}</div>}
-                    {item.form !=1 && <div className='item-content-bottom-description'>{item.productDescription.subtitle} {item.countFormTwo}</div>}
-                    <div className='item-content-bottom-description'>Количество единиц товара: {item.count}</div>
-                    <div className='item-content-bottom-price'>Итого: {item.finalPrice} BYN</div>
+                <div className='card-price'>
+                    <span>Итого</span>
+                    <span>{item.finalPrice} BYN</span>
                 </div>
+
+
             </div>
         </div>
     );

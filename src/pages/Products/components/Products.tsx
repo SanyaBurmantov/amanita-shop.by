@@ -30,7 +30,7 @@ export const Products: FC<Products> = () => {
                     )}
                 </div>
             </div>
-            <div className='products-ico-image'><img src={bgIcoProduct}/></div>
+            {(window.innerWidth < 536) && <div className='products-ico-image'><img src={bgIcoProduct}/></div>}
         </div>
     );
 };

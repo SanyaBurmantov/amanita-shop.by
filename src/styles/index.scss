@@ -32,7 +32,6 @@ body{color:$color-dark-gray;
 .container {
   position: relative;
   padding-top: 7rem;
-  width: 94%;
   margin: 0 auto;
   z-index: 10;
   padding-left: 56px;
@@ -42,7 +41,8 @@ body{color:$color-dark-gray;
   }
   @media all and (max-width: 767px) {
     padding-left: 18px;
-    padding-right: 18px
+    padding-right: 18px;
+    width: 94%;
   }
   @media (max-width: $mobile) {
 
