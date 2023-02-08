@@ -4,7 +4,7 @@ import './BasketIcoAndCount.scss';
 import Modal from "../Modal/Modal";
 import {useTypedSelector} from "../../../hooks/useTypedSelector";
 import Preloader from "../Preloader/Preloader";
-const Cart = lazy(() => import('../Cart/Cart'));
+const Cart = lazy(() => import('../Cart/Card'));
 
 
 interface BasketIcoAndCount {
