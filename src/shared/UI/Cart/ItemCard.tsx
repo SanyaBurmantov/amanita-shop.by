@@ -1,15 +1,24 @@
 import {FC} from 'react';
-import {FunctionRemoveHandler, ICartItem} from "../../../types";
+import {ICartItem} from "../../../types";
 import './ItemCard.scss'
 import RemoveIco from '../../../assets/icons/UI/remove-add.svg'
 import {LazyLoadImage} from "react-lazy-load-image-component";
+import {removeFromCart} from "../../../store/cart/actions";
+import {useDispatch} from "react-redux";
 
 interface ItemCard {
     item: ICartItem,
-    removeHandler: FunctionRemoveHandler,
 }
 
-export const ItemCard: FC<ItemCard> = ({item, removeHandler}) => {
+export const ItemCard: FC<ItemCard> = ({item}) => {
+
+
+    const dispatch = useDispatch()
+
+    const removeHandler = (id: string) => {
+        dispatch(removeFromCart(id))
+    }
+
     return (
 
 
@@ -18,7 +27,9 @@ export const ItemCard: FC<ItemCard> = ({item, removeHandler}) => {
 
             <div className='card-item-top'>
                 <div className='card_image'><LazyLoadImage src={item.imagePath}/></div>
-                <div className='card-ico_remove'><LazyLoadImage src={RemoveIco} onClick={() => removeHandler(item.id)}/>
+                <div className='card-ico_remove'><LazyLoadImage src={RemoveIco} onClick={() => {
+                    removeHandler(item.id);
+                }}/>
                 </div>
 
             </div>

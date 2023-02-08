@@ -7,7 +7,7 @@ import './HeaderDesktop.scss'
 import {useScroll} from "framer-motion";
 import Modal from "../../UI/Modal/Modal";
 import Preloader from "../../UI/Preloader/Preloader";
-const Cart = lazy(() => import('../../UI/Cart/Cart'));
+const Cart = lazy(() => import('../../UI/Cart/Card'));
 
 
 interface HeaderDesktop {

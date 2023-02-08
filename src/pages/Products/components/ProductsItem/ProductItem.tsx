@@ -128,11 +128,12 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                 </form>
             </div>
         </div>
-        <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
-            <Suspense fallback={<div><Preloader/></div>}>
-                {isShowProduct && <ProductMore product={product}/>}
-            </Suspense>
-        </Modal>
+
+            <Modal visible={isShowProduct} setVisible={setIsShowProduct}>
+                <Suspense fallback={<div><Preloader/></div>}>
+                    {isShowProduct && <ProductMore product={product}/>}
+                </Suspense>
+            </Modal>
     </>
     );
 };
