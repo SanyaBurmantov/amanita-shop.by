@@ -1,32 +1,41 @@
 import {FC} from 'react';
-import './Modal.scss'
-import {TypeSetState} from "../../../types";
-import RemoveIco from '../../../assets/icons/UI/remove-add.svg'
+import Portal from "../../Portal/Portal";
+import {useMount} from "../../../hooks/useMount";
+import Layout from "./Layout/Layout";
 import {useModalOpen} from "../../../hooks/useModalOpen";
 import {LazyLoadImage} from "react-lazy-load-image-component";
+import RemoveIco from '../../../assets/icons/UI/remove-add.svg';
+import {TypeSetState} from "../../../types";
+import './Layout/Layout.scss'
+
 
 interface Modal {
+    opened: boolean,
+    onClose: any,
     children: any,
-    visible: boolean,
-    setVisible: TypeSetState<boolean>,
+    setOpened: TypeSetState<boolean>
 }
 
+export const Modal: FC<Modal> = ({opened, children, onClose, setOpened}) => {
 
-const Modal: FC<Modal> = ({children, visible, setVisible}) => {
+    useModalOpen(opened);
 
-    useModalOpen(visible)
+    const {mounted} = useMount({opened})
+
+
+    if (!mounted) {
+        return null;
+    }
+
 
     return (
-        <div className={visible ? 'modal active' : 'modal'}>
-            <div className='modal-content'>
-                <div className='modal-content-ico-remove'><LazyLoadImage src={RemoveIco} onClick={() => {
-                    setVisible(false);
+        <Portal>
+            <Layout onClose={onClose} opened={opened}>
+                <div className='modal-ico-remove'><LazyLoadImage src={RemoveIco} onClick={() => {
+                    setOpened(false);
                 }}/></div>
-                <div className='modal-content-content'>{children}</div>
-            </div>
-        </div>
+                {children}
+            </Layout>
+        </Portal>
     );
 };
-
-export default Modal;
-

@@ -1,77 +1,129 @@
 @import "../../../../styles/vars";
 
+
 .product {
-  background: $color-white-two;
-  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-  border-radius: 1.2rem;
+  display: flex;
+  align-items: stretch;
+  flex: 0 1 33.3333%;
+  font-family: Bahnschrift;
+  margin-bottom: 2rem;
 
+  @media (max-width: 1300px) {
+    flex: 0 1 50%;
+  }
 
-  &:not(:last-child){
-    margin-bottom: 2.6rem;
+  @media (max-width: $phone) {
+    flex: 0 1 100%;
   }
 
   &-wrapper {
-    padding: 1.5rem;
+    padding: 0rem 0.5rem;
+
   }
 
-  &-image{
-    img{
+  &-body {
+    padding: 1.5rem;
+    background-color: $color-white-two;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.4rem 0.4rem rgb(0 0 0 / 25%);
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &-image {
+    text-align: center;
+
+    img {
       position: relative;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 80%;
     }
   }
 
   &-title {
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
 
-    h3 {
-      font-weight: 600;
-      font-size: 2rem;
-      line-height: 2.4rem;
+    &__name {
       color: $color-orange-elements;
-      margin-bottom: 0rem;
+      font-size: 2.8rem;
+      line-height: 3rem;
+      margin: 0;
+      @media (max-width: 1450px) {
+        font-size: 2.2rem;
+        line-height: 2rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: 2.6rem;
+        line-height: 2.4rem;
+      }
+      @media (max-width: $mobile) {
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+      }
     }
 
-    span {
-      font-weight: 500;
-      font-size: 1.2rem;
-      line-height: 116.02%;
+    &__type {
+      font-size: 1.6rem;
+      line-height: 1.4rem;
       color: $color-gray-two;
+      margin: 0;
+      @media (max-width: 1450px) {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+      @media (max-width: 1200px) {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+      }
     }
+
   }
 
   &-subtitle {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 116.02%;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
     color: $color-gray-two;
-    max-width: 25.2rem;
-    margin-top: 0rem;
+    margin: 0;
+    max-width: 40rem;
+    min-height: 4rem;
     margin-bottom: 1rem;
   }
 
   &-form-one {
-    margin-bottom: 0.8rem;
 
-    span {
-      font-weight: 600;
-      font-size: 1.6rem;
-      line-height: 1.9rem;
+    margin-bottom: 1.5rem;
+
+    &__title {
       color: $color-dark-one;
+      font-weight: 600;
+      font-size: 2.2rem;
+      line-height: 2rem;
+      margin: 0;
+      margin-bottom: 1rem;
+      @media (max-width: 1500px) {
+        font-size: 1.9rem;
+        line-height: 1.6rem;
+      }
+      @media (max-width: 1300px) {
+        font-size: 1.8rem;
+        line-height: 1.6rem;
+      }
+
     }
 
-    div {
-      margin-top: 0.8rem;
+    .product-buttons {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: 0.4rem;
 
       :not(:last-child) {
         margin-right: 0.4rem;
@@ -85,34 +137,57 @@
         border-radius: 0rem 0.6rem 0.6rem 0rem;
       }
 
-      .product-button {
-        background-color: $color-white-interface;
-        border: 0;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 1.9rem;
-        color: $color-dark-one;
-        width: 100%;
-        padding: 0.5rem 0rem;
-        transition: 0.5s;
 
-        &.active{
-          background-color: $color-orange-elements;
-          color: $color-white;
-          font-weight: 500;
-        }
+    }
+
+    .product-button {
+      background-color: $color-white-interface;
+      border: 0;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 1.9rem;
+      color: $color-dark-one;
+      width: 100%;
+      padding: 0.8rem 0rem;
+      transition: 0.5s;
+      cursor: pointer;
+
+      @media (max-width: $phone) {
+        font-size: 1.7rem;
+        line-height: 1.7rem;
+      }
+
+      &.active {
+        background-color: $color-orange-elements;
+        color: $color-white;
+        font-weight: 500;
       }
     }
+
   }
+
 
   &-form-two {
 
-    span {
-      font-weight: 600;
-      font-size: 1.6rem;
-      line-height: 1.9rem;
+    margin-bottom: 1.5rem;
+
+    &__subtitle {
       color: $color-dark-one;
+      font-size: 2.2rem;
+      line-height: 2rem;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 0.5rem;
+      @media (max-width: 1500px) {
+        font-size: 1.9rem;
+        line-height: 1.6rem;
+      }
+      @media (max-width: 1300px) {
+        font-size: 1.8rem;
+        line-height: 1.6rem;
+      }
     }
+
 
     .product-radio {
       display: flex;
@@ -121,6 +196,7 @@
       .custom-radio {
         display: flex;
         align-items: center;
+        margin-right: 2rem;
 
         label {
           margin-right: 0.6rem;
@@ -137,13 +213,17 @@
               border-radius: 100%;
               border: 0.2rem solid $color-orange-elements;
               display: inline-block;
-              width: 2.4rem;
-              height: 2.4rem;
+              width: 3rem;
+              height: 3rem;
               position: relative;
               vertical-align: top;
               cursor: pointer;
               text-align: center;
               transition: all 250ms ease;
+              @media (max-width: $phone) {
+                height: 2.6rem;
+                width: 2.6rem;
+              }
             }
           }
 
@@ -158,73 +238,97 @@
 
         }
 
-        span {
-          font-weight: 600;
-          font-size: 1.8rem;
-          line-height: 2.2rem;
-          color: $color-dark-one;
-          margin-right: 3rem;
-        }
 
       }
 
-
+      p {
+        margin: 0;
+        font-size: 2rem;
+        line-height: 1.9rem;
+        font-weight: 600;
+      }
     }
   }
 
+
   &-form-three {
+    background-color: $color-white-interface;
+    border-radius: 0.6rem;
     display: flex;
     flex-direction: column;
-    background-color: $color-white-interface;
-    margin-top: 1rem;
-    border-radius: 0.6rem;
-    max-width: 18rem;
+    max-width: 25rem;
     padding: 1rem 1.6rem;
+    margin-bottom: 1.5rem;
 
-    span {
-      display: block;
-      text-align: center;
+    &__title {
       font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
       color: $color-gray-two;
+      font-size: 2.2rem;
+      line-height: 2rem;
+      margin: 0;
+      text-align: center;
+      @media (max-width: 1500px) {
+        font-size: 1.9rem;
+        line-height: 1.6rem;
+      }
+      @media (max-width: 1300px) {
+        font-size: 1.8rem;
+        line-height: 1.6rem;
+      }
     }
-
 
     .count-wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      span{
-        font-weight: 400;
-        font-size: 2rem;
-        line-height: 2.4rem;
-        color: $color-dark-one;
+      img {
+        height: 4rem;
+        width: 4rem;
+        cursor: pointer;
+        @media (max-width: $phone) {
+          height: 3.5rem;
+          width: 3.5rem;
+        }
+      }
+
+      &__number {
+        margin: 0;
+        font-size: 2.4rem;
+        line-height: 2.2rem;
       }
     }
   }
 
   &-form-total {
-    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    font-size: 2.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: $color-dark-one;
 
-    &__total-title {
-      font-weight: 600;
-      font-size: 1.8rem;
+    @media (max-width: 1500px) {
+      font-size: 2.2rem;
       line-height: 2.2rem;
-      color: $color-dark-one;
     }
+
+    @media (max-width: $mobile) {
+      font-size: 2.4rem;
+      line-height: 2.2rem;
+    }
+    @media (max-width: $phone) {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
 
     &__total-count {
-      font-weight: 600;
-      font-size: 1.8rem;
-      line-height: 2.2rem;
       color: $color-orange-elements;
     }
+
   }
 
   &-buttons {
@@ -232,37 +336,61 @@
     align-items: center;
     justify-content: space-between;
 
+
     &__pay {
+      cursor: pointer;
       width: 100%;
       border-radius: 0.6rem;
       font-weight: 500;
-      font-size: 1.9rem;
+      font-size: 2.2rem;
       line-height: 2.2rem;
       color: $color-white;
       background-color: $color-orange-elements;
       border: 0;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
       transition: 0.3s;
+      @media (max-width: 1500px) {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+      @media (max-width: $phone) {
+        font-size: 1.9rem;
+        line-height: 1.9rem;
+      }
 
-      &.buying{
+      &.buying {
         background-color: $color-gray-btn;
       }
+
+
     }
 
-
     &__more {
-      margin-left: 2rem;
+      cursor: pointer;
+      margin-left: 1rem;
       width: 100%;
       border-radius: 0.6rem;
       font-weight: 500;
-      font-size: 1.9rem;
+      font-size: 2.2rem;
       line-height: 2.2rem;
-      color: $color-dark-one;
+      color: $color-gray-two;
       background-color: $color-white-interface;
       border: 0;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      @media (max-width: 1500px) {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+      @media (max-width: $phone) {
+        font-size: 1.9rem;
+        line-height: 1.9rem;
+      }
     }
   }
 }
+
+
+
+

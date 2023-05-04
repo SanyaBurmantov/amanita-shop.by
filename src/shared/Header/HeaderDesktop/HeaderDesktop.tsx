@@ -1,13 +1,12 @@
-import {FC, lazy, Suspense, useEffect, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 import {ReactComponent as AmanitaLogo} from '../../../assets/icons/headerIco/logo-amanita.svg'
 import {Link} from "react-router-dom";
 import {Pages} from "../../../data/Pages";
-import {BasketIcoAndCount} from "../../UI/Basket/BasketIcoAndCount";
+import {BasketIcoAndCount} from "../../UI/Basket/BasketIcoAndCount/BasketIcoAndCount";
 import './HeaderDesktop.scss'
 import {useScroll} from "framer-motion";
-import Modal from "../../UI/Modal/Modal";
-import Preloader from "../../UI/Preloader/Preloader";
-const Cart = lazy(() => import('../../UI/Cart/Card'));
+import {Modal} from "../../UI/Modal/Modal";
+import Basket from "../../UI/Basket/Basket";
 
 
 interface HeaderDesktop {
@@ -16,7 +15,7 @@ interface HeaderDesktop {
 
 export const HeaderDesktop: FC<HeaderDesktop> = () => {
 
-    const [showBasket, setShowBasket] = useState(false)
+    const [opened, setOpened] = useState(false);
 
     const {scrollY} = useScroll();
 
@@ -63,15 +62,24 @@ export const HeaderDesktop: FC<HeaderDesktop> = () => {
                     </nav>
 
                     {(window.innerWidth > 992) && <>
-                        <div className='header-desktop-button' onClick={() => setShowBasket(true)}>
+
+
+                        <div className='header-desktop-button' onClick={() => setOpened(true)}>
                             <button className='header-desktop-button__btn'>Оформить заказ</button>
                         </div>
-                        <Modal visible={showBasket} setVisible={setShowBasket}>
-                            <Suspense fallback={<Preloader/>}>
-                                {showBasket && <Cart/>}
-                            </Suspense>
+
+
+                        <Modal opened={opened} onClose={() => setOpened(false)} setOpened={setOpened}>
+
+
+                            <Basket/>
+
+
                         </Modal>
+
+
                     </>}
+
 
                     {(window.innerWidth <= 992) && <BasketIcoAndCount/>}
 

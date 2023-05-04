@@ -1,4 +1,4 @@
-import {FC, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 import {products} from "../../../data/Products"
 import ProductItem from "./ProductsItem/ProductItem";
 import {Filter} from "./Filter/Filter";
@@ -17,10 +17,31 @@ export const Products: FC<Products> = () => {
         setFilter(attr)
     }
 
+    // useEffect(() => {
+    //
+    // }, [])
+    //
+    // useEffect(()=> {
+    //     document.addEventListener('scroll', scrollHandler)
+    //
+    //     return function (){
+    //         document.removeEventListener('scroll', scrollHandler)
+    //     }
+    // },[])
+    //
+    // const scrollHandler = (e: any) => {
+    //
+    //     if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop+window.innerHeight) < 100){
+    //         console.log('scroll')
+    //         //фетчинг
+    //     }
+    // }
+
+
     return (
         <div className='section section-products'>
             <div className="container">
-                <h3>Магазин</h3>
+                <h3 className='products-title'>Магазин</h3>
                 <h4 className='products-subtitle'>Мухомор сушеный, мухомор красный, пантерный, ежовик гребенчатый,
                     кордицепс и многое другое!</h4>
                 <Filter updateFilter={updateFilter} setFilter={setFilter}/>
@@ -28,9 +49,12 @@ export const Products: FC<Products> = () => {
                     {filter.map((product: IProduct, index) =>
                         <ProductItem product={product} index={index} key={product.id}/>
                     )}
+                    {/*{filter.map((product: IProduct, index) =>*/}
+                    {/*    <ProductItemLazy/>*/}
+                    {/*)}*/}
                 </div>
             </div>
-            {(window.innerWidth < 536) && <div className='products-ico-image'><img src={bgIcoProduct}/></div>}
+            {(window.innerWidth < 767) && <div className='products-ico-image'><img src={bgIcoProduct}/></div>}
         </div>
     );
 };

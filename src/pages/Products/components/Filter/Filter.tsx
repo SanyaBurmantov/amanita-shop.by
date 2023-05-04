@@ -29,11 +29,13 @@ export const Filter: FC<Filter> = ({updateFilter, setFilter}) => {
 
     return (
         <div className='filter'>
-            <button className={active === 'Все' ? 'product-filter__item active' : 'product-filter__item'} onClick={() => {
+            <button className={active === 'Все' ? 'product-filter__item active' : 'product-filter__item'}
+                    onClick={() => {
                         ArrFilter('all');
                         updateFilter(products);
                         setActive('Все')
-                    }}>Все</button>
+                    }}>Все
+            </button>
             <div className='product-filter__items'>
                 {fill.map((item, index) => <FilterItem key={item.id} active={active} setActive={setActive} item={item}
                                                        ArrFilter={ArrFilter}/>)}

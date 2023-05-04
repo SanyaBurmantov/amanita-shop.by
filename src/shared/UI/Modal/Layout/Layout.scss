@@ -1,0 +1,102 @@
+@import "../../../../styles/vars";
+
+
+.container-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 28%;
+  padding-right: 28%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10000;
+  overflow-x: hidden;
+  pointer-events: all;
+
+
+  @media (max-width: 1500px) {
+    padding-left: 21%;
+    padding-right: 21%;
+  }
+
+  @media (max-width: 1150px) {
+    padding-left: 19%;
+    padding-right: 19%;
+  }
+
+  @media (max-width: $tablet) {
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+
+  @media (max-width: 830px) {
+    padding-left: 13%;
+    padding-right: 13%;
+  }
+
+  @media (max-width: 600px) {
+    padding-left: 11%;
+    padding-right: 11%;
+  }
+
+  @media (max-width: $phone) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @media (max-width: 444px) {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+}
+
+
+.overlay-modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.content-modal {
+  padding: 1.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  border-radius: 1.2rem;
+  z-index: 3;
+  min-width: 100%;
+
+  @media (max-width: 444px) {
+    padding: 1rem;
+  }
+}
+
+.modal-ico-remove {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  img {
+    cursor: pointer;
+    height: 2.5rem;
+    position: absolute;
+    width: 2.5rem;
+  }
+
+}

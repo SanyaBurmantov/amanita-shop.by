@@ -1,19 +1,22 @@
 import {FC, SetStateAction, useCallback, useState} from 'react';
 import {useInput} from "../../../../hooks/useInput";
-import './CardForm.scss'
+import './BasketForm.scss'
 import InputMask from "react-input-mask";
 import {ICartItem, TypeSetState} from "../../../../types";
 import {removeCartAll} from "../../../../store/cart/actions";
 import {useDispatch} from "react-redux";
 import {useTelegram} from "../../../../hooks/useTelegram";
+import {ReactComponent as AmanitaLogo} from '../../../../assets/icons/headerIco/logo-amanita.svg';
+import bgIcoProduct from '../../../../assets/Background/Image-products.png';
 
-interface CardForm {
+
+interface BasketForm {
     total: number,
     cart:  ICartItem[],
     setSubmitTg: TypeSetState<boolean>
 }
 
-export const CardForm: FC<CardForm> = ({total, cart, setSubmitTg}) => {
+export const BasketForm: FC<BasketForm> = ({total, cart, setSubmitTg}) => {
 
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
@@ -103,43 +106,73 @@ export const CardForm: FC<CardForm> = ({total, cart, setSubmitTg}) => {
     }, [name, number, cart, total, queryId])
 
 
-
-
     return (
-        <form className='cards-form'>
 
-            <span>Введите ваши данные:</span>
+        <div className='basket-container'>
 
-            {(nameInputHooks.minLengthError && nameInputHooks.isDirty) &&
-                <span className='input-error'>*Поле должно содержать 2 или более букв</span>}
-            <input className='cards-form__input-name'
-                   type='text'
-                   placeholder='Имя'
-                   value={nameInputHooks.value.replace(/[^a-zA-ZА-Яа-яЁё]/g, '')}
-                   onBlur={e => nameInputHooks.onBlur(e)}
-                   onChange={onChangeName}
-            />
 
-            {(telInputHooks.isDirty && telInputHooks.phoneError) &&
-                <span className='input-error'>*Введите корректный номер</span>}
-            <InputMask className='cards-form__input-tel'
-                       type='tel'
-                       mask="+375(99)999-99-99"
-                       disabled={false}
-                       placeholder='Номер телефона'
-                       value={telInputHooks.value}
-                       onBlur={(e: FocusEvent) => telInputHooks.onBlur(e)}
-                       onChange={onChangeNumber}
-            >
-            </InputMask>
+            <div className='basket'>
+                <form className='basket-form'>
 
-            <div className='cards-form-button'>
-                <button onClick={onSendData}
-                    disabled={(!telInputHooks.inputValid || !nameInputHooks.inputValid)}
-                        className={(!telInputHooks.inputValid || !nameInputHooks.inputValid) ? 'disabled' : ''}>
-                    Оформить заказ
-                </button>
+                    <div className='basket-form__icon'>
+                        <AmanitaLogo/>
+                    </div>
+
+                    <p className='basket-form__title'>Введине ваши данные:</p>
+
+
+                    <div className='basket-form__inputs'>
+                        <div className='form-input'>
+                            <input className='form-input__names'
+                                   required
+                                   type='text'
+                                   value={nameInputHooks.value.replace(/[^a-zA-ZА-Яа-яЁё]/g, '')}
+                                   onBlur={e => nameInputHooks.onBlur(e)}
+                                   onChange={onChangeName}
+                            />
+                            <label>Имя</label>
+                            <span></span>
+                        </div>
+
+                        <div className='form-input'>
+                            <InputMask className='form-input__tel'
+                                       type='tel'
+                                       required
+                                       mask="+375(99)999-99-99"
+                                       disabled={false}
+                                       value={telInputHooks.value}
+                                       onBlur={(e: FocusEvent) => telInputHooks.onBlur(e)}
+                                       onChange={onChangeNumber}
+                            >
+                            </InputMask>
+                            <label>Номер телефона</label>
+                            <span></span>
+                        </div>
+                    </div>
+
+
+                    <p className='basket-form__subtitle'>*После оформления менеджер свяжется с вами для подверждения
+                        заказа.</p>
+
+                    <div className='basket-form__button'>
+                        <button onClick={onSendData}
+                                disabled={(!telInputHooks.inputValid || !nameInputHooks.inputValid)}
+                                className={(!telInputHooks.inputValid || !nameInputHooks.inputValid) ? 'disabled' : ''}>
+                            Оформить заказ
+                        </button>
+                    </div>
+
+                </form>
+                {window.innerWidth > 992 && <div className='basket-total'>
+                    <div className='basket-total__count'>Общая сумма:<span> {Math.round(total)} BYN </span></div>
+                </div>}
             </div>
-        </form>
+
+            {window.innerWidth > 992 && <div className='image'>
+                <img src={bgIcoProduct}/>
+            </div>}
+
+        </div>
+
     );
 };

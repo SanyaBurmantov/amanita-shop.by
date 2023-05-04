@@ -1,6 +1,7 @@
 @import "../../../styles/vars";
 
 .header-bottom {
+  font-family: Bahnschrift;
   bottom: 0;
   left: 0;
   position: fixed;
@@ -63,10 +64,10 @@
   &__circle-one {
     background-color: $color-orange-elements;
     border-radius: 50%;
-    min-height: 7rem;
-    min-width: 7rem;
-    max-height: 7rem;
-    max-width: 7rem;
+    min-height: 7.2rem;
+    min-width: 7.2rem;
+    max-height:7.2rem;
+    max-width: 7.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,10 +79,10 @@
   &__circle-two {
     background-color: $color-white;
     border-radius: 50%;
-    min-height: 6.6rem;
-    min-width: 6.6rem;
-    max-height: 6.6rem;
-    max-width: 6.6rem;
+    min-height: 6.8rem;
+    min-width: 6.8rem;
+    max-height: 6.8rem;
+    max-width: 6.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,10 +91,10 @@
   &__circle-three {
     background: $color-orange-elements;
     border-radius: 50%;
-    min-height: 6rem;
-    min-width: 6rem;
-    max-height: 6rem;
-    max-width: 6rem;
+    min-height: 6.4rem;
+    min-width: 6.4rem;
+    max-height: 6.4rem;
+    max-width: 6.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,7 +121,7 @@
     padding-top: 0.3rem;
     margin: 0;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.2rem;
     color: $color-header-text-white;
 
