@@ -13,9 +13,9 @@ export const Header: FC<Header> = ({}) => {
 
     return (
         <>
-            {(window.innerWidth > 536) && <HeaderDesktop/>}
+            {(window.innerWidth > 587) && <HeaderDesktop/>}
 
-            {(window.innerWidth <= 536) &&
+            {(window.innerWidth <= 587) &&
                 <>
                     <HeaderTop setCurrentPage={setCurrentPage}/>
                     <HeaderBottom currentPage={currentPage} setCurrentPage={setCurrentPage}/>

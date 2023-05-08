@@ -7,3 +7,4 @@ export const REVIEWS_ROUTE = '/reviews'
 export const TELEGRAM_ROUTE = '/telegram'
 export const INSTAGRAM_ROUTE = ''
 export const FAQ_ROUTE = '/faq'
+export const ANIMATION_MODAL = 300;

@@ -1,0 +1,196 @@
+@import "../../../styles/vars";
+
+
+.basket {
+  font-family: Bahnschrift;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+  &-ordering {
+    user-select: none;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .basket-total {
+
+      &__count {
+        font-size: 2.4rem;
+        color: $color-dark-one;
+
+        span {
+          color: $color-orange-elements;
+        }
+      }
+
+    }
+
+    &__title {
+      font-size: 3.5rem;
+      color: #FF543D;
+      margin: 0rem;
+
+
+      @media (max-width: $tablet) {
+        font-size: 3.2rem;
+      }
+    }
+
+    &__subtitle {
+      color: #565656;
+      font-size: 1.6rem;
+      margin: 0rem;
+      font-weight: 300;
+      max-width: 50%;
+      text-align: center;
+
+      @media (max-width: 1646px) {
+        max-width: 60%;
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 70%;
+      }
+
+      @media (max-width: $phone) {
+        max-width: 100%;
+      }
+
+    }
+
+  }
+
+
+  &-title {
+    user-select: none;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 3rem;
+    color: $color-dark-one;
+    padding-top: 1rem;
+    margin: 0rem 0rem 0rem 0rem;
+
+    @media (max-width: 1200px) {
+      font-size: 2.6rem;
+      line-height: 2.4rem;
+    }
+    @media (max-width: $mobile) {
+      font-size: 3rem;
+      line-height: 2.8rem;
+    }
+    @media (max-width: $phone) {
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+    }
+
+
+  }
+
+
+  .cards {
+
+    font-family: Bahnschrift;
+    font-size: 3.2rem;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &-list {
+      padding-top: 2rem;
+    }
+
+
+    &-empty {
+      color: $color-orange-elements;
+      user-select: none;
+      margin: 8rem 0rem;
+
+      @media (max-width: 1200px) {
+        font-size: 2.6rem;
+        line-height: 2.4rem;
+      }
+      @media (max-width: $mobile) {
+        font-size: 3rem;
+        line-height: 2.8rem;
+      }
+      @media (max-width: $phone) {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+        margin: 4rem 0rem;
+      }
+
+    }
+  }
+
+  &-submit {
+    margin: 4rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Bahnschrift;
+
+    &__title {
+      font-family: Bahnschrift;
+      font-size: 3.4rem;
+      color: $color-orange-elements;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+
+      @media (max-width: 1200px) {
+        font-size: 2.8rem;
+      }
+    }
+
+    &__subtitle {
+      margin-top: 0rem;
+      color: $color-dark;
+      font-size: 1.6rem;
+      font-weight: 300;
+      text-align: center;
+      max-width: 60%;
+      margin-bottom: 3rem;
+
+      @media (max-width: $phone) {
+        max-width: 80%;
+      }
+    }
+
+    &-wrapper {
+      width: 60%;
+      margin: 0 auto;
+
+      &__line {
+        height: 1rem;
+        background: -webkit-linear-gradient(90deg, #f15256, #ff6b29);
+        background: linear-gradient(90deg, #f15256, #ff6b29);
+        border-radius: 0.75rem;
+      }
+
+    }
+
+  }
+
+
+  &-footer {
+    user-select: none;
+
+    p {
+      font-weight: 300;
+      text-align: right;
+      margin: 0;
+      color: $color-dark;
+      @media (max-width: $phone) {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+      }
+    }
+  }
+
+}

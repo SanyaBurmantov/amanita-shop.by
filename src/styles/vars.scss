@@ -1,13 +1,13 @@
 @import "fonts.scss";
 
 // FONTS
-$font-normal: 'amanita_sans-regular';
-$font-bold: 'amanita_sans-bold';
+$font-bold: "Amanita-Bold";
+$font-medium: "Amanita-Medium";
 
 
 $base-font-size: 1.5rem;
 $base-line-height: 1.813rem;
-$base-font-family: 'amanita_sans-regular';
+$base-font-family: "Amanita-Medium";
 
 
 //Breakpoints
@@ -43,7 +43,7 @@ $color-header-text-white:#B6B6B6;
 $color-header-logo-gray:#3F3F3F;
 $color-white-two:#F8F8F8;
 $color-gray-two:#647280;
-$color-dark-one:#213348;
+$color-dark-one: #385070FF;
 $color-white-interface:#EBEEF2;
 $color-gray-btn:#C6C9CD;
 $color-dark: #565656;

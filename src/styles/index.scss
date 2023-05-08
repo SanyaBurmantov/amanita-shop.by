@@ -1,58 +1,82 @@
-html{
-  min-height:100%;
+@import "~normalize.css";
+@import "vars.scss";
+
+html {
+  min-height: 100%;
   box-sizing: border-box;
   font-size: 10px;
   scroll-behavior: smooth;
 
 }
-body{
 
+body {
   overflow-x: hidden;
   overflow-y: scroll;
   min-width: 320px;
   margin: 0;
-  background:inherit;
+  background: inherit;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust:none;
+  -ms-text-size-adjust: none;
 }
 
 
-
-@import "~normalize.css";
-@import "vars.scss";
-
-
-body{color:$color-dark-gray;
+body {
+  color: $color-dark-gray;
   background-size: 100%;
-  font: 1.6rem/1.375 $font-normal;
-  -webkit-text-size-adjust:none;
-  &.no-scroll{overflow-y: hidden; overflow-x: hidden;}}
+  font: 1.6rem/1.375 $font-medium;
+  -webkit-text-size-adjust: none;
+
+  &.no-scroll {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+
 
 .container {
-  position: relative;
-  padding-top: 7rem;
-  margin: 0 auto;
-  z-index: 10;
-  padding-left: 56px;
-  padding-right: 56px;
-  padding-bottom: 2rem;
-  @media all and (max-width: 1440px) {
-  }
-  @media all and (max-width: 767px) {
-    padding-left: 18px;
-    padding-right: 18px;
-    width: 94%;
-  }
-  @media (max-width: $mobile) {
 
-    padding: 30% 0rem 0rem 0rem;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  padding-left: 14.6rem;
+  padding-right: 14.6rem;
+  padding-top: 8rem;
+
+  @media (max-width: 1100px) {
+    padding-left: 11rem;
+    padding-right: 11rem;
   }
+
+  @media (max-width: $tablet) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  @media (max-width: $phone) {
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    padding-top: 4rem;
+  }
+
 }
+
+
+
+
+
+
+
 
 .section{
   width: 100vw;
   min-height:79vh;
+  overflow: hidden;
   @media (max-width: 1000px ){
     min-height: 60vh;
   }
@@ -64,9 +88,9 @@ body{color:$color-dark-gray;
 @media all and (min-width:2000px){html{font-size: 20px}}
 @media all and (min-width:1700px){html{font-size: 12px}}
 @media all and (min-width:1580px){html{font-size: 10px}}
-@media all and (max-width:1000px){html{font-size: 8px}}
-@media all and (max-width:767px){html{font-size: 12px}}
-@media all and (max-width:440px){html{font-size: 10px}}
+@media all and (max-width:1000px){html{font-size: 10px}}
+@media all and (max-width:767px){html{font-size: 7px}}
+@media all and (max-width:536px){html{font-size: 10px}}
 
 @import "typo.scss";
 @import "pages/pages.scss";
@@ -75,7 +99,6 @@ body{color:$color-dark-gray;
 @import "src/shared/Header/header";
 @import "src/shared/Footer/footer";
 @import "sections";
-@import "../shared/UI/Cart/Card";
 @import "src/shared/Contacts/contacts.scss";
 
 /////

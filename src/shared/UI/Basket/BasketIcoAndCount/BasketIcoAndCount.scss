@@ -1,0 +1,44 @@
+@import "../../../../styles/vars";
+
+.header-basket {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    height: 2rem;
+    width: 2rem;
+    font-family: Bahnschrift;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    background: $color-orange-elements;
+    font-weight: 300;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.2rem;
+    right: -0.7rem;
+
+    @media (max-width: $mobile) {
+      height: 2.5rem;
+      width: 2.5rem;
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: $phone) {
+      height: 2rem;
+      width: 2rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &.tablet {
+    svg {
+      & * {
+        fill: $color-white;
+      }
+    }
+  }
+}

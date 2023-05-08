@@ -26,10 +26,10 @@ export const Counter: FC<Counter> = ({count, setCount}) => {
 
     return (
         <div className='product-form-three'>
-            <span>Количество:</span>
+            <p className='product-form-three__title'>Количество:</p>
             <div className='count-wrapper'>
                 <LazyLoadImage src={IcoMinus} alt='ico_minus' onClick={countDecrement}/>
-                <span>{count}</span>
+                <p className='count-wrapper__number'>{count}</p>
                 <LazyLoadImage src={IcoPlus} alt='ico_plus' onClick={countIncrement}/>
             </div>
         </div>
