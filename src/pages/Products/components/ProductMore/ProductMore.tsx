@@ -1,13 +1,12 @@
 import {FC} from 'react';
 import {IProduct} from "../../../../types";
 import './ProductMore.scss'
-import {MoreItem} from "./MoreItem";
+import {MoreItem} from "./MoreItem/MoreItem";
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import {Pagination, Navigation} from "swiper";
 import 'swiper/css/navigation';
-import {LazyLoadImage} from "react-lazy-load-image-component";
 
 interface ProductMore {
     product: IProduct
@@ -18,33 +17,36 @@ const ProductMore: FC<ProductMore> = ({product}) => {
 
 
     return (
+
         <div className='more'>
-            <div className='more__top_content'>
-                <h3 className='more__top_content-name'>{product.moreName}</h3>
-                <p className='more__top_content-text'>{product.text}</p>
+            <div className='more-top'>
+                <h3 className='more-top__title'>{product.moreName}</h3>
+                <p className='more-top__text'>{product.text}</p>
             </div>
-            <div className='more__center_images'>
+
+            <div className='more-center'>
                 <Swiper
                     modules={[Pagination, Navigation]}
-                    navigation={(window.innerWidth <= 767) ? false : true}
                     pagination={{clickable: true}}
-                    slidesPerView={(window.innerWidth <= 992) ? 1 : 2}
+                    slidesPerView={(window.innerWidth <= 536) ? 1 : (window.innerWidth <= 772 && window.innerWidth > 536) ? 2 : 3}
                     spaceBetween={5}
-                    loop
-                >
-                    {product.slider?.map((item, idx) => (
-                        <div key={idx}>
-                            <SwiperSlide><LazyLoadImage src={item.image}/></SwiperSlide>
-                        </div>
+                    loop>
+
+                    {product.slider?.map((item, index) => (
+                        <SwiperSlide key={index}><img src={item.image}/></SwiperSlide>
                     ))}
                 </Swiper>
+
             </div>
+
             <div className='more-bottom'>
-                <h3>Полезная информация</h3>
+                <h3 className='more-bottom__title'>Полезная информация</h3>
                 <hr/>
-                {product.more?.map((attr, index) =>
-                    <MoreItem key={attr.id} item={attr}/>
-                )}
+                {product.more?.map((attr, index) => <MoreItem key={attr.id} item={attr}/>)}
+                <div className='bottom-footer'>
+                    <p>Республика Беларусь, Минск</p>
+                    <p>© 2022 Amanita Shop | Микродозинг | Беларусь</p>
+                </div>
             </div>
         </div>
     );

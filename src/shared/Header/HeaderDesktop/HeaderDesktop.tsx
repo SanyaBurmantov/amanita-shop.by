@@ -5,7 +5,7 @@ import {Pages} from "../../../data/Pages";
 import {BasketIcoAndCount} from "../../UI/Basket/BasketIcoAndCount/BasketIcoAndCount";
 import './HeaderDesktop.scss'
 import {useScroll} from "framer-motion";
-import {Modal} from "../../UI/Modal/Modal";
+import Modal from "../../UI/Modal/Modal";
 import Basket from "../../UI/Basket/Basket";
 
 

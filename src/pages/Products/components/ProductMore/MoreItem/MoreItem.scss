@@ -1,0 +1,92 @@
+@import "../../../../../styles/vars";
+
+
+.more-item {
+  font-family: Bahnschrift;
+
+
+  .top {
+    margin: 0.5rem 0rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+      font-family: Bahnschrift;
+      font-size: 2.3rem;
+      color: $color-dark-one;
+      font-weight: 400;
+      transition: 0.4s;
+
+
+      @media (max-width: $phone) {
+        font-size: 1.9rem;
+      }
+      @media (max-width: 393px) {
+        font-size: 1.7rem;
+      }
+
+
+      &.active {
+        color: $color-orange-elements;
+      }
+
+    }
+
+
+    &__image {
+      flex-shrink: 0;
+      width: 3.5rem;
+      height: 3.5rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+
+      @media (max-width: $phone) {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      @media (max-width: 393px) {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+
+
+      img {
+        transform: rotate(-45deg);
+        transition: 0.4s;
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+
+
+        &.active {
+          transform: rotate(0deg);
+        }
+
+      }
+
+
+    }
+
+  }
+
+
+  .description {
+    margin-bottom: 0.5rem;
+    margin-top: 0rem;
+    font-family: Bahnschrift;
+    user-select: text;
+    white-space: pre-line;
+    color: #647280;
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+
+}

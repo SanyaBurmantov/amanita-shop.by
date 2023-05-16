@@ -1,16 +1,14 @@
-import {FC, SyntheticEvent, useEffect, useState, Suspense} from 'react';
+import {FC, SyntheticEvent, useEffect, useState} from 'react';
 import {IProduct} from "../../../../types";
 import './ProductItem.scss'
 import {Counter} from "../Counter/ Counter";
 import {useDispatch} from "react-redux";
 import {addToCart} from "../../../../store/cart/actions";
 import {useTypedSelector} from "../../../../hooks/useTypedSelector";
-import Modal from "../../../../shared/UI/Modal/Modal";
-import Preloader from "../../../../shared/UI/Preloader/Preloader";
 import {LazyLoadImage} from "react-lazy-load-image-component";
+import Modal from "../../../../shared/UI/Modal/Modal";
 import ProductMore from "../ProductMore/ProductMore";
 
-// const ProductMore = lazy(() => import('../ProductMore/ProductMore'));
 
 interface IProductItem {
     product: IProduct,
@@ -129,11 +127,15 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
 
 
 
-                                    {/*<Suspense fallback={<div><Preloader/></div>}>*/}
-                                    {/*    <Modal visible={isShowProduct} setVisible={setIsShowProduct}>*/}
-                                    {/*        {isShowProduct && <ProductMore product={product}/>}*/}
-                                    {/*    </Modal>*/}
-                                    {/*</Suspense>*/}
+                                    <Modal opened={isShowProduct} onClose={() => setIsShowProduct(false)} setOpened={setIsShowProduct}>
+                                        <ProductMore product={product}/>
+                                    </Modal>
+
+
+
+
+
+
 
 
 
