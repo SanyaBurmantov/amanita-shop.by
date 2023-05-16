@@ -2,6 +2,7 @@
 
 
 .container-modal {
+
   position: fixed;
   top: 0;
   left: 0;
@@ -88,6 +89,7 @@
 }
 
 .modal-ico-remove {
+  z-index: 1000;
   display: flex;
   justify-content: flex-end;
   position: relative;

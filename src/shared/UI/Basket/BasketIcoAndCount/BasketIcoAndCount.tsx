@@ -2,7 +2,7 @@ import {FC, useState} from 'react';
 import {ReactComponent as BasketIco} from '../../../../assets/icons/Header/BasketIco.svg'
 import './BasketIcoAndCount.scss';
 import {useTypedSelector} from "../../../../hooks/useTypedSelector";
-import {Modal} from "../../Modal/Modal";
+import Modal from "../../Modal/Modal";
 import Basket from "../Basket";
 
 

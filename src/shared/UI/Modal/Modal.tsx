@@ -16,7 +16,7 @@ interface Modal {
     setOpened: TypeSetState<boolean>
 }
 
-export const Modal: FC<Modal> = ({opened, children, onClose, setOpened}) => {
+const Modal: FC<Modal> = ({opened, children, onClose, setOpened}) => {
 
     useModalOpen(opened);
 
@@ -39,3 +39,5 @@ export const Modal: FC<Modal> = ({opened, children, onClose, setOpened}) => {
         </Portal>
     );
 };
+
+export default Modal;
