@@ -194,3 +194,22 @@
   }
 
 }
+
+
+
+
+
+
+
+.ordering-exit-active{
+  animation: ordering-fade-out 500ms;
+}
+
+@keyframes ordering-fade-out {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
