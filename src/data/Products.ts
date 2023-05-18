@@ -107,19 +107,19 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: 'https://sun9-40.userapi.com/impg/558ByTDOm2Fl15OBtXYM7A4ZH30VhqdIVpf_Ww/QnDYyv96A70.jpg?size=1200x900&quality=95&sign=846a89010eceb2599f135092945aeb40&type=album',
+                image: 'https://sun9-47.userapi.com/impg/zw_4D-WhRmt-IN1AE7oZN4N4XPK-CFI4PWs2dA/3JkZ0cdHlfI.jpg?size=1380x918&quality=95&sign=ef60564a447b0eb6c51087711edaa0ba&type=album',
             }, {
                 id: 2,
-                image: 'https://sun9-37.userapi.com/impg/Ix5WAlsI9VqK4MU_6SVMIPjuTV4V963D3aQJHQ/lEBGUD40V5o.jpg?size=1280x720&quality=95&sign=deda7412c9a0acfb03eb223b794b14b7&type=album',
+                image: 'https://sun9-30.userapi.com/impg/RTgFI1hW55kw9aG8oaIJJ56WBi5J0GnkAAcIow/MIFxDOqAFO8.jpg?size=1380x920&quality=95&sign=73e2cba1030d4a07eb5b8fdd791e59ec&type=album',
             }, {
                 id: 3,
-                image: 'https://sun9-56.userapi.com/impg/FzpcCm_X-FP_snuN6nEcE7hOoZjKYUxEUlnIXw/nZe4Zv2UDsM.jpg?size=794x529&quality=95&sign=c13f237754d2ae01dcced185ca318c59&type=album',
+                image: 'https://sun9-59.userapi.com/impg/KYRpCojr821TvXrBag-ScMwPxv7dIWfnUfw4oA/3Q14VTWRTcQ.jpg?size=1380x918&quality=95&sign=a6f7dcb6d111d43d7de893499e9008a0&type=album',
             }, {
                 id: 4,
-                image: 'https://sun9-54.userapi.com/impg/-gDJrFITciXHeTJDLp_rv9CkwN_QehOksXtisw/62V7ovxXuAw.jpg?size=1024x683&quality=95&sign=d93be39d0f6201033b897362a3cf8b3e&type=album',
+                image: 'https://sun9-9.userapi.com/impg/fg5NGrxgAp6KZYAcOdTuOuQvU0af0i2Y4eR3Lg/eLzOBWArdO0.jpg?size=1380x920&quality=95&sign=c67584156cb94bcbd3c836beb4830e0c&type=album',
             }, {
                 id: 5,
-                image: 'https://sun9-20.userapi.com/impg/SzkNlN91IU9ADUAO18gDu5uQ8YR8JqTBhrC-Tg/L-E9FLcNVys.jpg?size=1280x720&quality=95&sign=11eee44e15282cc45b093ca77d3ed00a&type=album',
+                image: 'https://sun9-10.userapi.com/impg/-T2S8FTD7g9vQpeGDYj_wfFM333egqAKQjUc8w/NRiRwwTcZ90.jpg?size=1380x918&quality=95&sign=20524aa7e3b293f2971625c7cf124b58&type=album',
             }
         ]
     },
@@ -557,19 +557,19 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: 'https://sun9-40.userapi.com/impg/558ByTDOm2Fl15OBtXYM7A4ZH30VhqdIVpf_Ww/QnDYyv96A70.jpg?size=1200x900&quality=95&sign=846a89010eceb2599f135092945aeb40&type=album',
+                image: 'https://sun9-47.userapi.com/impg/zw_4D-WhRmt-IN1AE7oZN4N4XPK-CFI4PWs2dA/3JkZ0cdHlfI.jpg?size=1380x918&quality=95&sign=ef60564a447b0eb6c51087711edaa0ba&type=album',
             }, {
                 id: 2,
-                image: 'https://sun9-37.userapi.com/impg/Ix5WAlsI9VqK4MU_6SVMIPjuTV4V963D3aQJHQ/lEBGUD40V5o.jpg?size=1280x720&quality=95&sign=deda7412c9a0acfb03eb223b794b14b7&type=album',
+                image: 'https://sun9-30.userapi.com/impg/RTgFI1hW55kw9aG8oaIJJ56WBi5J0GnkAAcIow/MIFxDOqAFO8.jpg?size=1380x920&quality=95&sign=73e2cba1030d4a07eb5b8fdd791e59ec&type=album',
             }, {
                 id: 3,
-                image: 'https://sun9-56.userapi.com/impg/FzpcCm_X-FP_snuN6nEcE7hOoZjKYUxEUlnIXw/nZe4Zv2UDsM.jpg?size=794x529&quality=95&sign=c13f237754d2ae01dcced185ca318c59&type=album',
+                image: 'https://sun9-59.userapi.com/impg/KYRpCojr821TvXrBag-ScMwPxv7dIWfnUfw4oA/3Q14VTWRTcQ.jpg?size=1380x918&quality=95&sign=a6f7dcb6d111d43d7de893499e9008a0&type=album',
             }, {
                 id: 4,
-                image: 'https://sun9-54.userapi.com/impg/-gDJrFITciXHeTJDLp_rv9CkwN_QehOksXtisw/62V7ovxXuAw.jpg?size=1024x683&quality=95&sign=d93be39d0f6201033b897362a3cf8b3e&type=album',
+                image: 'https://sun9-9.userapi.com/impg/fg5NGrxgAp6KZYAcOdTuOuQvU0af0i2Y4eR3Lg/eLzOBWArdO0.jpg?size=1380x920&quality=95&sign=c67584156cb94bcbd3c836beb4830e0c&type=album',
             }, {
                 id: 5,
-                image: 'https://sun9-20.userapi.com/impg/SzkNlN91IU9ADUAO18gDu5uQ8YR8JqTBhrC-Tg/L-E9FLcNVys.jpg?size=1280x720&quality=95&sign=11eee44e15282cc45b093ca77d3ed00a&type=album',
+                image: 'https://sun9-10.userapi.com/impg/-T2S8FTD7g9vQpeGDYj_wfFM333egqAKQjUc8w/NRiRwwTcZ90.jpg?size=1380x918&quality=95&sign=20524aa7e3b293f2971625c7cf124b58&type=album',
             }
         ]
     },
@@ -710,20 +710,22 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: 'https://sun9-40.userapi.com/impg/558ByTDOm2Fl15OBtXYM7A4ZH30VhqdIVpf_Ww/QnDYyv96A70.jpg?size=1200x900&quality=95&sign=846a89010eceb2599f135092945aeb40&type=album',
+                image: 'https://sun9-47.userapi.com/impg/zw_4D-WhRmt-IN1AE7oZN4N4XPK-CFI4PWs2dA/3JkZ0cdHlfI.jpg?size=1380x918&quality=95&sign=ef60564a447b0eb6c51087711edaa0ba&type=album',
             }, {
                 id: 2,
-                image: 'https://sun9-37.userapi.com/impg/Ix5WAlsI9VqK4MU_6SVMIPjuTV4V963D3aQJHQ/lEBGUD40V5o.jpg?size=1280x720&quality=95&sign=deda7412c9a0acfb03eb223b794b14b7&type=album',
+                image: 'https://sun9-30.userapi.com/impg/RTgFI1hW55kw9aG8oaIJJ56WBi5J0GnkAAcIow/MIFxDOqAFO8.jpg?size=1380x920&quality=95&sign=73e2cba1030d4a07eb5b8fdd791e59ec&type=album',
             }, {
                 id: 3,
-                image: 'https://sun9-56.userapi.com/impg/FzpcCm_X-FP_snuN6nEcE7hOoZjKYUxEUlnIXw/nZe4Zv2UDsM.jpg?size=794x529&quality=95&sign=c13f237754d2ae01dcced185ca318c59&type=album',
+                image: 'https://sun9-59.userapi.com/impg/KYRpCojr821TvXrBag-ScMwPxv7dIWfnUfw4oA/3Q14VTWRTcQ.jpg?size=1380x918&quality=95&sign=a6f7dcb6d111d43d7de893499e9008a0&type=album',
             }, {
                 id: 4,
-                image: 'https://sun9-54.userapi.com/impg/-gDJrFITciXHeTJDLp_rv9CkwN_QehOksXtisw/62V7ovxXuAw.jpg?size=1024x683&quality=95&sign=d93be39d0f6201033b897362a3cf8b3e&type=album',
+                image: 'https://sun9-9.userapi.com/impg/fg5NGrxgAp6KZYAcOdTuOuQvU0af0i2Y4eR3Lg/eLzOBWArdO0.jpg?size=1380x920&quality=95&sign=c67584156cb94bcbd3c836beb4830e0c&type=album',
             }, {
                 id: 5,
-                image: 'https://sun9-20.userapi.com/impg/SzkNlN91IU9ADUAO18gDu5uQ8YR8JqTBhrC-Tg/L-E9FLcNVys.jpg?size=1280x720&quality=95&sign=11eee44e15282cc45b093ca77d3ed00a&type=album',
-            }, {
+                image: 'https://sun9-10.userapi.com/impg/-T2S8FTD7g9vQpeGDYj_wfFM333egqAKQjUc8w/NRiRwwTcZ90.jpg?size=1380x918&quality=95&sign=20524aa7e3b293f2971625c7cf124b58&type=album',
+            },
+
+            {
                 id: 6,
                 image: 'https://sun9-22.userapi.com/impg/v7XSlGBcEIwJ7y0kejzUNOMKwJWohPPDHn2Xvg/hocgZgN1TI0.jpg?size=1024x749&quality=95&sign=97ef0012ca4dee0d5685fd795c010e63&type=album',
             }, {
@@ -1268,19 +1270,19 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: 'https://sun9-40.userapi.com/impg/558ByTDOm2Fl15OBtXYM7A4ZH30VhqdIVpf_Ww/QnDYyv96A70.jpg?size=1200x900&quality=95&sign=846a89010eceb2599f135092945aeb40&type=album',
+                image: 'https://sun9-47.userapi.com/impg/zw_4D-WhRmt-IN1AE7oZN4N4XPK-CFI4PWs2dA/3JkZ0cdHlfI.jpg?size=1380x918&quality=95&sign=ef60564a447b0eb6c51087711edaa0ba&type=album',
             }, {
                 id: 2,
-                image: 'https://sun9-37.userapi.com/impg/Ix5WAlsI9VqK4MU_6SVMIPjuTV4V963D3aQJHQ/lEBGUD40V5o.jpg?size=1280x720&quality=95&sign=deda7412c9a0acfb03eb223b794b14b7&type=album',
+                image: 'https://sun9-30.userapi.com/impg/RTgFI1hW55kw9aG8oaIJJ56WBi5J0GnkAAcIow/MIFxDOqAFO8.jpg?size=1380x920&quality=95&sign=73e2cba1030d4a07eb5b8fdd791e59ec&type=album',
             }, {
                 id: 3,
-                image: 'https://sun9-56.userapi.com/impg/FzpcCm_X-FP_snuN6nEcE7hOoZjKYUxEUlnIXw/nZe4Zv2UDsM.jpg?size=794x529&quality=95&sign=c13f237754d2ae01dcced185ca318c59&type=album',
+                image: 'https://sun9-59.userapi.com/impg/KYRpCojr821TvXrBag-ScMwPxv7dIWfnUfw4oA/3Q14VTWRTcQ.jpg?size=1380x918&quality=95&sign=a6f7dcb6d111d43d7de893499e9008a0&type=album',
             }, {
                 id: 4,
-                image: 'https://sun9-54.userapi.com/impg/-gDJrFITciXHeTJDLp_rv9CkwN_QehOksXtisw/62V7ovxXuAw.jpg?size=1024x683&quality=95&sign=d93be39d0f6201033b897362a3cf8b3e&type=album',
+                image: 'https://sun9-9.userapi.com/impg/fg5NGrxgAp6KZYAcOdTuOuQvU0af0i2Y4eR3Lg/eLzOBWArdO0.jpg?size=1380x920&quality=95&sign=c67584156cb94bcbd3c836beb4830e0c&type=album',
             }, {
                 id: 5,
-                image: 'https://sun9-20.userapi.com/impg/SzkNlN91IU9ADUAO18gDu5uQ8YR8JqTBhrC-Tg/L-E9FLcNVys.jpg?size=1280x720&quality=95&sign=11eee44e15282cc45b093ca77d3ed00a&type=album',
+                image: 'https://sun9-10.userapi.com/impg/-T2S8FTD7g9vQpeGDYj_wfFM333egqAKQjUc8w/NRiRwwTcZ90.jpg?size=1380x918&quality=95&sign=20524aa7e3b293f2971625c7cf124b58&type=album',
             }
         ]
     },
@@ -1397,19 +1399,19 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: 'https://sun9-40.userapi.com/impg/558ByTDOm2Fl15OBtXYM7A4ZH30VhqdIVpf_Ww/QnDYyv96A70.jpg?size=1200x900&quality=95&sign=846a89010eceb2599f135092945aeb40&type=album',
+                image: 'https://sun9-47.userapi.com/impg/zw_4D-WhRmt-IN1AE7oZN4N4XPK-CFI4PWs2dA/3JkZ0cdHlfI.jpg?size=1380x918&quality=95&sign=ef60564a447b0eb6c51087711edaa0ba&type=album',
             }, {
                 id: 2,
-                image: 'https://sun9-37.userapi.com/impg/Ix5WAlsI9VqK4MU_6SVMIPjuTV4V963D3aQJHQ/lEBGUD40V5o.jpg?size=1280x720&quality=95&sign=deda7412c9a0acfb03eb223b794b14b7&type=album',
+                image: 'https://sun9-30.userapi.com/impg/RTgFI1hW55kw9aG8oaIJJ56WBi5J0GnkAAcIow/MIFxDOqAFO8.jpg?size=1380x920&quality=95&sign=73e2cba1030d4a07eb5b8fdd791e59ec&type=album',
             }, {
                 id: 3,
-                image: 'https://sun9-56.userapi.com/impg/FzpcCm_X-FP_snuN6nEcE7hOoZjKYUxEUlnIXw/nZe4Zv2UDsM.jpg?size=794x529&quality=95&sign=c13f237754d2ae01dcced185ca318c59&type=album',
+                image: 'https://sun9-59.userapi.com/impg/KYRpCojr821TvXrBag-ScMwPxv7dIWfnUfw4oA/3Q14VTWRTcQ.jpg?size=1380x918&quality=95&sign=a6f7dcb6d111d43d7de893499e9008a0&type=album',
             }, {
                 id: 4,
-                image: 'https://sun9-54.userapi.com/impg/-gDJrFITciXHeTJDLp_rv9CkwN_QehOksXtisw/62V7ovxXuAw.jpg?size=1024x683&quality=95&sign=d93be39d0f6201033b897362a3cf8b3e&type=album',
+                image: 'https://sun9-9.userapi.com/impg/fg5NGrxgAp6KZYAcOdTuOuQvU0af0i2Y4eR3Lg/eLzOBWArdO0.jpg?size=1380x920&quality=95&sign=c67584156cb94bcbd3c836beb4830e0c&type=album',
             }, {
                 id: 5,
-                image: 'https://sun9-20.userapi.com/impg/SzkNlN91IU9ADUAO18gDu5uQ8YR8JqTBhrC-Tg/L-E9FLcNVys.jpg?size=1280x720&quality=95&sign=11eee44e15282cc45b093ca77d3ed00a&type=album',
+                image: 'https://sun9-10.userapi.com/impg/-T2S8FTD7g9vQpeGDYj_wfFM333egqAKQjUc8w/NRiRwwTcZ90.jpg?size=1380x918&quality=95&sign=20524aa7e3b293f2971625c7cf124b58&type=album',
             }
         ]
     },
@@ -1853,19 +1855,19 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: 'https://sun9-40.userapi.com/impg/558ByTDOm2Fl15OBtXYM7A4ZH30VhqdIVpf_Ww/QnDYyv96A70.jpg?size=1200x900&quality=95&sign=846a89010eceb2599f135092945aeb40&type=album',
+                image: 'https://sun9-47.userapi.com/impg/zw_4D-WhRmt-IN1AE7oZN4N4XPK-CFI4PWs2dA/3JkZ0cdHlfI.jpg?size=1380x918&quality=95&sign=ef60564a447b0eb6c51087711edaa0ba&type=album',
             }, {
                 id: 2,
-                image: 'https://sun9-37.userapi.com/impg/Ix5WAlsI9VqK4MU_6SVMIPjuTV4V963D3aQJHQ/lEBGUD40V5o.jpg?size=1280x720&quality=95&sign=deda7412c9a0acfb03eb223b794b14b7&type=album',
+                image: 'https://sun9-30.userapi.com/impg/RTgFI1hW55kw9aG8oaIJJ56WBi5J0GnkAAcIow/MIFxDOqAFO8.jpg?size=1380x920&quality=95&sign=73e2cba1030d4a07eb5b8fdd791e59ec&type=album',
             }, {
                 id: 3,
-                image: 'https://sun9-56.userapi.com/impg/FzpcCm_X-FP_snuN6nEcE7hOoZjKYUxEUlnIXw/nZe4Zv2UDsM.jpg?size=794x529&quality=95&sign=c13f237754d2ae01dcced185ca318c59&type=album',
+                image: 'https://sun9-59.userapi.com/impg/KYRpCojr821TvXrBag-ScMwPxv7dIWfnUfw4oA/3Q14VTWRTcQ.jpg?size=1380x918&quality=95&sign=a6f7dcb6d111d43d7de893499e9008a0&type=album',
             }, {
                 id: 4,
-                image: 'https://sun9-54.userapi.com/impg/-gDJrFITciXHeTJDLp_rv9CkwN_QehOksXtisw/62V7ovxXuAw.jpg?size=1024x683&quality=95&sign=d93be39d0f6201033b897362a3cf8b3e&type=album',
+                image: 'https://sun9-9.userapi.com/impg/fg5NGrxgAp6KZYAcOdTuOuQvU0af0i2Y4eR3Lg/eLzOBWArdO0.jpg?size=1380x920&quality=95&sign=c67584156cb94bcbd3c836beb4830e0c&type=album',
             }, {
                 id: 5,
-                image: 'https://sun9-20.userapi.com/impg/SzkNlN91IU9ADUAO18gDu5uQ8YR8JqTBhrC-Tg/L-E9FLcNVys.jpg?size=1280x720&quality=95&sign=11eee44e15282cc45b093ca77d3ed00a&type=album',
+                image: 'https://sun9-10.userapi.com/impg/-T2S8FTD7g9vQpeGDYj_wfFM333egqAKQjUc8w/NRiRwwTcZ90.jpg?size=1380x918&quality=95&sign=20524aa7e3b293f2971625c7cf124b58&type=album',
             }
         ]
     },
@@ -1975,19 +1977,19 @@ export const products: IProduct[] = [
         slider: [
             {
                 id: 1,
-                image: 'https://sun9-40.userapi.com/impg/558ByTDOm2Fl15OBtXYM7A4ZH30VhqdIVpf_Ww/QnDYyv96A70.jpg?size=1200x900&quality=95&sign=846a89010eceb2599f135092945aeb40&type=album',
+                image: 'https://sun9-47.userapi.com/impg/zw_4D-WhRmt-IN1AE7oZN4N4XPK-CFI4PWs2dA/3JkZ0cdHlfI.jpg?size=1380x918&quality=95&sign=ef60564a447b0eb6c51087711edaa0ba&type=album',
             }, {
                 id: 2,
-                image: 'https://sun9-37.userapi.com/impg/Ix5WAlsI9VqK4MU_6SVMIPjuTV4V963D3aQJHQ/lEBGUD40V5o.jpg?size=1280x720&quality=95&sign=deda7412c9a0acfb03eb223b794b14b7&type=album',
+                image: 'https://sun9-30.userapi.com/impg/RTgFI1hW55kw9aG8oaIJJ56WBi5J0GnkAAcIow/MIFxDOqAFO8.jpg?size=1380x920&quality=95&sign=73e2cba1030d4a07eb5b8fdd791e59ec&type=album',
             }, {
                 id: 3,
-                image: 'https://sun9-56.userapi.com/impg/FzpcCm_X-FP_snuN6nEcE7hOoZjKYUxEUlnIXw/nZe4Zv2UDsM.jpg?size=794x529&quality=95&sign=c13f237754d2ae01dcced185ca318c59&type=album',
+                image: 'https://sun9-59.userapi.com/impg/KYRpCojr821TvXrBag-ScMwPxv7dIWfnUfw4oA/3Q14VTWRTcQ.jpg?size=1380x918&quality=95&sign=a6f7dcb6d111d43d7de893499e9008a0&type=album',
             }, {
                 id: 4,
-                image: 'https://sun9-54.userapi.com/impg/-gDJrFITciXHeTJDLp_rv9CkwN_QehOksXtisw/62V7ovxXuAw.jpg?size=1024x683&quality=95&sign=d93be39d0f6201033b897362a3cf8b3e&type=album',
+                image: 'https://sun9-9.userapi.com/impg/fg5NGrxgAp6KZYAcOdTuOuQvU0af0i2Y4eR3Lg/eLzOBWArdO0.jpg?size=1380x920&quality=95&sign=c67584156cb94bcbd3c836beb4830e0c&type=album',
             }, {
                 id: 5,
-                image: 'https://sun9-20.userapi.com/impg/SzkNlN91IU9ADUAO18gDu5uQ8YR8JqTBhrC-Tg/L-E9FLcNVys.jpg?size=1280x720&quality=95&sign=11eee44e15282cc45b093ca77d3ed00a&type=album',
+                image: 'https://sun9-10.userapi.com/impg/-T2S8FTD7g9vQpeGDYj_wfFM333egqAKQjUc8w/NRiRwwTcZ90.jpg?size=1380x918&quality=95&sign=20524aa7e3b293f2971625c7cf124b58&type=album',
             }
         ]
     },

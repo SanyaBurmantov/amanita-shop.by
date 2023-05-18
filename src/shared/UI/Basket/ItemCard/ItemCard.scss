@@ -293,3 +293,20 @@
   }
 
 }
+
+
+
+.card-item-exit-active{
+  animation: fade-out 500ms forwards;
+}
+
+@keyframes fade-out {
+  0%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
