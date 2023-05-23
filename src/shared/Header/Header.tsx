@@ -2,6 +2,7 @@ import {FC, useState} from "react";
 import {HeaderTop} from "./HeaderTop/HeaderTop";
 import {HeaderBottom} from "./HeaderBottom/HeaderBottom";
 import {HeaderDesktop} from "./HeaderDesktop/HeaderDesktop";
+import './header.scss'
 
 interface Header {
 

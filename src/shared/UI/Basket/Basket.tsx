@@ -42,14 +42,14 @@ const Basket: FC<Basket> = () => {
                             </div>
                 }
 
-                <TransitionGroup component='empty'>
+
                     {(!submitTg && cart.length === 0) && (
 
-                        <CSSTransition classNames='empty' timeout={500}>
+
                         <div className='cards-empty'>Ваша корзина пуста!</div>
-                        </CSSTransition>
+
                         )}
-                </TransitionGroup>
+
 
 
 
@@ -69,9 +69,9 @@ const Basket: FC<Basket> = () => {
                 </div>
             </div>}
 
-            <TransitionGroup component='ordering'>
 
-                {(cart.length > 0) && (
+
+                {(cart.length > 0) &&
 
                     <CSSTransition classNames='ordering' timeout={500}>
                         <div className='ordering'>
@@ -95,12 +95,9 @@ const Basket: FC<Basket> = () => {
 
                     </CSSTransition>
 
+                    }
 
 
-                    )}
-
-
-            </TransitionGroup>
 
             <div className='basket-footer'>
                 <p>Республика Беларусь, Минск</p>
