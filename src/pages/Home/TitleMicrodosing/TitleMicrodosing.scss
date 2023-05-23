@@ -1,0 +1,114 @@
+@import "../../../styles/vars";
+
+.info-container {
+  position: relative;
+
+  .info {
+    position: relative;
+    z-index: 10000;
+    background-color: $color-white-two;
+    max-width: 100rem;
+    border-radius: 0.9rem;
+    margin: 0 auto;
+    padding: 2.8rem 3.3rem;
+
+
+    h3 {
+      font-family: 'Bahnschrift';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 58px;
+      color: $color-orange-elements;
+      padding: 0rem;
+      margin-bottom: 0rem;
+      text-align: center;
+    }
+
+
+    p {
+      font-family: 'Bahnschrift';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+      color: $color-gray-two;
+    }
+
+  }
+
+
+
+  @keyframes amanita {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  .image-one {
+    position: absolute;
+    top: 10rem;
+    right: 14rem;
+    opacity: 0;
+
+    &.visible{
+      animation: amanita 500ms;
+      opacity: 1;
+    }
+  }
+
+
+  .image-two {
+    position: absolute;
+    top: 9rem;
+    left: 10rem;
+    opacity: 0;
+    &.visible{
+      animation: amanita 500ms;
+      opacity: 1;
+    }
+  }
+
+  .image-three {
+    position: absolute;
+    top: -18rem;
+    left: 13rem;
+    opacity: 0;
+    &.visible{
+      animation: amanita 500ms;
+      opacity: 1;
+    }
+  }
+
+  .image-four {
+    position: absolute;
+    top: -17rem;
+    right: 12rem;
+    opacity: 0;
+    &.visible{
+      animation: amanita 500ms;
+      opacity: 1;
+    }
+  }
+
+  .image-five {
+    position: absolute;
+    top: -18rem;
+    right: 34rem;
+    opacity: 0;
+    &.visible{
+      animation: amanita 500ms;
+      opacity: 1;
+    }
+  }
+
+
+
+
+}
+
+
+
