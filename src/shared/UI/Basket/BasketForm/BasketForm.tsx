@@ -48,6 +48,7 @@ export const BasketForm: FC<BasketForm> = ({total, cart, setSubmitTg}) => {
         const chatIdMark = "424119633";
         const chatIdSanya = "408745156";
         const chatIdKarina = "483278857";
+        const chatIdSergey = "2024969663";
         const data = {
             name,
             number,
@@ -89,15 +90,19 @@ export const BasketForm: FC<BasketForm> = ({total, cart, setSubmitTg}) => {
         const URL_API_1 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdSanya}&text=${message}&parse_mode=html`;
         const URL_API_2 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdMark}&text=${message}&parse_mode=html`;
         const URL_API_3 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdKarina}&text=${message}&parse_mode=html`;
+        const URL_API_4 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdSergey}&text=${message}&parse_mode=html`;
         let api = new XMLHttpRequest();
         let api1 = new XMLHttpRequest();
         let api2 = new XMLHttpRequest();
+        let api3 = new XMLHttpRequest();
         api.open("GET", URL_API_1, true);
         api1.open("GET", URL_API_2, true);
         api2.open("GET", URL_API_3, true);
+        api3.open("GET", URL_API_3, true);
         api.send();
         api1.send();
         api2.send();
+        api3.send();
 
         dispatch(removeCartAll())
         setSubmitTg(true)
