@@ -16,14 +16,14 @@ interface IProductItem {
 }
 
 
-const ProductItem: FC<IProductItem> = ({product, index}) => {
-
+const ProductItem: FC<IProductItem> = ({product, index}, props) => {
+    const [activeIndex, setActiveIndex] = useState(0);
     const dispatch = useDispatch()
     const [count, setCount] = useState(1)
-    const [productIdOne, setProductIdOne] = useState(-1)
-    const [productIdTwo, setProductIdTwo] = useState(-1)
-    const [countFormOne, setCountFormOne] = useState(1)
-    const [countFormTwo, setCountFormTwo] = useState(1)
+    const [productIdOne, setProductIdOne] = useState(product.productCountOne[0].id)
+    const [productIdTwo, setProductIdTwo] = useState(product.productCountTwo[0].id)
+    const [countFormOne, setCountFormOne] = useState(product.productCountOne[0].count);
+    const [countFormTwo, setCountFormTwo] = useState(product.productCountTwo[0].count);
     const [coefficient, setCoefficient] = useState(0)
     const [isShowProduct, setIsShowProduct] = useState(false)
 
@@ -87,7 +87,7 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                                     setCountFormOne(item.count);
                                                 }}
                                                 className={(countFormOne === item.count) ? 'product-button active' : 'product-button'}
-                                        >{item.count}</button>
+                                        >{item.count}</button>,
                                     )}
                                 </div>
                             </div>}
@@ -95,23 +95,26 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                 <p className='product-form-two__subtitle'>{product.productDescription.subtitle}</p>
 
                                 <div className='product-radio'>
-                                    {product.productCountTwo.map((item) =>
+                                    {product.productCountTwo.map((item, index) => (
                                         <div className='custom-radio' key={item.id}>
-                                            <input type='radio' name='productCountTwo'
-                                                   id={String(product.id) + String(item.id) + String(item.coefficient)}
+                                            <input
+                                                type='radio'
+                                                name='productCountTwo'
+                                                id={String(product.id) + String(item.id) + String(item.coefficient)}
+                                                checked={index === activeIndex} // Используем состояние активного индекса
+                                                onChange={() => {
+                                                    setActiveIndex(index); // Обновляем активный индекс при выборе
+                                                    setProductIdTwo(item.id);
+                                                    setCountFormTwo(item.count);
+                                                }}
                                             />
                                             <label
                                                 htmlFor={String(product.id) + String(item.id) + String(item.coefficient)}
                                                 className="radio-label"
-                                                onClick={() => {
-                                                    setProductIdTwo(item.id);
-                                                    setCountFormTwo(item.count);
-                                                }
-                                                }
                                             />
                                             <p>{item.count}</p>
                                         </div>
-                                    )}
+                                    ))}
                                 </div>
                             </div>}
                             <Counter count={count} setCount={setCount}/>
@@ -124,21 +127,9 @@ const ProductItem: FC<IProductItem> = ({product, index}) => {
                                         onClick={addHandler}>{inCart ? `Добавлено` : `В корзину`}</button>
                                 {product.more && <button className='product-buttons__more'
                                                          onClick={() => setIsShowProduct(true)}>Подробнее</button>}
-
-
-
                                     <Modal opened={isShowProduct} onClose={() => setIsShowProduct(false)} setOpened={setIsShowProduct}>
                                         <ProductMore product={product}/>
                                     </Modal>
-
-
-
-
-
-
-
-
-
                             </div>
                         </form>
                     </div>

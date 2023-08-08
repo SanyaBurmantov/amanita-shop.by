@@ -43,72 +43,57 @@ export const BasketForm: FC<BasketForm> = ({total, cart, setSubmitTg}) => {
 
 
     const onSendData = useCallback(() => {
-
         const token = "5395453268:AAFNhZwVm1ScGFb2jiukzA7H8LIZwLxBc9E";
-        const chatIdMark = "424119633";
-        const chatIdSanya = "408745156";
-        const chatIdKarina = "483278857";
-        const chatIdSergey = "2024969663";
+        const usersTelegram = {
+            chatIdMark: "424119633",
+            chatIdSanya: "408745156",
+            chatIdKarina: "2024969663",
+            chatIdNikita: "2024969663",
+        };
         const data = {
             name,
             number,
             products: cart,
             totalPrice: total,
             queryId,
-        }
+        };
 
-        let s1 = '';
-        let s2 = '';
-        let s3 = '';
-        let s4 = '';
-        let s5 = '';
-        let s6 = '';
+        let strMatrix = "";
+        let posValue = data.products.length;
 
-        let posValue = data.products.length
-        let strMatrix = ''
         let strPr = data.products.map(el => {
-            s1 = "%0A %09" + el.name.toString();
-            strMatrix = strMatrix + s1;
-            s2 = "%0A %09" + el.type.toString();
-            strMatrix = strMatrix + s2;
+            strMatrix += "%0A %09" + el.name.toString();
+            strMatrix += "%0A %09" + el.type.toString();
             if (el.productDescription.title){
-            s3 = "%0A %09 " + el.productDescription.title + el.countFormOne.toString();
-            strMatrix = strMatrix + s3;
+                strMatrix += "%0A %09 " + el.productDescription.title + el.countFormOne.toString();
             }
             if (el.productDescription.subtitle){
-            s4 = "%0A %09 " + el.productDescription.subtitle + el.countFormTwo.toString();
-            strMatrix = strMatrix + s4;
+                strMatrix += "%0A %09 " + el.productDescription.subtitle + el.countFormTwo.toString();
             }
-            s5 = "%0A %09" + "Количество единиц товара: " + el.count.toString();
-            strMatrix = strMatrix + s5;
-            s6 = "%0A %09Цена " + el.finalPrice.toString() + "BYN%0A";
-            strMatrix = strMatrix + s6;
+            strMatrix += "%0A %09" + "Количество единиц товара: " + el.count.toString();
+            strMatrix += "%0A %09Цена " + el.finalPrice.toString() + "BYN%0A";
         })
 
-        let message = "Клиент: " + data.name + "%0AНомер телефона" + data.number + "%0AЧисло товаров: " + posValue + "%0AТовары: " + strMatrix + "%0AИтоговая цена: " + data.totalPrice.toString() + "BYN"
+        let message = `Клиент: ${data.name}%0AНомер телефона ${data.number}%0AЧисло товаров: ${posValue}%0AТовары: ${strMatrix}%0AИтоговая цена: ${data.totalPrice.toString()}BYN`;
 
-        const URL_API_1 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdSanya}&text=${message}&parse_mode=html`;
-        const URL_API_2 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdMark}&text=${message}&parse_mode=html`;
-        const URL_API_3 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdKarina}&text=${message}&parse_mode=html`;
-        const URL_API_4 = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatIdSergey}&text=${message}&parse_mode=html`;
-        let api = new XMLHttpRequest();
-        let api1 = new XMLHttpRequest();
-        let api2 = new XMLHttpRequest();
-        let api3 = new XMLHttpRequest();
-        api.open("GET", URL_API_1, true);
-        api1.open("GET", URL_API_2, true);
-        api2.open("GET", URL_API_3, true);
-        api3.open("GET", URL_API_3, true);
-        api.send();
-        api1.send();
-        api2.send();
-        api3.send();
+        const urls = [
+            `https://api.telegram.org/bot${token}/sendMessage?chat_id=${usersTelegram.chatIdSanya}&text=${message}&parse_mode=html`,
+            `https://api.telegram.org/bot${token}/sendMessage?chat_id=${usersTelegram.chatIdMark}&text=${message}&parse_mode=html`,
+            `https://api.telegram.org/bot${token}/sendMessage?chat_id=${usersTelegram.chatIdKarina}&text=${message}&parse_mode=html`,
+            `https://api.telegram.org/bot${token}/sendMessage?chat_id=${usersTelegram.chatIdNikita}&text=${message}&parse_mode=html`
+        ];
 
-        dispatch(removeCartAll())
-        setSubmitTg(true)
+        urls.forEach(url => {
+            let api = new XMLHttpRequest();
+            api.open("GET", url, true);
+            api.send();
+        });
+
+        dispatch(removeCartAll());
+        setSubmitTg(true);
         setTimeout(() => setSubmitTg(false), 10000);
 
-    }, [name, number, cart, total, queryId])
+    }, [name, number, cart, total, queryId]);
 
 
     return (

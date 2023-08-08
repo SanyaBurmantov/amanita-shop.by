@@ -7,6 +7,7 @@ import './HeaderDesktop.scss'
 import {useScroll} from "framer-motion";
 import Modal from "../../UI/Modal/Modal";
 import Basket from "../../UI/Basket/Basket";
+import {useTypedSelector} from "../../../hooks/useTypedSelector";
 
 
 interface HeaderDesktop {
@@ -18,7 +19,7 @@ export const HeaderDesktop: FC<HeaderDesktop> = () => {
     const [opened, setOpened] = useState(false);
 
     const {scrollY} = useScroll();
-
+    const cart = useTypedSelector(state => state.cart)
 
     useEffect(() => {
         return scrollY.onChange((latest) => {
@@ -65,7 +66,7 @@ export const HeaderDesktop: FC<HeaderDesktop> = () => {
 
 
                         <div className='header-desktop-button' onClick={() => setOpened(true)}>
-                            <button className='header-desktop-button__btn'>Оформить заказ</button>
+                            <button className='header-desktop-button__btn'>Оформить заказ ({cart.length})</button>
                         </div>
 
 
