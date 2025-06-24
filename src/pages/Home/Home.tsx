@@ -13,15 +13,6 @@ interface Home {
 
 
 export const Home: FC<Home> = ({}) => {
-
-
-
-
-
-
-
-
-
     return (
 
         <>
@@ -29,6 +20,14 @@ export const Home: FC<Home> = ({}) => {
                 <div className='home-title'>
                     <h3 className='home-title__title'>Дары природы</h3>
                     <h4 className='home-title__subtitle'>Польза для здоровья каждый день</h4>
+                    <div className="wrapper-info">
+                        <h4 className='wrapper-info__text'>Внимание</h4>
+                        <h4 className='wrapper-info__text'>Продажа мухоморов теперь запрещена на территории Республики Беларусь.</h4>
+                        <h4 className='wrapper-info__text'>Но не расстраивайтесь, альтернативы можно рассмотреть на сайте нашего поставщика</h4>
+                        <a className='wrapper-info__link' href="https://altay-baykal.by">https://altay-baykal.by</a>
+                    </div>
+
+
                     <button className="home-title__button "><Link to='/products'>Посмотреть каталог</Link></button>
                 </div>
 

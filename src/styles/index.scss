@@ -152,3 +152,34 @@ body::-webkit-scrollbar-thumb {
 //    }
 //  }
 //}
+
+.wrapper-info {
+  background-color: white;
+  color: red;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  &--shop {
+    position: absolute;
+    top: 0;
+    z-index: 100000;
+    width: 400px;
+    height: 200px;
+
+  }
+  &__text {
+    color: black;
+  }
+  &--cart {
+    width: 400px;
+    margin: auto;
+    margin-top: 40px;
+  }
+  &__link {
+    color: green;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+
+  }
+}

@@ -24,7 +24,12 @@ const Basket: FC<Basket> = () => {
         <div className='basket'>
 
             <h3 className='basket-title'>Корзина товаров</h3>
-
+            <div className="wrapper-info wrapper-info--cart">
+                <h4 className='wrapper-info__text'>Внимание</h4>
+                <h4 className='wrapper-info__text'>Продажа мухоморов теперь запрещена на территории Республики Беларусь.</h4>
+                <h4 className='wrapper-info__text'>Но не расстраивайтесь, альтернативы можно рассмотреть на сайте нашего поставщика</h4>
+                <a className='wrapper-info__link' href="https://altay-baykal.by">https://altay-baykal.by</a>
+            </div>
 
             <div className='cards'>
 

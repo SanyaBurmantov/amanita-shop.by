@@ -51,8 +51,13 @@ export const ItemCard: FC<ItemCard> = ({item}) => {
                     </div>
                 </div>
 
-
                 <div className='item-final'>
+                    <div className="wrapper-info">
+                        <h4 className='wrapper-info__text'>Внимание</h4>
+                        <h4 className='wrapper-info__text'>Продажа мухоморов теперь запрещена на территории Республики Беларусь.</h4>
+                        <h4 className='wrapper-info__text'>Но не расстраивайтесь, альтернативы можно рассмотреть на сайте нашего поставщика</h4>
+                        <a className='wrapper-info__link' href="https://altay-baykal.by">https://altay-baykal.by</a>
+                    </div>
                     <span className='item-final__text'>Итого</span>
                     <span className='item-final__count'>{item.finalPrice} BYN</span>
                 </div>
