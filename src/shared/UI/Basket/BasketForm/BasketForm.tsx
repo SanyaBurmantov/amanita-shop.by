@@ -76,9 +76,7 @@ export const BasketForm: FC<BasketForm> = ({total, cart, setSubmitTg}) => {
 
         const urls = [
             `https://api.telegram.org/bot${token}/sendMessage?chat_id=${usersTelegram.chatIdSanya}&text=${message}&parse_mode=html`,
-            `https://api.telegram.org/bot${token}/sendMessage?chat_id=${usersTelegram.chatIdMark}&text=${message}&parse_mode=html`,
             `https://api.telegram.org/bot${token}/sendMessage?chat_id=${usersTelegram.chatIdKarina}&text=${message}&parse_mode=html`,
-            `https://api.telegram.org/bot${token}/sendMessage?chat_id=${usersTelegram.chatIdNikita}&text=${message}&parse_mode=html`
         ];
 
         urls.forEach(url => {
