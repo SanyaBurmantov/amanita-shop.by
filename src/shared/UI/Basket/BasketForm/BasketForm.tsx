@@ -45,10 +45,8 @@ export const BasketForm: FC<BasketForm> = ({total, cart, setSubmitTg}) => {
     const onSendData = useCallback(() => {
         const token = "5395453268:AAFNhZwVm1ScGFb2jiukzA7H8LIZwLxBc9E";
         const usersTelegram = {
-            chatIdMark: "424119633",
             chatIdSanya: "408745156",
             chatIdKarina: "2024969663",
-            chatIdNikita: "2024969663",
         };
         const data = {
             name,
