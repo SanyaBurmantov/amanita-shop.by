@@ -37,6 +37,10 @@
     "eject": "react-scripts eject",
     "start2": "nodemon index.js"
   },
+
+  "engines": {
+    "node": "22.0.0"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
